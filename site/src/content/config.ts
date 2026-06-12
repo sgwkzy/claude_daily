@@ -1,4 +1,5 @@
 import { defineCollection, z } from "astro:content";
+import { glob } from "astro/loaders";
 
 const bulletPointSchema = z.object({
   time: z.number().int().nonnegative(),
@@ -13,7 +14,11 @@ const sectionSchema = z.object({
 });
 
 const articles = defineCollection({
-  type: "content",
+  loader: glob({
+    pattern: "**/*.md",
+    base: "./src/content/articles",
+    generateId: ({ data }) => String(data.videoId).toLowerCase(),
+  }),
   schema: z.object({
     videoId: z.string().min(1),
     title: z.string().min(1),
@@ -35,4 +40,3 @@ const articles = defineCollection({
 });
 
 export const collections = { articles };
-

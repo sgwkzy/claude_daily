@@ -3,7 +3,7 @@ videoId: 0pgCBV8CTZY
 title: Anthropic is starting to panic…
 channel: Fireship
 channelId: UCsBjURrPoezykLs9EqgamOA
-publishedAt: '2026-06-09T17:32:30Z'
+publishedAt: '2026-06-12T10:25:40.273696Z'
 fetchedAt: '2026-06-12T10:25:40.273696Z'
 originalThumbnail: https://i.ytimg.com/vi/0pgCBV8CTZY/maxresdefault.jpg
 headerImage: /images/0pgCBV8CTZY/header.webp

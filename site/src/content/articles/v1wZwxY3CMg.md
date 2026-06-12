@@ -3,7 +3,7 @@ videoId: v1wZwxY3CMg
 title: Inside Anthropic, the $965 Billion AI Juggernaut | The Circuit
 channel: Bloomberg Originals
 channelId: UCUMZ7gohGI9HcU9VNsr2FJQ
-publishedAt: '2026-06-10T12:00:20Z'
+publishedAt: '2026-06-12T12:00:20Z'
 fetchedAt: '2026-06-12T10:25:41.477521Z'
 originalThumbnail: https://i.ytimg.com/vi/v1wZwxY3CMg/maxresdefault.jpg
 headerImage: /images/v1wZwxY3CMg/header.webp

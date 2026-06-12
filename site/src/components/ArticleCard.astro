@@ -7,7 +7,7 @@ interface BulletPoint {
 }
 
 interface Props {
-  slug: string;
+  articleId: string;
   title: string;
   channel: string;
   headerImage: string;
@@ -16,9 +16,9 @@ interface Props {
   bulletPoints: BulletPoint[];
 }
 
-const { slug, title, channel, headerImage, publishedAt, keyPhrases, bulletPoints } = Astro.props;
+const { articleId, title, channel, headerImage, publishedAt, keyPhrases, bulletPoints } = Astro.props;
 const headerImageSrc = withBase(headerImage);
-const articleHref = withBase(`/articles/${slug}/`);
+const articleHref = withBase(`/articles/${articleId}/`);
 const previewPoints = bulletPoints.slice(0, 2);
 const chipStyles = [
   "border-coral/40 bg-coral/10 text-coralDark",

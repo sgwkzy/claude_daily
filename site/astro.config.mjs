@@ -2,9 +2,7 @@ import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
 
 export default defineConfig({
-  site: "https://sgwkzy.github.io/claude_daily",
-  base: "/claude_daily/",
+  site: "https://www.claude-daily.com",
   integrations: [tailwind()],
   output: "static"
 });
-

@@ -112,7 +112,7 @@ const hrefFor = (date: string) => (date === latestDate ? withBase("/") : withBas
     {day.articles.map((article, index) => (
       <li>
         <a
-          href={`#article-${article.slug}`}
+          href={`#article-${article.id}`}
           class="group flex items-start gap-4 py-4 transition hover:bg-cream/40"
         >
           <span class="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-coral/40 text-sm font-bold text-coral">{String(index + 1).padStart(2, "0")}</span>
@@ -129,9 +129,9 @@ const hrefFor = (date: string) => (date === latestDate ? withBase("/") : withBas
 
 <section class="space-y-10">
   {day.articles.map((article) => (
-    <div id={`article-${article.slug}`} class="scroll-mt-24">
+    <div id={`article-${article.id}`} class="scroll-mt-24">
       <ArticleCard
-        slug={article.slug}
+        articleId={article.id}
         title={article.data.title}
         channel={article.data.channel}
         headerImage={article.data.headerImage}
