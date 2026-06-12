@@ -1,0 +1,10 @@
+anthropic>=0.57.1
+google-api-python-client>=2.171.0
+openai>=1.93.0
+pydantic>=2.11.5
+Pillow>=10.4.0
+PyYAML>=6.0.2
+pytest>=8.4.0
+youtube-transcript-api>=1.2.2
+yt-dlp>=2025.6.9
+

@@ -1,0 +1,22 @@
+youtube:
+  keywords:
+    - Claude
+    - Claude Code
+    - Anthropic
+    - MCP
+    - AIエージェント
+  limit_total: 10
+  per_keyword_top_n: 5
+  min_view_count: 5000
+  max_age_hours: 72
+  region_code: JP
+pipeline:
+  dry_run_limit: 2
+  section_count_min: 3
+  section_count_max: 5
+  output_articles_dir: site/src/content/articles
+  output_images_dir: site/public/images
+  temp_dir: batch/tmp
+prompts:
+  trend_limit: 3
+  header_style: warm editorial collage, soft beige and coral palette, abstract paper-cut shapes, calm and modern

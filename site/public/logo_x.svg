@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- リング（上が開いたオレンジの円弧） -->
+  <path d="M 398 619 A 165 165 0 1 0 618 619"
+        fill="none" stroke="#F09245" stroke-width="62" stroke-linecap="round"/>
+
+  <!-- ティアドロップ（噴き出す光条） -->
+  <!-- 赤（左） -->
+  <path d="M 245 355 A 47 47 0 1 1 325 307 L 463 624 Z" fill="#EF7265"/>
+  <!-- 黄（中央） -->
+  <path d="M 467 161 A 52 52 0 1 1 571 161 L 514 640 Z" fill="#F5AF3D"/>
+  <!-- ティール -->
+  <path d="M 594 314 A 44 44 0 1 1 678 338 L 545 636 Z" fill="#43A38C"/>
+  <!-- 水色（右） -->
+  <path d="M 722 331 A 40 40 0 1 1 791 371 L 587 640 Z" fill="#8EC8EC"/>
+
+  <!-- ドット -->
+  <circle cx="372" cy="223" r="35" fill="#EF7265"/>
+  <circle cx="436" cy="382" r="23" fill="#8EC8EC"/>
+  <circle cx="671" cy="233" r="27" fill="#F5AF3D"/>
+  <circle cx="281" cy="555" r="22" fill="#F5AF3D"/>
+
+  <!-- スパークル（4芒星） -->
+  <path d="M 0 -45 Q 0 0 45 0 Q 0 0 0 45 Q 0 0 -45 0 Q 0 0 0 -45 Z"
+        fill="#F6CBA2" transform="translate(232 470)"/>
+  <path d="M 0 -38 Q 0 0 38 0 Q 0 0 0 38 Q 0 0 -38 0 Q 0 0 0 -38 Z"
+        fill="#349D85" transform="translate(792 523)"/>
+</svg>

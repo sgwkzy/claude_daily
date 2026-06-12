@@ -1,0 +1,15 @@
+.env
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+batch/.cache/
+batch/tmp/
+site/dist/
+site/node_modules/
+site/.astro/
+site/.tailwind-cache/
+pip-install.log
+pytest-tmp/
+

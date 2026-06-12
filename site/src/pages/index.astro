@@ -1,0 +1,21 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DailyView from "../components/DailyView.astro";
+import { loadDailyGroups, resolveDay } from "../lib/articles";
+
+const groups = await loadDailyGroups();
+const latest = groups[0];
+const day = latest ? resolveDay(groups, latest.date) : undefined;
+const allDates = groups.map((g) => g.date);
+---
+
+<BaseLayout title="Claude Daily — Claude関連YouTubeまとめ">
+  {day ? (
+    <DailyView day={day} totalDays={groups.length} allDates={allDates} latestDate={latest!.date} />
+  ) : (
+    <section class="rounded-slide border border-line/70 bg-paper p-10 text-center shadow-card">
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">No brief yet</p>
+      <p class="mt-3 text-lg text-ink/75">まだ記事がありません。バッチを実行すると記事がここに表示されます。</p>
+    </section>
+  )}
+</BaseLayout>

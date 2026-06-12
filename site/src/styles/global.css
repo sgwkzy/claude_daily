@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  @apply bg-cream text-ink font-sans;
+  background-image:
+    radial-gradient(circle at top right, rgba(240, 160, 75, 0.14), transparent 40%),
+    radial-gradient(circle at bottom left, rgba(105, 168, 156, 0.08), transparent 42%);
+  background-attachment: fixed;
+}
+
+.headline {
+  word-break: keep-all;
+  overflow-wrap: anywhere;
+  line-break: strict;
+}
+
+.prose-copy p {
+  @apply leading-[1.95] text-[1.04rem] text-ink/85;
+}
+.prose-copy p + p {
+  @apply mt-4;
+}

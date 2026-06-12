@@ -1,0 +1,56 @@
+---
+interface BulletPoint {
+  time: number;
+  text: string;
+}
+
+interface Props {
+  slug: string;
+  title: string;
+  channel: string;
+  headerImage: string;
+  publishedAt: Date;
+  keyPhrases: string[];
+  bulletPoints: BulletPoint[];
+}
+
+const { slug, title, channel, headerImage, publishedAt, keyPhrases, bulletPoints } = Astro.props;
+const previewPoints = bulletPoints.slice(0, 2);
+const chipStyles = [
+  "border-coral/40 bg-coral/10 text-coralDark",
+  "border-teal/40 bg-teal/10 text-teal",
+  "border-sky/50 bg-sky/15 text-ink/80",
+  "border-salmon/40 bg-salmon/10 text-salmon",
+];
+---
+
+<article class="overflow-hidden rounded-slide border border-line/70 bg-paper shadow-card transition hover:-translate-y-0.5 hover:shadow-slide">
+  <a href={`/articles/${slug}/`} class="block">
+    <div class="grid gap-0 md:grid-cols-[0.95fr_1.25fr]">
+      <div class="aspect-[16/10] overflow-hidden bg-cream md:aspect-auto md:min-h-[16rem]">
+        <img src={headerImage} alt={title} class="h-full w-full object-cover" />
+      </div>
+      <div class="space-y-5 p-7 md:py-9 md:pl-8 md:pr-9">
+        <div class="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">
+          <span>{channel}</span>
+          <span class="h-px w-6 bg-line"></span>
+          <time>{publishedAt.toLocaleDateString("ja-JP")}</time>
+        </div>
+        <h2 class="headline text-[1.7rem] font-bold leading-snug text-ink">{title}</h2>
+        <ul class="space-y-2.5 text-sm leading-7 text-ink/75">
+          {previewPoints.map((point) => (
+            <li class="flex gap-3">
+              <span class="mt-2.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-coral"></span>
+              <span>{point.text}</span>
+            </li>
+          ))}
+        </ul>
+        <div class="flex flex-wrap gap-2 pt-1">
+          {keyPhrases.slice(0, 4).map((phrase, i) => (
+            <span class={`rounded-full border px-3 py-1 text-xs ${chipStyles[i % chipStyles.length]}`}>#{phrase}</span>
+          ))}
+        </div>
+      </div>
+    </div>
+  </a>
+</article>

@@ -1,0 +1,33 @@
+---
+interface BulletPoint {
+  time: number;
+  text: string;
+}
+
+interface Props {
+  videoId: string;
+  points: BulletPoint[];
+}
+
+const { videoId, points } = Astro.props;
+
+const formatTime = (seconds: number) => {
+  const minutes = Math.floor(seconds / 60);
+  const remain = seconds % 60;
+  return `${String(minutes).padStart(2, "0")}:${String(remain).padStart(2, "0")}`;
+};
+---
+
+<ul class="space-y-3">
+  {points.map((point) => (
+    <li class="rounded-2xl bg-white/85 p-4 shadow-card">
+      <a href={`https://youtu.be/${videoId}?t=${point.time}`} target="_blank" rel="noreferrer" class="flex gap-4">
+        <span class="inline-flex min-w-16 items-center justify-center rounded-full bg-ember px-3 py-1 text-sm font-bold text-white">
+          {formatTime(point.time)}
+        </span>
+        <span class="leading-7 text-ink">{point.text}</span>
+      </a>
+    </li>
+  ))}
+</ul>
+

@@ -1,0 +1,25 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import DailyView from "../../components/DailyView.astro";
+import { loadDailyGroups, resolveDay, formatDateLabel } from "../../lib/articles";
+
+export async function getStaticPaths() {
+  const groups = await loadDailyGroups();
+  return groups.map((group) => ({ params: { date: group.date } }));
+}
+
+const { date } = Astro.params;
+const groups = await loadDailyGroups();
+const day = date ? resolveDay(groups, date) : undefined;
+const latestDate = groups[0]?.date;
+
+if (!day || !latestDate) {
+  throw new Error("指定された日付のブリーフが見つかりません。");
+}
+
+const allDates = groups.map((g) => g.date);
+---
+
+<BaseLayout title={`${formatDateLabel(day.date)} のブリーフ | Claude Daily`}>
+  <DailyView day={day} totalDays={groups.length} allDates={allDates} latestDate={latestDate} />
+</BaseLayout>

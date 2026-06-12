@@ -1,0 +1,54 @@
+---
+interface Section {
+  heading: string;
+  time: number;
+  body: string;
+}
+
+interface Props {
+  section: Section;
+  index: number;
+  total: number;
+  timeLabel: string;
+  youtubeUrl: string;
+}
+
+const { section, index, total, timeLabel, youtubeUrl } = Astro.props;
+const paragraphs = section.body.split(/\n{2,}|(?<=。)\n/).map((p) => p.trim()).filter(Boolean);
+const numberLabel = String(index).padStart(2, "0");
+---
+
+<section id={`slide-${index}`} class="slide-card scroll-mt-24 relative overflow-hidden rounded-slide border border-line/70 bg-paper shadow-card">
+  <span aria-hidden="true" class="slide-watermark pointer-events-none absolute -right-4 -top-8 select-none font-display text-[12rem] font-black leading-none text-coral/10 md:text-[16rem]">{numberLabel}</span>
+  <span aria-hidden="true" class="pointer-events-none absolute right-0 top-0 h-1.5 w-40 bg-coral"></span>
+
+  <div class="relative space-y-7 p-8 md:p-14">
+    <header class="flex flex-wrap items-center justify-between gap-3">
+      <div class="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.28em] text-clay">
+        <span class="grid h-9 w-9 place-items-center rounded-full border border-coral text-sm font-bold text-coral">{numberLabel}</span>
+        <span>Slide {index} / {total}</span>
+      </div>
+      <a
+        href={youtubeUrl}
+        target="_blank"
+        rel="noreferrer"
+        class="inline-flex items-center gap-2 rounded-full border border-line bg-cream px-3.5 py-1.5 text-[0.72rem] font-semibold tracking-[0.14em] text-clay transition hover:border-coral hover:text-ink"
+      >
+        <svg class="h-3 w-3 text-coral" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 1l10 7-10 7V1z"/></svg>
+        {timeLabel} で観る
+      </a>
+    </header>
+
+    <h2 class="headline text-2xl font-black leading-[1.25] text-ink md:text-[2.2rem]">{section.heading}</h2>
+    <div class="h-px w-16 bg-coral"></div>
+
+    <div class="prose-copy max-w-none">
+      {paragraphs.length > 0 ? paragraphs.map((p) => <p>{p}</p>) : <p>{section.body}</p>}
+    </div>
+
+    <footer class="flex items-center justify-between border-t border-line/60 pt-5 text-[0.65rem] uppercase tracking-[0.3em] text-clay/80">
+      <span>Claude Daily</span>
+      <span>{numberLabel} / {String(total).padStart(2, "0")}</span>
+    </footer>
+  </div>
+</section>
