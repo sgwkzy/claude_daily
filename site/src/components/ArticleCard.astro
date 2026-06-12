@@ -1,4 +1,6 @@
 ---
+import { withBase } from "../lib/url";
+
 interface BulletPoint {
   time: number;
   text: string;
@@ -15,6 +17,8 @@ interface Props {
 }
 
 const { slug, title, channel, headerImage, publishedAt, keyPhrases, bulletPoints } = Astro.props;
+const headerImageSrc = withBase(headerImage);
+const articleHref = withBase(`/articles/${slug}/`);
 const previewPoints = bulletPoints.slice(0, 2);
 const chipStyles = [
   "border-coral/40 bg-coral/10 text-coralDark",
@@ -25,10 +29,10 @@ const chipStyles = [
 ---
 
 <article class="overflow-hidden rounded-slide border border-line/70 bg-paper shadow-card transition hover:-translate-y-0.5 hover:shadow-slide">
-  <a href={`/articles/${slug}/`} class="block">
+  <a href={articleHref} class="block">
     <div class="grid gap-0 md:grid-cols-[0.95fr_1.25fr]">
       <div class="aspect-[16/10] overflow-hidden bg-cream md:aspect-auto md:min-h-[16rem]">
-        <img src={headerImage} alt={title} class="h-full w-full object-cover" />
+        <img src={headerImageSrc} alt={title} class="h-full w-full object-cover" />
       </div>
       <div class="space-y-5 p-7 md:py-9 md:pl-8 md:pr-9">
         <div class="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">

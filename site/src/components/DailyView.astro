@@ -1,6 +1,7 @@
 ---
 import ArticleCard from "./ArticleCard.astro";
 import { formatDateLabel, formatShortDate, type ResolvedDay } from "../lib/articles";
+import { withBase } from "../lib/url";
 
 interface Props {
   day: ResolvedDay;
@@ -10,11 +11,11 @@ interface Props {
 }
 
 const { day, allDates, latestDate } = Astro.props;
-const prevHref = day.prevDate ? `/days/${day.prevDate}/` : undefined;
-const nextHref = day.nextDate ? `/days/${day.nextDate}/` : undefined;
+const prevHref = day.prevDate ? withBase(`/days/${day.prevDate}/`) : undefined;
+const nextHref = day.nextDate ? withBase(`/days/${day.nextDate}/`) : undefined;
 const dateLabel = formatDateLabel(day.date);
 const latestLabel = formatDateLabel(latestDate);
-const hrefFor = (date: string) => (date === latestDate ? "/" : `/days/${date}/`);
+const hrefFor = (date: string) => (date === latestDate ? withBase("/") : withBase(`/days/${date}/`));
 ---
 
 <section class="mb-12">
