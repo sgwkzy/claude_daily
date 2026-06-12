@@ -2,6 +2,7 @@
   "name": "claude-daily-site",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://sgwkzy.github.io/claude_daily/",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
