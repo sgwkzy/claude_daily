@@ -8,7 +8,7 @@ const bulletPointSchema = z.object({
 const sectionSchema = z.object({
   heading: z.string().min(1),
   time: z.number().int().nonnegative(),
-  image: z.string().min(1).optional(),
+  image: z.string().min(1).nullable().optional(),
   body: z.string().min(1)
 });
 
