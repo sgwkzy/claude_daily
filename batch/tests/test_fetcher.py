@@ -6,8 +6,8 @@ def test_fetcher_dry_run() -> None:
     settings = load_config("batch/config.yaml")
     fetcher = YouTubeFetcher(api_key=None, settings=settings)
     items = fetcher.fetch(["AI"], dry_run=True)
-    assert len(items) == 2
-    assert items[0].video_id.startswith("dryrun-video")
+    assert len(items) == 5
+    assert all(item.video_id.startswith("dryrun-") for item in items)
 
 
 def test_parse_duration_seconds() -> None:

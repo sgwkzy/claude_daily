@@ -11,17 +11,17 @@ class TranscriptFetcher:
         try:
             from youtube_transcript_api import NoTranscriptFound, TranscriptsDisabled, YouTubeTranscriptApi
 
-            transcript = YouTubeTranscriptApi.get_transcript(video_id, languages=languages)
+            fetched = YouTubeTranscriptApi().fetch(video_id, languages=languages)
         except (NoTranscriptFound, TranscriptsDisabled):
             return []
         return [
             TranscriptSegment(
-                start=int(item["start"]),
-                duration=int(item.get("duration", 0)),
-                text=str(item["text"]).strip(),
+                start=int(snippet.start),
+                duration=int(snippet.duration),
+                text=snippet.text.strip(),
             )
-            for item in transcript
-            if str(item.get("text", "")).strip()
+            for snippet in fetched
+            if snippet.text.strip()
         ]
 
 

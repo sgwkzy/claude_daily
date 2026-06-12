@@ -12,4 +12,6 @@ site/.astro/
 site/.tailwind-cache/
 pip-install.log
 pytest-tmp/
+_scratch_*.py
+_scratch_*.json
 

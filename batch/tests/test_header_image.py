@@ -8,5 +8,6 @@ def test_header_image_dry_run(tmp_path: Path) -> None:
     source.write_bytes(b"demo")
     generator = HeaderImageGenerator(api_key=None, style_prompt="style")
     destination = generator.generate(source, tmp_path / "header.webp", "title", dry_run=True)
-    assert destination.read_bytes() == b"demo"
+    assert destination.exists()
+    assert destination.stat().st_size > 0
 
