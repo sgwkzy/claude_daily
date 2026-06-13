@@ -18,8 +18,29 @@ if (!day || !latestDate) {
 }
 
 const allDates = groups.map((g) => g.date);
+const leadArticle = day.articles[0];
+const description = `${formatDateLabel(day.date)}に公開・整理したClaude・Claude Code・Anthropic・MCP関連動画の要点まとめ。${day.articles.length}本の記事を一覧で読めます。`;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: `${formatDateLabel(day.date)} のブリーフ | Claude Daily`,
+  url: `https://www.claude-daily.com/days/${day.date}/`,
+  inLanguage: "ja",
+  description,
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Claude Daily",
+    url: "https://www.claude-daily.com/",
+  },
+};
 ---
 
-<BaseLayout title={`${formatDateLabel(day.date)} のブリーフ | Claude Daily`}>
+<BaseLayout
+  title={`${formatDateLabel(day.date)}のClaude関連YouTube要約 | Claude Daily`}
+  description={description}
+  path={`/days/${day.date}/`}
+  image={leadArticle?.data.headerImage}
+  structuredData={structuredData}
+>
   <DailyView day={day} totalDays={groups.length} allDates={allDates} latestDate={latestDate} />
 </BaseLayout>

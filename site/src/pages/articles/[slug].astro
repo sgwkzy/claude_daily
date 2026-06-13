@@ -30,6 +30,9 @@ const youtubeUrl = (time: number) => `https://youtu.be/${data.videoId}?t=${time}
 const localThumbnail = withBase(`/images/${data.videoId}/thumbnail.webp`);
 const headerImageSrc = withBase(data.headerImage);
 const heroImageSrc = withBase(data.heroImage ?? data.headerImage);
+const articleDescription =
+  data.bulletPoints[0]?.text ??
+  `${data.channel}の動画「${data.title}」を日本語で要約した記事。`;
 const chipStyles = [
   "border-coral/40 bg-coral/10 text-coralDark",
   "border-teal/40 bg-teal/10 text-teal",
@@ -37,9 +40,41 @@ const chipStyles = [
   "border-salmon/40 bg-salmon/10 text-salmon",
   "border-sun/50 bg-sun/15 text-ink/80",
 ];
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: data.title,
+  description: articleDescription,
+  image: [`https://www.claude-daily.com${heroImageSrc}`],
+  datePublished: data.publishedAt.toISOString(),
+  dateModified: data.fetchedAt.toISOString(),
+  inLanguage: "ja",
+  author: {
+    "@type": "Organization",
+    name: "Claude Daily",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Claude Daily",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.claude-daily.com/logo.png",
+    },
+  },
+  mainEntityOfPage: `https://www.claude-daily.com/articles/${article.id}/`,
+  isBasedOn: `https://youtu.be/${data.videoId}`,
+};
 ---
 
-<BaseLayout title={`${data.title} | Claude Daily`} description={data.keyPhrases.join(" / ")}>
+<BaseLayout
+  title={`${data.title} | Claude Daily`}
+  description={articleDescription}
+  path={`/articles/${article.id}/`}
+  image={heroImageSrc}
+  type="article"
+  publishedTime={data.publishedAt.toISOString()}
+  structuredData={structuredData}
+>
   <article class="mx-auto max-w-[74rem] space-y-12 xl:max-w-[72rem]">
     <section class="overflow-hidden rounded-slide border border-line/70 bg-paper shadow-slide">
       <div class="space-y-0">

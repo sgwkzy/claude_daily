@@ -48,6 +48,13 @@ cd ..
 - `ANTHROPIC_API_KEY`
 - `OPENAI_API_KEY`
 
+サイト公開時に任意で使う公開向け変数:
+
+- `PUBLIC_GA_MEASUREMENT_ID`
+- `PUBLIC_GOOGLE_SITE_VERIFICATION`
+
+GitHub Pages の本番ビルドで使う場合は、`Repository Settings > Secrets and variables > Actions > Variables` に同名で設定してください。
+
 ## 実行方法
 
 ドライラン:
@@ -97,3 +104,14 @@ npm run dev
 
 - `batch.yml`: 1 日 3 回 cron 実行し、生成された記事と画像をコミットします。
 - `deploy.yml`: `site/**` の push をトリガに Astro をビルドし、GitHub Pages にデプロイします。
+
+## 公開と集客の基本設定
+
+- `site/src/layouts/BaseLayout.astro` で canonical / OGP / Twitter Card / JSON-LD / GA4 を出力します。
+- `site/src/pages/robots.txt.ts` で `robots.txt` を生成します。
+- `site/src/pages/sitemap.xml.ts` で `sitemap.xml` を生成します。
+- `site/public/b32626ab-6fcd-48b6-a66e-edb27a8f8b56.txt` を `IndexNow` の所有確認キーとして公開します。
+- Google Analytics 4 を使う場合は `PUBLIC_GA_MEASUREMENT_ID=G-XXXXXXXXXX` を設定します。
+- Search Console を使う場合は `PUBLIC_GOOGLE_SITE_VERIFICATION` を設定するか、DNS レコードで所有権確認を行います。
+- GitHub Pages 本番ビルドでは `.github/workflows/deploy.yml` から GitHub Actions Variables を環境変数として渡します。
+- GitHub Pages デプロイ後は `.github/workflows/deploy.yml` から `IndexNow` に公開 URL 一覧を自動送信します。
