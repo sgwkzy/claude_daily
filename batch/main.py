@@ -19,6 +19,7 @@ from batch.ranker import dedupe_and_rank
 from batch.summarizer import TranscriptSummarizer
 from batch.transcript import TranscriptFetcher, compact_segments
 from batch.trend_proposer import TrendProposer
+from batch.x_poster import PostPayload, XPoster, post_articles_with_delay
 
 
 def parse_args() -> argparse.Namespace:
@@ -30,6 +31,11 @@ def parse_args() -> argparse.Namespace:
         "--thumbnail-directions",
         default=None,
         help="サムネイル方針をカンマ区切りで上書きします。例: source-first,source-explainer",
+    )
+    parser.add_argument(
+        "--no-x-post",
+        action="store_true",
+        help="新規記事の X 自動投稿をスキップします（ローカル検証向け）。",
     )
     return parser.parse_args()
 
@@ -49,6 +55,7 @@ def main() -> int:
     limit = args.limit or settings.youtube.limit_total
     thumbnail_directions = _resolve_thumbnail_directions(args.thumbnail_directions, settings.prompts.thumbnail_directions)
     stats = PipelineStats()
+    pending_x_posts: list[PostPayload] = []
 
     trend_proposer = TrendProposer(api_keys["anthropic"])
     fetcher = YouTubeFetcher(api_keys["youtube"], settings)
@@ -138,6 +145,13 @@ def main() -> int:
             )
             write_article(frontmatter, article_path)
             stats.created += 1
+            pending_x_posts.append(
+                PostPayload(
+                    article_title=summary.articleTitle,
+                    slug=candidate.video_id.lower(),
+                    key_phrases=list(summary.keyPhrases),
+                )
+            )
             print(f"記事を生成しました: {article_path.relative_to(root)}")
             logger.info("Article created: video_id=%s article_path=%s", candidate.video_id, article_path)
         except Exception as error:
@@ -159,6 +173,20 @@ def main() -> int:
         stats.skipped_transcript,
         stats.skipped_errors,
     )
+
+    if pending_x_posts and not args.dry_run and not args.no_x_post:
+        poster = XPoster.from_env()
+        if poster.enabled:
+            print(f"X への自動投稿を開始します: {len(pending_x_posts)} 件")
+            posted = post_articles_with_delay(poster, pending_x_posts)
+            print(f"X 投稿結果: 成功 {posted}/{len(pending_x_posts)} 件")
+            logger.info("X posting finished posted=%s total=%s", posted, len(pending_x_posts))
+        else:
+            print("X 認証情報が未設定のため自動投稿をスキップしました。")
+            logger.info("X posting skipped: credentials missing")
+    elif pending_x_posts and (args.dry_run or args.no_x_post):
+        logger.info("X posting skipped by flag: pending=%s", len(pending_x_posts))
+
     return 0
 
 
