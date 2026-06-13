@@ -48,6 +48,11 @@ cd ..
 - `ANTHROPIC_API_KEY`
 - `OPENAI_API_KEY`
 
+字幕取得が `youtube_transcript_api` の `IpBlocked` / `429` に当たる環境では、任意で次も使えます。
+
+- `YTDLP_COOKIES_FROM_BROWSER`
+- `YTDLP_COOKIES_PATH`
+
 サイト公開時に任意で使う公開向け変数:
 
 - `PUBLIC_GA_MEASUREMENT_ID`
@@ -95,7 +100,9 @@ npm run dev
 ## 実装メモ
 
 - `--dry-run` では API 呼び出しを行わず、ダミー動画・ダミー字幕・ダミー画像でパイプラインを最後まで通します。
+- 字幕取得は `youtube_transcript_api` を優先し、`IpBlocked` などで失敗した場合は `yt-dlp` の字幕取得へフォールバックします。
 - 字幕なし、動画ダウンロード失敗、画像生成失敗は該当動画をスキップまたはサムネイルへフォールバックし、全体処理は継続します。
+- 実行ログは `batch/tmp/batch.log` に追記され、字幕取得経路と失敗理由の確認に使えます。
 - 記事フロントマターの構造と Astro Content Collections の zod スキーマは同じ項目を表現しています。
 - 画像生成は OpenAI `gpt-image-1` の image edit API を利用します。
 - サムネイル仕様と運用方針は [docs/thumbnail-directions.md](/F:/Work/claude-daily/docs/thumbnail-directions.md) を参照してください。

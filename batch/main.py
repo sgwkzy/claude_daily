@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import argparse
+import logging
 import os
 import sys
 from pathlib import Path
@@ -38,6 +39,7 @@ def main() -> int:
     root = Path(__file__).resolve().parent.parent
     settings = load_config(root / args.config)
     ensure_directories(root, settings)
+    _configure_logging(root / settings.pipeline.temp_dir)
 
     api_keys = {
         "youtube": os.getenv("YOUTUBE_API_KEY"),
@@ -54,8 +56,10 @@ def main() -> int:
     summarizer = TranscriptSummarizer(api_keys["anthropic"])
     media = MediaManager(root / settings.pipeline.temp_dir)
     header_generator = HeaderImageGenerator(api_keys["openai"], settings.prompts.header_style)
+    logger = logging.getLogger(__name__)
 
     print("設定を読み込みました。")
+    logger.info("Batch started dry_run=%s limit=%s config=%s", args.dry_run, limit, args.config)
     trend_keywords = trend_proposer.propose(
         fixed_keywords=settings.youtube.keywords,
         limit=settings.prompts.trend_limit,
@@ -73,6 +77,7 @@ def main() -> int:
         if article_path.exists():
             stats.skipped_existing += 1
             print(f"既存記事のためスキップ: {candidate.video_id}")
+            logger.info("Skipped existing article: video_id=%s", candidate.video_id)
             continue
         try:
             segments = compact_segments(
@@ -81,6 +86,7 @@ def main() -> int:
             if not segments:
                 stats.skipped_transcript += 1
                 print(f"字幕が取得できないためスキップ: {candidate.video_id}")
+                logger.warning("Skipped due to missing transcript: video_id=%s", candidate.video_id)
                 continue
 
             summary = summarizer.summarize(candidate.title, segments, dry_run=args.dry_run)
@@ -133,15 +139,25 @@ def main() -> int:
             write_article(frontmatter, article_path)
             stats.created += 1
             print(f"記事を生成しました: {article_path.relative_to(root)}")
+            logger.info("Article created: video_id=%s article_path=%s", candidate.video_id, article_path)
         except Exception as error:
             stats.skipped_errors += 1
             print(f"動画処理でエラーが発生したためスキップします: {candidate.video_id} / {error}")
+            logger.exception("Video processing failed: video_id=%s", candidate.video_id)
             continue
 
     print(
         "実行結果:"
         f" 処理候補={stats.processed}, 作成={stats.created}, 既存スキップ={stats.skipped_existing},"
         f" 字幕スキップ={stats.skipped_transcript}, エラー={stats.skipped_errors}"
+    )
+    logger.info(
+        "Batch finished processed=%s created=%s skipped_existing=%s skipped_transcript=%s skipped_errors=%s",
+        stats.processed,
+        stats.created,
+        stats.skipped_existing,
+        stats.skipped_transcript,
+        stats.skipped_errors,
     )
     return 0
 
@@ -156,6 +172,20 @@ def _resolve_thumbnail_directions(cli_value: str | None, config_value: list[str]
         if direction not in seen:
             seen.append(direction)
     return seen
+
+
+def _configure_logging(log_dir: Path) -> None:
+    log_dir.mkdir(parents=True, exist_ok=True)
+    log_path = log_dir / "batch.log"
+    logging.basicConfig(
+        level=logging.INFO,
+        format="%(asctime)s %(levelname)s %(name)s %(message)s",
+        handlers=[
+            logging.StreamHandler(),
+            logging.FileHandler(log_path, encoding="utf-8"),
+        ],
+        force=True,
+    )
 
 
 if __name__ == "__main__":
