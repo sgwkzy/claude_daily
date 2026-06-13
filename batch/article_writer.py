@@ -12,6 +12,7 @@ def build_frontmatter(
     candidate: VideoCandidate,
     summary: SummaryResult,
     header_image: str,
+    hero_image: str | None = None,
     fetched_at: datetime | None = None,
 ) -> ArticleFrontmatter:
     return ArticleFrontmatter(
@@ -23,6 +24,7 @@ def build_frontmatter(
         fetchedAt=fetched_at or datetime.now(UTC),
         originalThumbnail=candidate.original_thumbnail,
         headerImage=header_image,
+        heroImage=hero_image or header_image,
         viewCount=candidate.view_count,
         durationSec=candidate.duration_sec,
         sourceLanguage=candidate.source_language,
@@ -66,4 +68,3 @@ def write_article(frontmatter: ArticleFrontmatter, output_path: Path) -> Path:
 def format_mmss(seconds: int) -> str:
     minutes, secs = divmod(max(seconds, 0), 60)
     return f"{minutes:02d}:{secs:02d}"
-

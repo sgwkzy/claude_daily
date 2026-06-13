@@ -12,9 +12,9 @@ def test_article_writer_roundtrip(tmp_path: Path) -> None:
     settings = load_config("batch/config.yaml")
     candidate = YouTubeFetcher(None, settings).fetch(["AI"], dry_run=True)[0]
     summary = TranscriptSummarizer(None).summarize("sample", TranscriptFetcher().fetch("x", dry_run=True), dry_run=True)
-    frontmatter = build_frontmatter(candidate, summary, "/images/test/header.webp", fetched_at=datetime.now(UTC))
+    frontmatter = build_frontmatter(candidate, summary, "/images/test/header.png", fetched_at=datetime.now(UTC))
     content = render_article(frontmatter)
     assert "videoId:" in content
+    assert "heroImage: /images/test/header.png" in content
     target = write_article(frontmatter, tmp_path / "article.md")
     assert target.exists()
-

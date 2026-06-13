@@ -1,0 +1,168 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ArticleCard from "../components/ArticleCard.astro";
+import { withBase } from "../lib/url";
+
+interface BulletPoint {
+  time: number;
+  text: string;
+}
+
+interface PreviewArticle {
+  id: string;
+  title: string;
+  channel: string;
+  publishedAt: Date;
+  keyPhrases: string[];
+  bulletPoints: BulletPoint[];
+  headerImage: string;
+  summaryLabel: string;
+}
+
+const previews: PreviewArticle[] = [
+  {
+    id: "y9wz2pv404e",
+    title: "Introducing Claude Fable 5",
+    channel: "Anthropic",
+    publishedAt: new Date("2026-06-12T04:46:32.241Z"),
+    keyPhrases: ["Claude Fable 5", "安全設計", "長文処理", "新モデル"],
+    bulletPoints: [
+      {
+        time: 0,
+        text: "Fable 5 の発表ポイントを、性能・長文処理・安全設計の3軸で短く掴める見せ方を想定。",
+      },
+    ],
+    headerImage: "/images/previews/fable5-header.png",
+    summaryLabel: "Source + Explainer の本命案",
+  },
+  {
+    id: "v1wzwxy3cmg",
+    title: "Inside Anthropic, the $965 Billion AI Juggernaut | The Circuit",
+    channel: "Bloomberg Originals",
+    publishedAt: new Date("2026-06-12T12:00:20Z"),
+    keyPhrases: ["Anthropic", "経営", "1兆ドル", "Bloomberg"],
+    bulletPoints: [
+      {
+        time: 18,
+        text: "人物主導のドキュメンタリー調サムネイルが、記事ページの特集感と相性が良いかを見るための案。",
+      },
+    ],
+    headerImage: "/images/previews/anthropic-story-header.png",
+    summaryLabel: "Feature / Documentary 寄りの案",
+  },
+  {
+    id: "0pgcbv8ctzy",
+    title: "Anthropic is starting to panic…",
+    channel: "Fireship",
+    publishedAt: new Date("2026-06-12T10:25:40.273Z"),
+    keyPhrases: ["IPO", "自己改善", "ROI", "警告"],
+    bulletPoints: [
+      {
+        time: 0,
+        text: "一覧で目を引く強めの構図。トップに並べたときに情報密度が高すぎないかを確認するための案。",
+      },
+    ],
+    headerImage: "/images/previews/hype-warning-header.png",
+    summaryLabel: "Commentary / Warning 寄りの案",
+  },
+];
+---
+
+<BaseLayout title="Thumbnail Preview | Claude Daily" description="Claude Daily のサムネイル検討用プレビュー">
+  <section class="mb-12">
+    <p class="text-xs font-semibold uppercase tracking-[0.32em] text-coral">Design Review</p>
+    <h1 class="headline mt-5 text-4xl font-black leading-[1.2] text-ink md:text-[3rem]">
+      サムネイルを実際のページに当てた時の<br class="hidden md:inline" />見え方を確認するためのプレビュー
+    </h1>
+    <p class="mt-6 max-w-3xl text-lg leading-[1.9] text-ink/75">
+      トップカードと記事ヒーローの両方で、生成サムネイルがどれだけ機能するかを確認するための試作ページです。
+      画像の雰囲気だけでなく、文字量・カード幅・一覧での差の出方も見られるようにしています。
+    </p>
+  </section>
+
+  <section class="mb-16 space-y-6">
+    <div class="flex items-center justify-between gap-3">
+      <div>
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">Top Page Preview</p>
+        <h2 class="headline mt-2 text-2xl font-black text-ink">一覧カードへの当て込み</h2>
+      </div>
+      <a
+        href={withBase("/")}
+        class="inline-flex items-center gap-2 rounded-full border border-line/70 bg-paper px-4 py-2 text-sm font-semibold text-clay transition hover:bg-cream hover:text-ink"
+      >
+        現在のトップへ
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+    <div class="space-y-10">
+      {previews.map((article) => (
+        <div class="space-y-3">
+          <div class="flex flex-wrap items-center gap-3">
+            <span class="rounded-full bg-coral px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.24em] text-paper">{article.summaryLabel}</span>
+            <span class="text-sm text-clay">{article.channel}</span>
+          </div>
+          <ArticleCard
+            articleId={article.id}
+            title={article.title}
+            channel={article.channel}
+            headerImage={article.headerImage}
+            publishedAt={article.publishedAt}
+            keyPhrases={article.keyPhrases}
+            bulletPoints={article.bulletPoints}
+          />
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <section class="space-y-10">
+    <div>
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">Article Hero Preview</p>
+      <h2 class="headline mt-2 text-2xl font-black text-ink">記事ページのファーストビュー</h2>
+    </div>
+    {previews.map((article, index) => (
+      <section class="overflow-hidden rounded-slide border border-line/70 bg-paper shadow-slide">
+        <div class="relative isolate">
+          <img src={withBase(article.headerImage)} alt={article.title} class="h-[18rem] w-full object-cover sm:h-[22rem] md:h-[28rem]" />
+          <div class="absolute inset-0 bg-gradient-to-t from-ink/55 via-ink/10 to-transparent"></div>
+          <div class="absolute inset-x-0 bottom-0 p-5 md:p-8">
+            <div class="flex flex-wrap items-center gap-2">
+              <span class="rounded-full border border-paper/20 bg-ink/20 px-3 py-1 text-[0.68rem] uppercase tracking-[0.22em] text-paper/85 backdrop-blur">Claude Daily</span>
+              <span class="rounded-full border border-paper/20 bg-paper/10 px-3 py-1 text-[0.68rem] uppercase tracking-[0.22em] text-paper/85 backdrop-blur">{article.channel}</span>
+              <span class="rounded-full border border-paper/20 bg-paper/10 px-3 py-1 text-[0.68rem] uppercase tracking-[0.22em] text-paper/85 backdrop-blur">Preview {index + 1}</span>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-6 p-8 md:p-12">
+          <div class="flex flex-wrap items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">
+            <span>{article.channel}</span>
+            <span class="h-px w-6 bg-line"></span>
+            <time>{article.publishedAt.toLocaleDateString("ja-JP")}</time>
+            <span class="h-px w-6 bg-line"></span>
+            <span>{article.summaryLabel}</span>
+          </div>
+          <h3 class="headline text-3xl font-black leading-[1.22] text-ink md:text-[2.6rem]">{article.title}</h3>
+          <div class="flex flex-wrap gap-2">
+            {article.keyPhrases.map((phrase) => (
+              <span class="rounded-full border border-line/70 bg-cream/70 px-3 py-1 text-sm text-ink/80">#{phrase}</span>
+            ))}
+          </div>
+          <div class="grid gap-4 rounded-[1.6rem] border border-line/60 bg-cream/70 p-5 md:grid-cols-3">
+            <div>
+              <p class="text-[0.68rem] uppercase tracking-[0.24em] text-clay">Hero Fit</p>
+              <p class="mt-2 text-base font-semibold text-ink">ファーストビューの印象確認</p>
+            </div>
+            <div>
+              <p class="text-[0.68rem] uppercase tracking-[0.24em] text-clay">Top Fit</p>
+              <p class="mt-2 text-base font-semibold text-ink">一覧カードにもそのまま使用</p>
+            </div>
+            <div>
+              <p class="text-[0.68rem] uppercase tracking-[0.24em] text-clay">Goal</p>
+              <p class="mt-2 text-base font-semibold text-ink">{article.summaryLabel}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    ))}
+  </section>
+</BaseLayout>

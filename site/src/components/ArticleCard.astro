@@ -19,7 +19,7 @@ interface Props {
 const { articleId, title, channel, headerImage, publishedAt, keyPhrases, bulletPoints } = Astro.props;
 const headerImageSrc = withBase(headerImage);
 const articleHref = withBase(`/articles/${articleId}/`);
-const previewPoints = bulletPoints.slice(0, 2);
+const previewPoints = bulletPoints.slice(0, 1);
 const chipStyles = [
   "border-coral/40 bg-coral/10 text-coralDark",
   "border-teal/40 bg-teal/10 text-teal",
@@ -28,29 +28,34 @@ const chipStyles = [
 ];
 ---
 
-<article class="overflow-hidden rounded-slide border border-line/70 bg-paper shadow-card transition hover:-translate-y-0.5 hover:shadow-slide">
-  <a href={articleHref} class="block">
-    <div class="grid gap-0 md:grid-cols-[0.95fr_1.25fr]">
-      <div class="aspect-[16/10] overflow-hidden bg-cream md:aspect-auto md:min-h-[16rem]">
-        <img src={headerImageSrc} alt={title} class="h-full w-full object-cover" />
+<article class="overflow-hidden rounded-[2rem] border border-line/70 bg-paper shadow-card transition hover:-translate-y-0.5 hover:shadow-slide">
+  <a href={articleHref} class="group block">
+    <div class="grid gap-0 xl:max-h-[31rem] xl:grid-cols-[1.38fr_0.62fr]">
+      <div class="bg-[#ded1c2] xl:h-[31rem]">
+        <div class="flex aspect-video h-full items-center justify-center xl:aspect-auto">
+          <img src={headerImageSrc} alt={title} class="h-full w-full object-cover object-center transition duration-500 ease-out group-hover:scale-[1.012]" />
+        </div>
       </div>
-      <div class="space-y-5 p-7 md:py-9 md:pl-8 md:pr-9">
+      <div class="space-y-5 overflow-hidden p-6 md:p-8 xl:flex xl:h-[31rem] xl:flex-col xl:justify-between xl:p-9">
         <div class="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">
-          <span>{channel}</span>
+          <span class="truncate">{channel}</span>
           <span class="h-px w-6 bg-line"></span>
           <time>{publishedAt.toLocaleDateString("ja-JP")}</time>
         </div>
-        <h2 class="headline text-[1.7rem] font-bold leading-snug text-ink">{title}</h2>
-        <ul class="space-y-2.5 text-sm leading-7 text-ink/75">
+        <div class="space-y-4">
+          <h2 class="headline line-clamp-4 text-[1.5rem] font-black leading-[1.18] text-ink md:text-[1.72rem]">{title}</h2>
+          <p class="text-sm uppercase tracking-[0.24em] text-clay">この記事の要点</p>
+        </div>
+        <ul class="space-y-2.5 overflow-hidden text-sm leading-7 text-ink/75">
           {previewPoints.map((point) => (
-            <li class="flex gap-3">
+            <li class="flex gap-3 rounded-2xl bg-cream/70 px-4 py-4">
               <span class="mt-2.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-coral"></span>
-              <span>{point.text}</span>
+              <span class="line-clamp-3">{point.text}</span>
             </li>
           ))}
         </ul>
-        <div class="flex flex-wrap gap-2 pt-1">
-          {keyPhrases.slice(0, 4).map((phrase, i) => (
+        <div class="flex flex-wrap gap-2 overflow-hidden pt-1">
+          {keyPhrases.slice(0, 3).map((phrase, i) => (
             <span class={`rounded-full border px-3 py-1 text-xs ${chipStyles[i % chipStyles.length]}`}>#{phrase}</span>
           ))}
         </div>

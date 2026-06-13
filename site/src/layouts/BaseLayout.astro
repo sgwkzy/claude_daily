@@ -23,7 +23,7 @@ const { title, description = "Claude関連YouTube動画の要点を毎日まと�
   <body>
     <div class="flex min-h-screen flex-col">
       <header class="border-b border-line/70 bg-paper/70 backdrop-blur">
-        <div class="mx-auto flex max-w-5xl items-center justify-between px-6 py-4">
+        <div class="mx-auto flex max-w-[86rem] items-center justify-between px-6 py-4 xl:px-8">
           <a href={withBase("/")} class="flex items-center gap-3 text-ink">
             <img src={withBase("/logo.png")} alt="Claude Daily" class="h-10 w-10 object-contain" onerror={`this.onerror=null; this.src='${withBase("/logo.svg")}'`} />
             <span class="flex items-baseline gap-3">
@@ -34,7 +34,7 @@ const { title, description = "Claude関連YouTube動画の要点を毎日まと�
           <p class="hidden text-sm text-clay md:block">Claude関連YouTubeを毎日まとめる</p>
         </div>
       </header>
-      <main class="mx-auto w-full max-w-5xl flex-1 px-6 py-12">
+      <main class="mx-auto w-full max-w-[86rem] flex-1 px-6 py-12 xl:px-8">
         <slot />
       </main>
       <footer class="border-t border-line/70 bg-paper/50 py-8 text-center text-xs leading-7 text-clay">

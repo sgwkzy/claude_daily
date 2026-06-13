@@ -14,10 +14,35 @@ body {
   background-attachment: fixed;
 }
 
+a img {
+  display: block;
+}
+
 .headline {
   word-break: keep-all;
   overflow-wrap: anywhere;
   line-break: strict;
+}
+
+.line-clamp-4 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+}
+
+.line-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.line-clamp-5 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 5;
+  overflow: hidden;
 }
 
 .prose-copy p {

@@ -11,7 +11,7 @@ if __package__ in {None, ""}:
 from batch.article_writer import build_frontmatter, write_article
 from batch.config import ensure_directories, load_config
 from batch.fetcher import YouTubeFetcher
-from batch.header_image import HeaderImageGenerator
+from batch.header_image import HeaderContext, HeaderImageGenerator
 from batch.media import MediaManager
 from batch.models import PipelineStats
 from batch.ranker import dedupe_and_rank
@@ -25,6 +25,11 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--dry-run", action="store_true", help="API呼び出しを行わずダミーデータで動作確認します。")
     parser.add_argument("--limit", type=int, default=None, help="処理する動画本数を上書きします。")
     parser.add_argument("--config", default="batch/config.yaml", help="設定ファイルのパスを指定します。")
+    parser.add_argument(
+        "--thumbnail-directions",
+        default=None,
+        help="サムネイル方針をカンマ区切りで上書きします。例: source-first,source-explainer",
+    )
     return parser.parse_args()
 
 
@@ -40,6 +45,7 @@ def main() -> int:
         "openai": os.getenv("OPENAI_API_KEY"),
     }
     limit = args.limit or settings.youtube.limit_total
+    thumbnail_directions = _resolve_thumbnail_directions(args.thumbnail_directions, settings.prompts.thumbnail_directions)
     stats = PipelineStats()
 
     trend_proposer = TrendProposer(api_keys["anthropic"])
@@ -87,9 +93,33 @@ def main() -> int:
                     section.image = f"/images/{candidate.video_id}/{frame_path.name}"
             media.cleanup(video_path)
 
-            header_path = image_dir / "header.webp"
+            header_path = image_dir / "header.png"
+            header_context = HeaderContext(
+                title=candidate.title,
+                channel=candidate.channel,
+                key_phrases=summary.keyPhrases,
+                bullet_points=[item.text for item in summary.bulletPoints],
+                section_headings=[section.heading for section in summary.sections],
+            )
             try:
-                header_generator.generate(thumbnail_path, header_path, candidate.title, dry_run=args.dry_run)
+                generated_headers = []
+                for index, direction in enumerate(thumbnail_directions):
+                    is_primary = index == 0
+                    destination = header_path if is_primary else image_dir / f"header-{direction}.png"
+                    prompt_dump = image_dir / f"header-{direction}.prompt.txt" if len(thumbnail_directions) > 1 else None
+                    generated_headers.append(
+                        header_generator.generate(
+                            thumbnail_path,
+                            destination,
+                            candidate.title,
+                            dry_run=args.dry_run,
+                            direction=direction,
+                            context=header_context,
+                            prompt_dump_path=prompt_dump,
+                        )
+                    )
+                if generated_headers and generated_headers[0] != header_path:
+                    header_path.write_bytes(generated_headers[0].read_bytes())
             except Exception as error:
                 print(f"ヘッダー画像生成に失敗したためサムネイルを使用します: {candidate.video_id} / {error}")
                 header_path.write_bytes(thumbnail_path.read_bytes())
@@ -98,6 +128,7 @@ def main() -> int:
                 candidate=candidate,
                 summary=summary,
                 header_image=f"/images/{candidate.video_id}/{header_path.name}",
+                hero_image=f"/images/{candidate.video_id}/{header_path.name}",
             )
             write_article(frontmatter, article_path)
             stats.created += 1
@@ -115,6 +146,17 @@ def main() -> int:
     return 0
 
 
+def _resolve_thumbnail_directions(cli_value: str | None, config_value: list[str]) -> list[str]:
+    source = cli_value.split(",") if cli_value else config_value
+    directions = [item.strip() for item in source if item.strip()]
+    if not directions:
+        return ["source-explainer"]
+    seen: list[str] = []
+    for direction in directions:
+        if direction not in seen:
+            seen.append(direction)
+    return seen
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
-

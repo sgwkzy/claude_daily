@@ -7,7 +7,7 @@ channelId: UCeCmAYh1ylwIsgGrmqaklzg
 publishedAt: '2026-06-12T09:30:09Z'
 fetchedAt: '2026-06-12T10:25:38.931514Z'
 originalThumbnail: https://i.ytimg.com/vi/Fv8OC7skxT0/maxresdefault.jpg
-headerImage: /images/Fv8OC7skxT0/header.webp
+headerImage: /images/Fv8OC7skxT0/header.png
 viewCount: 223807
 durationSec: 2041
 sourceLanguage: ja

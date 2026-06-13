@@ -28,6 +28,7 @@ const articles = defineCollection({
     fetchedAt: z.coerce.date(),
     originalThumbnail: z.string().url(),
     headerImage: z.string().min(1),
+    heroImage: z.string().min(1).optional(),
     viewCount: z.number().int().nonnegative(),
     durationSec: z.number().int().nonnegative(),
     sourceLanguage: z.string().min(2),

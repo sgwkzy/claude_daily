@@ -55,6 +55,7 @@ class ArticleFrontmatter(BaseModel):
     fetchedAt: datetime
     originalThumbnail: HttpUrl
     headerImage: str = Field(min_length=1)
+    heroImage: str | None = None
     viewCount: int = Field(ge=0)
     durationSec: int = Field(ge=0)
     sourceLanguage: str = Field(min_length=2)

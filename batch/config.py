@@ -28,6 +28,7 @@ class PipelineConfig(BaseModel):
 class PromptConfig(BaseModel):
     trend_limit: int = 3
     header_style: str = "cinematic editorial collage, vibrant lighting, high contrast"
+    thumbnail_directions: list[str] = Field(default_factory=lambda: ["source-explainer"])
 
 
 class Settings(BaseModel):
@@ -61,4 +62,3 @@ def deep_merge(base: dict[str, Any], extra: dict[str, Any]) -> dict[str, Any]:
         else:
             merged[key] = value
     return merged
-

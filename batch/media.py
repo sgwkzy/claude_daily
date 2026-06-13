@@ -105,5 +105,7 @@ def _write_placeholder(destination: Path, seed: str, palette: str) -> None:
         [0, height - 12, width, height],
         fill=(*accent, 255),
     )
-    image.save(destination, "WEBP", quality=82)
-
+    if destination.suffix.lower() == ".png":
+        image.save(destination, "PNG")
+    else:
+        image.save(destination, "WEBP", quality=82)

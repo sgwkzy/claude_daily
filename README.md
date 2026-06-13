@@ -64,6 +64,14 @@ python .\batch\main.py --dry-run
 python .\batch\main.py --limit 1
 ```
 
+既定のサムネイル生成:
+
+```powershell
+python .\batch\main.py --limit 1
+```
+
+既定では `source-explainer` 方針で `16:9` の `header.png` を生成します。比較したい場合のみ `--thumbnail-directions` で複数方針を指定できます。
+
 Pytest:
 
 ```powershell
@@ -83,6 +91,7 @@ npm run dev
 - 字幕なし、動画ダウンロード失敗、画像生成失敗は該当動画をスキップまたはサムネイルへフォールバックし、全体処理は継続します。
 - 記事フロントマターの構造と Astro Content Collections の zod スキーマは同じ項目を表現しています。
 - 画像生成は OpenAI `gpt-image-1` の image edit API を利用します。
+- サムネイル仕様と運用方針は [docs/thumbnail-directions.md](/F:/Work/claude-daily/docs/thumbnail-directions.md) を参照してください。
 
 ## GitHub Actions
 

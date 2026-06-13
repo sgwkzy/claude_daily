@@ -6,7 +6,7 @@ channelId: UCsBjURrPoezykLs9EqgamOA
 publishedAt: '2026-06-12T10:25:40.273696Z'
 fetchedAt: '2026-06-12T10:25:40.273696Z'
 originalThumbnail: https://i.ytimg.com/vi/0pgCBV8CTZY/maxresdefault.jpg
-headerImage: /images/0pgCBV8CTZY/header.webp
+headerImage: /images/0pgCBV8CTZY/header.png
 viewCount: 891486
 durationSec: 303
 sourceLanguage: en
