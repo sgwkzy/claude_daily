@@ -18,6 +18,7 @@ def build_frontmatter(
     return ArticleFrontmatter(
         videoId=candidate.video_id,
         title=candidate.title,
+        articleTitle=summary.articleTitle,
         channel=candidate.channel,
         channelId=candidate.channel_id,
         publishedAt=candidate.published_at,

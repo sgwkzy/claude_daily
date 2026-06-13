@@ -17,6 +17,7 @@ if (!article) {
 }
 
 const { data } = article;
+const displayTitle = data.articleTitle ?? data.title;
 const total = data.sections.length;
 const minutes = Math.max(1, Math.round(data.durationSec / 60));
 
@@ -32,7 +33,7 @@ const headerImageSrc = withBase(data.headerImage);
 const heroImageSrc = withBase(data.heroImage ?? data.headerImage);
 const articleDescription =
   data.bulletPoints[0]?.text ??
-  `${data.channel}の動画「${data.title}」を日本語で要約した記事。`;
+  `${data.channel}の動画「${displayTitle}」を日本語で要約した記事。`;
 const chipStyles = [
   "border-coral/40 bg-coral/10 text-coralDark",
   "border-teal/40 bg-teal/10 text-teal",
@@ -43,7 +44,7 @@ const chipStyles = [
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: data.title,
+  headline: displayTitle,
   description: articleDescription,
   image: [`https://www.claude-daily.com${heroImageSrc}`],
   datePublished: data.fetchedAt.toISOString(),
@@ -67,7 +68,7 @@ const structuredData = {
 ---
 
 <BaseLayout
-  title={`${data.title} | Claude Daily`}
+  title={`${displayTitle} | Claude Daily`}
   description={articleDescription}
   path={`/articles/${article.id}/`}
   image={heroImageSrc}
@@ -88,7 +89,7 @@ const structuredData = {
             <span class="h-px w-6 bg-line"></span>
             <span>{total} slides</span>
           </div>
-          <h1 class="headline mt-5 text-[2rem] font-black leading-[1.14] text-ink md:text-[2.45rem] xl:max-w-[56rem] xl:text-[2.9rem]">{data.title}</h1>
+          <h1 class="headline mt-5 text-[2rem] font-black leading-[1.14] text-ink md:text-[2.45rem] xl:max-w-[56rem] xl:text-[2.9rem]">{displayTitle}</h1>
           <div class="mt-5 flex flex-wrap gap-2">
             {data.keyPhrases.map((phrase, i) => (
               <span class={`rounded-full border px-3 py-1 text-sm ${chipStyles[i % chipStyles.length]}`}>#{phrase}</span>

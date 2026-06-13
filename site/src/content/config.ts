@@ -22,6 +22,7 @@ const articles = defineCollection({
   schema: z.object({
     videoId: z.string().min(1),
     title: z.string().min(1),
+    articleTitle: z.string().min(1).optional(),
     channel: z.string().min(1),
     channelId: z.string().min(1),
     publishedAt: z.coerce.date(),

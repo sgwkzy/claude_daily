@@ -117,7 +117,7 @@ const hrefFor = (date: string) => (date === latestDate ? withBase("/") : withBas
         >
           <span class="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-coral/40 text-sm font-bold text-coral">{String(index + 1).padStart(2, "0")}</span>
           <div class="flex-1 space-y-1">
-            <p class="headline text-base font-bold leading-snug text-ink group-hover:text-coralDark md:text-lg">{article.data.title}</p>
+            <p class="headline text-base font-bold leading-snug text-ink group-hover:text-coralDark md:text-lg">{article.data.articleTitle ?? article.data.title}</p>
             <p class="text-xs text-clay">{article.data.channel} · {article.data.keyPhrases.slice(0, 3).map((p) => `#${p}`).join(" ")}</p>
           </div>
           <span class="mt-1 text-clay/60 group-hover:text-coral" aria-hidden="true">↓</span>
@@ -132,7 +132,7 @@ const hrefFor = (date: string) => (date === latestDate ? withBase("/") : withBas
     <div id={`article-${article.id}`} class="scroll-mt-24">
       <ArticleCard
         articleId={article.id}
-        title={article.data.title}
+        title={article.data.articleTitle ?? article.data.title}
         channel={article.data.channel}
         headerImage={article.data.headerImage}
         publishedAt={article.data.fetchedAt}

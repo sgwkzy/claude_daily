@@ -24,6 +24,7 @@ class ArticleSection(BaseModel):
 
 
 class SummaryResult(BaseModel):
+    articleTitle: str = Field(min_length=1)
     bulletPoints: list[BulletPoint] = Field(min_length=1)
     sections: list[ArticleSection] = Field(min_length=1)
     keyPhrases: list[str] = Field(min_length=1)
@@ -49,6 +50,7 @@ class VideoCandidate(BaseModel):
 class ArticleFrontmatter(BaseModel):
     videoId: str = Field(min_length=1)
     title: str = Field(min_length=1)
+    articleTitle: str | None = None
     channel: str = Field(min_length=1)
     channelId: str = Field(min_length=1)
     publishedAt: datetime

@@ -26,9 +26,12 @@ class TranscriptSummarizer:
             system=(
                 "あなたはYouTube字幕を日本語の構造化記事に要約するアシスタントです。"
                 " 出力はJSONのみ。形式は "
-                "{\"bulletPoints\":[{\"time\":0,\"text\":\"...\"}],"
+                "{\"articleTitle\":\"...\","
+                "\"bulletPoints\":[{\"time\":0,\"text\":\"...\"}],"
                 "\"sections\":[{\"heading\":\"...\",\"time\":0,\"body\":\"...\"}],"
                 "\"keyPhrases\":[\"...\"]}。"
+                " articleTitleは必須。日本語の記事見出しで30〜50字程度。検索意図に沿った具体的な内容を含め、"
+                "元動画タイトルの直訳・直写しは禁止。煽り表現は禁止。感嘆符は禁止。絵文字は禁止。"
                 " bulletPointsは5〜8件、sectionsは3〜5件、timeは入力に存在する秒数を使うこと。"
             ),
             messages=[
@@ -86,6 +89,7 @@ def _dummy_summary(segments: list[TranscriptSegment]) -> SummaryResult:
     ]
     return SummaryResult.model_validate(
         {
+            "articleTitle": "Claude Codeをコードベース操作エージェントとして使いこなす実装フローとMCP連携",
             "bulletPoints": bullet_points,
             "sections": sections,
             "keyPhrases": ["Claude Code", "MCP", "AIエージェント", "開発フロー", "コンテキスト設計"],
