@@ -31,6 +31,7 @@ const socialImage = image ? new URL(image, siteUrl).toString() : new URL(withBas
 const robotsContent = noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large";
 const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
+const adsenseClientId = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID;
 const structuredDataPayload = structuredData ? JSON.stringify(structuredData) : undefined;
 ---
 
@@ -73,6 +74,13 @@ const structuredDataPayload = structuredData ? JSON.stringify(structuredData) : 
         `}</script>
       </>
     )}
+    {adsenseClientId && (
+      <script
+        async
+        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseClientId}`}
+        crossorigin="anonymous"
+      ></script>
+    )}
     {structuredDataPayload && <script type="application/ld+json" set:html={structuredDataPayload} />}
   </head>
   <body>
@@ -93,7 +101,10 @@ const structuredDataPayload = structuredData ? JSON.stringify(structuredData) : 
         <slot />
       </main>
       <footer class="border-t border-line/70 bg-paper/50 py-8 text-center text-xs leading-7 text-clay">
-        Claude Daily — 自動要約のため正確性は保証されません。出典は各記事末尾に記載しています。
+        <p>Claude Daily — 自動要約のため正確性は保証されません。出典は各記事末尾に記載しています。</p>
+        <p class="mt-2">
+          <a href={withBase("/privacy/")} class="underline hover:text-coral">プライバシーポリシー</a>
+        </p>
       </footer>
     </div>
   </body>
