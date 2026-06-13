@@ -135,7 +135,7 @@ const hrefFor = (date: string) => (date === latestDate ? withBase("/") : withBas
         title={article.data.title}
         channel={article.data.channel}
         headerImage={article.data.headerImage}
-        publishedAt={article.data.publishedAt}
+        publishedAt={article.data.fetchedAt}
         keyPhrases={article.data.keyPhrases}
         bulletPoints={article.data.bulletPoints}
       />

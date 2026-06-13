@@ -19,7 +19,7 @@ export const loadDailyGroups = async (): Promise<DayGroup[]> => {
   const articles = await getCollection("articles");
   const groups = new Map<string, Article[]>();
   for (const article of articles) {
-    const key = toDateKey(article.data.publishedAt);
+    const key = toDateKey(article.data.fetchedAt);
     const list = groups.get(key) ?? [];
     list.push(article);
     groups.set(key, list);
@@ -28,7 +28,7 @@ export const loadDailyGroups = async (): Promise<DayGroup[]> => {
     .map(([date, items]) => ({
       date,
       articles: items.sort(
-        (a, b) => b.data.publishedAt.getTime() - a.data.publishedAt.getTime()
+        (a, b) => b.data.fetchedAt.getTime() - a.data.fetchedAt.getTime()
       ),
     }))
     .sort((a, b) => (a.date < b.date ? 1 : -1));

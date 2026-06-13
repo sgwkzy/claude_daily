@@ -46,7 +46,7 @@ const structuredData = {
   headline: data.title,
   description: articleDescription,
   image: [`https://www.claude-daily.com${heroImageSrc}`],
-  datePublished: data.publishedAt.toISOString(),
+  datePublished: data.fetchedAt.toISOString(),
   dateModified: data.fetchedAt.toISOString(),
   inLanguage: "ja",
   author: {
@@ -72,7 +72,7 @@ const structuredData = {
   path={`/articles/${article.id}/`}
   image={heroImageSrc}
   type="article"
-  publishedTime={data.publishedAt.toISOString()}
+  publishedTime={data.fetchedAt.toISOString()}
   structuredData={structuredData}
 >
   <article class="mx-auto max-w-[74rem] space-y-12 xl:max-w-[72rem]">
@@ -82,7 +82,7 @@ const structuredData = {
           <div class="flex flex-wrap items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">
             <span class="truncate">{data.channel}</span>
             <span class="h-px w-6 bg-line"></span>
-            <time>{data.publishedAt.toLocaleDateString("ja-JP")}</time>
+            <time>{data.fetchedAt.toLocaleDateString("ja-JP")}</time>
             <span class="h-px w-6 bg-line"></span>
             <span>{minutes}分の動画</span>
             <span class="h-px w-6 bg-line"></span>
@@ -170,7 +170,7 @@ const structuredData = {
           <p class="text-[0.7rem] uppercase tracking-[0.22em] text-clay">{data.channel}</p>
           <h3 class="headline text-xl font-bold leading-snug text-ink">{data.title}</h3>
           <div class="flex flex-wrap gap-4 text-xs text-clay">
-            <span>公開日 {data.publishedAt.toLocaleDateString("ja-JP")}</span>
+            <span>動画公開日 {data.publishedAt.toLocaleDateString("ja-JP")}</span>
             <span>{minutes}分</span>
             <span>{data.viewCount.toLocaleString("ja-JP")} 回再生</span>
           </div>
