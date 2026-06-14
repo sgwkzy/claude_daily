@@ -8,12 +8,15 @@ export interface DayGroup {
   articles: Article[];
 }
 
-const toDateKey = (date: Date): string => {
-  const year = date.getFullYear();
-  const month = String(date.getMonth() + 1).padStart(2, "0");
-  const day = String(date.getDate()).padStart(2, "0");
-  return `${year}-${month}-${day}`;
-};
+// 日次バケットは JST (Asia/Tokyo) で決定する。ビルド環境のローカル時間に依存させない。
+const JST_DATE_FORMATTER = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Asia/Tokyo",
+  year: "numeric",
+  month: "2-digit",
+  day: "2-digit",
+});
+
+const toDateKey = (date: Date): string => JST_DATE_FORMATTER.format(date);
 
 export const loadDailyGroups = async (): Promise<DayGroup[]> => {
   const articles = await getCollection("articles");
