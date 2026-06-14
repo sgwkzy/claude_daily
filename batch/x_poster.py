@@ -119,10 +119,10 @@ def _to_hashtag(phrase: str) -> str | None:
 def post_articles_with_delay(
     poster: XPoster,
     payloads: list[PostPayload],
-    min_delay_sec: int = 300,
-    max_delay_sec: int = 600,
+    min_delay_sec: int = 3600,
+    max_delay_sec: int = 3600,
 ) -> int:
-    """新規作成記事を順次投稿する。投稿間に 5〜10 分のランダム待機を挟む。"""
+    """新規作成記事を順次投稿する。投稿間に 1 時間の待機を挟む。"""
     if not payloads:
         return 0
     if not poster.enabled:
