@@ -64,6 +64,8 @@ class HeaderImageGenerator:
                 prompt=prompt,
                 size="1536x1024",
             )
+        if not response.data or not response.data[0].b64_json:
+            raise ValueError("OpenAI 画像生成レスポンスが空です。")
         image_base64 = response.data[0].b64_json
         _normalize_header_image(base64.b64decode(image_base64), destination)
         return destination

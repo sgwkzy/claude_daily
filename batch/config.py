@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 from pathlib import Path
-from typing import Any
 
 import yaml
 from pydantic import BaseModel, Field
@@ -11,9 +10,9 @@ class YoutubeConfig(BaseModel):
     keywords: list[str] = Field(default_factory=list)
     limit_total: int = 10
     per_keyword_top_n: int = 5
-    min_view_count: int = 10000
+    min_view_count: int = 5000
     min_duration_sec: int = 180
-    max_age_hours: int = 48
+    max_age_hours: int = 72
     region_code: str = "JP"
 
 
@@ -53,13 +52,3 @@ def ensure_directories(root: Path, settings: Settings) -> None:
         settings.pipeline.temp_dir,
     ):
         (root / relative_path).mkdir(parents=True, exist_ok=True)
-
-
-def deep_merge(base: dict[str, Any], extra: dict[str, Any]) -> dict[str, Any]:
-    merged = dict(base)
-    for key, value in extra.items():
-        if isinstance(value, dict) and isinstance(merged.get(key), dict):
-            merged[key] = deep_merge(merged[key], value)
-        else:
-            merged[key] = value
-    return merged

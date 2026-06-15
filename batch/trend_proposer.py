@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import json
-
 
 class TrendProposer:
     def __init__(self, api_key: str | None, model: str = "claude-sonnet-4-6") -> None:
@@ -13,7 +11,7 @@ class TrendProposer:
             return ["AI agents", "developer tools", "breaking tech news"][:limit]
         if not self.api_key:
             raise ValueError("ANTHROPIC_API_KEY が設定されていません。")
-        from .llm import anthropic_client
+        from .llm import anthropic_client, parse_json_response
 
         client = anthropic_client(self.api_key)
         response = client.messages.create(
@@ -32,6 +30,6 @@ class TrendProposer:
             ],
         )
         text = "".join(block.text for block in response.content if getattr(block, "type", "") == "text")
-        payload = json.loads(text)
-        keywords = payload.get("keywords", [])
+        payload = parse_json_response(text)
+        keywords = payload.get("keywords", []) if isinstance(payload, dict) else []
         return [str(keyword) for keyword in keywords][:limit]
