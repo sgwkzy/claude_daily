@@ -12,6 +12,7 @@ class YoutubeConfig(BaseModel):
     limit_total: int = 10
     per_keyword_top_n: int = 5
     min_view_count: int = 10000
+    min_duration_sec: int = 180
     max_age_hours: int = 48
     region_code: str = "JP"
 

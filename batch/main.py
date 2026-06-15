@@ -76,7 +76,7 @@ def main() -> int:
 
     keywords = settings.youtube.keywords + trend_keywords
     candidates = fetcher.fetch(keywords=keywords, dry_run=args.dry_run)
-    ranked = dedupe_and_rank(candidates, limit=limit)
+    ranked = dedupe_and_rank(candidates, limit=limit, youtube_config=settings.youtube)
 
     for candidate in ranked:
         stats.processed += 1

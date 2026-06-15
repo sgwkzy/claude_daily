@@ -8,6 +8,7 @@ youtube:
   limit_total: 10
   per_keyword_top_n: 5
   min_view_count: 5000
+  min_duration_sec: 180
   max_age_hours: 72
   region_code: JP
 pipeline:
