@@ -8,8 +8,18 @@ import tempfile
 from pathlib import Path
 
 from .models import TranscriptSegment
+from .utils import contains_japanese, unique_preserving_order
 
 logger = logging.getLogger(__name__)
+
+
+def preferred_languages(title: str) -> list[str]:
+    """タイトルが日本語中心なら ja を優先、それ以外は en を優先した字幕言語順を返す。
+
+    グローバル版運用（非日本語チャンネルも候補に入る）に合わせ、元動画の言語傾向を
+    タイトルから推定して字幕取得の試行順を決める。
+    """
+    return ["ja", "en"] if contains_japanese(title) else ["en", "ja"]
 
 
 class TranscriptFetcher:
@@ -136,11 +146,7 @@ def _expand_language_codes(languages: list[str]) -> list[str]:
         if "-" in lang:
             expanded.append(lang.split("-", 1)[0])
     expanded.extend(["en", "ja"])
-    seen: list[str] = []
-    for lang in expanded:
-        if lang not in seen:
-            seen.append(lang)
-    return seen
+    return unique_preserving_order(expanded)
 
 
 def _has_command(command: str) -> bool:

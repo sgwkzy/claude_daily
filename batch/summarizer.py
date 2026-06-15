@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-import json
-
 from .models import SummaryResult, TranscriptSegment
 
 
@@ -15,9 +13,9 @@ class TranscriptSummarizer:
             return _dummy_summary(segments)
         if not self.api_key:
             raise ValueError("ANTHROPIC_API_KEY が設定されていません。")
-        from anthropic import Anthropic
+        from .llm import anthropic_client, parse_json_response
 
-        client = Anthropic(api_key=self.api_key)
+        client = anthropic_client(self.api_key)
         transcript_text = "\n".join(f"[{segment.start}] {segment.text}" for segment in segments)
         response = client.messages.create(
             model=self.model,
@@ -42,7 +40,7 @@ class TranscriptSummarizer:
             ],
         )
         text = "".join(block.text for block in response.content if getattr(block, "type", "") == "text")
-        return SummaryResult.model_validate(json.loads(text))
+        return SummaryResult.model_validate(parse_json_response(text))
 
 
 def _dummy_summary(segments: list[TranscriptSegment]) -> SummaryResult:
