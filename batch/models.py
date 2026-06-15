@@ -74,3 +74,9 @@ class PipelineStats(BaseModel):
     skipped_existing: int = 0
     skipped_transcript: int = 0
     skipped_errors: int = 0
+    # skipped_errors の内訳（標準出力サマリには出さず、ログ・調査用）。
+    failed_transcript: int = 0
+    failed_summary: int = 0
+    failed_media: int = 0
+    failed_header: int = 0
+    failed_write: int = 0

@@ -9,15 +9,15 @@ from pathlib import Path
 if __package__ in {None, ""}:
     sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
-from batch.article_writer import build_frontmatter, write_article
 from batch.config import ensure_directories, load_config
 from batch.fetcher import YouTubeFetcher
-from batch.header_image import HeaderContext, HeaderImageGenerator
+from batch.header_image import HeaderImageGenerator
 from batch.media import MediaManager
 from batch.models import PipelineStats
+from batch.pipeline import PipelineDeps, process_candidate
 from batch.ranker import dedupe_and_rank
 from batch.summarizer import TranscriptSummarizer
-from batch.transcript import TranscriptFetcher, compact_segments
+from batch.transcript import TranscriptFetcher
 from batch.trend_proposer import TrendProposer
 from batch.x_poster import PostPayload, XPoster, post_articles_with_delay
 
@@ -78,87 +78,21 @@ def main() -> int:
     candidates = fetcher.fetch(keywords=keywords, dry_run=args.dry_run)
     ranked = dedupe_and_rank(candidates, limit=limit, youtube_config=settings.youtube)
 
+    deps = PipelineDeps(
+        root=root,
+        settings=settings,
+        transcript_fetcher=transcript_fetcher,
+        summarizer=summarizer,
+        media=media,
+        header_generator=header_generator,
+        thumbnail_directions=thumbnail_directions,
+        dry_run=args.dry_run,
+    )
+
     for candidate in ranked:
-        stats.processed += 1
-        article_path = root / settings.pipeline.output_articles_dir / f"{candidate.video_id}.md"
-        if article_path.exists():
-            stats.skipped_existing += 1
-            print(f"既存記事のためスキップ: {candidate.video_id}")
-            logger.info("Skipped existing article: video_id=%s", candidate.video_id)
-            continue
-        try:
-            segments = compact_segments(
-                transcript_fetcher.fetch(candidate.video_id, languages=[candidate.source_language, "ja", "en"], dry_run=args.dry_run)
-            )
-            if not segments:
-                stats.skipped_transcript += 1
-                print(f"字幕が取得できないためスキップ: {candidate.video_id}")
-                logger.warning("Skipped due to missing transcript: video_id=%s", candidate.video_id)
-                continue
-
-            summary = summarizer.summarize(candidate.title, segments, dry_run=args.dry_run)
-            image_dir = root / settings.pipeline.output_images_dir / candidate.video_id
-            thumbnail_path = media.download_thumbnail(str(candidate.original_thumbnail), image_dir / "thumbnail.webp", dry_run=args.dry_run)
-            video_path = media.download_video(candidate.video_id, dry_run=args.dry_run)
-            for index, section in enumerate(summary.sections, start=1):
-                frame_path = media.extract_frame(video_path, section.time, image_dir / f"scene-{index}.webp", dry_run=args.dry_run)
-                if frame_path:
-                    section.image = f"/images/{candidate.video_id}/{frame_path.name}"
-            media.cleanup(video_path)
-
-            header_path = image_dir / "header.png"
-            header_context = HeaderContext(
-                title=candidate.title,
-                channel=candidate.channel,
-                key_phrases=summary.keyPhrases,
-                bullet_points=[item.text for item in summary.bulletPoints],
-                section_headings=[section.heading for section in summary.sections],
-            )
-            try:
-                generated_headers = []
-                for index, direction in enumerate(thumbnail_directions):
-                    is_primary = index == 0
-                    destination = header_path if is_primary else image_dir / f"header-{direction}.png"
-                    prompt_dump = image_dir / f"header-{direction}.prompt.txt" if len(thumbnail_directions) > 1 else None
-                    generated_headers.append(
-                        header_generator.generate(
-                            thumbnail_path,
-                            destination,
-                            candidate.title,
-                            dry_run=args.dry_run,
-                            direction=direction,
-                            context=header_context,
-                            prompt_dump_path=prompt_dump,
-                        )
-                    )
-                if generated_headers and generated_headers[0] != header_path:
-                    header_path.write_bytes(generated_headers[0].read_bytes())
-            except Exception as error:
-                print(f"ヘッダー画像生成に失敗したためサムネイルを使用します: {candidate.video_id} / {error}")
-                header_path.write_bytes(thumbnail_path.read_bytes())
-
-            frontmatter = build_frontmatter(
-                candidate=candidate,
-                summary=summary,
-                header_image=f"/images/{candidate.video_id}/{header_path.name}",
-                hero_image=f"/images/{candidate.video_id}/{header_path.name}",
-            )
-            write_article(frontmatter, article_path)
-            stats.created += 1
-            pending_x_posts.append(
-                PostPayload(
-                    article_title=summary.articleTitle,
-                    slug=candidate.video_id.lower(),
-                    key_phrases=list(summary.keyPhrases),
-                )
-            )
-            print(f"記事を生成しました: {article_path.relative_to(root)}")
-            logger.info("Article created: video_id=%s article_path=%s", candidate.video_id, article_path)
-        except Exception as error:
-            stats.skipped_errors += 1
-            print(f"動画処理でエラーが発生したためスキップします: {candidate.video_id} / {error}")
-            logger.exception("Video processing failed: video_id=%s", candidate.video_id)
-            continue
+        payload = process_candidate(candidate, deps, stats)
+        if payload is not None:
+            pending_x_posts.append(payload)
 
     print(
         "実行結果:"
@@ -172,6 +106,14 @@ def main() -> int:
         stats.skipped_existing,
         stats.skipped_transcript,
         stats.skipped_errors,
+    )
+    logger.info(
+        "Error breakdown failed_transcript=%s failed_summary=%s failed_media=%s failed_header=%s failed_write=%s",
+        stats.failed_transcript,
+        stats.failed_summary,
+        stats.failed_media,
+        stats.failed_header,
+        stats.failed_write,
     )
 
     if pending_x_posts and not args.dry_run and not args.no_x_post:
