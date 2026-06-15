@@ -19,6 +19,7 @@ from batch.ranker import dedupe_and_rank
 from batch.summarizer import TranscriptSummarizer
 from batch.transcript import TranscriptFetcher
 from batch.trend_proposer import TrendProposer
+from batch.utils import unique_preserving_order
 from batch.x_poster import PostPayload, XPoster, post_articles_with_delay
 
 
@@ -137,11 +138,7 @@ def _resolve_thumbnail_directions(cli_value: str | None, config_value: list[str]
     directions = [item.strip() for item in source if item.strip()]
     if not directions:
         return ["source-explainer"]
-    seen: list[str] = []
-    for direction in directions:
-        if direction not in seen:
-            seen.append(direction)
-    return seen
+    return unique_preserving_order(directions)
 
 
 def _configure_logging(log_dir: Path) -> None:

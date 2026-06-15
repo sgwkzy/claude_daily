@@ -48,9 +48,9 @@ class HeaderImageGenerator:
             prompt_dump_path.parent.mkdir(parents=True, exist_ok=True)
             prompt_dump_path.write_text(prompt, encoding="utf-8")
         if dry_run:
-            from .media import _write_placeholder
+            from .placeholder import write_placeholder
 
-            _write_placeholder(destination, seed=title, palette="header")
+            write_placeholder(destination, seed=title, palette="header")
             return destination
         if not self.api_key:
             raise ValueError("OPENAI_API_KEY が設定されていません。")

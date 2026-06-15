@@ -8,6 +8,7 @@ import tempfile
 from pathlib import Path
 
 from .models import TranscriptSegment
+from .utils import unique_preserving_order
 
 logger = logging.getLogger(__name__)
 
@@ -136,11 +137,7 @@ def _expand_language_codes(languages: list[str]) -> list[str]:
         if "-" in lang:
             expanded.append(lang.split("-", 1)[0])
     expanded.extend(["en", "ja"])
-    seen: list[str] = []
-    for lang in expanded:
-        if lang not in seen:
-            seen.append(lang)
-    return seen
+    return unique_preserving_order(expanded)
 
 
 def _has_command(command: str) -> bool:

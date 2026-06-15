@@ -15,9 +15,9 @@ class TranscriptSummarizer:
             return _dummy_summary(segments)
         if not self.api_key:
             raise ValueError("ANTHROPIC_API_KEY が設定されていません。")
-        from anthropic import Anthropic
+        from .llm import anthropic_client
 
-        client = Anthropic(api_key=self.api_key)
+        client = anthropic_client(self.api_key)
         transcript_text = "\n".join(f"[{segment.start}] {segment.text}" for segment in segments)
         response = client.messages.create(
             model=self.model,

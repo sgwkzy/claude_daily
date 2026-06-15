@@ -13,9 +13,9 @@ class TrendProposer:
             return ["AI agents", "developer tools", "breaking tech news"][:limit]
         if not self.api_key:
             raise ValueError("ANTHROPIC_API_KEY が設定されていません。")
-        from anthropic import Anthropic
+        from .llm import anthropic_client
 
-        client = Anthropic(api_key=self.api_key)
+        client = anthropic_client(self.api_key)
         response = client.messages.create(
             model=self.model,
             max_tokens=300,
