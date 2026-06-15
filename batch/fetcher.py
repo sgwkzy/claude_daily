@@ -23,30 +23,31 @@ class YouTubeFetcher:
         collected: list[VideoCandidate] = []
         published_after = (datetime.now(UTC) - timedelta(hours=self.settings.youtube.max_age_hours)).isoformat()
 
-        for keyword in keywords:
-            search_response = (
-                service.search()
-                .list(
-                    part="snippet",
-                    type="video",
-                    q=keyword,
-                    order="viewCount",
-                    maxResults=self.settings.youtube.per_keyword_top_n,
-                    publishedAfter=published_after,
-                    regionCode=self.settings.youtube.region_code,
+        for region in self.settings.youtube.effective_regions():
+            for keyword in keywords:
+                search_response = (
+                    service.search()
+                    .list(
+                        part="snippet",
+                        type="video",
+                        q=keyword,
+                        order="viewCount",
+                        maxResults=self.settings.youtube.per_keyword_top_n,
+                        publishedAfter=published_after,
+                        regionCode=region,
+                    )
+                    .execute()
                 )
-                .execute()
-            )
-            video_ids = [item["id"]["videoId"] for item in search_response.get("items", []) if item.get("id", {}).get("videoId")]
-            if not video_ids:
-                continue
-            videos_response = (
-                service.videos()
-                .list(part="snippet,statistics,contentDetails", id=",".join(video_ids))
-                .execute()
-            )
-            for item in videos_response.get("items", []):
-                collected.append(self._to_candidate(item, keyword))
+                video_ids = [item["id"]["videoId"] for item in search_response.get("items", []) if item.get("id", {}).get("videoId")]
+                if not video_ids:
+                    continue
+                videos_response = (
+                    service.videos()
+                    .list(part="snippet,statistics,contentDetails", id=",".join(video_ids))
+                    .execute()
+                )
+                for item in videos_response.get("items", []):
+                    collected.append(self._to_candidate(item, keyword))
         return collected
 
     def _to_candidate(self, item: dict, keyword: str) -> VideoCandidate:

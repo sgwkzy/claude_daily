@@ -11,6 +11,11 @@ youtube:
   min_duration_sec: 180
   max_age_hours: 72
   region_code: JP
+  # グローバル版運用: JP と US を叩いて videoId でデデュープ（ranker が処理）。
+  # 単一地域に戻す場合は regions を空にすれば region_code(JP) にフォールバックする。
+  regions:
+    - JP
+    - US
 pipeline:
   dry_run_limit: 2
   section_count_min: 3

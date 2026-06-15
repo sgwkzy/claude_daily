@@ -13,7 +13,13 @@ class YoutubeConfig(BaseModel):
     min_view_count: int = 5000
     min_duration_sec: int = 180
     max_age_hours: int = 72
+    # 後方互換用の単一地域。新しい運用は regions（配列）を使う。
     region_code: str = "JP"
+    regions: list[str] = Field(default_factory=list)
+
+    def effective_regions(self) -> list[str]:
+        """検索対象の地域コード一覧。regions 未指定なら region_code 単独にフォールバック。"""
+        return self.regions if self.regions else [self.region_code]
 
 
 class PipelineConfig(BaseModel):

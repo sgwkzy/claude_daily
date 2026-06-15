@@ -16,7 +16,7 @@ from .header_image import HeaderContext, HeaderImageGenerator
 from .media import MediaManager
 from .models import PipelineStats, VideoCandidate
 from .summarizer import TranscriptSummarizer
-from .transcript import TranscriptFetcher, compact_segments
+from .transcript import TranscriptFetcher, compact_segments, preferred_languages
 from .x_poster import PostPayload
 
 logger = logging.getLogger(__name__)
@@ -61,7 +61,7 @@ def process_candidate(
         segments = compact_segments(
             deps.transcript_fetcher.fetch(
                 candidate.video_id,
-                languages=[candidate.source_language, "ja", "en"],
+                languages=preferred_languages(candidate.title),
                 dry_run=deps.dry_run,
             )
         )
