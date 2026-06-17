@@ -82,35 +82,26 @@ const structuredData = {
         <div class="border-b border-line/60 px-6 py-6 md:px-8 md:py-8 xl:px-9">
           <div class="flex flex-wrap items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">
             <span class="truncate">{data.channel}</span>
-            <span class="h-px w-6 bg-line"></span>
+            <span aria-hidden="true">·</span>
             <time>{data.fetchedAt.toLocaleDateString("ja-JP")}</time>
-            <span class="h-px w-6 bg-line"></span>
+            <span aria-hidden="true">·</span>
             <span>{minutes}分の動画</span>
-            <span class="h-px w-6 bg-line"></span>
+            <span aria-hidden="true">·</span>
             <span>{total} slides</span>
           </div>
-          <h1 class="headline mt-5 text-[2rem] font-black leading-[1.14] text-ink md:text-[2.45rem] xl:max-w-[56rem] xl:text-[2.9rem]">{displayTitle}</h1>
-          <div class="mt-5 flex flex-wrap gap-2">
+          <h1 class="headline mt-5 text-[1.65rem] font-black leading-[1.32] text-ink sm:text-[2rem] sm:leading-[1.18] md:text-[2.45rem] md:leading-[1.14] xl:max-w-[56rem] xl:text-[2.9rem]">{displayTitle}</h1>
+          <div class="mt-5 flex flex-wrap items-center gap-2">
             {data.keyPhrases.map((phrase, i) => (
-              <span class={`rounded-full border px-3 py-1 text-sm ${chipStyles[i % chipStyles.length]}`}>#{phrase}</span>
+              <span class={`rounded-full border px-2.5 py-0.5 text-xs ${chipStyles[i % chipStyles.length]}`}>#{phrase}</span>
             ))}
           </div>
-          <div class="mt-6 grid gap-4 rounded-[1.6rem] border border-line/60 bg-cream/55 p-5 sm:grid-cols-2">
-            <div>
-              <p class="text-[0.68rem] uppercase tracking-[0.24em] text-clay">Takeaways</p>
-              <p class="mt-2 text-sm font-semibold text-ink md:text-base">{data.bulletPoints.length} highlights</p>
-            </div>
-            <div>
-              <p class="text-[0.68rem] uppercase tracking-[0.24em] text-clay">Source</p>
-              <p class="mt-2 text-sm font-semibold text-ink md:text-base">{data.viewCount.toLocaleString("ja-JP")} views</p>
-            </div>
-          </div>
         </div>
-        <div class="bg-[#ded1c2]">
-          <div class="flex min-h-[18rem] items-center justify-center px-4 py-4 sm:min-h-[20rem] md:min-h-[24rem] md:px-6 md:py-6 xl:min-h-[35rem] xl:px-8 xl:py-8">
-            <div class="w-full overflow-hidden rounded-[1.75rem] border border-black/5 shadow-[0_20px_50px_rgba(32,24,17,0.08)]">
-              <img src={heroImageSrc} alt={data.title} class="aspect-video h-full w-full object-cover object-center" />
-            </div>
+        <div class="relative">
+          <img src={heroImageSrc} alt={data.title} class="aspect-video w-full object-cover object-center" />
+          <div class="absolute bottom-3 right-3 flex items-center gap-2 rounded-full bg-ink/70 px-3 py-1.5 text-[0.7rem] font-semibold text-paper backdrop-blur-sm md:bottom-4 md:right-4 md:gap-3 md:px-4 md:py-2 md:text-xs">
+            <span>{data.viewCount.toLocaleString("ja-JP")} views</span>
+            <span class="text-paper/40" aria-hidden="true">·</span>
+            <span>{data.bulletPoints.length} highlights</span>
           </div>
         </div>
       </div>
