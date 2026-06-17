@@ -2,9 +2,9 @@
 
 ## Overview
 
-Claude Daily のサムネイルは、記事一覧と記事ページの両方で一貫した見え方になることを目的に、`source-explainer` 方針を標準採用する。
+Claude Daily のヘッダーは、記事一覧と記事ページの両方で一貫した見え方になることを目的に、`editorial-rebuild` 方針を標準採用する。
 
-この方針では、元動画との結びつきを残しながら、記事で何が分かるかを短く伝える。アート性よりも、次の 3 点を優先する。
+この方針では、元動画サムネイルをそのまま土台にせず、記事内容に合わせて背景・構図・タイポグラフィをまとめて再生成する。優先するのは次の 3 点。
 
 - 元動画のトピックがすぐ分かる
 - 記事の要点が 1 秒で伝わる
@@ -12,16 +12,16 @@ Claude Daily のサムネイルは、記事一覧と記事ページの両方で�
 
 ## Final Direction
 
-採用方針は `Direction B: Source + Explainer`。
+採用方針は `Editorial Rebuild`。
 
 ### Visual Rules
 
-- ベースは元動画サムネイル、または元動画の文脈を保った説明画像
+- 左に強い日本語見出し、右に主ビジュアルを置く
 - 小さなカテゴリチップを 1 つ置く
-- 短い日本語見出しを 1 つ置く
 - 補足要素は 2 から 3 個まで
+- warm beige / coral / charcoal を軸にした上品な editorial explainer にする
 - 画像内に `Claude Daily` のような媒体ロゴは基本的に入れない
-- 主役の人物、主要 UI、製品名を隠さない
+- 騒がしい YouTube サムネ風の矢印・丸囲み・過剰な煽りは避ける
 
 ### Text Rules
 
@@ -69,8 +69,8 @@ Claude Daily のサムネイルは、記事一覧と記事ページの両方で�
 生成時には次の情報を使う。
 
 - 動画タイトル
+- 日本語記事タイトル
 - チャンネル名
-- 元動画サムネイル
 - 記事の key phrases
 - 記事の bullet points
 - セクション見出し
@@ -79,7 +79,7 @@ Claude Daily のサムネイルは、記事一覧と記事ページの両方で�
 
 ### Default Behavior
 
-- 既定の生成方針は `source-explainer`
+- 既定の生成方針は `editorial-rebuild`
 - 出力は `header.png`
 - フロントマターの `headerImage` と `heroImage` は、初期状態では同じ画像を指す
 
@@ -97,12 +97,13 @@ Claude Daily のサムネイルは、記事一覧と記事ページの両方で�
 
 比較検証が必要な場合のみ、複数方針を使う。
 
+- `editorial-rebuild`
 - `source-first`
 - `source-explainer`
 - `frame-summary`
 - `reconstructed-concept`
 
-通常運用では使わない。既定運用は `source-explainer` のみ。
+通常運用では比較用途のみ。既定運用は `editorial-rebuild` のみ。
 
 ## Maintenance Notes
 

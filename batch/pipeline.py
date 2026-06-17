@@ -113,7 +113,9 @@ def process_candidate(
     header_path = image_dir / "header.png"
     header_context = HeaderContext(
         title=candidate.title,
+        article_title=summary.articleTitle,
         channel=candidate.channel,
+        category_label=candidate.matched_keywords[0] if candidate.matched_keywords else "",
         key_phrases=summary.keyPhrases,
         bullet_points=[item.text for item in summary.bulletPoints],
         section_headings=[section.heading for section in summary.sections],

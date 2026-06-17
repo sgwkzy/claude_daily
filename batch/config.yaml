@@ -27,4 +27,4 @@ prompts:
   trend_limit: 3
   header_style: warm editorial collage, soft beige and coral palette, abstract paper-cut shapes, calm and modern
   thumbnail_directions:
-    - source-explainer
+    - editorial-rebuild

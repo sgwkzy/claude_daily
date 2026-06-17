@@ -49,7 +49,7 @@ def _make_deps(root: Path) -> PipelineDeps:
         summarizer=TranscriptSummarizer(api_key=None),
         media=MediaManager(root / settings.pipeline.temp_dir),
         header_generator=HeaderImageGenerator(api_key=None, style_prompt="test style"),
-        thumbnail_directions=["source-explainer"],
+        thumbnail_directions=["editorial-rebuild"],
         dry_run=True,
     )
 

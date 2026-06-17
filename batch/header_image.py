@@ -9,6 +9,7 @@ from PIL import Image, ImageOps
 
 
 SUPPORTED_DIRECTIONS = {
+    "editorial-rebuild",
     "source-first",
     "source-explainer",
     "frame-summary",
@@ -21,6 +22,8 @@ TARGET_HEADER_SIZE = (1672, 941)
 class HeaderContext:
     title: str
     channel: str
+    article_title: str = ""
+    category_label: str = ""
     key_phrases: list[str] = field(default_factory=list)
     bullet_points: list[str] = field(default_factory=list)
     section_headings: list[str] = field(default_factory=list)
@@ -38,7 +41,7 @@ class HeaderImageGenerator:
         title: str,
         dry_run: bool = False,
         *,
-        direction: str = "source-explainer",
+        direction: str = "editorial-rebuild",
         context: HeaderContext | None = None,
         prompt_dump_path: Path | None = None,
     ) -> Path:
@@ -57,13 +60,20 @@ class HeaderImageGenerator:
         from openai import OpenAI
 
         client = OpenAI(api_key=self.api_key)
-        with source_image.open("rb") as image_file:
-            response = client.images.edit(
+        if direction == "editorial-rebuild":
+            response = client.images.generate(
                 model="gpt-image-1",
-                image=image_file,
                 prompt=prompt,
                 size="1536x1024",
             )
+        else:
+            with source_image.open("rb") as image_file:
+                response = client.images.edit(
+                    model="gpt-image-1",
+                    image=image_file,
+                    prompt=prompt,
+                    size="1536x1024",
+                )
         if not response.data or not response.data[0].b64_json:
             raise ValueError("OpenAI 画像生成レスポンスが空です。")
         image_base64 = response.data[0].b64_json
@@ -80,10 +90,37 @@ class HeaderImageGenerator:
         key_phrase_text = _compact_list(context.key_phrases, limit=3)
         bullet_text = _compact_list(context.bullet_points, limit=2)
         section_text = _compact_list(context.section_headings, limit=3)
+        headline_text = context.article_title.strip() or context.title
         source_label = f"Source video title: {context.title}."
+        article_label = f"Japanese article headline: {headline_text}."
         channel_label = f"Channel: {context.channel}." if context.channel else ""
+        category_label = f"Category chip text: {context.category_label}." if context.category_label else ""
         style = f"Visual style: {self.style_prompt}."
 
+        if direction == "editorial-rebuild":
+            return " ".join(
+                part
+                for part in (
+                    "Create a widescreen 16:9 editorial explainer hero image for a Japanese AI article.",
+                    article_label,
+                    source_label,
+                    channel_label,
+                    category_label,
+                    _optional_sentence("Key phrases", key_phrase_text),
+                    _optional_sentence("Article takeaways", bullet_text),
+                    _optional_sentence("Section themes", section_text),
+                    "Generate the entire background and composition from scratch rather than editing or preserving the original video thumbnail.",
+                    "Style: premium magazine-style AI explainer image.",
+                    "Use a warm beige, coral, charcoal palette with restrained clutter, cinematic lighting, and clear visual hierarchy.",
+                    "Composition: left side with strong Japanese headline text and a small category chip; right side with the main visual scene inspired by the article.",
+                    "The image should feel like an article hero, not a noisy YouTube thumbnail.",
+                    "Avoid Claude Daily branding inside the image.",
+                    "Avoid screenshots, giant floating faces, sensational arrows, red circles, and cluttered overlays.",
+                    "Prefer concrete product, workflow, policy, interface, or business cues that match the article.",
+                    style,
+                )
+                if part
+            )
         if direction == "source-first":
             return " ".join(
                 part

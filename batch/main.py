@@ -137,7 +137,7 @@ def _resolve_thumbnail_directions(cli_value: str | None, config_value: list[str]
     source = cli_value.split(",") if cli_value else config_value
     directions = [item.strip() for item in source if item.strip()]
     if not directions:
-        return ["source-explainer"]
+        return ["editorial-rebuild"]
     return unique_preserving_order(directions)
 
 

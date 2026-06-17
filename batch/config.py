@@ -34,7 +34,7 @@ class PipelineConfig(BaseModel):
 class PromptConfig(BaseModel):
     trend_limit: int = 3
     header_style: str = "cinematic editorial collage, vibrant lighting, high contrast"
-    thumbnail_directions: list[str] = Field(default_factory=lambda: ["source-explainer"])
+    thumbnail_directions: list[str] = Field(default_factory=lambda: ["editorial-rebuild"])
 
 
 class Settings(BaseModel):

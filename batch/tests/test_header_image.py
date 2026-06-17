@@ -18,10 +18,12 @@ def test_header_image_dry_run(tmp_path: Path) -> None:
 def test_header_image_builds_directional_prompt(tmp_path: Path) -> None:
     source = tmp_path / "src.webp"
     source.write_bytes(b"demo")
-    prompt_path = tmp_path / "header-source-explainer.prompt.txt"
+    prompt_path = tmp_path / "header-editorial-rebuild.prompt.txt"
     context = HeaderContext(
         title="Claude Code workflow",
+        article_title="Claude Code実践ガイド",
         channel="Demo Channel",
+        category_label="Claude Code",
         key_phrases=["Claude Code", "MCP", "agents"],
         bullet_points=["CLIから実装まで進める", "社内ツール接続で文脈共有する"],
         section_headings=["導入", "実装フロー", "運用"],
@@ -32,12 +34,15 @@ def test_header_image_builds_directional_prompt(tmp_path: Path) -> None:
         tmp_path / "header.webp",
         "Claude Code workflow",
         dry_run=True,
-        direction="source-explainer",
+        direction="editorial-rebuild",
         context=context,
         prompt_dump_path=prompt_path,
     )
     prompt_text = prompt_path.read_text(encoding="utf-8")
-    assert "Use the original video thumbnail as the main background." in prompt_text
-    assert "Design the composition specifically for a consistent 16:9 widescreen editorial thumbnail." in prompt_text
+    assert "Generate the entire background and composition from scratch" in prompt_text
+    assert "Composition: left side with strong Japanese headline text" in prompt_text
+    assert "Avoid Claude Daily branding inside the image." in prompt_text
+    assert "Japanese article headline: Claude Code実践ガイド." in prompt_text
+    assert "Category chip text: Claude Code." in prompt_text
     assert "Key phrases: Claude Code; MCP; agents." in prompt_text
     assert "Article takeaways: CLIから実装まで進める; 社内ツール接続で文脈共有する." in prompt_text
