@@ -69,13 +69,8 @@ const localThumbnail = withBase(`/images/${data.videoId}/thumbnail.webp`);
 const headerImageSrc = withBase(data.headerImage);
 const heroImageSrc = withBase(data.heroImage ?? data.headerImage);
 const articleDescription = getArticleDescription(article);
-const chipStyles = [
-  "border-coral/40 bg-coral/10 text-coralDark",
-  "border-teal/40 bg-teal/10 text-teal",
-  "border-sky/50 bg-sky/15 text-ink/80",
-  "border-salmon/40 bg-salmon/10 text-salmon",
-  "border-sun/50 bg-sun/15 text-ink/80",
-];
+// chip はアクセント1色（coral）に統一。色はトピック種別を符号化しないため装飾的な多色巡回を廃止
+const chipStyle = "border-coral/30 bg-coral/10 text-coralDark";
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Article",
@@ -127,10 +122,10 @@ const structuredData = {
           </div>
           <h1 class="headline mt-5 text-[1.65rem] font-black leading-[1.32] text-ink sm:text-[2rem] sm:leading-[1.18] md:text-[2.45rem] md:leading-[1.14] xl:max-w-[56rem] xl:text-[2.9rem]">{displayTitle}</h1>
           <div class="mt-5 flex flex-wrap items-center gap-2">
-            {data.keyPhrases.map((phrase, i) => (
+            {data.keyPhrases.map((phrase) => (
             <a
               href={withBase(buildTopicHrefFromLabel(phrase))}
-                class={`rounded-full border px-2.5 py-0.5 text-xs transition hover:-translate-y-0.5 hover:shadow-sm ${chipStyles[i % chipStyles.length]}`}
+                class={`rounded-full border px-2.5 py-0.5 text-xs transition hover:-translate-y-0.5 hover:shadow-sm ${chipStyle}`}
               >
                 #{phrase}
               </a>

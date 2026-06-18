@@ -8,10 +8,9 @@
 
 body {
   @apply bg-cream text-ink font-sans;
+  /* アクセントは coral 1色に集約。teal の二重グラデと background-attachment: fixed は廃止 */
   background-image:
-    radial-gradient(circle at top right, rgba(240, 160, 75, 0.14), transparent 40%),
-    radial-gradient(circle at bottom left, rgba(105, 168, 156, 0.08), transparent 42%);
-  background-attachment: fixed;
+    radial-gradient(circle at top right, rgba(240, 160, 75, 0.1), transparent 45%);
 }
 
 a img {
@@ -19,9 +18,30 @@ a img {
 }
 
 .headline {
+  /* 見出しはディスプレイ書体（Noto Serif JP）。本文 sans との対比をつくる */
+  @apply font-display;
   word-break: keep-all;
   overflow-wrap: anywhere;
   line-break: strict;
+}
+
+/* キーボード操作時のフォーカスを可視化（角丸 pill リンクで既定リングが弱いため） */
+:focus-visible {
+  outline: 2px solid theme("colors.coral");
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+/* モーション抑制設定を尊重する */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 .line-clamp-4 {

@@ -33,12 +33,8 @@ const {
 const headerImageSrc = withBase(headerImage);
 const articleHref = withBase(articlePath ?? buildArticlePathFromTitle(title, articleId));
 const previewText = summary ?? bulletPoints[0]?.text;
-const chipStyles = [
-  "border-coral/40 bg-coral/10 text-coralDark",
-  "border-teal/40 bg-teal/10 text-teal",
-  "border-sky/50 bg-sky/15 text-ink/80",
-  "border-salmon/40 bg-salmon/10 text-salmon",
-];
+// chip はアクセント1色（coral）に統一。色はトピック種別を符号化しないため装飾的な多色巡回を廃止
+const chipStyle = "border-coral/30 bg-coral/10 text-coralDark";
 ---
 
 <article class="overflow-hidden rounded-[2rem] border border-line/70 bg-paper shadow-card transition hover:-translate-y-0.5 hover:shadow-slide">
@@ -66,10 +62,10 @@ const chipStyles = [
         <div class="space-y-2 overflow-hidden pt-1">
           <p class="text-[0.7rem] uppercase tracking-[0.24em] text-clay">触れている論点</p>
           <div class="flex flex-wrap gap-2">
-          {keyPhrases.slice(0, 3).map((phrase, i) => (
+          {keyPhrases.slice(0, 3).map((phrase) => (
             <a
               href={withBase(buildTopicHrefFromLabel(phrase))}
-              class={`rounded-full border px-2.5 py-0.5 text-[0.7rem] transition hover:-translate-y-0.5 hover:shadow-sm ${chipStyles[i % chipStyles.length]}`}
+              class={`rounded-full border px-2.5 py-0.5 text-[0.7rem] transition hover:-translate-y-0.5 hover:shadow-sm ${chipStyle}`}
             >
               #{phrase}
             </a>
