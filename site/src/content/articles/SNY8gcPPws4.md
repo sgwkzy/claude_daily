@@ -2,6 +2,9 @@
 videoId: SNY8gcPPws4
 title: '【速報解説】AnthropicのMythos級モデル「Claude Fable 5」をゆる解説 / Mythos 5と何が違う？ / 注目の価格設定 / 性能が弱体化されているのはなぜ？'
 articleTitle: 'Claude Fable 5の二段構えと価格・能力フィルタ・データ保持変更を整理する'
+slug: claude-fable-5-pricing-filters-data-retention
+seoTitle: Claude Fable 5の価格 能力フィルタ データ保持変更を整理
+summary: Claude Fable 5 と Mythos 5 の違い、価格設定、能力制限、データ保持方針までをまとめて把握できる記事です。
 channel: '安野貴博の自由研究'
 channelId: UCiMwbmcCSMORJ-85XWhStBw
 publishedAt: '2026-06-11T07:22:21Z'

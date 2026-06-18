@@ -2,6 +2,9 @@
 videoId: t6Zmu-pBZlE
 title: '【Claudeが自分で爆速開発→「Fable 5」誕生】アンソロピック幹部「寝て起きたらAIが仕事完了」新型モデル“月イチ発表”の裏側／ミュトス級は「ざっくり指示」で意図を理解【1on1 Tech】'
 articleTitle: 'Anthropicキャサリン・ウー氏が語るFable 5の進化と月1モデル開発の現場'
+slug: catherine-woo-fable-5-development
+seoTitle: キャサリン・ウー氏が語るFable 5進化と月1開発体制
+summary: Anthropic 幹部キャサリン・ウー氏の発言をもとに、Fable 5 の進化と高速なモデル開発体制を整理した記事です。
 channel: 'TBS CROSS DIG with Bloomberg'
 channelId: UCeCmAYh1ylwIsgGrmqaklzg
 publishedAt: '2026-06-12T22:00:09Z'

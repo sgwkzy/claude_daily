@@ -2,6 +2,9 @@
 videoId: tj87aylNN-c
 title: 'Claude 5 Fable ausgeschaltet'
 articleTitle: 'ドイツ技術メディアc''t 3003が指摘するClaude停止令の欧州ユーザーへの示唆'
+slug: europe-view-on-claude-fable-shutdown
+seoTitle: Claude停止令を欧州はどう見るか c't 3003の論点整理
+summary: ドイツ技術メディア c't 3003 の視点から、Claude 停止令が欧州ユーザーに与える示唆を整理した記事です。
 channel: 'c''t 3003'
 channelId: UC1t9VFj-O6YUDPQxaVg-NkQ
 publishedAt: '2026-06-13T08:07:22Z'

@@ -2,6 +2,9 @@
 videoId: hm4aFfaf0FA
 title: 'Claude用の業務設計書は全部無料で公開されている！金融も、マーケも営業も論文も'
 articleTitle: 'Anthropicが無料公開するClaude業務設計書3本と「型は借りる」の使い分け'
+slug: anthropic-free-claude-workflow-guides
+seoTitle: Anthropicが無料公開するClaude業務設計書3本と活用法
+summary: Anthropic が公開する Claude 向け業務設計書の中身と、用途に応じた使い分けを短く整理した記事です。
 channel: '海外Yパパラジオ　世界を読み解く'
 channelId: UC8fTn4DsxlAlql3OXJ8syRA
 publishedAt: '2026-06-11T07:56:53Z'

@@ -2,6 +2,9 @@
 videoId: _-jZ6eV3DP4
 title: I Built A Business From Scratch Only Following Claude's Advice
 articleTitle: Claudeの助言だけでカーペット清掃業をゼロから立ち上げた2週間 — 売上£685と次に黒字化する手応え
+slug: claude-carpet-cleaning-business-case
+seoTitle: Claudeだけで清掃ビジネスを立ち上げた実験 2週間の記録
+summary: Claudeの助言を頼りに小さな事業を立ち上げたケースを追い、収益化の初期手応えと運用の実態を要約した記事です。
 channel: 3.7Million
 channelId: UCohkCVfU-15iRhmInV14AyQ
 publishedAt: '2026-06-14T15:00:31Z'

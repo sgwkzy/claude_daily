@@ -62,13 +62,16 @@ def test_process_candidate_creates_article_and_returns_payload(tmp_path: Path) -
     payload = process_candidate(candidate, deps, stats)
 
     assert isinstance(payload, PostPayload)
-    assert payload.slug == "dryrun-pipeline"
+    assert payload.slug == "claude-codeをコードベース操作エージェントとして使いこなす実装フローとmcp連携-dryrun-pipeline"
     assert stats.created == 1
     assert stats.processed == 1
     assert stats.skipped_errors == 0
 
     article_path = tmp_path / "articles" / "dryrun-pipeline.md"
     assert article_path.exists()
+    article_text = article_path.read_text(encoding="utf-8")
+    assert "seoTitle:" in article_text
+    assert "summary:" in article_text
     header_path = tmp_path / "images" / "dryrun-pipeline" / "header.png"
     assert header_path.exists()
 

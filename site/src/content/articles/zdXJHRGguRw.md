@@ -2,6 +2,9 @@
 videoId: zdXJHRGguRw
 title: 'Claude’s Viral Ad Took a Direct Shot at OpenAI 🤯'
 articleTitle: 'AnthropicのSuper Bowl広告がOpenAIを名指し、Sam Altmanが反応した広告戦争'
+slug: anthropic-super-bowl-openai-ad-war
+seoTitle: AnthropicとOpenAIの広告戦争 Super Bowl施策の反応を整理
+summary: AnthropicのSuper Bowl広告をきっかけに生まれたOpenAIとの応酬を、文脈ごと把握しやすくまとめた記事です。
 channel: 'Thinknomy®'
 channelId: UCRffTCRQ54BCPF-04DItPhw
 publishedAt: '2026-06-12T19:00:35Z'

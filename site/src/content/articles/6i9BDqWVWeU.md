@@ -2,6 +2,9 @@
 videoId: 6i9BDqWVWeU
 title: This New Free AI Model is 3x FASTER Than Claude Code! 🤯
 articleTitle: 「Claude Codeより3倍速い無料AI」North Mini codeとは — ローカルで動く軽量コーディングモデル
+slug: north-mini-code-claude-code-alternative
+seoTitle: North Mini codeとは Claude Codeより高速な無料ローカルAIを整理
+summary: North Mini code の特徴、Claude Code との速度差、ローカルで使う軽量コーディングモデルとしての魅力を短くまとめた記事です。
 channel: Vaibhav Sisinty
 channelId: UClXAalunTPaX1YV185DWUeg
 publishedAt: '2026-06-14T12:06:08Z'

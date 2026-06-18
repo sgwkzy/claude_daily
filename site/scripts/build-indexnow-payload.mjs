@@ -17,14 +17,24 @@ const dayUrls = new Set();
 const urlList = [siteUrl.toString()];
 
 for (const fileName of articleFiles) {
-  const slug = path.basename(fileName, ".md");
   const content = await readFile(path.join(articlesDir, fileName), "utf8");
+  const frontmatterMatch = content.match(/^---\r?\n([\s\S]*?)\r?\n---/);
+  const slugMatch = content.match(/^slug:\s*['"]?([^'"\r\n]+)['"]?/m);
   const publishedAtMatch = content.match(/^publishedAt:\s*['"]?([^'"\r\n]+)['"]?/m);
+
+  if (!frontmatterMatch) {
+    throw new Error(`frontmatter not found in ${fileName}`);
+  }
+
+  if (!slugMatch) {
+    throw new Error(`slug not found in ${fileName}`);
+  }
 
   if (!publishedAtMatch) {
     throw new Error(`publishedAt not found in ${fileName}`);
   }
 
+  const slug = slugMatch[1].trim();
   const publishedDate = new Date(publishedAtMatch[1]);
   if (Number.isNaN(publishedDate.valueOf())) {
     throw new Error(`Invalid publishedAt in ${fileName}: ${publishedAtMatch[1]}`);

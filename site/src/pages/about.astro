@@ -1,0 +1,72 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/url";
+
+const description =
+  "Claude Daily について。どんなサイトか、誰向けか、どのようにYouTube動画を要約しているかを説明します。";
+---
+
+<BaseLayout title="About | Claude Daily" description={description} path="/about/">
+  <article class="mx-auto max-w-[52rem] space-y-10 leading-[1.95] text-ink/85">
+    <header>
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">About</p>
+      <h1 class="headline mt-3 text-3xl font-black leading-tight text-ink md:text-4xl">Claude Daily について</h1>
+      <p class="mt-4 text-lg text-ink/75">
+        Claude・Claude Code・Anthropic・MCP まわりのYouTube動画を毎日収集し、
+        日本語で短く読める形に整理するダイジェストサイトです。
+      </p>
+    </header>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">1. このサイトがやっていること</h2>
+      <p>
+        当サイトは、英語圏を含む YouTube 上の関連動画を定期的に収集し、字幕やメタデータをもとに
+        記事化しています。長い動画を最初から視聴しなくても、主要トピックや要点を短時間で把握できることを目的としています。
+      </p>
+      <p>
+        すべての記事には元動画のタイトル、チャンネル名、公開日、動画リンクを明記し、読者が必要に応じて一次情報へ戻れる構成にしています。
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">2. 想定している読者</h2>
+      <ul class="list-disc space-y-2 pl-6">
+        <li>Claude / Claude Code の動向を短時間で追いたい人</li>
+        <li>Anthropic や MCP の情報を日本語でざっと把握したい人</li>
+        <li>動画視聴前に「何が話されているか」を先に知りたい人</li>
+        <li>複数の関連動画を日次でまとめて追いたい人</li>
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">3. 記事の作り方</h2>
+      <p>
+        記事は完全な手書きではなく、YouTube の公開情報と字幕データをもとに自動生成しています。
+        そのうえで、見出し、要点、スライド風の区切りを付け、読みやすい形に整えています。
+      </p>
+      <p>
+        そのため、当サイトの記事は「元動画の代替」ではなく、「元動画に素早く入るための索引・ダイジェスト」として利用されることを想定しています。
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">4. できるだけ大切にしていること</h2>
+      <ul class="list-disc space-y-2 pl-6">
+        <li>元動画へすぐ戻れること</li>
+        <li>動画の論点を短く、誇張せずに伝えること</li>
+        <li>毎日追いやすい一貫したフォーマットで届けること</li>
+        <li>自動生成であることを隠さず明示すること</li>
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">5. 補足</h2>
+      <p>当サイトは個人運営であり、Claude / Anthropic 公式とは関係ありません。</p>
+      <p>
+        収集方針や要約ルール、修正対応については
+        <a class="underline hover:text-coral" href={withBase("/editorial-policy/")}>Editorial Policy</a>
+        をご確認ください。
+      </p>
+    </section>
+  </article>
+</BaseLayout>

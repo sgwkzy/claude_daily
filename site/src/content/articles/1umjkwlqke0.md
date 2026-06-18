@@ -1,6 +1,9 @@
 ---
 videoId: 1UmjkWlqKe0
+slug: claude-fable-5-10000-dollar-website
 title: Claude Fable 5 Built a $10K Website in Minutes
+seoTitle: Claude Fable 5で1万ドル級サイトを短時間生成 実演の要点
+summary: Claude Fable 5 を使った高単価サイト制作デモをもとに、生成速度と実務インパクトを短く整理した記事です。
 channel: Zubair Trabzada | AI Workshop
 channelId: UC2b2wgxm0vFjQfJJ0iRcFRw
 publishedAt: '2026-06-10T21:22:11Z'

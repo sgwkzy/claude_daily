@@ -2,6 +2,9 @@
 videoId: SIUrshGwgDI
 title: Anthropic CEO's SHOCKING Response on Iranian Girl School Strike
 articleTitle: 「イラン女子校襲撃はred lineに当たらない」 — Amodei発言を批判するBreaking Pointsの論点整理
+slug: amodei-red-line-critique
+seoTitle: Amodeiのred line発言を批判 論点を整理する
+summary: Dario Amodei の red line 発言に対する批判をもとに、AI安全保障と説明責任の論点を追いやすくまとめた記事です。
 channel: Breaking Points
 channelId: UCDRIjKy6eZOvKtOELtTdeUA
 publishedAt: '2026-06-16T17:30:04Z'

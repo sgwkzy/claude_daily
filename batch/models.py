@@ -50,7 +50,10 @@ class VideoCandidate(BaseModel):
 class ArticleFrontmatter(BaseModel):
     videoId: str = Field(min_length=1)
     title: str = Field(min_length=1)
+    slug: str | None = None
     articleTitle: str | None = None
+    seoTitle: str | None = None
+    summary: str | None = None
     channel: str = Field(min_length=1)
     channelId: str = Field(min_length=1)
     publishedAt: datetime

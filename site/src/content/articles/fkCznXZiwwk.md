@@ -2,6 +2,9 @@
 videoId: fkCznXZiwwk
 title: '【Claude】公開後いきなり炎上して謝罪へ。Claude新モデルFableで何が起こったのか。'
 articleTitle: 'Claude Fable 5の隠れた品質低下が3日で謝罪へ至った炎上の構造'
+slug: claude-fable-5-hidden-quality-drop
+seoTitle: Claude Fable 5の隠れた品質低下 謝罪に至る炎上構造を整理
+summary: Claude Fable 5 の公開直後に起きた品質低下と炎上の流れを、論点ごとに把握しやすくまとめた記事です。
 channel: '海外Yパパラジオ　世界を読み解く'
 channelId: UC8fTn4DsxlAlql3OXJ8syRA
 publishedAt: '2026-06-11T20:26:17Z'

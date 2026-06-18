@@ -2,6 +2,9 @@
 videoId: bdhUBBACglw
 title: Claude Fable 5 is BANNED. What to do?
 articleTitle: Fableが禁止された週末にどう動くか — ローカルAIへの乗り換え実践ガイド
+slug: local-ai-migration-after-fable-ban
+seoTitle: Fable禁止後にどう動くか ローカルAI移行の実践ガイド
+summary: Claude Fable 5 が使えなくなった前提で、代替ツール選びとローカルAIへの移行方針を追いやすく整理した記事です。
 channel: Greg Isenberg
 channelId: UCPjNBjflYl0-HQtUvOx0Ibw
 publishedAt: '2026-06-13T21:25:13Z'

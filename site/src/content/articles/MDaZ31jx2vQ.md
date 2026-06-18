@@ -2,6 +2,9 @@
 videoId: MDaZ31jx2vQ
 title: 'Latest Claude AI models suspended after orders from Trump administration • FRANCE 24 English'
 articleTitle: '米政府が国家安全保障令でClaude Fable 5を停止、AnthropicとTrump政権の対立が深まる'
+slug: trump-order-suspends-claude-fable-5
+seoTitle: Trump政権命令でClaude Fable 5停止 対立の構図を整理
+summary: Trump政権下での停止命令をめぐり、Claude Fable 5 と Anthropic に何が起きたのかを短く整理したニュース要約です。
 channel: 'FRANCE 24 English'
 channelId: UCQfwfsi5VrQ8yKZ-UWmAEFg
 publishedAt: '2026-06-13T11:31:15Z'

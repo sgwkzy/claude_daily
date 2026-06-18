@@ -1,6 +1,9 @@
 ---
 videoId: 1PBRhm5ZnjU
+slug: anthropic-stop-ai-fable-5
 title: Anthropic begged the world to stop AI… then shipped this
+seoTitle: Anthropicの慎重論とClaude Fable 5公開の矛盾を読む
+summary: AnthropicがAI加速に慎重論を唱えた直後にClaude Fable 5を公開した流れを整理し、性能評価と安全設計の論点を短く追える記事です。
 channel: Fireship
 channelId: UCsBjURrPoezykLs9EqgamOA
 publishedAt: '2026-06-11T17:17:48Z'

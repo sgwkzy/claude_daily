@@ -1,6 +1,9 @@
 ---
 videoId: 0DVUjpClqgI
+slug: claude-fable-5-insane
 title: Claude Fable 5 is INSANE.
+seoTitle: Claude Fable 5は本当に異次元か 実演ベースで整理
+summary: Claude Fable 5 の強さがどこにあるのかを、実演や比較を通じて短く把握できる要約記事です。
 channel: tef
 channelId: UC3nKTPXh9DE0Md3HvCPB7sw
 publishedAt: '2026-06-11T01:21:33Z'

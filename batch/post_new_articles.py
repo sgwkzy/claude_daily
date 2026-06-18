@@ -26,15 +26,16 @@ def main(paths: list[str]) -> int:
             continue
         frontmatter = _read_frontmatter(path)
         article_title = frontmatter.get("articleTitle") or frontmatter.get("title")
+        slug = frontmatter.get("slug") or frontmatter.get("videoId")
         video_id = frontmatter.get("videoId")
         key_phrases = frontmatter.get("keyPhrases") or []
-        if not article_title or not video_id:
-            logger.warning("articleTitle/videoId が無いためスキップ: %s", path)
+        if not article_title or not video_id or not slug:
+            logger.warning("articleTitle/videoId/slug が無いためスキップ: %s", path)
             continue
         payloads.append(
             PostPayload(
                 article_title=str(article_title),
-                slug=str(video_id).lower(),
+                slug=str(slug).lower(),
                 key_phrases=list(key_phrases),
             )
         )

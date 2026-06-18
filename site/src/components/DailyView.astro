@@ -1,6 +1,13 @@
 ---
 import ArticleCard from "./ArticleCard.astro";
-import { formatDateLabel, formatShortDate, type ResolvedDay } from "../lib/articles";
+import {
+  buildArticlePath,
+  formatDateLabel,
+  formatShortDate,
+  getArticleDescription,
+  getArticleId,
+  type ResolvedDay,
+} from "../lib/articles";
 import { withBase } from "../lib/url";
 
 interface Props {
@@ -24,7 +31,7 @@ const hrefFor = (date: string) => (date === latestDate ? withBase("/") : withBas
     Claudeを語る動画を、<br class="hidden md:inline" />読むだけで掴む。
   </h1>
   <p class="mt-6 max-w-2xl text-lg leading-[1.95] text-ink/75">
-    Claude・Claude Code・Anthropic・MCPに関する動画を毎日収集し、字幕からスライド風の日本語まとめを自動生成しています。
+    Claude・Claude Code・Anthropic・MCPに関する動画を毎日収集し、<br class="hidden md:inline" />字幕からスライド風の日本語まとめを自動生成しています。
   </p>
 </section>
 
@@ -112,7 +119,7 @@ const hrefFor = (date: string) => (date === latestDate ? withBase("/") : withBas
     {day.articles.map((article, index) => (
       <li>
         <a
-          href={`#article-${article.id}`}
+          href={`#article-${getArticleId(article)}`}
           class="group flex items-start gap-4 py-4 transition hover:bg-cream/40"
         >
           <span class="mt-0.5 grid h-8 w-8 shrink-0 place-items-center rounded-full border border-coral/40 text-sm font-bold text-coral">{String(index + 1).padStart(2, "0")}</span>
@@ -129,15 +136,17 @@ const hrefFor = (date: string) => (date === latestDate ? withBase("/") : withBas
 
 <section class="space-y-10">
   {day.articles.map((article) => (
-    <div id={`article-${article.id}`} class="scroll-mt-24">
+    <div id={`article-${getArticleId(article)}`} class="scroll-mt-24">
       <ArticleCard
-        articleId={article.id}
+        articleId={getArticleId(article)}
+        articlePath={buildArticlePath(article)}
         title={article.data.articleTitle ?? article.data.title}
         channel={article.data.channel}
         headerImage={article.data.headerImage}
         publishedAt={article.data.fetchedAt}
         keyPhrases={article.data.keyPhrases}
         bulletPoints={article.data.bulletPoints}
+        summary={getArticleDescription(article)}
       />
     </div>
   ))}

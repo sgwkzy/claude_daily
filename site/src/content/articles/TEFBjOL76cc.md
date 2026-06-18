@@ -2,6 +2,9 @@
 videoId: TEFBjOL76cc
 title: 'Anthropic Model BANNED: Is it TOO DANGEROUS?'
 articleTitle: Fable 5は本当に「危険すぎ」たのか — 政府によるshutdownを「FDA級審査の必要性」から読み解く
+slug: fable-5-too-dangerous-shutdown-debate
+seoTitle: Fable 5は本当に危険すぎたのか shutdown論争の論点整理
+summary: Fable 5 の停止判断をめぐり、安全性、規制、審査基準の観点から論争の構図を整理した記事です。
 channel: Breaking Points
 channelId: UCDRIjKy6eZOvKtOELtTdeUA
 publishedAt: '2026-06-15T17:00:30Z'

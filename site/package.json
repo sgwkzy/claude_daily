@@ -6,7 +6,8 @@
   "type": "module",
   "scripts": {
     "dev": "astro dev",
-    "build": "astro build",
+    "check:content": "node ./scripts/check-content.mjs",
+    "build": "npm run check:content && astro build",
     "preview": "astro preview"
   },
   "dependencies": {

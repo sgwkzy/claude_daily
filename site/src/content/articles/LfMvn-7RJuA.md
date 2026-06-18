@@ -3,6 +3,9 @@ videoId: LfMvn-7RJuA
 title: 'Anthropic released their most powerful AI.. and then the government stepped
   in #carterpcs #tech'
 articleTitle: 最強AI「Fable」を公開直後に米政府が制止 — 外国籍ユーザー禁止で全面停止へ
+slug: fable-suspended-government-order
+seoTitle: Claude Fable停止騒動 米政府命令と利用制限の要点
+summary: Claude Fable公開直後に起きた停止騒動について、政府命令、利用制限、Anthropic側の立場を短く追える記事です。
 channel: CarterPCs
 channelId: UCi7wDE2ZTiR5QYYrUY5WhtA
 publishedAt: '2026-06-13T03:39:30Z'

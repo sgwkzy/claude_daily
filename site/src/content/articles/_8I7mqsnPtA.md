@@ -1,7 +1,10 @@
 ---
 videoId: _8I7mqsnPtA
+slug: claude-code-line-automation-zero-cost
 title: 'Claude CodeであらゆるSaaSを0円でばら撒く天才AI起業家に、今後どんな未来が来るのか聞いてみた。【LINE Harness】'
 articleTitle: 'Claude CodeでLINE自動化を0円化する野田一氏の構想と次の方向性'
+seoTitle: Claude CodeでLINE自動化を0円化する発想と実装の方向性
+summary: Claude Codeを使ってLINE運用ツールを低コスト化する発想、並列運用の実践、今後のエージェント活用像までをまとめた記事です。
 channel: 'セキグチガクの未来解剖ch'
 channelId: UC-nyCQc7ZCzWJmXuPr4vsYw
 publishedAt: '2026-06-11T11:00:26Z'

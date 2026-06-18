@@ -1,6 +1,9 @@
 ---
 videoId: DkClEbyXyq4
+slug: claude-code-complete-guide
 title: 【神回！】絶対理解できる！『Claude Code』完全入門マニュアル！【使うと人生が変わる便利なAI 】
+seoTitle: Claude Code完全入門 ガチで使える実践ポイント整理
+summary: Claude Codeの基本的な使い方から、実務に乗せるときの考え方までをまとめた入門要約です。長尺動画の要点だけを短時間で確認できます。
 channel: パソコン博士TAIKI
 channelId: UCYhXmcP7xSyGd5RFe15YJOg
 publishedAt: '2026-06-12T10:00:03Z'

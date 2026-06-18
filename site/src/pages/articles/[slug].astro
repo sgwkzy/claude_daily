@@ -1,23 +1,60 @@
 ---
-import { getCollection, getEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import SectionBlock from "../../components/SectionBlock.astro";
+import {
+  buildArticlePath,
+  buildLegacyArticleSlug,
+  buildTopicHrefFromLabel,
+  findRelatedArticles,
+  getArticleCustomSlug,
+  getArticleDescription,
+  getArticleDisplayTitle,
+  getArticleId,
+  getArticleSeoTitle,
+  loadArticles,
+} from "../../lib/articles";
 import { withBase } from "../../lib/url";
 
 export async function getStaticPaths() {
   const articles = await getCollection("articles");
-  return articles.map((article) => ({ params: { slug: article.id } }));
+  return articles.flatMap((article) => {
+    const articleId = getArticleId(article);
+    const canonicalSlug = buildArticlePath(article).split("/").filter(Boolean).pop()!;
+    const displayTitle = getArticleDisplayTitle(article);
+    const legacyTitleSlug = buildLegacyArticleSlug(displayTitle, articleId);
+    const explicitSlug = getArticleCustomSlug(article);
+    const explicitSlugWithId = explicitSlug
+      ? buildLegacyArticleSlug(explicitSlug, articleId)
+      : undefined;
+    const routeSlugs = Array.from(
+      new Set(
+        [canonicalSlug, explicitSlugWithId, legacyTitleSlug, articleId].filter(Boolean)
+      )
+    );
+
+    return routeSlugs.map((routeSlug) => ({
+      params: { slug: routeSlug },
+      props: { entryId: articleId, isLegacyRoute: routeSlug !== canonicalSlug },
+    }));
+  });
 }
 
-const { slug } = Astro.params;
-const article = slug ? await getEntry("articles", slug) : undefined;
+const { entryId, isLegacyRoute = false } = Astro.props;
+const allArticles = await loadArticles();
+const article = entryId
+  ? allArticles.find((entry) => getArticleId(entry) === String(entryId).toLowerCase())
+  : undefined;
 
 if (!article) {
   throw new Error("記事が見つかりません。");
 }
 
 const { data } = article;
-const displayTitle = data.articleTitle ?? data.title;
+const relatedArticles = findRelatedArticles(article, allArticles);
+const displayTitle = getArticleDisplayTitle(article);
+const seoTitle = getArticleSeoTitle(article);
+const canonicalPath = buildArticlePath(article);
 const total = data.sections.length;
 const minutes = Math.max(1, Math.round(data.durationSec / 60));
 
@@ -31,9 +68,7 @@ const youtubeUrl = (time: number) => `https://youtu.be/${data.videoId}?t=${time}
 const localThumbnail = withBase(`/images/${data.videoId}/thumbnail.webp`);
 const headerImageSrc = withBase(data.headerImage);
 const heroImageSrc = withBase(data.heroImage ?? data.headerImage);
-const articleDescription =
-  data.bulletPoints[0]?.text ??
-  `${data.channel}の動画「${displayTitle}」を日本語で要約した記事。`;
+const articleDescription = getArticleDescription(article);
 const chipStyles = [
   "border-coral/40 bg-coral/10 text-coralDark",
   "border-teal/40 bg-teal/10 text-teal",
@@ -44,7 +79,7 @@ const chipStyles = [
 const structuredData = {
   "@context": "https://schema.org",
   "@type": "Article",
-  headline: displayTitle,
+  headline: seoTitle,
   description: articleDescription,
   image: [`https://www.claude-daily.com${heroImageSrc}`],
   datePublished: data.fetchedAt.toISOString(),
@@ -62,18 +97,19 @@ const structuredData = {
       url: "https://www.claude-daily.com/logo.png",
     },
   },
-  mainEntityOfPage: `https://www.claude-daily.com/articles/${article.id}/`,
+  mainEntityOfPage: `https://www.claude-daily.com${canonicalPath}`,
   isBasedOn: `https://youtu.be/${data.videoId}`,
 };
 ---
 
 <BaseLayout
-  title={`${displayTitle} | Claude Daily`}
+  title={`${seoTitle} | Claude Daily`}
   description={articleDescription}
-  path={`/articles/${article.id}/`}
+  path={canonicalPath}
   image={heroImageSrc}
   type="article"
   publishedTime={data.fetchedAt.toISOString()}
+  noindex={isLegacyRoute}
   structuredData={structuredData}
 >
   <article class="mx-auto max-w-[74rem] space-y-12 xl:max-w-[72rem]">
@@ -92,7 +128,12 @@ const structuredData = {
           <h1 class="headline mt-5 text-[1.65rem] font-black leading-[1.32] text-ink sm:text-[2rem] sm:leading-[1.18] md:text-[2.45rem] md:leading-[1.14] xl:max-w-[56rem] xl:text-[2.9rem]">{displayTitle}</h1>
           <div class="mt-5 flex flex-wrap items-center gap-2">
             {data.keyPhrases.map((phrase, i) => (
-              <span class={`rounded-full border px-2.5 py-0.5 text-xs ${chipStyles[i % chipStyles.length]}`}>#{phrase}</span>
+            <a
+              href={withBase(buildTopicHrefFromLabel(phrase))}
+                class={`rounded-full border px-2.5 py-0.5 text-xs transition hover:-translate-y-0.5 hover:shadow-sm ${chipStyles[i % chipStyles.length]}`}
+              >
+                #{phrase}
+              </a>
             ))}
           </div>
         </div>
@@ -181,5 +222,37 @@ const structuredData = {
         </div>
       </div>
     </section>
+
+    {relatedArticles.length > 0 && (
+      <section class="rounded-slide border border-line/70 bg-paper p-8 shadow-card md:p-10">
+        <div class="flex items-center justify-between gap-3">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">関連記事</p>
+          <p class="text-xs text-clay">{relatedArticles.length} 件</p>
+        </div>
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          {relatedArticles.map((related) => (
+            <a
+              href={withBase(buildArticlePath(related))}
+              class="group overflow-hidden rounded-2xl border border-line/70 bg-cream/40 transition hover:-translate-y-0.5 hover:border-coral/40 hover:bg-cream"
+            >
+              <img
+                src={withBase(related.data.headerImage)}
+                alt={related.data.articleTitle ?? related.data.title}
+                class="aspect-video w-full object-cover object-center"
+              />
+              <div class="space-y-3 p-5">
+                <p class="text-[0.7rem] uppercase tracking-[0.2em] text-clay">{related.data.channel}</p>
+                <h3 class="headline line-clamp-3 text-lg font-bold leading-snug text-ink group-hover:text-coralDark">
+                  {related.data.articleTitle ?? related.data.title}
+                </h3>
+                <p class="line-clamp-3 text-sm leading-7 text-ink/75">
+                  {related.data.bulletPoints[0]?.text}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+      </section>
+    )}
   </article>
 </BaseLayout>

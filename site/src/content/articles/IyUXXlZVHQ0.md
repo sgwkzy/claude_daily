@@ -2,6 +2,9 @@
 videoId: IyUXXlZVHQ0
 title: 'Claude Fable 5 Is Now Banned By The US Government'
 articleTitle: 'Anthropicが米政府の停止命令に従いつつ公に反論する異例の構図とAI規制の論点'
+slug: anthropic-government-order-response
+seoTitle: Anthropicが停止命令に従いながら反論する異例の構図
+summary: 米政府の停止命令に対する Anthropic の対応と、AI 規制をめぐる対立構図を短く追えるニュース要約です。
 channel: 'Varun Mayya'
 channelId: UCsQoiOrh7jzKmE8NBofhTnQ
 publishedAt: '2026-06-13T10:52:57Z'

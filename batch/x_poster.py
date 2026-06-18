@@ -12,6 +12,9 @@ SITE_URL = "https://www.claude-daily.com"
 BASE_TAGS = ["Claude", "Anthropic"]
 TWEET_MAX = 280
 URL_LENGTH = 23  # t.co 自動短縮の固定長
+# 投稿本文の冒頭ヘッダー文言。空文字ならヘッダー行を出さない（現行運用）。
+# 自動投稿を再有効化する際に文言を入れたい場合はここだけ変更する。
+TWEET_HEADER = ""
 
 
 @dataclass
@@ -80,19 +83,30 @@ class XPoster:
 
 
 def build_tweet_text(payload: PostPayload) -> str:
-    """280字に収まるツイート本文を組み立てる。"""
+    """280字に収まるツイート本文を組み立てる。
+
+    ``TWEET_HEADER`` が空のときは冒頭ヘッダー行を出さず、
+    記事タイトル + ハッシュタグ + 記事URL の構成にする。
+    """
     url = f"{SITE_URL}/articles/{payload.slug}/"
     hashtags = _build_hashtags(payload.key_phrases)
-    header = "本日のClaude Daily更新"
 
-    # URL は t.co 短縮で 23 字固定として計算する
-    fixed_overhead = len(header) + 2 + 2 + len(hashtags) + 2 + URL_LENGTH if hashtags else len(header) + 2 + 2 + URL_LENGTH
+    # URL は t.co 短縮で 23 字固定として計算する。各ブロック間は空行 1 行を挟む。
+    fixed_overhead = URL_LENGTH
+    if TWEET_HEADER:
+        fixed_overhead += len(TWEET_HEADER) + 2  # ヘッダー行 + 空行
+    if hashtags:
+        fixed_overhead += len(hashtags) + 2  # ハッシュタグ行 + 空行
+    fixed_overhead += 2  # タイトル行と次ブロックの間の空行
     title_budget = TWEET_MAX - fixed_overhead
     title = payload.article_title
     if len(title) > title_budget:
         title = title[: max(title_budget - 1, 0)] + "…"
 
-    parts = [header, "", title, ""]
+    parts: list[str] = []
+    if TWEET_HEADER:
+        parts.extend([TWEET_HEADER, ""])
+    parts.extend([title, ""])
     if hashtags:
         parts.extend([hashtags, ""])
     parts.append(url)

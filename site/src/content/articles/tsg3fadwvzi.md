@@ -1,6 +1,9 @@
 ---
 videoId: tSg3FAdWvzI
 title: Claude Fable 5 UI/UX One-Shots - 5 Tests
+slug: claude-fable-5-ui-ux-tests
+seoTitle: Claude Fable 5のUI生成力 5つの実地テストで見る
+summary: Claude Fable 5 の UI / UX 生成力を複数テストで確認し、ワンショット制作の実力感をつかめる記事です。
 channel: DesignCourse
 channelId: UCVyRiMvfUNMA1UPlDPzG5Ow
 publishedAt: '2026-06-10T14:51:01Z'

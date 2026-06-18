@@ -2,6 +2,9 @@
 videoId: Fv8OC7skxT0
 title: 【新型Claude「Fable 5」はポケモン攻略】「Googleの聖域が危ない」今井翔太／ミュトスの能力を過剰制限“融通が利かない”／アンソロピックが計算資源不足→「課金地獄」に【AI
   QUEST】
+slug: claude-fable-5-bloomberg-tbs-analysis
+seoTitle: Claude Fable 5をTBS×Bloombergが分析 能力と制約の論点整理
+summary: Claude Fable 5 をめぐる性能評価、制約、計算資源の問題までを、TBS CROSS DIG with Bloomberg の議論から整理した記事です。
 channel: TBS CROSS DIG with Bloomberg
 channelId: UCeCmAYh1ylwIsgGrmqaklzg
 publishedAt: '2026-06-12T09:30:09Z'

@@ -33,6 +33,7 @@ const googleSiteVerification = import.meta.env.PUBLIC_GOOGLE_SITE_VERIFICATION;
 const gaMeasurementId = import.meta.env.PUBLIC_GA_MEASUREMENT_ID;
 const adsenseClientId = import.meta.env.PUBLIC_ADSENSE_CLIENT_ID;
 const structuredDataPayload = structuredData ? JSON.stringify(structuredData) : undefined;
+const rssUrl = new URL(withBase("/rss.xml"), siteUrl).toString();
 ---
 
 <!doctype html>
@@ -56,6 +57,7 @@ const structuredDataPayload = structuredData ? JSON.stringify(structuredData) : 
     <meta name="twitter:image" content={socialImage} />
     {publishedTime && <meta property="article:published_time" content={publishedTime} />}
     <link rel="canonical" href={canonicalUrl} />
+    <link rel="alternate" type="application/rss+xml" title="Claude Daily RSS" href={rssUrl} />
     {googleSiteVerification && <meta name="google-site-verification" content={googleSiteVerification} />}
     <link rel="icon" type="image/svg+xml" href={withBase("/logo.svg")} />
     <link rel="icon" type="image/png" href={withBase("/logo.png")} />
@@ -91,7 +93,15 @@ const structuredDataPayload = structuredData ? JSON.stringify(structuredData) : 
               <span class="hidden text-xs uppercase tracking-[0.3em] text-clay md:inline">brief</span>
             </span>
           </a>
-          <p class="hidden text-sm text-clay md:block">Claude関連YouTubeを毎日まとめる</p>
+          <div class="flex items-center gap-4">
+            <p class="hidden text-sm text-clay md:block">Claude関連YouTubeを毎日まとめる</p>
+            <a
+              href={withBase("/rss.xml")}
+              class="rounded-full border border-line bg-paper px-3 py-1.5 text-xs font-semibold uppercase tracking-[0.18em] text-clay transition hover:border-coral hover:text-coralDark"
+            >
+              RSS
+            </a>
+          </div>
         </div>
       </header>
       <main class="mx-auto w-full max-w-[86rem] flex-1 px-6 py-12 xl:px-8">
@@ -99,9 +109,19 @@ const structuredDataPayload = structuredData ? JSON.stringify(structuredData) : 
       </main>
       <footer class="border-t border-line/70 bg-paper/50 py-8 text-center text-xs leading-7 text-clay">
         <p>Claude Daily — 自動要約のため正確性は保証されません。出典は各記事末尾に記載しています。</p>
-        <p class="mt-2">
+        <nav class="mt-2 flex flex-wrap items-center justify-center gap-x-3 gap-y-1">
+          <a href={withBase("/about/")} class="underline hover:text-coral">About</a>
+          <span aria-hidden="true">·</span>
+          <a href={withBase("/topics/")} class="underline hover:text-coral">Topics</a>
+          <span aria-hidden="true">·</span>
+          <a href={withBase("/notes/")} class="underline hover:text-coral">編集メモ</a>
+          <span aria-hidden="true">·</span>
+          <a href={withBase("/editorial-policy/")} class="underline hover:text-coral">Editorial Policy</a>
+          <span aria-hidden="true">·</span>
           <a href={withBase("/privacy/")} class="underline hover:text-coral">プライバシーポリシー</a>
-        </p>
+          <span aria-hidden="true">·</span>
+          <a href={withBase("/rss.xml")} class="underline hover:text-coral">RSS</a>
+        </nav>
       </footer>
     </div>
   </body>

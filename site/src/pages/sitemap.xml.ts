@@ -1,5 +1,5 @@
 import { getCollection } from "astro:content";
-import { loadDailyGroups } from "../lib/articles";
+import { buildArticlePath, loadDailyGroups, loadTopicGroups } from "../lib/articles";
 
 const site = import.meta.env.SITE ?? "https://www.claude-daily.com";
 
@@ -16,16 +16,26 @@ const escapeXml = (value: string) =>
 export async function GET() {
   const articles = await getCollection("articles");
   const groups = await loadDailyGroups();
+  const topics = await loadTopicGroups();
+  const latestFetchedAt = articles[0]?.data.fetchedAt.toISOString();
 
   const urls = [
-    { loc: toUrl("/"), lastmod: articles[0]?.data.fetchedAt.toISOString() },
+    { loc: toUrl("/"), lastmod: latestFetchedAt },
+    { loc: toUrl("/about/"), lastmod: latestFetchedAt },
+    { loc: toUrl("/editorial-policy/"), lastmod: latestFetchedAt },
+    { loc: toUrl("/notes/"), lastmod: latestFetchedAt },
+    { loc: toUrl("/topics/"), lastmod: latestFetchedAt },
     ...groups.map((group) => ({
       loc: toUrl(`/days/${group.date}/`),
       lastmod: group.articles[0]?.data.fetchedAt.toISOString(),
     })),
     ...articles.map((article) => ({
-      loc: toUrl(`/articles/${article.id}/`),
+      loc: toUrl(buildArticlePath(article)),
       lastmod: article.data.fetchedAt.toISOString(),
+    })),
+    ...topics.map((topic) => ({
+      loc: toUrl(`/topics/${topic.slug}/`),
+      lastmod: topic.articles[0]?.data.fetchedAt.toISOString() ?? latestFetchedAt,
     })),
   ];
 

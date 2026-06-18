@@ -5,6 +5,7 @@ from pathlib import Path
 
 import yaml
 
+from .article_metadata import build_article_slug, build_seo_title, build_summary_text
 from .models import ArticleFrontmatter, SummaryResult, VideoCandidate
 
 
@@ -15,10 +16,14 @@ def build_frontmatter(
     hero_image: str | None = None,
     fetched_at: datetime | None = None,
 ) -> ArticleFrontmatter:
+    article_title = summary.articleTitle
     return ArticleFrontmatter(
         videoId=candidate.video_id,
         title=candidate.title,
-        articleTitle=summary.articleTitle,
+        slug=build_article_slug(article_title, candidate.video_id),
+        articleTitle=article_title,
+        seoTitle=build_seo_title(article_title),
+        summary=build_summary_text(summary),
         channel=candidate.channel,
         channelId=candidate.channel_id,
         publishedAt=candidate.published_at,

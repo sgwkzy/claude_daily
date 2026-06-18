@@ -17,12 +17,14 @@ const articles = defineCollection({
   loader: glob({
     pattern: "**/*.md",
     base: "./src/content/articles",
-    generateId: ({ data }) => String(data.videoId).toLowerCase(),
   }),
   schema: z.object({
     videoId: z.string().min(1),
+    slug: z.string().min(1).optional(),
     title: z.string().min(1),
     articleTitle: z.string().min(1).optional(),
+    seoTitle: z.string().min(1).optional(),
+    summary: z.string().min(1).optional(),
     channel: z.string().min(1),
     channelId: z.string().min(1),
     publishedAt: z.coerce.date(),

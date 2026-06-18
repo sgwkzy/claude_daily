@@ -15,7 +15,10 @@ def test_article_writer_roundtrip(tmp_path: Path) -> None:
     frontmatter = build_frontmatter(candidate, summary, "/images/test/header.png", fetched_at=datetime.now(UTC))
     content = render_article(frontmatter)
     assert "videoId:" in content
+    assert "slug:" in content
     assert "articleTitle:" in content
+    assert "seoTitle:" in content
+    assert "summary:" in content
     assert "heroImage: /images/test/header.png" in content
     target = write_article(frontmatter, tmp_path / "article.md")
     assert target.exists()

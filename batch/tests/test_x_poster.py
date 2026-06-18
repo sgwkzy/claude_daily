@@ -10,7 +10,8 @@ def test_build_tweet_text_basic() -> None:
         key_phrases=["Claude Fable 5", "安全設計", "長文処理"],
     )
     text = build_tweet_text(payload)
-    assert "本日のClaude Daily更新" in text
+    # ヘッダーなし運用: 冒頭はタイトルから始まる
+    assert not text.startswith("本日のClaude Daily更新")
     assert payload.article_title in text
     assert "https://www.claude-daily.com/articles/y9wz2pv404e/" in text
     assert "#Claude" in text and "#Anthropic" in text

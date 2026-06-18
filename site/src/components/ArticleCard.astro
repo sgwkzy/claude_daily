@@ -1,4 +1,5 @@
 ---
+import { buildArticlePathFromTitle, buildTopicHrefFromLabel } from "../lib/articles";
 import { withBase } from "../lib/url";
 
 interface BulletPoint {
@@ -14,12 +15,24 @@ interface Props {
   publishedAt: Date;
   keyPhrases: string[];
   bulletPoints: BulletPoint[];
+  summary?: string;
+  articlePath?: string;
 }
 
-const { articleId, title, channel, headerImage, publishedAt, keyPhrases, bulletPoints } = Astro.props;
+const {
+  articleId,
+  title,
+  channel,
+  headerImage,
+  publishedAt,
+  keyPhrases,
+  bulletPoints,
+  summary,
+  articlePath,
+} = Astro.props;
 const headerImageSrc = withBase(headerImage);
-const articleHref = withBase(`/articles/${articleId}/`);
-const previewPoints = bulletPoints.slice(0, 1);
+const articleHref = withBase(articlePath ?? buildArticlePathFromTitle(title, articleId));
+const previewText = summary ?? bulletPoints[0]?.text;
 const chipStyles = [
   "border-coral/40 bg-coral/10 text-coralDark",
   "border-teal/40 bg-teal/10 text-teal",
@@ -43,21 +56,25 @@ const chipStyles = [
           <time>{publishedAt.toLocaleDateString("ja-JP")}</time>
         </div>
         <div class="space-y-4">
-          <h2 class="headline line-clamp-4 text-[1.5rem] font-black leading-[1.18] text-ink md:text-[1.72rem]">{title}</h2>
-          <p class="text-sm uppercase tracking-[0.24em] text-clay">この記事の要点</p>
+          <h2 class="headline line-clamp-3 text-[1.5rem] font-black leading-[1.18] text-ink md:text-[1.72rem]">{title}</h2>
+          {previewText && (
+            <p class="rounded-2xl border border-coral/20 bg-coral/5 px-4 py-4 text-sm leading-7 text-ink/82 line-clamp-4">
+              {previewText}
+            </p>
+          )}
         </div>
-        <ul class="space-y-2.5 overflow-hidden text-sm leading-7 text-ink/75">
-          {previewPoints.map((point) => (
-            <li class="flex gap-3 rounded-2xl bg-cream/70 px-4 py-4">
-              <span class="mt-2.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-coral"></span>
-              <span class="line-clamp-3">{point.text}</span>
-            </li>
-          ))}
-        </ul>
-        <div class="flex flex-wrap gap-2 overflow-hidden pt-1">
+        <div class="space-y-2 overflow-hidden pt-1">
+          <p class="text-[0.7rem] uppercase tracking-[0.24em] text-clay">触れている論点</p>
+          <div class="flex flex-wrap gap-2">
           {keyPhrases.slice(0, 3).map((phrase, i) => (
-            <span class={`rounded-full border px-2.5 py-0.5 text-[0.7rem] ${chipStyles[i % chipStyles.length]}`}>#{phrase}</span>
+            <a
+              href={withBase(buildTopicHrefFromLabel(phrase))}
+              class={`rounded-full border px-2.5 py-0.5 text-[0.7rem] transition hover:-translate-y-0.5 hover:shadow-sm ${chipStyles[i % chipStyles.length]}`}
+            >
+              #{phrase}
+            </a>
           ))}
+          </div>
         </div>
       </div>
     </div>

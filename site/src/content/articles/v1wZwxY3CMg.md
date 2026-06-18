@@ -1,6 +1,9 @@
 ---
 videoId: v1wZwxY3CMg
 title: Inside Anthropic, the $965 Billion AI Juggernaut | The Circuit
+slug: inside-anthropic-ai-juggernaut
+seoTitle: Anthropic内部を描く大型レポート 企業戦略と勢いの全体像
+summary: Bloomberg Originals の長尺レポートをもとに、Anthropicの企業規模感、経営陣、事業の勢いを日本語で把握しやすく整理した記事です。
 channel: Bloomberg Originals
 channelId: UCUMZ7gohGI9HcU9VNsr2FJQ
 publishedAt: '2026-06-12T12:00:20Z'

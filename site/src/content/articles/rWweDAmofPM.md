@@ -2,6 +2,9 @@
 videoId: rWweDAmofPM
 title: 'YASAKLANAN YAPAY ZEKA Claude’u SATRANÇ SORUSU ile TEST ETTİM'
 articleTitle: 'トルコのチェスチャンネルがClaude Fableで2手詰めをテスト、Stockfish連携で正答'
+slug: claude-fable-chess-stockfish-test
+seoTitle: Claude Fableをチェスで検証 2手詰めとStockfish連携の結果
+summary: Claude Fable をチェス問題で試し、2手詰めの解答や Stockfish 連携の反応を短く整理した検証記事です。
 channel: 'Sabo Satranç'
 channelId: UCHy2agLCNuhvUOi1Fx4w77g
 publishedAt: '2026-06-13T16:59:03Z'

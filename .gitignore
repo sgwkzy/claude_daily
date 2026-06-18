@@ -14,6 +14,19 @@ pip-install.log
 pytest-tmp/
 _scratch_*.py
 _scratch_*.json
+_scratch_text_*.txt
 _astro-dev*.log
 serve/
+
+# 一時生成物・ローカル成果物（公開リポジトリに含めない）
+site/.chrome-headless-profile/
+site/.tmp-chrome-shot/
+site/astro-dev*.log
+site/preview-card-copy-*.png
+site/public/images/_samples/
+*.bak
+
+# ドライラン生成のテスト記事・画像（本番には載せない）
+site/src/content/articles/dryrun-*.md
+site/public/images/dryrun-*/
 

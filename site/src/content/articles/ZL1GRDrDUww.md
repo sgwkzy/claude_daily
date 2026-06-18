@@ -2,6 +2,9 @@
 videoId: ZL1GRDrDUww
 title: 'Anthropic CEO learns meaning of "life comes at you fast" '
 articleTitle: Fable停止騒動を斬る — 「安全性」の建前と矛盾を突くRossmannの批判
+slug: fable-suspension-rossmann-critique
+seoTitle: Fable停止騒動をRossmannが批判 安全性ロジックの矛盾とは
+summary: Fable停止騒動に対するRossmannの批判を軸に、安全性をめぐる建前と矛盾の論点を整理した記事です。
 channel: Louis Rossmann
 channelId: UCl2mFZoRqjw_ELax4Yisf6w
 publishedAt: '2026-06-13T21:50:11Z'

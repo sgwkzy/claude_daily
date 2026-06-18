@@ -1,6 +1,9 @@
 ---
 videoId: Y9Wz2PV404E
 title: Introducing Claude Fable 5
+slug: introducing-claude-fable-5
+seoTitle: Claude Fable 5 発表内容の要点整理
+summary: Claude Fable 5 の発表内容をベースに、何が新しく、どこが注目点なのかを短く確認できる要約です。
 channel: Anthropic
 channelId: UCrDwWp7EBBv4NwvScIpBDOA
 publishedAt: '2026-06-12T04:46:32.241259Z'

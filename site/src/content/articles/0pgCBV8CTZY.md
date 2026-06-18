@@ -1,6 +1,9 @@
 ---
 videoId: 0pgCBV8CTZY
 title: Anthropic is starting to panic…
+slug: anthropic-starting-to-panic
+seoTitle: Anthropicは本当に焦り始めたのか 競争環境の変化を読む
+summary: Anthropicを取り巻く競争環境の変化と、Claude周辺で起きているプレッシャーを短く整理した要約記事です。
 channel: Fireship
 channelId: UCsBjURrPoezykLs9EqgamOA
 publishedAt: '2026-06-12T10:25:40.273696Z'

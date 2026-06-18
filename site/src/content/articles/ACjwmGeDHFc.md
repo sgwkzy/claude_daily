@@ -3,6 +3,9 @@ videoId: ACjwmGeDHFc
 title: Why Anthropic's Claude Fable 5 & Mythos 5 Are Now Illegal (+15 AI Updates)
 articleTitle: Fable 5/Mythos 5禁止に始まる今週のAI週報 — Apple Siri×Gemini契約・Kimi K 2.7・Figma
   1クリック化まで
+slug: ai-weekly-fable-mythos-apple-kimi-figma
+seoTitle: 今週のAI週報 Fable停止からApple・Kimi・Figmaまで整理
+summary: Fable 5 / Mythos 5 の停止騒動を起点に、Apple、Kimi、Figma など周辺トピックまで一気に把握できる週報要約です。
 channel: Vaibhav Sisinty
 channelId: UClXAalunTPaX1YV185DWUeg
 publishedAt: '2026-06-14T05:21:46Z'

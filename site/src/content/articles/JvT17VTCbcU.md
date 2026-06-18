@@ -2,6 +2,9 @@
 videoId: JvT17VTCbcU
 title: Claude Fable 5 is a freak
 articleTitle: Fable 5は本当に「化け物」か — Minecraft/Spotify/GTAクローンを1プロンプトでどこまで作れるか実地検証
+slug: claude-fable-5-prompt-potato-tests
+seoTitle: Fable 5は本当に化け物か 1プロンプト実地検証で見る実力
+summary: Minecraft、Spotify、GTAクローン風の制作テストを通じて、Claude Fable 5 の生成力を具体的に確認できる記事です。
 channel: Prompt Potato
 channelId: UC3owM34LYtaDERvFwLxTsLA
 publishedAt: '2026-06-14T19:30:01Z'

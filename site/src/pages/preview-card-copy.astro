@@ -1,0 +1,199 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { buildTopicHrefFromLabel } from "../lib/articles";
+import { withBase } from "../lib/url";
+
+interface PreviewArticle {
+  id: string;
+  title: string;
+  channel: string;
+  publishedAt: Date;
+  keyPhrases: string[];
+  headerImage: string;
+  bulletLead: string;
+  summary: string;
+}
+
+const previews: PreviewArticle[] = [
+  {
+    id: "0pgcbv8ctzy",
+    title: "Anthropicは本当に焦り始めたのか 競争環境の変化を読む",
+    channel: "Fireship",
+    publishedAt: new Date("2026-06-12T10:25:40.273Z"),
+    keyPhrases: ["Anthropic", "IPO", "AI導入ROI"],
+    headerImage: "/images/0pgCBV8CTZY/header.png",
+    bulletLead:
+      "再帰的自己改善の波と収益プレッシャーが重なり、Anthropicの立ち位置が変わり始めている点を動画は強く示している。",
+    summary:
+      "Anthropicを取り巻く競争環境の変化と、Claude周辺で起きているプレッシャーを短く整理した要約記事です。",
+  },
+  {
+    id: "y9wz2pv404e",
+    title: "Claude Fable 5 発表内容の要点整理",
+    channel: "Anthropic",
+    publishedAt: new Date("2026-06-12T04:46:32.241Z"),
+    keyPhrases: ["Claude Fable 5", "安全設計", "長文処理"],
+    headerImage: "/images/Y9Wz2PV404E/header.png",
+    bulletLead:
+      "Fable 5の発表では、長文処理や安全システムの拡張が前面に出され、単なる性能更新ではない点が印象に残る。",
+    summary:
+      "Claude Fable 5 の発表内容をベースに、何が新しく、どこが注目点なのかを短く確認できる要約です。",
+  },
+];
+---
+
+<BaseLayout
+  title="Card Copy Preview | Claude Daily"
+  description="一覧カードで summary を見せた場合の比較プレビュー"
+  path="/preview-card-copy/"
+  noindex={true}
+>
+  <section class="mb-12">
+    <p class="text-xs font-semibold uppercase tracking-[0.32em] text-coral">Copy Preview</p>
+    <h1 class="headline mt-5 text-4xl font-black leading-[1.2] text-ink md:text-[3rem]">
+      `summary` を一覧カードに入れたときの<br class="hidden md:inline" />見え方比較
+    </h1>
+    <p class="mt-6 max-w-3xl text-lg leading-[1.9] text-ink/75">
+      同じ記事で、現状の bullet 先頭表示と、`summary` を使った表示を見比べるためのサンプルです。
+      デザインをほぼ変えない案と、summary を少し前に出す案の両方を並べています。
+    </p>
+  </section>
+
+  <section class="space-y-16">
+    {previews.map((article) => (
+      <section class="space-y-5">
+        <div class="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-[0.28em] text-coral">Sample Article</p>
+            <h2 class="headline mt-2 text-2xl font-black text-ink">{article.title}</h2>
+            <p class="mt-2 text-sm text-clay">{article.channel} · {article.publishedAt.toLocaleDateString("ja-JP")}</p>
+          </div>
+        </div>
+
+        <div class="grid gap-6 xl:grid-cols-3">
+          <article class="overflow-hidden rounded-[2rem] border border-line/70 bg-paper shadow-card">
+            <div class="border-b border-line/60 px-6 py-4">
+              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">Current</p>
+              <p class="mt-2 text-sm text-ink/70">先頭 bullet をそのまま表示</p>
+            </div>
+            <div class="grid gap-0">
+              <div class="bg-[#ded1c2]">
+                <div class="flex aspect-video items-center justify-center">
+                  <img src={withBase(article.headerImage)} alt={article.title} class="h-full w-full object-cover object-center" />
+                </div>
+              </div>
+              <div class="space-y-5 p-6 md:p-8">
+                <div class="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">
+                  <span class="truncate">{article.channel}</span>
+                  <span class="h-px w-6 bg-line"></span>
+                  <time>{article.publishedAt.toLocaleDateString("ja-JP")}</time>
+                </div>
+                <div class="space-y-4">
+                  <h3 class="headline line-clamp-4 text-[1.5rem] font-black leading-[1.18] text-ink">{article.title}</h3>
+                  <p class="text-sm uppercase tracking-[0.24em] text-clay">この記事の要点</p>
+                </div>
+                <div class="rounded-2xl bg-cream/70 px-4 py-4 text-sm leading-7 text-ink/75">
+                  <div class="flex gap-3">
+                    <span class="mt-2.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-coral"></span>
+                    <span class="line-clamp-4">{article.bulletLead}</span>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  {article.keyPhrases.map((phrase) => (
+                    <a
+                      href={withBase(buildTopicHrefFromLabel(phrase))}
+                      class="rounded-full border border-coral/40 bg-coral/10 px-2.5 py-0.5 text-[0.7rem] text-coralDark"
+                    >
+                      #{phrase}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="overflow-hidden rounded-[2rem] border border-line/70 bg-paper shadow-card">
+            <div class="border-b border-line/60 px-6 py-4">
+              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-clay">Summary Swap</p>
+              <p class="mt-2 text-sm text-ink/70">見た目はほぼ同じで、説明文だけ summary に差し替え</p>
+            </div>
+            <div class="grid gap-0">
+              <div class="bg-[#ded1c2]">
+                <div class="flex aspect-video items-center justify-center">
+                  <img src={withBase(article.headerImage)} alt={article.title} class="h-full w-full object-cover object-center" />
+                </div>
+              </div>
+              <div class="space-y-5 p-6 md:p-8">
+                <div class="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">
+                  <span class="truncate">{article.channel}</span>
+                  <span class="h-px w-6 bg-line"></span>
+                  <time>{article.publishedAt.toLocaleDateString("ja-JP")}</time>
+                </div>
+                <div class="space-y-4">
+                  <h3 class="headline line-clamp-4 text-[1.5rem] font-black leading-[1.18] text-ink">{article.title}</h3>
+                  <p class="text-sm uppercase tracking-[0.24em] text-clay">この記事の要点</p>
+                </div>
+                <div class="rounded-2xl bg-cream/70 px-4 py-4 text-sm leading-7 text-ink/75">
+                  <div class="flex gap-3">
+                    <span class="mt-2.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-coral"></span>
+                    <span class="line-clamp-4">{article.summary}</span>
+                  </div>
+                </div>
+                <div class="flex flex-wrap gap-2">
+                  {article.keyPhrases.map((phrase) => (
+                    <a
+                      href={withBase(buildTopicHrefFromLabel(phrase))}
+                      class="rounded-full border border-coral/40 bg-coral/10 px-2.5 py-0.5 text-[0.7rem] text-coralDark"
+                    >
+                      #{phrase}
+                    </a>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="overflow-hidden rounded-[2rem] border border-coral/30 bg-paper shadow-card">
+            <div class="border-b border-coral/20 bg-coral/5 px-6 py-4">
+              <p class="text-[0.7rem] font-semibold uppercase tracking-[0.24em] text-coralDark">Summary Focus</p>
+              <p class="mt-2 text-sm text-ink/70">summary を前に出して、記事案内として読ませる案</p>
+            </div>
+            <div class="grid gap-0">
+              <div class="bg-[#ded1c2]">
+                <div class="flex aspect-video items-center justify-center">
+                  <img src={withBase(article.headerImage)} alt={article.title} class="h-full w-full object-cover object-center" />
+                </div>
+              </div>
+              <div class="space-y-5 p-6 md:p-8">
+                <div class="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">
+                  <span class="truncate">{article.channel}</span>
+                  <span class="h-px w-6 bg-line"></span>
+                  <time>{article.publishedAt.toLocaleDateString("ja-JP")}</time>
+                </div>
+                <div class="space-y-4">
+                  <h3 class="headline line-clamp-3 text-[1.5rem] font-black leading-[1.18] text-ink">{article.title}</h3>
+                  <p class="rounded-2xl border border-coral/20 bg-coral/5 px-4 py-4 text-sm leading-7 text-ink/82">
+                    {article.summary}
+                  </p>
+                </div>
+                <div class="space-y-2">
+                  <p class="text-[0.7rem] uppercase tracking-[0.24em] text-clay">触れている論点</p>
+                  <div class="flex flex-wrap gap-2">
+                    {article.keyPhrases.map((phrase) => (
+                      <a
+                        href={withBase(buildTopicHrefFromLabel(phrase))}
+                        class="rounded-full border border-line/70 bg-cream/70 px-2.5 py-0.5 text-[0.7rem] text-ink/80"
+                      >
+                        #{phrase}
+                      </a>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    ))}
+  </section>
+</BaseLayout>

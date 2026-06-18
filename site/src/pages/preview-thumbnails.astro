@@ -15,6 +15,7 @@ interface PreviewArticle {
   publishedAt: Date;
   keyPhrases: string[];
   bulletPoints: BulletPoint[];
+  summary: string;
   headerImage: string;
   summaryLabel: string;
 }
@@ -32,6 +33,7 @@ const previews: PreviewArticle[] = [
         text: "Fable 5 の発表ポイントを、性能・長文処理・安全設計の3軸で短く掴める見せ方を想定。",
       },
     ],
+    summary: "Claude Fable 5 の発表内容をベースに、何が新しく、どこが注目点なのかを短く確認できる要約です。",
     headerImage: "/images/previews/fable5-header.png",
     summaryLabel: "Source + Explainer の本命案",
   },
@@ -47,6 +49,7 @@ const previews: PreviewArticle[] = [
         text: "人物主導のドキュメンタリー調サムネイルが、記事ページの特集感と相性が良いかを見るための案。",
       },
     ],
+    summary: "Anthropicの企業規模感、経営陣、事業の勢いを日本語で把握しやすく整理した記事です。",
     headerImage: "/images/previews/anthropic-story-header.png",
     summaryLabel: "Feature / Documentary 寄りの案",
   },
@@ -62,6 +65,7 @@ const previews: PreviewArticle[] = [
         text: "一覧で目を引く強めの構図。トップに並べたときに情報密度が高すぎないかを確認するための案。",
       },
     ],
+    summary: "Anthropicを取り巻く競争環境の変化と、Claude周辺で起きているプレッシャーを短く整理した要約記事です。",
     headerImage: "/images/previews/hype-warning-header.png",
     summaryLabel: "Commentary / Warning 寄りの案",
   },
@@ -114,6 +118,7 @@ const previews: PreviewArticle[] = [
             publishedAt={article.publishedAt}
             keyPhrases={article.keyPhrases}
             bulletPoints={article.bulletPoints}
+            summary={article.summary}
           />
         </div>
       ))}

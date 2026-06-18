@@ -173,6 +173,6 @@ def process_candidate(
     logger.info("Article created: video_id=%s article_path=%s", candidate.video_id, article_path)
     return PostPayload(
         article_title=summary.articleTitle,
-        slug=candidate.video_id.lower(),
+        slug=frontmatter.slug or candidate.video_id.lower(),
         key_phrases=list(summary.keyPhrases),
     )

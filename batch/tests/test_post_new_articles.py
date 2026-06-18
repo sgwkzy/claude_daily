@@ -12,6 +12,7 @@ def test_read_frontmatter_parses_yaml(tmp_path: Path) -> None:
         "videoId: ABC123\n"
         "title: Original Title\n"
         "articleTitle: 日本語の要約見出し\n"
+        "slug: sample-slug\n"
         "keyPhrases:\n"
         "  - Claude\n"
         "  - MCP\n"
@@ -22,6 +23,7 @@ def test_read_frontmatter_parses_yaml(tmp_path: Path) -> None:
     data = _read_frontmatter(article)
     assert data["videoId"] == "ABC123"
     assert data["articleTitle"] == "日本語の要約見出し"
+    assert data["slug"] == "sample-slug"
     assert data["keyPhrases"] == ["Claude", "MCP"]
 
 
