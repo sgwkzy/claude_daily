@@ -30,16 +30,29 @@ class TranscriptFetcher:
         try:
             from youtube_transcript_api import NoTranscriptFound, TranscriptsDisabled, YouTubeTranscriptApi
 
-            fetched = YouTubeTranscriptApi().fetch(video_id, languages=languages)
+            api = YouTubeTranscriptApi()
+            try:
+                fetched = api.fetch(video_id, languages=languages)
+                logger.info(
+                    "Transcript fetched via youtube_transcript_api: video_id=%s languages=%s segments=%s",
+                    video_id,
+                    ",".join(languages),
+                    len(fetched),
+                )
+            except NoTranscriptFound:
+                # 希望言語(ja/en)が無くても、訳して要約できるので任意の言語の字幕を取得する。
+                # グローバルな情報発信のため、利用可能ならどの言語でも率先して拾う。
+                fetched = _fetch_any_available(api, video_id, languages)
+                if fetched is None:
+                    logger.info(
+                        "Transcript unavailable in any language: video_id=%s preferred=%s",
+                        video_id,
+                        ",".join(languages),
+                    )
+                    return []
+        except TranscriptsDisabled:
             logger.info(
-                "Transcript fetched via youtube_transcript_api: video_id=%s languages=%s segments=%s",
-                video_id,
-                ",".join(languages),
-                len(fetched),
-            )
-        except (NoTranscriptFound, TranscriptsDisabled):
-            logger.info(
-                "Transcript unavailable via youtube_transcript_api: video_id=%s languages=%s reason=no_transcript",
+                "Transcript unavailable via youtube_transcript_api: video_id=%s languages=%s reason=disabled",
                 video_id,
                 ",".join(languages),
             )
@@ -61,6 +74,42 @@ class TranscriptFetcher:
             for snippet in fetched
             if snippet.text.strip()
         ]
+
+
+def _fetch_any_available(api, video_id: str, preferred: list[str]):
+    """希望言語が無い場合に、利用可能な任意言語の字幕を1つ選んで取得する。
+
+    手動作成字幕を優先し、次いで preferred の言語順、最後に残り全部の順で選ぶ。
+    取得できなければ None を返す。
+    """
+    try:
+        transcript_list = list(api.list(video_id))
+    except Exception as error:
+        logger.warning("Transcript list failed: video_id=%s error=%s", video_id, error)
+        return None
+    if not transcript_list:
+        return None
+
+    preferred_roots = [lang.split("-", 1)[0] for lang in preferred]
+
+    def rank(transcript) -> tuple[int, int]:
+        manual_rank = 1 if getattr(transcript, "is_generated", False) else 0
+        root = str(getattr(transcript, "language_code", "")).split("-", 1)[0]
+        lang_rank = preferred_roots.index(root) if root in preferred_roots else len(preferred_roots)
+        return (manual_rank, lang_rank)
+
+    chosen = sorted(transcript_list, key=rank)[0]
+    logger.info(
+        "Transcript fallback to available language: video_id=%s language=%s generated=%s",
+        video_id,
+        getattr(chosen, "language_code", "?"),
+        getattr(chosen, "is_generated", "?"),
+    )
+    try:
+        return chosen.fetch()
+    except Exception as error:
+        logger.warning("Transcript fetch of fallback language failed: video_id=%s error=%s", video_id, error)
+        return None
 
 
 def compact_segments(segments: list[TranscriptSegment], max_segments: int = 120) -> list[TranscriptSegment]:
@@ -111,6 +160,17 @@ def _fetch_with_ytdlp(video_id: str, languages: list[str]) -> list[TranscriptSeg
         command.append(f"https://www.youtube.com/watch?v={video_id}")
         completed = subprocess.run(command, capture_output=True, text=True, check=False)
         subtitle_files = sorted(tmp_path.glob(f"{video_id}*.vtt"))
+        # 希望言語のファイルを先に処理する（無ければ任意言語の字幕を使う）。
+        preferred_roots = [lang.split("-", 1)[0] for lang in languages] + ["en", "ja"]
+
+        def _lang_rank(path: Path) -> int:
+            name = path.name.lower()
+            for index, root in enumerate(preferred_roots):
+                if f".{root}." in name or f".{root}-" in name:
+                    return index
+            return len(preferred_roots)
+
+        subtitle_files.sort(key=_lang_rank)
         if completed.returncode != 0 and not subtitle_files:
             stderr = completed.stderr.strip().replace("\n", " ")
             logger.warning(
@@ -145,7 +205,8 @@ def _expand_language_codes(languages: list[str]) -> list[str]:
         expanded.append(lang)
         if "-" in lang:
             expanded.append(lang.split("-", 1)[0])
-    expanded.extend(["en", "ja"])
+    # 希望言語を先頭に置きつつ、訳して要約できるので最後に全言語を拾う。
+    expanded.extend(["en", "ja", "all"])
     return unique_preserving_order(expanded)
 
 
