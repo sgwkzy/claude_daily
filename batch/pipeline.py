@@ -175,4 +175,5 @@ def process_candidate(
         article_title=summary.articleTitle,
         slug=frontmatter.slug or candidate.video_id.lower(),
         key_phrases=list(summary.keyPhrases),
+        video_id=candidate.video_id,
     )

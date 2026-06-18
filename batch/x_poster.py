@@ -22,6 +22,7 @@ class PostPayload:
     article_title: str
     slug: str
     key_phrases: list[str]
+    video_id: str = ""
 
 
 class XPoster:
@@ -88,7 +89,10 @@ def build_tweet_text(payload: PostPayload) -> str:
     ``TWEET_HEADER`` が空のときは冒頭ヘッダー行を出さず、
     記事タイトル + ハッシュタグ + 記事URL の構成にする。
     """
-    url = f"{SITE_URL}/articles/{payload.slug}/"
+    # 日本語スラッグ(canonical)は X 上でリンクとして貼りにくいため、
+    # ASCII の videoId ベースの URL を使う（同じ記事ページが配信される）。
+    path = payload.video_id.lower() if payload.video_id else payload.slug
+    url = f"{SITE_URL}/articles/{path}/"
     hashtags = _build_hashtags(payload.key_phrases)
 
     # URL は t.co 短縮で 23 字固定として計算する。各ブロック間は空行 1 行を挟む。

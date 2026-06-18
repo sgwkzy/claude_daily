@@ -37,6 +37,7 @@ def main(paths: list[str]) -> int:
                 article_title=str(article_title),
                 slug=str(slug).lower(),
                 key_phrases=list(key_phrases),
+                video_id=str(video_id),
             )
         )
 

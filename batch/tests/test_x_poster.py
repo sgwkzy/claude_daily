@@ -6,13 +6,15 @@ from batch.x_poster import PostPayload, XPoster, build_tweet_text
 def test_build_tweet_text_basic() -> None:
     payload = PostPayload(
         article_title="Claude Fable 5の安全設計と長文処理を読み解くAnthropic公式発表まとめ",
-        slug="y9wz2pv404e",
+        slug="claude-fable-5-y9wz2pv404e",
         key_phrases=["Claude Fable 5", "安全設計", "長文処理"],
+        video_id="Y9Wz2PV404E",
     )
     text = build_tweet_text(payload)
     # ヘッダーなし運用: 冒頭はタイトルから始まる
     assert not text.startswith("本日のClaude Daily更新")
     assert payload.article_title in text
+    # 日本語スラッグではなく ASCII の videoId ベース URL を使う
     assert "https://www.claude-daily.com/articles/y9wz2pv404e/" in text
     assert "#Claude" in text and "#Anthropic" in text
 
