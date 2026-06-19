@@ -12,6 +12,9 @@ SITE_URL = "https://www.claude-daily.com"
 BASE_TAGS = ["Claude", "Anthropic"]
 TWEET_MAX = 280
 URL_LENGTH = 23  # t.co 自動短縮の固定長
+# X 投稿リンクに付ける UTM パラメータ。GA4 で direct に埋もれず social 流入として分類させる。
+# t.co で短縮されるため、付与しても実効 URL 長（23 字固定）は変わらない。
+UTM_SUFFIX = "?utm_source=x&utm_medium=social&utm_campaign=daily"
 # 投稿本文の冒頭ヘッダー文言。空文字ならヘッダー行を出さない（現行運用）。
 # 自動投稿を再有効化する際に文言を入れたい場合はここだけ変更する。
 TWEET_HEADER = ""
@@ -92,7 +95,7 @@ def build_tweet_text(payload: PostPayload) -> str:
     # 日本語スラッグ(canonical)は X 上でリンクとして貼りにくいため、
     # ASCII の videoId ベースの URL を使う（同じ記事ページが配信される）。
     path = payload.video_id.lower() if payload.video_id else payload.slug
-    url = f"{SITE_URL}/articles/{path}/"
+    url = f"{SITE_URL}/articles/{path}/{UTM_SUFFIX}"
     hashtags = _build_hashtags(payload.key_phrases)
 
     # URL は t.co 短縮で 23 字固定として計算する。各ブロック間は空行 1 行を挟む。

@@ -1,6 +1,6 @@
 from __future__ import annotations
 
-from batch.x_poster import PostPayload, XPoster, build_tweet_text
+from batch.x_poster import UTM_SUFFIX, PostPayload, XPoster, build_tweet_text
 
 
 def test_build_tweet_text_basic() -> None:
@@ -15,7 +15,9 @@ def test_build_tweet_text_basic() -> None:
     assert not text.startswith("本日のClaude Daily更新")
     assert payload.article_title in text
     # 日本語スラッグではなく ASCII の videoId ベース URL を使う
-    assert "https://www.claude-daily.com/articles/y9wz2pv404e/" in text
+    assert f"https://www.claude-daily.com/articles/y9wz2pv404e/{UTM_SUFFIX}" in text
+    # GA4 で social 流入として分類させる UTM が付与されている
+    assert "utm_source=x" in text
     assert "#Claude" in text and "#Anthropic" in text
 
 
@@ -23,8 +25,8 @@ def test_build_tweet_text_truncates_long_title() -> None:
     long_title = "あ" * 300
     payload = PostPayload(article_title=long_title, slug="abc", key_phrases=[])
     text = build_tweet_text(payload)
-    # t.co 短縮を 23 字として概算した実効長で 280 以内
-    effective = len(text) - len("https://www.claude-daily.com/articles/abc/") + 23
+    # t.co 短縮を 23 字として概算した実効長で 280 以内（UTM 込みの URL 全体が短縮される）
+    effective = len(text) - len(f"https://www.claude-daily.com/articles/abc/{UTM_SUFFIX}") + 23
     assert effective <= 280
     assert "…" in text
 
