@@ -1,0 +1,60 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/url";
+
+const description =
+  "Claude Daily へのお問い合わせ窓口。掲載内容の誤り報告、権利者からの削除・修正依頼、一般的なご連絡の受付先を案内します。";
+---
+
+<BaseLayout title="Contact | Claude Daily" description={description} path="/contact/">
+  <article class="mx-auto max-w-[52rem] space-y-10 leading-[1.95] text-ink/85">
+    <header>
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">Contact</p>
+      <h1 class="headline mt-3 text-3xl font-black leading-tight text-ink md:text-4xl">お問い合わせ</h1>
+      <p class="mt-4 text-lg text-ink/75">
+        当サイトの掲載内容や運営に関するご連絡は、以下の窓口からお願いいたします。内容を確認のうえ、順次対応いたします。
+      </p>
+    </header>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">1. お問い合わせ窓口</h2>
+      <ul class="list-disc space-y-2 pl-6">
+        <li>
+          メール:
+          <a class="underline hover:text-coral" href="mailto:sugawalabo@gmail.com">sugawalabo@gmail.com</a>
+        </li>
+        <li>
+          X:
+          <a class="underline hover:text-coral" href="https://x.com/sugawalabo" target="_blank" rel="noreferrer">@sugawalabo</a>
+        </li>
+      </ul>
+      <p>
+        お急ぎの場合や込み入った内容の場合は、メールでお送りいただけるとやり取りがスムーズです。
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">2. お問い合わせ内容の例</h2>
+      <ul class="list-disc space-y-2 pl-6">
+        <li>掲載記事の誤りや不適切な表現のご報告</li>
+        <li>権利者の方からの掲載内容に関する削除・修正のご依頼</li>
+        <li>編集方針やサイト運営に関する一般的なご質問</li>
+      </ul>
+      <p>
+        権利関係のご連絡については、内容を確認のうえ、修正または削除を含めて速やかに対応いたします。掲載・要約の方針は
+        <a class="underline hover:text-coral" href={withBase("/editorial-policy/")}>Editorial Policy</a>
+        もあわせてご確認ください。
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">3. 補足</h2>
+      <p>当サイトは個人運営であり、Claude / Anthropic 公式とは関係ありません。</p>
+      <p>
+        個人情報の取り扱いについては
+        <a class="underline hover:text-coral" href={withBase("/privacy/")}>プライバシーポリシー</a>
+        をご確認ください。
+      </p>
+    </section>
+  </article>
+</BaseLayout>

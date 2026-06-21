@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/url";
 
 const lastUpdated = "2026-06-14";
 const description = "Claude Daily のプライバシーポリシー。アクセス解析(Google Analytics)・広告配信(Google AdSense)・Cookie の利用状況を記載します。";
@@ -62,7 +63,7 @@ const description = "Claude Daily のプライバシーポリシー。アクセ�
 
     <section class="space-y-3">
       <h2 class="text-xl font-bold text-ink">8. お問い合わせ</h2>
-      <p>本ポリシー、または当サイトに関するお問い合わせは、運営者の X アカウント <a class="underline hover:text-coral" href="https://x.com/sugawalabo" target="_blank" rel="noreferrer">@sugawalabo</a> へお願いいたします。</p>
+      <p>本ポリシー、または当サイトに関するお問い合わせは、メール <a class="underline hover:text-coral" href="mailto:sugawalabo@gmail.com">sugawalabo@gmail.com</a> または運営者の X アカウント <a class="underline hover:text-coral" href="https://x.com/sugawalabo" target="_blank" rel="noreferrer">@sugawalabo</a> へお願いいたします。窓口の詳細は <a class="underline hover:text-coral" href={withBase("/contact/")}>お問い合わせページ</a> をご確認ください。</p>
     </section>
   </article>
 </BaseLayout>
