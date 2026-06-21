@@ -11,8 +11,8 @@ channelId: UCKy1dAqELo0zrOtPkf0eTMw
 publishedAt: '2026-06-17T15:01:47Z'
 fetchedAt: '2026-06-20T10:03:36.216571Z'
 originalThumbnail: https://i.ytimg.com/vi/AlV__BFg8qk/maxresdefault.jpg
-headerImage: /images/AlV__BFg8qk/header.png
-heroImage: /images/AlV__BFg8qk/header.png
+headerImage: /images/AlV__BFg8qk/header.ja.png
+heroImage: /images/AlV__BFg8qk/header.ja.png
 viewCount: 37756
 durationSec: 958
 sourceLanguage: en
@@ -61,6 +61,89 @@ sections:
 
     一方で、これを支えるMCPサーバーはあくまで実験的な段階にあり、画像・動画生成として見せた機能は来年初頭に提供予定とされる。Epicは、モデルが真に有用であるためには技術的複雑さを下げるだけでなく、作り手に対して『何を作るか』の完全な創造的コントロールを与えることが不可欠だと位置づけ、この取り組みを共に進む旅だと締めくくった。'
   image: null
+en:
+  articleTitle: Unreal Engine 5.8 Adds Experimental MCP Support for Claude Code Workflows
+  seoTitle: Unreal Engine 5.8 Adds Experimental MCP Support for Claude Code
+  summary: At State of Unreal 2026, Epic Games unveiled new tools aimed at reducing
+    the technical overhead of game development…
+  keyPhrases:
+  - MCP
+  - Unreal Engine 5.8
+  - Claude Code
+  - Epic Games
+  - game development
+  - PCG Primitive
+  bulletPoints:
+  - time: 13
+    text: At State of Unreal 2026, Epic Games unveiled new tools aimed at reducing
+      the technical overhead of game development and freeing creators from endless
+      node-graph untangling.
+  - time: 66
+    text: Unreal Engine 5.8 adds an MCP server as a bridge between the engine and
+      any model. The demo uses Claude Code, but developers can connect Gemini or their
+      own custom models.
+  - time: 84
+    text: Enabling Unreal MCP requires only turning on a plugin, doing a bit of setup,
+      and connecting a model. Epic frames it as applying the long-standing philosophy
+      of "your source, your pipeline, your workflow" to LLMs.
+  - time: 476
+    text: Epic says work that would take months by hand was completed by an artist
+      in days with the MCP server and Unreal, arguing that lower technical friction
+      leads to more iteration and better games.
+  - time: 507
+    text: The MCP server, the PCG Primitive plugin, and the associated skills all
+      shipped that day as part of 5.8, open for extension and ready to pair with any
+      model.
+  - time: 928
+    text: The MCP server remains experimental, and the image and video generation
+      features shown are planned for early next year. Epic says the goal is not just
+      less complexity but full creative control for creators.
+  sections:
+  - heading: A New Toolset Designed to Reduce Technical Friction
+    time: 13
+    body: 'Onstage at State of Unreal 2026, Epic''s Michael argued that game development
+      is often difficult, expensive, and slow, with technical overhead creating a
+      gap between what creators imagine and what they can actually build. Spending
+      hours just untangling what is happening inside a node graph, he said, is not
+      creativity. There has to be a better way.
+
+
+      Epic''s answer is a new toolset built to help teams create faster and iterate
+      more. The company says it is not abandoning Unreal''s core philosophy of "your
+      source, your pipeline, your workflow," where developers keep full control and
+      the engine gets out of the way. Instead, it is extending that philosophy to
+      large language models.'
+    image: null
+  - heading: An MCP Server That Connects Claude Code to Unreal
+    time: 66
+    body: 'Unreal Engine 5.8 introduces an MCP server that acts as a bridge between
+      the engine and any model developers want to use. The presentation uses Claude
+      Code, but the setup can also connect to Gemini or custom in-house models. Activation
+      is simple: enable the plugin, configure a few settings, and connect a model.
+
+
+      Epic also announced that the MCP server, the PCG Primitive plugin, and the company''s
+      internally developed skills would all ship that day as part of 5.8. Everything
+      is open and extensible, and developers are encouraged to download it, point
+      it at their own models, and see what becomes possible. The more a team adds
+      its own primitives, examples, and skills, the more useful the system becomes
+      across the project.'
+    image: null
+  - heading: Early Results and an Explicitly Experimental Status
+    time: 476
+    body: 'According to the demo, work that would have taken months manually was completed
+      by an artist in just a few days using the MCP server and Unreal. The central
+      claim is straightforward: reduce technical friction, increase iteration, and
+      the result is better games.
+
+
+      At the same time, Epic is clear that the MCP server is still experimental, and
+      the image and video generation capabilities shown onstage are slated for release
+      early next year. The broader goal, the company says, is not only to reduce technical
+      complexity but to give creators complete control over what they choose to make.'
+    image: null
+  headerImage: /images/AlV__BFg8qk/header.png
+  heroImage: /images/AlV__BFg8qk/header.png
 ---
 
 ## ハイライト

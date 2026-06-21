@@ -10,8 +10,8 @@ channelId: UCh13OyDSm-Kb8ij3yZArtFg
 publishedAt: '2026-06-19T16:18:23Z'
 fetchedAt: '2026-06-21T02:16:07.465507Z'
 originalThumbnail: https://i.ytimg.com/vi/XzEgfmesG8c/maxresdefault.jpg
-headerImage: /images/XzEgfmesG8c/header.png
-heroImage: /images/XzEgfmesG8c/header.png
+headerImage: /images/XzEgfmesG8c/header.ja.png
+heroImage: /images/XzEgfmesG8c/header.ja.png
 viewCount: 23261
 durationSec: 721
 sourceLanguage: en
@@ -61,6 +61,89 @@ sections:
 
     そのCEOが、視聴者と同じ映像を台本も補足もなしに視聴した。3文のプロンプトから昨日作られた3本のゲームを、その規模のスタジオが見てどう反応したか——AIゲームに対する先入観を揺さぶる場面だとされる。半年後には誰もが同じことをしてマーケットプレイスは飽和する。これが優位になる『窓』は今であり、新しいプラットフォームで勝つのは早く動く者だ、と締めくくる。すべてのゲーム・MCP・スキル・プロンプトは概要欄で公開されている。'
   image: null
+en:
+  articleTitle: 'Building Real 3D Games with Claude + Higgsfield MCP: Three Multiplayer
+    Titles in a Day, Played by ~4,000 People'
+  seoTitle: 'Building Real 3D Games with Claude + Higgsfield MCP: Three Multi'
+  summary: Writing zero lines of code, the creator built and shipped three realistic
+    multiplayer 3D games in a single afternoon.…
+  keyPhrases:
+  - MCP
+  - Higgsfield
+  - Claude
+  - 3D game creation
+  - no-code
+  - game development
+  bulletPoints:
+  - time: 0
+    text: Writing zero lines of code, the creator built and shipped three realistic
+      multiplayer 3D games in a single afternoon. He went to sleep, and by morning
+      about 4,000 people had played them and 120 remixes had appeared.
+  - time: 37
+    text: The combination of Claude (Fable 5) and the Higgsfield (Hixel) MCP gives
+      each character a real skin and each object a real texture, breaking away from
+      the 'capsule humans and gray boxes' of past Claude-made games.
+  - time: 83
+    text: Setup takes about 30 seconds and two steps. You just paste the Higgsfield
+      MCP connector into Claude and sign in, and Claude can then generate realistic
+      assets.
+  - time: 303
+    text: The same prompt that writes the game also handles hosting, producing a playable
+      link in minutes. Because MCP makes the infrastructure 'invisible,' there is
+      no deployment hassle.
+  - time: 362
+    text: The most striking of the three was a fruit-slicing game that needs no controller,
+      mouse, or touchscreen. A webcam tracks your hand, and your fingertips become
+      the blade.
+  - time: 585
+    text: He showed all three, unscripted, to Smilegate, the company behind 'Crossfire'
+      (played by over 670 million people), and filmed the CEO's candid reaction, underscoring
+      the first-mover advantage before the moment when 'anyone can do this.'
+  sections:
+  - heading: Zero Code, Three Games in a Day, 4,000 Players
+    time: 0
+    body: 'The creator, Adil, says he built three realistic multiplayer 3D games in
+      a single afternoon without writing a single line of code. He published them,
+      went to sleep, and woke up to about 4,000 players and 120 remixes. What would
+      have been impossible a week ago is possible today.
+
+
+      Games made with Claude so far did work, but they looked like capsule-shaped
+      characters, gray boxes, and a single texture stretched across the whole world.
+      The code was impressive, but the visuals were extremely plain. This time, that
+      weakness is solved by combining Claude (Fable 5) with the Higgsfield MCP.'
+    image: null
+  - heading: 30-Second Setup and 'Invisible Infrastructure' via MCP
+    time: 83
+    body: 'Setup takes just 30 seconds and two steps. First, paste the Higgsfield
+      (Hixel) MCP connector into Claude and sign in, and Claude can then generate
+      real assets such as skins and textures.
+
+
+      A plain AI chatbot can technically deploy a game too, but in that case a human
+      has to act as an intermediary. MCP makes the infrastructure ''invisible,'' so
+      the same prompt that writes the game also handles hosting. The result is a playable
+      link in minutes, free of deployment headaches. Each gun has its own shape and
+      personality: the sniper zooms in for high damage, and the bazooka leaves a trail
+      of smoke and can destroy blocks.'
+    image: null
+  - heading: A Major Studio's Reaction and 'The Window Is Now'
+    time: 585
+    body: 'Aware that he would judge his own work too kindly, the creator sent all
+      three games to Smilegate, a studio that makes games for a living. Its shooter
+      ''Crossfire'' has run since 2007 and has more than 670 million players.
+
+
+      Its CEO watched the same footage as the audience, with no script or extra context.
+      How does a studio of that scale react to three games built yesterday from three-sentence
+      prompts? It is framed as a moment that shakes up preconceptions about AI games.
+      In six months, everyone will be doing the same thing and the marketplace will
+      be saturated. The ''window'' for an advantage is now, and the winners on a new
+      platform are those who move fast, he concludes. All of the games, MCPs, skills,
+      and prompts are shared in the description.'
+    image: null
+  headerImage: /images/XzEgfmesG8c/header.png
+  heroImage: /images/XzEgfmesG8c/header.png
 ---
 
 ## ハイライト

@@ -1,8 +1,8 @@
 ---
 videoId: _-jZ6eV3DP4
 title: I Built A Business From Scratch Only Following Claude's Advice
-articleTitle: Claudeの助言だけでカーペット清掃業をゼロから立ち上げた2週間 — 売上£685と次に黒字化する手応え
 slug: claude-carpet-cleaning-business-case
+articleTitle: Claudeの助言だけでカーペット清掃業をゼロから立ち上げた2週間 — 売上£685と次に黒字化する手応え
 seoTitle: Claudeだけで清掃ビジネスを立ち上げた実験 2週間の記録
 summary: Claudeの助言を頼りに小さな事業を立ち上げたケースを追い、収益化の初期手応えと運用の実態を要約した記事です。
 channel: 3.7Million
@@ -10,8 +10,8 @@ channelId: UCohkCVfU-15iRhmInV14AyQ
 publishedAt: '2026-06-14T15:00:31Z'
 fetchedAt: '2026-06-17T03:43:34.956075Z'
 originalThumbnail: https://i.ytimg.com/vi/_-jZ6eV3DP4/maxresdefault.jpg
-headerImage: /images/_-jZ6eV3DP4/header.png
-heroImage: /images/_-jZ6eV3DP4/header.png
+headerImage: /images/_-jZ6eV3DP4/header.ja.png
+heroImage: /images/_-jZ6eV3DP4/header.ja.png
 viewCount: 179844
 durationSec: 1370
 sourceLanguage: en
@@ -62,6 +62,94 @@ sections:
 
     それでも検証者は「機材は一度きりの投資で、同じペースを2週続ければ十分黒字化する。住宅清掃と比べてもこちらの方が顧客獲得が明らかに楽だった」と総括している。サービス業の検証としては、AIによる業態選定と価格・広告設計が「初期投資を回収できるラインに2週間で到達した」点を、肯定的に位置づけている。'
   image: null
+en:
+  articleTitle: 'Launching a Carpet Cleaning Business With Only Claude’s Advice: £685
+    in Two Weeks'
+  seoTitle: 'Launching a Carpet Cleaning Business With Only Claude’s Advice:'
+  summary: This experiment follows only the AI "Claude's" instructions to launch a
+    service business from scratch, without…
+  keyPhrases:
+  - starting a business with Claude
+  - carpet cleaning business
+  - AI business plan
+  - Facebook ads at £10/day
+  - £685 revenue / £881 costs
+  - path to profitability
+  bulletPoints:
+  - time: 0
+    text: This experiment follows only the AI "Claude's" instructions to launch a
+      service business from scratch, without inserting any human judgment.
+  - time: 54
+    text: 'Claude proposed four business types: residential cleaning, end-of-tenancy
+      deep cleaning, commercial office cleaning, and carpet cleaning.'
+  - time: 99
+    text: The creator chose carpet cleaning as the only option, arguing that the others
+      had already been covered in past videos or were harder to differentiate.
+  - time: 589
+    text: The first job was completed in three hours, but it also exposed operational
+      problems the business plan had not accounted for, including hose length and
+      transport constraints.
+  - time: 648
+    text: Because organic Facebook posts produced zero leads, the creator adopted
+      Claude's paid ad plan of £150 per month and, as a precaution, doubled it to
+      £10 per day.
+  - time: 1295
+    text: After two weeks, the business had landed 11 jobs and generated £685 in revenue,
+      against £881 in total costs for equipment, ads, and other expenses.
+  - time: 1342
+    text: The creator concludes that another two weeks would likely bring the business
+      into profitability and that customer acquisition was easier than for residential
+      cleaning.
+  sections:
+  - heading: An experiment in launching a service business with Claude alone
+    time: 0
+    body: 'The video follows a YouTuber testing how far a service business can be
+      built by suppressing his own judgment and relying only on advice from "Claude
+      (Cloud AI)." The starting question is simple: what are the top five most profitable
+      service businesses that a beginner could start from zero?
+
+
+      Claude''s answer included residential cleaning, end-of-tenancy deep cleaning,
+      commercial office cleaning, and carpet cleaning. The creator eliminated the
+      options he had already covered on other channels or considered difficult to
+      differentiate, and ultimately narrowed the experiment to carpet cleaning alone.
+      That becomes almost the only meaningful human decision in the entire project.'
+    image: null
+  - heading: Operational reality and the holes in the plan
+    time: 589
+    body: 'The first job took about three hours as a one-person operation. The cleaning
+      result itself was solid, but several practical points of friction emerged that
+      were not reflected in Claude''s business plan. The hose would not reach the
+      site, forcing the creator to carry equipment upstairs, and one customer even
+      suggested switching to a van because loading and unloading the gear from a small
+      car was so awkward.
+
+
+      On customer acquisition, organic Facebook posting produced zero leads even after
+      several days. The creator then switched to Claude''s paid advertising plan of
+      £150 per month, or roughly £5 per day, but doubled it to £10 per day based on
+      personal judgment before leads finally started coming in. The gap between the
+      AI''s desk-based budget assumptions and the real level of spend needed on the
+      ground became clear.'
+    image: null
+  - heading: Two-week results and the case for profitability in the next round
+    time: 1295
+    body: 'Across the two-week challenge, the business booked 11 jobs and generated
+      £685 in revenue. At the same time, it incurred £700 in equipment costs, £60
+      for a hoover, £70 for consumables, and £51 in advertising, for a total of £881.
+      At this stage, that leaves the business roughly £196 in the red.
+
+
+      Even so, the creator''s conclusion is positive: the equipment cost is a one-time
+      investment, and another two weeks at the same pace should be enough to turn
+      profitable. He also argues that customer acquisition was clearly easier here
+      than in residential cleaning. As a business experiment, the video frames this
+      as evidence that AI-driven niche selection, pricing, and ad planning can get
+      a service operation to the brink of recovering its initial investment within
+      two weeks.'
+    image: null
+  headerImage: /images/_-jZ6eV3DP4/header.png
+  heroImage: /images/_-jZ6eV3DP4/header.png
 ---
 
 ## ハイライト

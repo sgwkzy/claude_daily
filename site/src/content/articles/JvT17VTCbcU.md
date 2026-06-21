@@ -1,8 +1,8 @@
 ---
 videoId: JvT17VTCbcU
 title: Claude Fable 5 is a freak
-articleTitle: Fable 5は本当に「化け物」か — Minecraft/Spotify/GTAクローンを1プロンプトでどこまで作れるか実地検証
 slug: claude-fable-5-prompt-potato-tests
+articleTitle: Fable 5は本当に「化け物」か — Minecraft/Spotify/GTAクローンを1プロンプトでどこまで作れるか実地検証
 seoTitle: Fable 5は本当に化け物か 1プロンプト実地検証で見る実力
 summary: Minecraft、Spotify、GTAクローン風の制作テストを通じて、Claude Fable 5 の生成力を具体的に確認できる記事です。
 channel: Prompt Potato
@@ -10,8 +10,8 @@ channelId: UC3owM34LYtaDERvFwLxTsLA
 publishedAt: '2026-06-14T19:30:01Z'
 fetchedAt: '2026-06-17T03:43:34.956075Z'
 originalThumbnail: https://i.ytimg.com/vi/JvT17VTCbcU/maxresdefault.jpg
-headerImage: /images/JvT17VTCbcU/header.png
-heroImage: /images/JvT17VTCbcU/header.png
+headerImage: /images/JvT17VTCbcU/header.ja.png
+heroImage: /images/JvT17VTCbcU/header.ja.png
 viewCount: 134000
 durationSec: 1766
 sourceLanguage: en-US
@@ -62,6 +62,91 @@ sections:
 
     レビューの結論は、Fable 5は「一発で完成品を作る魔法」ではなく、『1プロンプトでアプリやゲームの土台を高解像度で立ち上げる装置』として強力、というもの。Anthropic公開停止後にこれを再び触れる日がいつ来るかは、別の論点として残った形だ。'
   image: null
+en:
+  articleTitle: Is Fable 5 Really a "Monster"? Testing One-Prompt Minecraft, Spotify,
+    and GTA Clones
+  seoTitle: Is Fable 5 Really a "Monster"? Testing One-Prompt Minecraft, Spo
+  summary: Before the shutdown, the creator used Claude Fable 5 in Claude Code ultra
+    to generate Minecraft, photo-editing,…
+  keyPhrases:
+  - Claude Fable 5
+  - Claude Code ultra
+  - Block Craft / Minecraft clone
+  - one-shot Spotify build
+  - 1.5 million tokens
+  - GTA 6 ragdoll physics
+  bulletPoints:
+  - time: 0
+    text: Before the shutdown, the creator used Claude Fable 5 in Claude Code ultra
+      to generate Minecraft, photo-editing, Spotify, and GTA-style clones one prompt
+      at a time.
+  - time: 23
+    text: For Minecraft, the creator simply asked for something that looked and behaved
+      like Minecraft, after which Fable 5 rewrote the prompt itself and launched into
+      the build.
+  - time: 49
+    text: After roughly an hour and 1.5 million tokens, it produced "Block Craft,"
+      with key mechanics such as block destruction and infinite resources working.
+  - time: 814
+    text: A Photoshop-style editor came next and was finished in about six minutes,
+      implementing every feature that had been explicitly requested.
+  - time: 825
+    text: Its Spotify-style app was generated in one shot in 11 minutes, complete
+      with a sidebar, album-art grid, playback controls, and an audio visualizer.
+  - time: 884
+    text: It even invented demo tracks automatically, delivering not just a UI but
+      a working app with features like likes, search, and a library.
+  - time: 1693
+    text: A true GTA 6 equivalent was beyond one-shot generation, but its ragdoll
+      physics and vehicle reactions during explosions came close enough to suggest
+      iteration could get it there.
+  sections:
+  - heading: 'Minecraft: A Working Clone in One Hour and 1.5 Million Tokens'
+    time: 0
+    body: 'Prompt Potato tests Claude Fable 5, just before its public withdrawal,
+      using Claude Code in "ultra" mode to attempt increasingly complex clone projects.
+      The first target is Minecraft. After entering a simple instruction to make something
+      that looks and behaves like Minecraft, the model rewrites the prompt on its
+      own and proceeds straight into the build.
+
+
+      Roughly an hour later, it delivers "Block Craft," with block breaking, infinite
+      resources, and a Minecraft-style crafting UI all working. The run consumed about
+      1.5 million tokens, so the cost was substantial, but the reviewer says the result
+      was convincing enough to momentarily feel like launching the real Minecraft.'
+    image: null
+  - heading: Photoshop and Spotify-Style Apps in Minutes, Not Hours
+    time: 814
+    body: 'For more standardized interfaces, generation time drops dramatically. A
+      Photoshop-style image editor took about six minutes, while a Spotify-style app
+      arrived in roughly 11 minutes as a one-shot build. The Spotify-inspired app
+      included a dark UI, sidebar, album grid, search bar, playback, pause, skip,
+      shuffle, progress bar, volume controls, and even an audio visualizer.
+
+
+      One especially interesting detail is that Fable 5 also made up its own demo
+      music catalog, including track names like "Neon Skyline" and "Glass Bloom."
+      Even with a limited number of songs, it implemented search, likes, and a library
+      view, reaching a level where it felt like an actual app rather than just a mocked-up
+      interface.'
+    image: null
+  - heading: 'GTA 6: Not One-Shot Ready, but the Physics Already Feel Real'
+    time: 1693
+    body: 'The final test is the most unrealistic one: "build GTA 6 from scratch."
+      Unsurprisingly, it cannot generate a full map, asset set, and mission structure
+      in one shot, so the result is not literally GTA. Even so, the physics work,
+      including police chases, rocket launchers, ragdolling pedestrians, and vehicles
+      tossed by explosions, is strong enough to suggest that with serious time, real
+      assets, and iterative refinement, it could get remarkably close.
+
+
+      The review''s conclusion is that Fable 5 is not magic that instantly outputs
+      finished products. It is better understood as a system that can stand up a high-resolution
+      foundation for apps and games from a single prompt. When the public will get
+      to touch it again after Anthropic pulled it remains a separate open question.'
+    image: null
+  headerImage: /images/JvT17VTCbcU/header.png
+  heroImage: /images/JvT17VTCbcU/header.png
 ---
 
 ## ハイライト

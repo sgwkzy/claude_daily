@@ -10,8 +10,8 @@ channelId: UCvvd2QBVcOletZqoyuXr-IQ
 publishedAt: '2026-06-16T10:24:37Z'
 fetchedAt: '2026-06-19T00:52:38.910395Z'
 originalThumbnail: https://i.ytimg.com/vi/QkckeI0tITg/maxresdefault.jpg
-headerImage: /images/QkckeI0tITg/header.png
-heroImage: /images/QkckeI0tITg/header.png
+headerImage: /images/QkckeI0tITg/header.ja.png
+heroImage: /images/QkckeI0tITg/header.ja.png
 viewCount: 38514
 durationSec: 806
 sourceLanguage: en-US
@@ -71,6 +71,98 @@ sections:
 
     最後に、至近距離での爆破でスローモーションに入りカメラが旋回する映画的演出を加え、Web版とGodot版がほぼ同一の仕上がりに到達したと締めくくる。'
   image: null
+en:
+  articleTitle: Zero Experience to an AAA-Style Game in 12 Hours With Claude Fable
+    5 and MCP Tools
+  seoTitle: Zero Experience to an AAA-Style Game in 12 Hours With Claude Fab
+  summary: The creator says a plain Blender cube was turned into a polished game running
+    in Godot within 12 hours using the new…
+  keyPhrases:
+  - Claude Fable 5
+  - Blender MCP
+  - Godot
+  - AI game development
+  - 3D modeling
+  - natural-language programming
+  bulletPoints:
+  - time: 0
+    text: The creator says a plain Blender cube was turned into a polished game running
+      in Godot within 12 hours using the new Fable 5 model, despite starting with
+      zero Blender or Godot experience.
+  - time: 26
+    text: The process began by having Opus Fable 5 create a dragon through Blender
+      MCP, and the creator says it outperformed Qwen on the same task.
+  - time: 67
+    text: Fable 5 directly operated Blender to build the dragon from scratch, including
+      the body, wings, horns, and glowing eyes, then rendered and critiqued the result
+      like an art reviewer before fixing its own mistakes.
+  - time: 321
+    text: By describing the desired action-movie feel in plain language, the creator
+      had it implement a kill-cam that follows a downed enemy while they moved on
+      to other asset work.
+  - time: 347
+    text: Wanting a more authentic AAA look, the creator abandoned the first Blender-made
+      dragon and switched to a pipeline using GPT image generation plus Neural 4D
+      for 3D asset creation.
+  - time: 632
+    text: A cinematic sequence was added in which blowing up a ship at close range
+      triggers slow motion and a sweeping camera shot through the explosion behind
+      the dragon.
+  - time: 660
+    text: In the end, the web version and Godot version looked nearly identical, and
+      the creator asks viewers which one they prefer while teasing an AI-made horror
+      game next.
+  sections:
+  - heading: A Production Workflow Driven by Plain English
+    time: 0
+    body: 'The creator declares that they completed the game in 12 hours through conversation
+      with Fable 5 despite having no prior 3D production experience. No game studio,
+      art training, or engine tutorial was involved.
+
+
+      What they brought to the table was plain English and a large volume of interaction
+      with the AI. The video walks through how a project that started from a single
+      cube gradually moved toward a finished game.
+
+
+      That approach, issuing instructions through natural language alone, serves as
+      the central theme running through the entire build.'
+    image: null
+  - heading: Fable 5 Directly Drives Blender and Godot
+    time: 67
+    body: 'The first major milestone comes when Fable 5 is asked to 3D-model a dragon
+      through Blender MCP. The creator provides a reference image, asks it to elaborate
+      creatively, and then mostly watches the process unfold.
+
+
+      Fable 5 constructs the model from the ground up, including the body, wings,
+      horns, and glowing eyes. The notable part is that it renders the result itself,
+      critiques it like an art judge, and fixes its own mistakes before presenting
+      the output.
+
+
+      Despite the human creator doing none of the modeling directly, the result is
+      strong enough that they say it outperformed other models on the same assignment.'
+    image: null
+  - heading: Cinematic Direction and the Push Toward AAA Quality
+    time: 321
+    body: 'As the creator shifts from prototyping to making the game feel more cinematic,
+      they describe the desired action-movie sensation in words and get a kill-cam
+      sequence implemented in response. The camera follows a defeated enemy all the
+      way down into the sea.
+
+
+      To push the visuals closer to AAA quality, the creator discards the original
+      Blender-built dragon and switches to a new pipeline: generate imagery with GPT
+      and turn it into a 3D asset using Neural 4D.
+
+
+      Finally, a close-range explosion effect is added, triggering slow motion and
+      a circling camera move. The video ends by saying the web version and the Godot
+      version now look almost the same.'
+    image: null
+  headerImage: /images/QkckeI0tITg/header.png
+  heroImage: /images/QkckeI0tITg/header.png
 ---
 
 ## ハイライト

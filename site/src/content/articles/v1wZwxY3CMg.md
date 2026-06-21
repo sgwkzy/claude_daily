@@ -9,7 +9,8 @@ channelId: UCUMZ7gohGI9HcU9VNsr2FJQ
 publishedAt: '2026-06-12T12:00:20Z'
 fetchedAt: '2026-06-12T10:25:41.477521Z'
 originalThumbnail: https://i.ytimg.com/vi/v1wZwxY3CMg/maxresdefault.jpg
-headerImage: /images/v1wZwxY3CMg/header.png
+headerImage: /images/v1wZwxY3CMg/header.ja.png
+heroImage: /images/v1wZwxY3CMg/header.ja.png
 viewCount: 826368
 durationSec: 2860
 sourceLanguage: en
@@ -74,6 +75,113 @@ sections:
 
     イタリアには馬を所有しており、「カリプソ」という名の馬のそばに座ってただ眺めるだけで心が落ち着くと話す。「彼女はこのAIの話なんて何も知らない。ただ幸せな馬なんだ」という言葉に、巨大テクノロジー企業のCEOの人間的な一面が垣間見える。'
   image: null
+en:
+  articleTitle: Inside Anthropic, the $965 Billion AI Juggernaut | The Circuit
+  seoTitle: Inside Anthropic, the $965 Billion AI Juggernaut | The Circuit
+  summary: Dario Amodei is presented as an unusual AI celebrity who has long warned
+    the world about AI risk, while his company…
+  keyPhrases:
+  - Anthropic
+  - Dario Amodei
+  - AI risk management
+  - AI arms race
+  - chip export controls to China
+  - safe AI development
+  bulletPoints:
+  - time: 18
+    text: Dario Amodei is presented as an unusual AI celebrity who has long warned
+      the world about AI risk, while his company Anthropic has grown into a frontier
+      AI firm valued at nearly $1 trillion.
+  - time: 40
+    text: Anthropic was founded in 2021 by former OpenAI members and has grown from
+      a small lab into a market force powerful enough to erase billions of dollars
+      in software market value.
+  - time: 69
+    text: The company is run by siblings Dario and Daniela Amodei, with Dario setting
+      the vision and Daniela handling day-to-day execution.
+  - time: 1414
+    text: Dario stands at the center of the AI race, openly criticizing rivals that
+      neglect risk management and strongly arguing for tighter AI chip export controls
+      to China.
+  - time: 2756
+    text: Anthropic devotes half of its internal resources to risk reduction, but
+      Dario also admits it is impossible to reduce AI danger to zero.
+  - time: 2788
+    text: He says Anthropic’s core mission is to drive down the probability of catastrophic
+      AI risk as far as possible.
+  - time: 2821
+    text: 'Under extreme pressure, Dario stays grounded through ordinary breaks: video
+      games, time with family, and quiet moments at a ranch in Italy.'
+  sections:
+  - heading: Anthropic’s Rise and Founding Story
+    time: 18
+    body: 'Dario Amodei is portrayed as a researcher who has spent years warning about
+      the dangers of AI, yet the company he leads, Anthropic, has now transformed
+      into a frontier AI powerhouse valued at nearly $1 trillion. Founded in 2021
+      by former OpenAI employees, the company was initially seen as a small lab.
+
+
+      Today, however, Anthropic is depicted as a company powerful enough to wipe out
+      tens of billions of dollars in software market value, compete for defense-related
+      business, and build models strong enough to unsettle modern cybersecurity. Early
+      testers reportedly even said, "This is a superweapon, please don’t release it."'
+    image: null
+  - heading: A Company Run by Siblings
+    time: 69
+    body: 'Anthropic is jointly led by siblings Dario and Daniela Amodei, with Dario
+      serving as CEO and Daniela as president. Dario is responsible for the big-picture
+      vision and research direction, while Daniela coordinates the broader leadership
+      team and runs day-to-day operations.
+
+
+      The two say they were close from childhood and had always wanted to do something
+      significant together. Dario describes the structure as "incredibly freeing"
+      because he does not have to report directly to anyone, while Daniela handles
+      execution. When they disagree, they say, neither side really "wins."'
+    image: null
+  - heading: AI Geopolitics and Dario’s Critique of Rivals
+    time: 1408
+    body: 'Anthropic now sits at the center of a technological arms race in which
+      major governments are competing for AI dominance. Dario openly criticizes rival
+      companies that, in his view, downplay risk management, comparing them to reckless
+      gamblers. He has also condemned AI chip exports to China, likening them to exporting
+      nuclear weapons to North Korea.
+
+
+      Dario argues that a Chinese lead in AI capability would pose a serious threat
+      to the United States and to democracy. Even while recognizing that this stance
+      could strain Anthropic’s relationships with partner chipmakers, he continues
+      to press for export controls and insists on saying what he believes.'
+    image: null
+  - heading: How He Thinks About Risk
+    time: 2735
+    body: 'Dario is candid about the possibility that Anthropic’s technology could
+      contribute to catastrophic outcomes. In his view, however, that risk does not
+      arise from Anthropic alone but from structural factors tied to the nature of
+      the technology and the behavior of many countries and companies.
+
+
+      He explains Anthropic’s position through an airline analogy: it may be possible
+      to build an airline that is 10 times safer than competitors, but no one can
+      reduce the crash rate to zero. Anthropic spends half its internal resources
+      on risk reduction, and its aim, he says, is to push the probability of disaster
+      as low as possible.'
+    image: null
+  - heading: The Human Side of a Frontier AI CEO
+    time: 2821
+    body: 'Leading one of the world’s most advanced AI companies brings extreme pressure,
+      but Dario says the way he stays mentally steady is surprisingly simple. He plays
+      video games on weekends, spends time with his sister Daniela, and takes trips
+      to Italy with his wife.
+
+
+      He also keeps horses in Italy, and says that simply sitting beside a horse named
+      "Calypso" helps him calm down. The remark that "she knows nothing about this
+      AI stuff, she’s just a happy horse" offers a brief glimpse of the person behind
+      the CEO of a massive technology company.'
+    image: null
+  headerImage: /images/v1wZwxY3CMg/header.png
+  heroImage: /images/v1wZwxY3CMg/header.png
 ---
 
 ## ハイライト

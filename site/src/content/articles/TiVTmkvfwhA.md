@@ -11,8 +11,8 @@ channelId: UCeCmAYh1ylwIsgGrmqaklzg
 publishedAt: '2026-06-15T10:30:03Z'
 fetchedAt: '2026-06-18T04:16:38.388661Z'
 originalThumbnail: https://i.ytimg.com/vi/TiVTmkvfwhA/maxresdefault.jpg
-headerImage: /images/TiVTmkvfwhA/header.png
-heroImage: /images/TiVTmkvfwhA/header.png
+headerImage: /images/TiVTmkvfwhA/header.ja.png
+heroImage: /images/TiVTmkvfwhA/header.ja.png
 viewCount: 79757
 durationSec: 2367
 sourceLanguage: ja
@@ -63,6 +63,90 @@ sections:
 
     ソブリンAIの議論も定義が論者ごとに異なり、現実的にはオープンウェイト化したモデルを目的別にチューニングして複数持つ選択肢が現実味を帯びる。先行者が作った規制で世界が固められていく中で、後から対応する難しさが指摘された。'
   image: null
+en:
+  articleTitle: The Fable 5 Halt Exposes the Collision Between AI Progress and National
+    Security
+  seoTitle: The Fable 5 Halt Exposes the Collision Between AI Progress and N
+  summary: On June 12 U.S. time, Anthropic halted Claude Fable 5 (Mythos 5) after
+    the U.S. government issued an export control…
+  keyPhrases:
+  - Claude Fable 5
+  - Mythos 5
+  - export controls
+  - AI and national security
+  - Anthropic
+  - sovereign AI
+  bulletPoints:
+  - time: 14
+    text: On June 12 U.S. time, Anthropic halted Claude Fable 5 (Mythos 5) after the
+      U.S. government issued an export control order over national security risks
+      and barred foreign nationals from using it.
+  - time: 43
+    text: 'The discussion is organized around three themes: AI and national security,
+      regulation and monopoly, and who gets to decide what counts as AI safety.'
+  - time: 98
+    text: The speakers argue that Anthropic’s clash with the Trump administration
+      had already been building since a February dispute over military use.
+  - time: 1051
+    text: They note that releasing frontier models at high speed while emphasizing
+      "safety" looks contradictory at first glance, but also gives Anthropic an early
+      vantage point on emerging risks.
+  - time: 1106
+    text: In an AI race fueled by massive financing, "if you stop, you lose," making
+      social consensus hard to reconcile with competitive pressure.
+  - time: 1129
+    text: They suggest the shutdown drama also made it seem as if Anthropic briefly
+      revealed overwhelming power and then pulled it back.
+  - time: 2202
+    text: The conversation extends to supply-chain risk as AI becomes infrastructure,
+      and to the cost of maintaining multiple options rather than depending on a single
+      provider.
+  sections:
+  - heading: How the Fable 5 Shutdown Hit the World
+    time: 14
+    body: 'On Friday, June 12 U.S. time, Anthropic suspended access to Claude Fable
+      5, the latest model in the Mythos 5 line. The immediate trigger was a U.S. export
+      control order justified on national security grounds, which prohibited use by
+      foreign nationals.
+
+
+      Existing models such as Opus remained available, but because Fable 5 had been
+      attracting attention as the new "strongest AI," its full suspension sent shockwaves
+      globally. The program reads the event through three lenses: AI and national
+      security, regulation and monopoly, and the question of who gets to decide what
+      AI safety means.'
+    image: null
+  - heading: How to Read the Tension Between Safety and Rapid Release
+    time: 1051
+    body: 'The experts acknowledge that Anthropic’s posture can look contradictory:
+      it stresses safety while also shipping frontier models at extreme speed. At
+      the same time, they argue that controlling the frontier firsthand also puts
+      Anthropic in the best position to detect risks early and warn society about
+      them.
+
+
+      In an AI race sustained by huge capital inflows, the logic is brutally simple:
+      if you stop, you lose. The shutdown therefore looked, in part, like a moment
+      where Anthropic flashed overwhelming capability and then withdrew it. More broadly,
+      the episode exposed how difficult it is to balance technological progress with
+      the slower work of building social consensus.'
+    image: null
+  - heading: Who Gets to Define AI Safety?
+    time: 2202
+    body: 'As AI turns into replaceable infrastructure, a supply-chain mindset starts
+      to apply. Just as factories suffer when parts supply stops, dependence on a
+      single AI provider creates a comparable risk. The speakers argue that even if
+      it costs more, organizations should preserve multiple options.
+
+
+      The discussion of sovereign AI also remains unsettled, since definitions differ
+      from one commentator to another. In practice, a more realistic path may be to
+      maintain multiple fine-tuned models built from open-weight systems for different
+      purposes. The speakers warn that once early movers lock in the regulatory framework,
+      it becomes much harder for others to respond later.'
+    image: null
+  headerImage: /images/TiVTmkvfwhA/header.png
+  heroImage: /images/TiVTmkvfwhA/header.png
 ---
 
 ## ハイライト

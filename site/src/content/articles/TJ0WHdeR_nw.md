@@ -10,8 +10,8 @@ channelId: UCxcDzs-4quJV4QsairlFYNg
 publishedAt: '2026-06-18T17:00:07Z'
 fetchedAt: '2026-06-21T02:16:07.465507Z'
 originalThumbnail: https://i.ytimg.com/vi/TJ0WHdeR_nw/maxresdefault.jpg
-headerImage: /images/TJ0WHdeR_nw/header.png
-heroImage: /images/TJ0WHdeR_nw/header.png
+headerImage: /images/TJ0WHdeR_nw/header.ja.png
+heroImage: /images/TJ0WHdeR_nw/header.ja.png
 viewCount: 51695
 durationSec: 2070
 sourceLanguage: es-ES
@@ -62,6 +62,93 @@ sections:
     後半では動画AIにも触れる。Symphony（TikTokアカウントでログイン）ではBytedanceのモデルで画像・動画・アバターを生成でき、1クレジット＝動画1秒、週に最低1000クレジット＝毎週1000秒（16分超）を無料で作れる。さらにTikTok
     Adsアカウントを作ると週2000クレジットに増えるという『裏技』も紹介される。これらは本来、広告を出す企業向けに設計された仕組みであることが背景にある。'
   image: null
+en:
+  articleTitle: 'How to Use Premium AI for Free: Try Claude’s Latest Models via AWS
+    Kiro'
+  seoTitle: 'How to Use Premium AI for Free: Try Claude’s Latest Models via A'
+  summary: For scripts, images, video, and app development, the best results usually
+    require the best AI models, but the best…
+  keyPhrases:
+  - Claude
+  - Kiro
+  - AWS
+  - free premium AI
+  - Opus
+  - video generation AI
+  bulletPoints:
+  - time: 0
+    text: For scripts, images, video, and app development, the best results usually
+      require the best AI models, but the best often means expensive. Free alternatives
+      often fall short of top-tier systems.
+  - time: 66
+    text: The first workaround presented is a legal, free way to use Anthropic’s latest
+      Opus and Sonnet models. The creator says he re-subscribed to Claude to try Mythos,
+      only to find the model gone the next day despite having paid.
+  - time: 108
+    text: The workaround is to switch to AWS "Kiro," a cloud-based development platform
+      comparable to Codex, Antigravity, and Claude Code, with no install required.
+  - time: 145
+    text: Even the free tier includes Sonnet 4.5, Haiku, DeepSeek, and Minimax, though
+      these are slightly older models. The newest premium models can be unlocked through
+      a free Pro trial.
+  - time: 168
+    text: The Pro plan offers 1,000 credits per month for about $10, but going through
+      "upgrade plan" makes the first month completely free after entering and verifying
+      banking information.
+  - time: 903
+    text: The second half covers video AI as well, using Bytedance models through
+      Symphony with a TikTok account to generate images, video, and avatars. A free
+      1,000 weekly credits equals 1,000 seconds, or more than 16 minutes, of video.
+  sections:
+  - heading: Avoiding the "Best AI Means Expensive" Trap
+    time: 0
+    body: 'Whether you are writing scripts, generating images or video, or building
+      apps, the best results usually require the best AI models. But in AI, "best"
+      often also means expensive, and free alternatives do not always reach the level
+      of the top-tier systems.
+
+
+      This video therefore highlights six platforms that let users access premium
+      models and tools for free. The examples range from using Claude’s strongest
+      models, to creating professional-quality video, to generating realistic avatars
+      and automating creative workflows. Some come with broad limits and some with
+      effectively unlimited access, but the common pitch is free access to premium
+      capability.'
+    image: null
+  - heading: Using AWS Kiro to Access Claude’s Latest Models for Free
+    time: 66
+    body: 'The first recommendation is a legal free alternative for using Anthropic’s
+      latest Opus and Sonnet models, and Mythos as well if it returns. The creator
+      says he reactivated his Claude subscription to try the new Mythos model, only
+      to find that it had been removed by the next day even though he had already
+      paid. He presents AWS "Kiro" as a way to avoid getting burned by the same scenario.
+
+
+      Kiro is a cloud-based platform for AI-driven app development, positioned as
+      comparable to Codex, Antigravity, and Claude Code, but provided by Amazon Web
+      Services. Because it runs in the cloud, nothing needs to be installed. The free
+      tier includes Sonnet 4.5, Haiku, DeepSeek, and Minimax, though those are slightly
+      older models. The latest premium models can be unlocked through the free Pro
+      tier.'
+    image: null
+  - heading: A Free First Month of Pro and Bonus Video AI Credits
+    time: 168
+    body: 'The Pro plan includes 1,000 credits per month for roughly $10. The notable
+      trick is that if you enter through "upgrade plan," the first month becomes completely
+      free. After entering and verifying banking information and returning to the
+      home screen, the latest Claude models become available.
+
+
+      The second half of the video also covers video AI. In Symphony, after logging
+      in with a TikTok account, users can generate images, video, and avatars using
+      Bytedance models. One credit equals one second of video, and the platform provides
+      at least 1,000 free credits per week, which means more than 16 minutes of free
+      video generation every week. The creator also shares a "hack" where creating
+      a TikTok Ads account doubles the weekly allowance to 2,000 credits, noting that
+      the system was originally designed for businesses running ads.'
+    image: null
+  headerImage: /images/TJ0WHdeR_nw/header.png
+  heroImage: /images/TJ0WHdeR_nw/header.png
 ---
 
 ## ハイライト

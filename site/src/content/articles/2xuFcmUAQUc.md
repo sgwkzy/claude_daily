@@ -11,8 +11,8 @@ channelId: UCkVfrGwV-iG9bSsgCbrNPxQ
 publishedAt: '2026-06-20T09:00:01Z'
 fetchedAt: '2026-06-21T02:16:07.465507Z'
 originalThumbnail: https://i.ytimg.com/vi/2xuFcmUAQUc/maxresdefault.jpg
-headerImage: /images/2xuFcmUAQUc/header.png
-heroImage: /images/2xuFcmUAQUc/header.png
+headerImage: /images/2xuFcmUAQUc/header.ja.png
+heroImage: /images/2xuFcmUAQUc/header.ja.png
 viewCount: 31728
 durationSec: 607
 sourceLanguage: en
@@ -65,6 +65,86 @@ sections:
     これは、私たちのコーディング解の多くがそもそも過剰設計で、正しく使えば『少ない方が豊か（less is more）』であることの証左だと語る。投稿者はPonytailを今後もClaude
     Code構成のプラグインとして残し、将来のプロジェクトでも使うと結論づけた。'
   image: null
+en:
+  articleTitle: 'Claude Code Plugin "Ponytail": The "Lazy Senior" That Cuts Code by
+    94%'
+  seoTitle: 'Claude Code Plugin "Ponytail": The "Lazy Senior" That Cuts Code'
+  summary: '"Ponytail" is a library/plugin for Claude Code named after the archetypal
+    veteran developer with a long ponytail and…'
+  keyPhrases:
+  - Claude Code
+  - Ponytail
+  - YAGNI
+  - plugin
+  - code simplification
+  - technical debt
+  bulletPoints:
+  - time: 0
+    text: '"Ponytail" is a library/plugin for Claude Code named after the archetypal
+      veteran developer with a long ponytail and round glasses, the kind of 10x engineer
+      who looks at 50 lines of code and silently replaces them with a single line.'
+  - time: 28
+    text: 'Its goal is to make AI coding agents "think like the laziest senior developer
+      in the room." That is meant as high praise: the mission is to preserve simplicity
+      at all costs and eliminate redundancy.'
+  - time: 287
+    text: The video also introduces criticism raised in a blog post by Colin Eberhart.
+      He found that simply replacing Ponytail with the three-word prompt "follow YAGNI
+      principles" produced nearly identical benchmark results, and expanding it to
+      seven words actually beat the score.
+  - time: 308
+    text: So is "Ponytail magic, or just a well-packaged prompt"? The presenter argues
+      that "the packaging is the product."
+  - time: 313
+    text: Its value lies in automatically injecting the right rules into multiple
+      agents via commands, along with audit tools and even a "technical debt ledger."
+  - time: 557
+    text: Many coding solutions are often overengineered, and when used correctly,
+      it reinforces the idea that "less is more." The presenter says Ponytail will
+      remain part of their Claude Code setup going forward.
+  sections:
+  - heading: A Plugin That Recreates the "Lazy Senior"
+    time: 0
+    body: '"Ponytail" is a library/plugin for Claude Code named after a legendary
+      veteran developer archetype everyone recognizes: someone with a long ponytail
+      and round glasses, who has been around longer than version control itself, and
+      who can look at 50 lines of code and silently replace them with a single line.
+
+
+      Its mission is simple: keep everything as concise as possible and eliminate
+      redundancy. The goal is to make AI coding agents "think like the laziest senior
+      developer in the room," and that phrase is used not as sarcasm but as the highest
+      form of praise. The video examines how Ponytail works and runs a live demo to
+      test what it can actually do.'
+    image: null
+  - heading: The "Isn't It Just a Prompt?" Critique and Rebuttal
+    time: 287
+    body: 'The video also covers the criticism directly. According to a blog post
+      by Colin Eberhart, simply replacing Ponytail with the three-word prompt "follow
+      YAGNI principles" produced benchmark scores that were almost identical to Ponytail''s.
+      Expanding that to seven words, "follow YAGNI principles and one-liner solutions,"
+      actually outperformed the benchmark.
+
+
+      That raises the obvious question: "Is Ponytail magic, or just a well-packaged
+      prompt?" The presenter responds that "the packaging is the product." In this
+      view, the value is the integrated experience itself: the right rules are automatically
+      injected into multiple agents through commands, and the package also includes
+      audit tools and a ledger for tracking technical debt.'
+    image: null
+  - heading: Realizing That "Less Is More"
+    time: 557
+    body: 'From the demo, the presenter''s conclusion was that using the Ponytail
+      skill can strip away code bloat while preserving quality.
+
+
+      They argue this shows that many of our coding solutions are overengineered to
+      begin with, and that when applied correctly, "less is more." The presenter concludes
+      that Ponytail will remain in their Claude Code configuration as a plugin and
+      will continue to be used in future projects.'
+    image: null
+  headerImage: /images/2xuFcmUAQUc/header.png
+  heroImage: /images/2xuFcmUAQUc/header.png
 ---
 
 ## ハイライト

@@ -1,7 +1,7 @@
 ---
 videoId: 0DVUjpClqgI
-slug: claude-fable-5-insane
 title: Claude Fable 5 is INSANE.
+slug: claude-fable-5-insane
 seoTitle: Claude Fable 5は本当に異次元か 実演ベースで整理
 summary: Claude Fable 5 の強さがどこにあるのかを、実演や比較を通じて短く把握できる要約記事です。
 channel: tef
@@ -9,8 +9,8 @@ channelId: UC3nKTPXh9DE0Md3HvCPB7sw
 publishedAt: '2026-06-11T01:21:33Z'
 fetchedAt: '2026-06-13T08:52:50.262045Z'
 originalThumbnail: https://i.ytimg.com/vi/0DVUjpClqgI/maxresdefault.jpg
-headerImage: /images/0DVUjpClqgI/header.png
-heroImage: /images/0DVUjpClqgI/header.png
+headerImage: /images/0DVUjpClqgI/header.ja.png
+heroImage: /images/0DVUjpClqgI/header.ja.png
 viewCount: 312939
 durationSec: 524
 sourceLanguage: en
@@ -59,6 +59,85 @@ sections:
 
     結論として、この動画は「完成度100%の代替ゲーム」を示すものではなく、「1時間でここまで作れてしまう」という制作速度の飛躍を見せる内容だった。10年前なら不可能だった水準が、いまは個人の検証動画で現れているという衝撃を前面に出している。'
   image: null
+en:
+  articleTitle: 'Claude Fable 5 Put to the Test: Minecraft, Fortnite, and GTA-Style
+    Games'
+  seoTitle: 'Claude Fable 5 Put to the Test: Minecraft, Fortnite, and GTA-Sty'
+  summary: The creator sets out to test whether the claim that Fable 5 can build games
+    from a single prompt really holds up.
+  keyPhrases:
+  - Claude Fable 5
+  - Minecraft
+  - Fortnite
+  - GTA clone
+  - one-prompt generation
+  bulletPoints:
+  - time: 0
+    text: The creator sets out to test whether the claim that Fable 5 can build games
+      from a single prompt really holds up.
+  - time: 22
+    text: The first test asks it to build Minecraft from scratch, using an intentionally
+      minimal prompt to see how far it can get on its own.
+  - time: 74
+    text: Fable 5 expands and refines its own prompts as it works, making the key
+      question whether its extreme benchmark performance translates into real output
+      quality.
+  - time: 225
+    text: After about an hour, it has assembled a Minecraft-like foundation and block
+      placement system, prompting the creator to call the result remarkable on its
+      own.
+  - time: 276
+    text: The video then moves on to Fortnite- and GTA-style tasks to see how well
+      the model handles heavier graphical demands, leaning into the hype with comparisons
+      to GTA 6.
+  - time: 449
+    text: The final GTA-style clone is still incomplete, but the biggest surprise
+      is that it produced a large world and smooth behavior in such a short time.
+  sections:
+  - heading: Testing whether it can build Minecraft in one shot
+    time: 22
+    body: 'The video opens from a position of cautious skepticism about the hype around
+      Fable 5 and gives it a first challenge: build Minecraft from "complete zero."
+      The prompt is kept deliberately short, making it a test not just of output quality
+      but of whether the model can infer the missing requirements on its own.
+
+
+      The creator argues that if it can genuinely produce something viable under those
+      conditions, the case for using other models becomes even weaker. Rather than
+      treating this as a flashy demo, he frames it as a meaningful inflection point
+      in model selection and evaluates Fable 5 through real work rather than headline
+      claims.'
+    image: null
+  - heading: An aggressive test that expands to Fortnite and GTA
+    time: 276
+    body: 'What sets the video apart is that it does not stop at Minecraft. It also
+      attempts a more demanding Fortnite-style build and then a GTA-style one. In
+      particular, testing how much of a GTA-scale world and feel can be recreated
+      in a short time serves as a clear way to probe Fable 5''s limits.
+
+
+      The creator is less interested in whether the outputs are perfectly finished
+      than in the fact that they can be stood up this quickly at all. His focus is
+      not benchmark scores but whether the model can produce something playable in
+      a short window.'
+    image: null
+  - heading: Rough edges remain, but the speed is the real shock
+    time: 449
+    body: 'The GTA-style clone shown late in the video still has rough spots, including
+      the player model, but it also includes a wide map, placed trees and shadows,
+      and smooth movement, all of which make it impressive for a fast generation run.
+      The creator also notes that, without time limits, it likely could have been
+      pushed substantially further.
+
+
+      In the end, the point is not that this is a perfect replacement for a finished
+      commercial game. It is that "this much" can now be built in about an hour. The
+      video''s central impact comes from showing that a level of production speed
+      that would have been unthinkable a decade ago is now appearing in an individual
+      test video.'
+    image: null
+  headerImage: /images/0DVUjpClqgI/header.png
+  heroImage: /images/0DVUjpClqgI/header.png
 ---
 
 ## ハイライト

@@ -10,8 +10,8 @@ channelId: UC37JpWP5PxLSma2lh79HU9A
 publishedAt: '2026-06-19T14:45:02Z'
 fetchedAt: '2026-06-20T10:03:36.216571Z'
 originalThumbnail: https://i.ytimg.com/vi/D6Cfjy83MQA/maxresdefault.jpg
-headerImage: /images/D6Cfjy83MQA/header.png
-heroImage: /images/D6Cfjy83MQA/header.png
+headerImage: /images/D6Cfjy83MQA/header.ja.png
+heroImage: /images/D6Cfjy83MQA/header.ja.png
 viewCount: 26596
 durationSec: 908
 sourceLanguage: en
@@ -60,6 +60,91 @@ sections:
 
     それでも、管理付きエージェントをループモードで動かす本来の狙いは『毎回の実行で自己改善する』ことにある。今回の失敗からシステムはRedditソーシングの修正方法を学習し、Web検索のみに切り替えれば30分かかっていた処理が2〜3分で、より良い応答になると提案してきた。初回セットアップだけで多くの教訓が得られた、と締めくくっている。'
   image: null
+en:
+  articleTitle: Anthropic's 'Launch Your Agent' Skill Brings Managed Agents to Claude
+    Code
+  seoTitle: Anthropic's 'Launch Your Agent' Skill Brings Managed Agents to C
+  summary: Anthropic released a free, open-source Claude Code skill called "Launch
+    Your Agent" designed to take users from an…
+  keyPhrases:
+  - Claude Code
+  - AI agents
+  - Launch Your Agent
+  - skill
+  - self-improvement loop
+  - Anthropic
+  bulletPoints:
+  - time: 0
+    text: Anthropic released a free, open-source Claude Code skill called "Launch
+      Your Agent" designed to take users from an idea to a production managed agent
+      in minutes.
+  - time: 42
+    text: 'The video argues that AI agents are closer to employees: you assign a task,
+      and they execute it and return results. The key difference from plain Claude
+      chat is that agents have tools.'
+  - time: 52
+    text: Those agents choose and use tools such as web search, file writing, code
+      execution, and API calls at each step. If you want repeat work done without
+      human hands, the answer is agents, not better prompts.
+  - time: 454
+    text: The skill proposes tailored agent ideas such as a daily digest that checks
+      sources every morning based on prior Claude chats, or a data analyst that turns
+      a CSV into a chart-filled report.
+  - time: 850
+    text: In the live demo, the system failed because it could not fetch Reddit links
+      directly and therefore missed the requirement. The run consumed about 27 million
+      tokens and about $12, which the host says could have been avoided with earlier
+      component testing.
+  - time: 882
+    text: The point of running a managed agent in loop mode is that it improves itself
+      on each run. Even from this failure, the system proposed switching to web search
+      only and showed it could get better results in minutes.
+  sections:
+  - heading: What the 'Launch Your Agent' Skill Is Trying to Do
+    time: 0
+    body: 'Anthropic''s free, open-source Claude Code skill "Launch Your Agent" is
+      designed to take a user from an initial idea to a production managed agent in
+      just a few minutes. The video explains what the skill does, how it represents
+      a new way of writing code with AI, and how to install it.
+
+
+      The pitch is that it includes core functionality that makes building AI agents
+      dramatically easier even for beginners, with a live demo showing what practical
+      usage looks like.'
+    image: null
+  - heading: Why Agents Are Fundamentally Different From Chat
+    time: 42
+    body: 'Before using the skill, the host says, it is important to understand what
+      an AI agent actually is. An agent is more like an employee: you assign a task,
+      it executes the work itself, and then returns the result. The decisive difference
+      from plain Claude chat is that an agent has tools. Chat can only respond in
+      language, while an agent can search the web, write files, execute code, and
+      call APIs.
+
+
+      More importantly, it chooses which tool to use at each step and processes the
+      entire workflow autonomously. That, the video argues, is what real automation
+      looks like. If the goal is to run repetitive work without direct human intervention,
+      agents matter more than prompt polish.'
+    image: null
+  - heading: What the Live Demo Revealed About Self-Improving Loops
+    time: 850
+    body: 'In a demo that tried to create a news digest, the system failed because
+      it could not fetch Reddit links directly and therefore could not satisfy the
+      requirement that each post link back to a real Reddit thread. That single run
+      consumed about 27 million tokens, or roughly $12, and the host reflects that
+      the cost could have been avoided by testing individual components in advance.
+
+
+      Even so, the core point of running a managed agent in loop mode is that it should
+      improve itself with every execution. From this failure, the system learned how
+      to fix its Reddit sourcing approach and suggested that switching to web search
+      alone would cut a 30-minute process down to 2 to 3 minutes while also improving
+      the answer. The conclusion is that even the initial setup produced a large number
+      of useful lessons.'
+    image: null
+  headerImage: /images/D6Cfjy83MQA/header.png
+  heroImage: /images/D6Cfjy83MQA/header.png
 ---
 
 ## ハイライト

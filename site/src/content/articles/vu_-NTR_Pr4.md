@@ -10,8 +10,8 @@ channelId: UCfdNM3NAhaBOXCafH7krzrA
 publishedAt: '2026-06-19T20:11:05Z'
 fetchedAt: '2026-06-20T10:03:36.216571Z'
 originalThumbnail: https://i.ytimg.com/vi/vu_-NTR_Pr4/maxresdefault.jpg
-headerImage: /images/vu_-NTR_Pr4/header.png
-heroImage: /images/vu_-NTR_Pr4/header.png
+headerImage: /images/vu_-NTR_Pr4/header.ja.png
+heroImage: /images/vu_-NTR_Pr4/header.ja.png
 viewCount: 87625
 durationSec: 927
 sourceLanguage: en
@@ -62,6 +62,103 @@ sections:
 
     さらに影響はAnthropicのコードに留まらない。同社は技術者がコードの大半を書かず『レビューする』側に回ったと認めており、それが業界標準になれば人的労働力は崩れる。スタンフォードのデジタル経済研究所のデータでは、22〜25歳のコーダーの職は2022年末のピークから約20%減り、30歳超は増加。入口の職が削られ、テック業界全体でレイオフが加速している実態が示される。'
   image: null
+en:
+  articleTitle: Does Anthropic Really Want AI to Stop? The Case That 'Safety' Is a
+    Strategy in Disguise
+  seoTitle: Does Anthropic Really Want AI to Stop? The Case That 'Safety' Is
+  summary: Anthropic frames its mission as 'responsible scaling' to prevent human
+    extinction, but there is a more cynical…
+  keyPhrases:
+  - Anthropic
+  - responsible scaling
+  - AI safety
+  - AI regulation
+  - Claude Code
+  - impact on jobs
+  bulletPoints:
+  - time: 0
+    text: 'Anthropic frames its mission as ''responsible scaling'' to prevent human
+      extinction, but there is a more cynical reading: a global slowdown also freezes
+      the market, locks in today''s front-runners, and makes it harder for open-source
+      players to catch up.'
+  - time: 23
+    text: In May 2026, Anthropic closed a record raise at a $1 trillion valuation
+      and filed to go public. Three days later it released a report warning that 'AI
+      could spin out of control' and urging governments to slow the whole industry
+      down. The timing, the video argues, is no coincidence.
+  - time: 142
+    text: By May 2026, Claude was writing more than 80% of the code shipped into Anthropic's
+      own systems. Before Claude Code, that figure was a low single-digit percentage;
+      in roughly 15 months, AI went from writing almost none of the company's code
+      to most of it. Co-founder Jack Clark openly says 100% could be reached by 2028.
+  - time: 406
+    text: If AI starts building its own successors, the industry needs rules, and
+      Anthropic already has a 'Responsible Scaling Policy.' It triggers additional
+      safeguards once capabilities cross defined Capability Thresholds.
+  - time: 485
+    text: A similar rule nearly became law in California, but a16z pushed back, arguing
+      'the burden falls hardest on startups and small developers.' A fine that is
+      pocket change to a trillion-dollar company can equal an entire startup. Governor
+      Newsom vetoed the bill in September 2024.
+  - time: 772
+    text: 'The impact goes beyond Anthropic''s own code. The company admits its engineers
+      now mostly ''review'' code rather than write it. If that becomes the industry
+      standard, human labor erodes: jobs for coders aged 22 to 25 are down about 20%
+      from their late-2022 peak, a sign of a seismic shift in the labor market.'
+  sections:
+  - heading: '''Safety'' or ''Strategy''? A Suspicious Sense of Timing'
+    time: 0
+    body: 'Anthropic calls for the ''responsible scaling'' of frontier AI to prevent
+      human extinction, at least, that is what the company says. But this video offers
+      a more cynical, strategic reading: a global slowdown would not just slow AI
+      progress, it would freeze the market itself, lock today''s front-runners into
+      an advantageous position, and make it harder for open-source rivals to catch
+      up to Anthropic''s level.
+
+
+      And the timing is what draws scrutiny. In May 2026, Anthropic closed a record
+      private raise at a $1 trillion valuation and filed to go public. Just three
+      days later, it published a report warning that AI could spin out of control
+      and urging governments to consider slowing the entire industry. To some it looks
+      like caution; to others, like ''strategy disguised as safety'', and the video
+      lays out both competing interpretations.'
+    image: null
+  - heading: The Reality of Claude Writing 80% of Its Own Code
+    time: 142
+    body: 'As of May 2026, more than 80% of the code shipped into Anthropic''s own
+      systems was written by Claude, the company''s own AI. Before Claude Code launched
+      in February 2025, that number was only in the low single digits. In under 15
+      months, Claude went from barely writing any of the company''s code to writing
+      the majority of it.
+
+
+      At the same time, engineers are shipping more: reportedly eight times as much
+      code per day as in 2024. Co-founder Jack Clark has openly said the share of
+      AI-written code could reach 100% by 2028. If AI begins to design and build its
+      own successors, the industry will need a rulebook for when to push ahead and
+      when to stop, and, the argument goes, Anthropic already has one.'
+    image: null
+  - heading: Standardizing Regulation and the Shock to the Labor Market
+    time: 485
+    body: 'Anthropic''s Responsible Scaling Policy triggers additional safeguards
+      once capabilities reach dangerous levels (Capability Thresholds), with autonomous
+      AI research and development in its sights. A similar idea nearly became law
+      in California, but the venture firm a16z warned that the regulatory burden would
+      fall hardest not on the industry''s giants but on startups and small developers.
+      A fine of 10 to 30% of training costs is pocket change to a trillion-dollar
+      company but equivalent to an entire startup. Governor Newsom vetoed the bill
+      in September 2024, but versions of it keep resurfacing across jurisdictions.
+
+
+      The impact also goes beyond Anthropic''s own code. The company concedes that
+      its engineers now mostly ''review'' code rather than write it, and if that becomes
+      the industry norm, human labor erodes. Data from Stanford''s Digital Economy
+      Lab shows that jobs for coders aged 22 to 25 are down about 20% from their late-2022
+      peak, while those over 30 have grown. Entry-level roles are being cut, and layoffs
+      are accelerating across the tech industry.'
+    image: null
+  headerImage: /images/vu_-NTR_Pr4/header.png
+  heroImage: /images/vu_-NTR_Pr4/header.png
 ---
 
 ## ハイライト

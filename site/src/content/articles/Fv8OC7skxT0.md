@@ -10,7 +10,8 @@ channelId: UCeCmAYh1ylwIsgGrmqaklzg
 publishedAt: '2026-06-12T09:30:09Z'
 fetchedAt: '2026-06-12T10:25:38.931514Z'
 originalThumbnail: https://i.ytimg.com/vi/Fv8OC7skxT0/maxresdefault.jpg
-headerImage: /images/Fv8OC7skxT0/header.png
+headerImage: /images/Fv8OC7skxT0/header.ja.png
+heroImage: /images/Fv8OC7skxT0/header.ja.png
 viewCount: 223807
 durationSec: 2041
 sourceLanguage: ja
@@ -60,6 +61,98 @@ sections:
 
     この計算資源の慢性的な不足が、Anthropicのサービス料金高騰（俗に「課金地獄」）に直結している。Fable 5・ミュトス5の価格設定を見ると、「思っていたより先は遠い、こんなにお金が必要だったのか」という現実認識を改めて突きつけられる形となっている。スケーリング則への期待が高まってAGIへの道が近いと感じられた時期とは様相が変わり、アムダールの法則的な連鎖ボトルネックが各所で顕在化しているとまとめられた。'
   image: null
+en:
+  articleTitle: Claude Fable 5, External Filters, and Why AI Infrastructure Is Now
+    the Bottleneck
+  seoTitle: Claude Fable 5, External Filters, and Why AI Infrastructure Is N
+  summary: On Wednesday, June 10, 2026, Anthropic suddenly released the new models
+    "Claude Fable 5" and "Mythos 5," prompting…
+  keyPhrases:
+  - Claude Fable 5
+  - Mythos 5
+  - external AI filter
+  - jailbreak
+  - data center construction bottleneck
+  - billing hell
+  bulletPoints:
+  - time: 15
+    text: On Wednesday, June 10, 2026, Anthropic suddenly released the new models
+      "Claude Fable 5" and "Mythos 5," prompting Shota Imai to join on short notice
+      for an emergency breakdown.
+  - time: 70
+    text: Anthropic also held its "Code with Claude" event in Japan that same day,
+      where interviews with the Claude Code and Fable 5 teams highlighted how putting
+      AI at the center of internal work has dramatically sped up development cycles.
+  - time: 885
+    text: The video's explanation for Fable 5's deliberately "0" cyberattack rating
+      is that the model itself was not heavily aligned for refusal, but rather wrapped
+      in a separate external AI filter that blocks dangerous content.
+  - time: 949
+    text: 'That external-filter design carries a dual risk: if jailbreaks or prompt
+      injection bypass the filter, the core model can produce dangerous outputs freely,
+      but if the filter is too strict it can end up refusing even harmless executive
+      presentation work.'
+  - time: 1901
+    text: Data center construction is not keeping pace physically, with projects underway
+      in many places. The shortage of compute supply is pushing up costs and feeding
+      what the video calls Anthropic's "billing hell."
+  - time: 1986
+    text: The speaker says scaling-law optimism once suggested a faster path to AGI,
+      but in reality one solved bottleneck keeps exposing another, more in line with
+      Amdahl's law than with a smooth acceleration curve.
+  sections:
+  - heading: Why the Episode Was Recorded as an Emergency Update
+    time: 2
+    body: 'On Wednesday, June 10, 2026, Anthropic suddenly unveiled two new AI models,
+      "Claude Fable 5" and "Mythos 5." The timing came immediately after the show''s
+      previous Claude recording on the prior Friday, and the opening explains that
+      Shota Imai canceled a planned academic event in Takasaki in order to join this
+      emergency follow-up.
+
+
+      Anthropic also held its "Code with Claude" event in Japan that same day, where
+      interviews were conducted with people working on Claude Code and Fable 5. According
+      to the segment, those conversations pointed to sharply faster development inside
+      Anthropic by placing Claude Code at the center of company workflows, with a
+      fuller report promised later.'
+    image: null
+  - heading: How the Safety Design Shapes the Capability Rating
+    time: 885
+    body: 'Fable 5''s cyberattack capability is rated "0" in the system card. The
+      explanation given is not that the core model itself was aligned to categorically
+      refuse all cybersecurity-related work, but that a separate external judgment
+      model evaluates request risk and filters outputs before they are returned.
+
+
+      The hosts note that this approach has been used before by both Anthropic and
+      OpenAI, but argue that it carries a fundamental weakness. If prompt injection
+      or jailbreak techniques break through the filter, the underlying model, which
+      has not been directly aligned for refusal, may generate dangerous outputs without
+      limit. At the same time, if the filter is tuned too aggressively for safety,
+      it starts refusing benign tasks such as preparing an executive presentation
+      or running personality-formation tests with AI. The segment says many such overblocking
+      examples have already surfaced on social media, making the calibration problem
+      a central issue.'
+    image: null
+  - heading: Compute Shortages, Higher Prices, and the Real Bottleneck
+    time: 1901
+    body: 'The video argues that physical data center construction is no longer keeping
+      up with how quickly AI capability is advancing. Projects are underway in many
+      regions, but securing materials, labor, and power infrastructure takes time,
+      making this what the speaker calls the most obvious bottleneck from a human
+      point of view.
+
+
+      That chronic shortage of compute resources is directly tied, in the video''s
+      telling, to Anthropic''s rising service costs, sarcastically described as "billing
+      hell." Looking at the pricing for Fable 5 and Mythos 5, the hosts say the market
+      is being forced to confront a harder truth: the road ahead is farther away and
+      more expensive than many expected. The mood has shifted from scaling-law optimism
+      toward a more Amdahl''s-law view, where solving one bottleneck simply reveals
+      the next.'
+    image: null
+  headerImage: /images/Fv8OC7skxT0/header.png
+  heroImage: /images/Fv8OC7skxT0/header.png
 ---
 
 ## ハイライト

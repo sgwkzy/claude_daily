@@ -9,8 +9,8 @@ channelId: UCVyRiMvfUNMA1UPlDPzG5Ow
 publishedAt: '2026-06-10T14:51:01Z'
 fetchedAt: '2026-06-13T08:52:49.359844Z'
 originalThumbnail: https://i.ytimg.com/vi/tSg3FAdWvzI/maxresdefault.jpg
-headerImage: /images/tSg3FAdWvzI/header.png
-heroImage: /images/tSg3FAdWvzI/header.png
+headerImage: /images/tSg3FAdWvzI/header.ja.png
+heroImage: /images/tSg3FAdWvzI/header.ja.png
 viewCount: 483174
 durationSec: 502
 sourceLanguage: en
@@ -60,6 +60,82 @@ sections:
 
     最後に投稿者は、AI時代のデザイナーは不要になるのではなく、自然言語で意図を伝え、良い方向へ反復させる役割が強くなるとまとめる。Fable 5は「Figmaの外で動く制作パートナー」になり得るという見立てだ。'
   image: null
+en:
+  articleTitle: Claude Fable 5 One-Shot UI/UX Tests Show a Major Leap in Design Execution
+  seoTitle: Claude Fable 5 One-Shot UI/UX Tests Show a Major Leap in Design
+  summary: 'After reviewing five UI demos created with Claude Fable 5, the creator’s
+    first reaction is blunt: this is an…'
+  keyPhrases:
+  - Claude Fable 5
+  - UI/UX one-shots
+  - Three.js
+  - Figma MCP
+  - Craigslist redesign
+  bulletPoints:
+  - time: 6
+    text: 'After reviewing five UI demos created with Claude Fable 5, the creator’s
+      first reaction is blunt: this is an extraordinary leap forward.'
+  - time: 18
+    text: In the first test, Claude designs and implements an award-site-style UI/UX
+      portfolio landing page from a single prompt, including mobile responsiveness.
+  - time: 57
+    text: The resulting page stands out for its scroll-linked gallery, well-timed
+      motion, and strong visual finish.
+  - time: 206
+    text: In a test focused on improving an existing hero section, the model uses
+      Figma MCP to compare options and delivers work the creator says is strong enough
+      for A/B test candidates.
+  - time: 263
+    text: Even when modernizing an old UI like Craigslist, it follows the instruction
+      to preserve information density instead of solving everything with excess whitespace.
+  - time: 413
+    text: The conclusion is not that AI will replace designers, but that it becomes
+      a new production medium for expressing ideas directly in the browser through
+      natural language.
+  sections:
+  - heading: A Portfolio Landing Page Built from a Single Prompt
+    time: 18
+    body: 'In the first test, Claude is asked to design and implement a portfolio
+      site for a fictional UI/UX designer from almost a single prompt. The creator
+      specifies the use of GSAP and Three.js, checks the output in Chrome DevTools,
+      and asks for mobile responsiveness, but provides very little detailed direction
+      beyond that.
+
+
+      Even so, the result includes a scroll-following gallery, restrained animation,
+      and strong visual accents. What surprises the creator most is not the code itself
+      but the maturity of the experience design.'
+    image: null
+  - heading: Improving Existing Design Work with Figma MCP
+    time: 206
+    body: 'In the middle test, Claude is asked to improve an existing hero section
+      and then generate alternative directions using Figma MCP. The point is not just
+      regeneration from scratch, but comparative improvement grounded in the context
+      of an existing design.
+
+
+      The creator says he would not ship the result unchanged, but he does consider
+      it strong enough to serve as an A/B test candidate. The bigger takeaway is that
+      the model is useful not just for flashy one-offs, but as a base for iterative
+      refinement.'
+    image: null
+  - heading: What a Craigslist Redesign Says About the Designer’s Role
+    time: 263
+    body: 'In the test built around modernizing a classic interface like Craigslist,
+      the constraint is to preserve information density and a type-led structure rather
+      than washing everything out with whitespace. The result becomes less a showcase
+      of visual flamboyance and more a test of how faithfully the model follows direction
+      and handles nuance.
+
+
+      The creator ends by arguing that designers will not become unnecessary in the
+      AI era. Instead, their role will shift more toward expressing intent in natural
+      language and steering repeated iterations toward the right outcome. In that
+      sense, Fable 5 looks like it could become a creative partner that works outside
+      Figma.'
+    image: null
+  headerImage: /images/tSg3FAdWvzI/header.png
+  heroImage: /images/tSg3FAdWvzI/header.png
 ---
 
 ## ハイライト

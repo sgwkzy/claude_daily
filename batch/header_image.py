@@ -91,6 +91,7 @@ class HeaderImageGenerator:
             context = HeaderContext(title=title, channel="")
 
         language_label = "English" if language == "en" else "Japanese"
+        language_article = "an" if language == "en" else "a"
         key_phrase_text = _compact_list(context.key_phrases, limit=3)
         bullet_text = _compact_list(context.bullet_points, limit=2)
         section_text = _compact_list(context.section_headings, limit=3)
@@ -105,7 +106,7 @@ class HeaderImageGenerator:
             return " ".join(
                 part
                 for part in (
-                    "Create a widescreen 16:9 editorial explainer hero image for a Japanese AI article.",
+                    f"Create a widescreen 16:9 editorial explainer hero image for {language_article} {language_label} AI article.",
                     article_label,
                     source_label,
                     channel_label,

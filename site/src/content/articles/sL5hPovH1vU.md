@@ -10,8 +10,8 @@ channelId: UCA-mWX9CvCTVFWRMb9bKc9w
 publishedAt: '2026-06-15T13:00:05Z'
 fetchedAt: '2026-06-18T04:16:38.388661Z'
 originalThumbnail: https://i.ytimg.com/vi/sL5hPovH1vU/maxresdefault.jpg
-headerImage: /images/sL5hPovH1vU/header.png
-heroImage: /images/sL5hPovH1vU/header.png
+headerImage: /images/sL5hPovH1vU/header.ja.png
+heroImage: /images/sL5hPovH1vU/header.ja.png
 viewCount: 131325
 durationSec: 897
 sourceLanguage: en
@@ -64,6 +64,83 @@ sections:
 
     こうして人間は作業そのものから外れ、『ループの中』ではなく『ループの上』に立つ。重要なのは機能を集めることではなく習慣化することで、まずは1つの機能を30日連続で使い切ることを勧めている。'
   image: null
+en:
+  articleTitle: 'From Search Replacement to System Builder: A Practical Guide to Mastering
+    Claude'
+  seoTitle: 'From Search Replacement to System Builder: A Practical Guide to'
+  summary: The creator says he has spent more than 1,000 hours using Claude and relies
+    on it daily to build tools and run…
+  keyPhrases:
+  - Claude
+  - system prompts
+  - skills
+  - co-work
+  - AI agents
+  - critique agents
+  bulletPoints:
+  - time: 0
+    text: The creator says he has spent more than 1,000 hours using Claude and relies
+      on it daily to build tools and run workflows.
+  - time: 23
+    text: At Level 1, the "amateur" uses Claude like an advanced search engine and
+      taps only about 5% of its capabilities.
+  - time: 48
+    text: 'Two ways to level up: make Claude ask the questions it needs before answering,
+      and have it check its own work.'
+  - time: 429
+    text: Operators start by defining the output format in a system prompt so it can
+      be reused repeatedly.
+  - time: 445
+    text: Turn recurring tasks into skills or commands. If you do something three
+      times or more, it is worth formalizing.
+  - time: 488
+    text: Use co-work to run tasks on a schedule, while humans focus only on review
+      and approval.
+  - time: 834
+    text: Have a critique agent review deliverables and iterate on fixes to maintain
+      quality.
+  - time: 860
+    text: The key is not collecting features but turning them into habits, starting
+      with one feature used every day for 30 days.
+  sections:
+  - heading: Two Ways to Stop Using Claude Like an Amateur
+    time: 23
+    body: 'Most people treat Claude like an advanced Google search, ask one question,
+      get one answer, and close the tab. That is like using a NASA supercomputer to
+      calculate 2+2, and it means using only about 5% of its potential.
+
+
+      There are two ways out of that pattern. First, ask Claude to "ask any questions
+      needed to do this task correctly" so it can pull out the missing context. Second,
+      tell it to "check your own work" so it can find errors in its output on its
+      own.'
+    image: null
+  - heading: How Operators Deploy Claude
+    time: 429
+    body: 'Advanced users do not just "use" Claude. They deploy it to solve problems.
+      The first step is the system prompt, where they define the output format in
+      advance. The creator argues that the future value of teams and companies will
+      increasingly lie in the stockpile of these system prompts.
+
+
+      The second step is skills, which save repeatable workflows for reuse. If a task
+      comes up three times or more, that is the threshold for turning it into a skill.
+      The third step is scheduled execution through co-work, where routine processing
+      is delegated and humans step in only to verify the results.'
+    image: null
+  - heading: Humans Belong Above the Loop
+    time: 834
+    body: 'The creator uses a setup where a main agent hands copy or research to a
+      critique agent for review. By having it produce improvement notes and rerun
+      the work, he says he consistently gets the best possible output.
+
+
+      That moves humans out of the task itself. Instead of being "in the loop," they
+      stand "above the loop." What matters is not accumulating features, but building
+      habits around them, starting with one feature used consistently for 30 days.'
+    image: null
+  headerImage: /images/sL5hPovH1vU/header.png
+  heroImage: /images/sL5hPovH1vU/header.png
 ---
 
 ## ハイライト

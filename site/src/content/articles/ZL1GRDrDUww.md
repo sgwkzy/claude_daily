@@ -1,8 +1,8 @@
 ---
 videoId: ZL1GRDrDUww
 title: 'Anthropic CEO learns meaning of "life comes at you fast" '
-articleTitle: Fable停止騒動を斬る — 「安全性」の建前と矛盾を突くRossmannの批判
 slug: fable-suspension-rossmann-critique
+articleTitle: Fable停止騒動を斬る — 「安全性」の建前と矛盾を突くRossmannの批判
 seoTitle: Fable停止騒動をRossmannが批判 安全性ロジックの矛盾とは
 summary: Fable停止騒動に対するRossmannの批判を軸に、安全性をめぐる建前と矛盾の論点を整理した記事です。
 channel: Louis Rossmann
@@ -10,8 +10,8 @@ channelId: UCl2mFZoRqjw_ELax4Yisf6w
 publishedAt: '2026-06-13T21:50:11Z'
 fetchedAt: '2026-06-16T02:23:21.011535Z'
 originalThumbnail: https://i.ytimg.com/vi/ZL1GRDrDUww/maxresdefault.jpg
-headerImage: /images/ZL1GRDrDUww/header.png
-heroImage: /images/ZL1GRDrDUww/header.png
+headerImage: /images/ZL1GRDrDUww/header.ja.png
+heroImage: /images/ZL1GRDrDUww/header.ja.png
 viewCount: 265618
 durationSec: 1254
 sourceLanguage: en
@@ -63,6 +63,90 @@ sections:
 
     米国市民なら誰もCIAや政府サーバーへの侵入、JFKやエプスタイン関連の非公開情報の取得などを試みない、という前提自体がありえないと皮肉る。結論として、安全を気にするふりをするAnthropicと、ハッキング被害を気にするふりをする政府の双方が、上から下まで建前だらけだと断じている。'
   image: null
+en:
+  articleTitle: 'Dissecting the Fable Shutdown Furor: Rossmann''s Critique of the
+    ''Safety'' Pretext and Its Contradictions'
+  seoTitle: 'Dissecting the Fable Shutdown Furor: Rossmann''s Critique of the'
+  summary: The U.S. government told Anthropic not to let foreign nationals use its
+    most powerful model, Fable, and Anthropic…
+  keyPhrases:
+  - Fable ban
+  - the safety pretext
+  - contradiction of foreign-national restrictions
+  - Claude billing change
+  - API billing rate
+  - criticism of Anthropic
+  bulletPoints:
+  - time: 18
+    text: The U.S. government told Anthropic not to let foreign nationals use its
+      most powerful model, Fable, and Anthropic pulled the model so no one could use
+      it.
+  - time: 44
+    text: The creator makes clear he is neither a supporter of the Trump administration
+      nor an ally of Anthropic, taking a neutral stance that both sides are, in their
+      own way, deceptive.
+  - time: 615
+    text: The topic digresses to criticism of Claude's new billing policy, announced
+      on June 15.
+  - time: 619
+    text: Paid Claude plans were announced to include monthly credits for programmatic
+      use, but the creator argues this is effectively a downgrade.
+  - time: 657
+    text: He says that calling Claude from your own scripts applies the API billing
+      rate, so the same prompt costs differently depending on where you use it.
+  - time: 1176
+    text: Returning to the main point, he argues that if it really is dangerous, U.S.
+      citizens shouldn't be allowed to use it either, and that the logic of banning
+      only foreign nationals falls apart.
+  - time: 1232
+    text: 'His conclusion: both Anthropic, feigning safety, and the government, feigning
+      hacking concerns, are full of pretext.'
+  sections:
+  - heading: An Overview of the Furor and the Creator's Position
+    time: 18
+    body: 'The creator takes up the case in which the U.S. government told Anthropic
+      that ''foreign nationals must not be allowed to use its most powerful model,
+      Fable,'' and Anthropic responded by pulling the model so no one could use it.
+      Noting that the topic sprawls and that cramming it all into one video risks
+      losing viewers, he declares he will nonetheless tackle it all at once.
+
+
+      He then makes his position clear. He does not think the Trump administration
+      is a good one, and at the same time considers Anthropic ''a gaslighting, awful
+      company,'' stressing that this is a neutral critique and that he is not rooting
+      for either camp.'
+    image: null
+  - heading: 'A Digression: Frustration With Claude''s New Billing Policy'
+    time: 615
+    body: 'The topic digresses for a moment to Claude''s billing change announced
+      on June 15. The announcement is that paid plans get ''monthly credits for programmatic
+      use,'' covering use through the Agent SDK, Claude-P, Claude Code, GitHub Actions,
+      and the like.
+
+
+      To anyone not deeply involved in the community, granting credits looks like
+      good news, but the creator argues it is effectively a downgrade. Using Claude
+      inside those programs stays as is, but throwing the same prompt from your own
+      scripts applies the ''API billing rate.'' He criticizes it as a structure that
+      penalizes precisely the users who want to automate work without sitting in front
+      of the terminal waiting for it to finish.'
+    image: null
+  - heading: 'The Core: The Logical Collapse of ''Safety'''
+    time: 1176
+    body: 'Returning to the main point, the creator attacks the very logic of the
+      Fable ban. If the model is so dangerous, why give U.S. citizens access to it?
+      If it were truly about safety, the consistent move would be to let no one use
+      it; banning only foreign nationals makes no sense.
+
+
+      He mocks the very premise that no U.S. citizen would ever try to break into
+      the CIA or government servers, or obtain non-public information related to JFK
+      or Epstein. His conclusion: both Anthropic, pretending to care about safety,
+      and the government, pretending to care about hacking victims, are full of pretext
+      from top to bottom.'
+    image: null
+  headerImage: /images/ZL1GRDrDUww/header.png
+  heroImage: /images/ZL1GRDrDUww/header.png
 ---
 
 ## ハイライト

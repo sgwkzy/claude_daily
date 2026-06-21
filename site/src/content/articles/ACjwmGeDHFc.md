@@ -1,9 +1,9 @@
 ---
 videoId: ACjwmGeDHFc
 title: Why Anthropic's Claude Fable 5 & Mythos 5 Are Now Illegal (+15 AI Updates)
+slug: ai-weekly-fable-mythos-apple-kimi-figma
 articleTitle: Fable 5/Mythos 5禁止に始まる今週のAI週報 — Apple Siri×Gemini契約・Kimi K 2.7・Figma
   1クリック化まで
-slug: ai-weekly-fable-mythos-apple-kimi-figma
 seoTitle: 今週のAI週報 Fable停止からApple・Kimi・Figmaまで整理
 summary: Fable 5 / Mythos 5 の停止騒動を起点に、Apple、Kimi、Figma など周辺トピックまで一気に把握できる週報要約です。
 channel: Vaibhav Sisinty
@@ -11,8 +11,8 @@ channelId: UClXAalunTPaX1YV185DWUeg
 publishedAt: '2026-06-14T05:21:46Z'
 fetchedAt: '2026-06-17T03:43:34.956075Z'
 originalThumbnail: https://i.ytimg.com/vi/ACjwmGeDHFc/maxresdefault.jpg
-headerImage: /images/ACjwmGeDHFc/header.png
-heroImage: /images/ACjwmGeDHFc/header.png
+headerImage: /images/ACjwmGeDHFc/header.ja.png
+heroImage: /images/ACjwmGeDHFc/header.ja.png
 viewCount: 177624
 durationSec: 1551
 sourceLanguage: en
@@ -65,6 +65,87 @@ sections:
     コーディングAIではKimi K 2.7 codeがKimi K 2.6・GPT 5.5・Claude Opus 4.8と並べてテストされ、サイエンス概念のビジュアル生成では「水の波」の物理表現が最もリアルだったと評価されている。前世代Kimi
     K 2.6は物理的な動きで苦戦していたとされ、汎用AIだけでなく可視化向けエージェントとして頭角を現してきた形だ。'
   image: null
+en:
+  articleTitle: 'This Week in AI: Fable 5 Ban, Siri-Gemini Deal, Kimi K 2.7 and Figma'
+  seoTitle: 'This Week in AI: Fable 5 Ban, Siri-Gemini Deal, Kimi K 2.7 and F'
+  summary: The US government blocked all foreign users from Anthropic's Claude Fable
+    5 and Mythos 5, which the video describes as…
+  keyPhrases:
+  - Claude Fable 5 ban
+  - Mythos 5
+  - Siri x Gemini
+  - Claude 2 vs Gemini pricing
+  - one-click Figma design
+  - Kimi K 2.7 code
+  bulletPoints:
+  - time: 0
+    text: The US government blocked all foreign users from Anthropic's Claude Fable
+      5 and Mythos 5, which the video describes as a first in AI history.
+  - time: 27
+    text: Other headlines this week include Elon Musk becoming the first person worth
+      $1 trillion after a SpaceX IPO and Jeff Bezos returning from retirement to launch
+      an AI company.
+  - time: 70
+    text: The stated reason for the ban was national security, cutting off access
+      to the strongest models for non-US nationals in both Mumbai and San Francisco.
+  - time: 736
+    text: A rebuilt Siri will reportedly run on Google Gemini rather than Apple's
+      own model stack, under a deal worth roughly $1 billion per year.
+  - time: 766
+    text: Using Anthropic's Claude 2 instead was said to require about $1.5 billion
+      annually, making Google's offer the cheaper route.
+  - time: 800
+    text: Figma's new flow lets users paste an image into chat and ask it to convert
+      that asset into an editable design returned for downstream editing in Canva.
+  - time: 1480
+    text: China's Kimi K 2.7 code was judged to produce the most realistic wave physics
+      when compared with Kimi K 2.6, GPT 5.5, and Claude Opus 4.8.
+  sections:
+  - heading: The Week Access to the Strongest AI Was Cut Off by Nationality
+    time: 0
+    body: 'The video''s opening headline is that the US government forced Anthropic
+      to halt all access for foreign nationals to its flagship model, Claude Fable
+      5, and its research variant, Mythos 5. The reason given was national security,
+      and the event is framed as the first time authorities have explicitly stopped
+      the international release of a specific AI model.
+
+
+      As a result, engineers building in Mumbai and non-US nationals living in San
+      Francisco were both cut off from what the host describes as the most powerful
+      model on Earth. The speed of the move, a full shutdown within three days of
+      the announcement, is emphasized as part of what shocked the industry.'
+    image: null
+  - heading: Apple Siri x Google Gemini, With Claude Ruled Out on Cost
+    time: 736
+    body: 'Another major story this week is the report that the new Siri is being
+      rebuilt on top of Google Gemini rather than Apple''s own foundation model stack.
+      Under the arrangement, Apple would pay Google roughly $1 billion per year and
+      then layer its own "Apple Foundation Models" on top.
+
+
+      The estimate for building the same arrangement around Anthropic''s "Claude 2"
+      was reportedly $1.5 billion per year, giving Google the edge on price. Apple,
+      for its part, is stressing a mix of on-device processing and Private Cloud Compute,
+      with a trust strategy centered on the claim that user data is not stored by
+      Apple or third parties and can be externally audited.'
+    image: null
+  - heading: Figma's One-Click Shift and Kimi K 2.7 Code
+    time: 800
+    body: 'On the tools side, Figma rolled out a feature that turns pasted images
+      into editable designs through a chat instruction. The workflow of exporting
+      assets, sending them to Canva, and then making final adjustments is now close
+      to a one-click pipeline.
+
+
+      Among coding models, Kimi K 2.7 code was tested against Kimi K 2.6, GPT 5.5,
+      and Claude Opus 4.8, and was rated best at generating scientifically grounded
+      visuals, especially realistic water-wave physics. The previous-generation Kimi
+      K 2.6 reportedly struggled with physically accurate motion, so this is presented
+      as a sign that Kimi is emerging not just as a general-purpose AI but as a strong
+      visualization-oriented agent.'
+    image: null
+  headerImage: /images/ACjwmGeDHFc/header.png
+  heroImage: /images/ACjwmGeDHFc/header.png
 ---
 
 ## ハイライト

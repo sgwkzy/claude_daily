@@ -10,8 +10,8 @@ channelId: UCl2mFZoRqjw_ELax4Yisf6w
 publishedAt: '2026-06-16T20:37:59Z'
 fetchedAt: '2026-06-18T04:16:38.388661Z'
 originalThumbnail: https://i.ytimg.com/vi/2lfMtyXCNKg/maxresdefault.jpg
-headerImage: /images/2lfMtyXCNKg/header.png
-heroImage: /images/2lfMtyXCNKg/header.png
+headerImage: /images/2lfMtyXCNKg/header.ja.png
+heroImage: /images/2lfMtyXCNKg/header.ja.png
 viewCount: 207558
 durationSec: 1075
 sourceLanguage: en
@@ -61,6 +61,84 @@ sections:
 
     相手を、合鍵で勝手に家に入って片付けた翌日に怒り出す『最悪の元恋人』にたとえる。編集する時間もない勢い任せのラントだと断りつつ、それでもこれが1兆ドル規模のIPOを目指す企業の話なのだと皮肉って締めくくる。'
   image: null
+en:
+  articleTitle: Claude Code Is Useful, but Anthropic Lacks the Consistency Businesses
+    Need
+  seoTitle: Claude Code Is Useful, but Anthropic Lacks the Consistency Busin
+  summary: Repair-business owner Louis Rossmann delivers a blunt critique of how companies
+    like Anthropic operate.
+  keyPhrases:
+  - Anthropic
+  - Claude Code
+  - consistency
+  - business model
+  - Gemini Deep Research
+  bulletPoints:
+  - time: 0
+    text: Repair-business owner Louis Rossmann delivers a blunt critique of how companies
+      like Anthropic operate.
+  - time: 22
+    text: He says Claude Code itself is useful, citing a case where it recovered a
+      damaged file that expensive specialist software could not restore.
+  - time: 45
+    text: Whenever progress stalled, he had Claude Code automatically call Gemini
+      Deep Research in the background as part of a loop to diagnose the problem.
+  - time: 501
+    text: The real issue, he argues, is the same kind of unpredictability seen in
+      the swings around Trump-era tariffs.
+  - time: 544
+    text: What businesses need, he says, is not the best possible environment but
+      a consistent one.
+  - time: 991
+    text: No matter how strong the technology is, he says he does not want to do business
+      with an unstable counterparty.
+  - time: 1066
+    text: He closes by dryly noting that this is the behavior of a company aiming
+      for a trillion-dollar IPO.
+  sections:
+  - heading: A practical example of what Claude Code enabled
+    time: 22
+    body: 'Rossmann starts by acknowledging that Claude Code is genuinely useful.
+      He describes recovering a file whose metadata had been badly corrupted, something
+      that even the shop''s roughly $20,000 hardware and expensive specialist software
+      had failed to fix.
+
+
+      He built a loop in Claude Code that would automatically call Gemini Deep Research
+      in the background whenever it got stuck, helping identify the source of the
+      file problem. He presents this as a real business use case, including recovering
+      voice memos left by someone who had passed away.'
+    image: null
+  - heading: 'The core complaint: unpredictability'
+    time: 501
+    body: 'His frustration is not with the technology itself, but with how the company
+      conducts business. He compares sudden changes in product policy to the violent
+      swings of Trump-era tariffs. In an environment where a $110 item can become
+      a $210 item the next day because of a single tweet, it becomes impossible to
+      plan margins or run a stable business.
+
+
+      That leads to his broader point: businesses do not primarily need the best regulatory
+      or commercial environment, they need a consistent one. Even when there is money
+      to be made, merchants will pull back if the rules keep shifting and the counterparties
+      cannot be predicted.'
+    image: null
+  - heading: Powerful technology from a partner he would not trust
+    time: 991
+    body: 'Rossmann frames his criticism around people using these systems for genuinely
+      meaningful work, not for surveillance or abusive use cases, but for things like
+      recovering a deceased relative''s final voice memo. His question is simple:
+      even if the technology is excellent, would you want to do business with a partner
+      that feels unstable every single morning?
+
+
+      He compares that kind of company to "the worst ex" who lets themselves into
+      your house with a spare key, cleans everything up, and then gets angry the next
+      day. He admits the video is an unedited rant, but ends by underlining the irony
+      that this is a company aspiring to a trillion-dollar IPO.'
+    image: null
+  headerImage: /images/2lfMtyXCNKg/header.png
+  heroImage: /images/2lfMtyXCNKg/header.png
 ---
 
 ## ハイライト

@@ -1,8 +1,8 @@
 ---
 videoId: bdhUBBACglw
 title: Claude Fable 5 is BANNED. What to do?
-articleTitle: Fableが禁止された週末にどう動くか — ローカルAIへの乗り換え実践ガイド
 slug: local-ai-migration-after-fable-ban
+articleTitle: Fableが禁止された週末にどう動くか — ローカルAIへの乗り換え実践ガイド
 seoTitle: Fable禁止後にどう動くか ローカルAI移行の実践ガイド
 summary: Claude Fable 5 が使えなくなった前提で、代替ツール選びとローカルAIへの移行方針を追いやすく整理した記事です。
 channel: Greg Isenberg
@@ -10,8 +10,8 @@ channelId: UCPjNBjflYl0-HQtUvOx0Ibw
 publishedAt: '2026-06-13T21:25:13Z'
 fetchedAt: '2026-06-16T02:23:22.106317Z'
 originalThumbnail: https://i.ytimg.com/vi/bdhUBBACglw/maxresdefault.jpg
-headerImage: /images/bdhUBBACglw/header.png
-heroImage: /images/bdhUBBACglw/header.png
+headerImage: /images/bdhUBBACglw/header.ja.png
+heroImage: /images/bdhUBBACglw/header.ja.png
 viewCount: 110586
 durationSec: 1496
 sourceLanguage: en
@@ -63,6 +63,89 @@ sections:
 
     投稿者は、ただ視聴して頷くのではなく、OllamaやLM Studioを導入してQwen 3を動かし、実際のタスクを完全にローカルでやり切ってみることを勧める。クラウドモデルと使い分ければ、次に何かが禁止されたり値上げされたりしても事業を回し続けられるとし、「誰にも止められないものを今日作ろう」と締めくくっている。'
   image: null
+en:
+  articleTitle: 'What to Build After the Fable Ban: A Practical Guide to Local AI
+    Models'
+  seoTitle: 'What to Build After the Fable Ban: A Practical Guide to Local AI'
+  summary: Just as the creator was about to spend the weekend building with Fable,
+    the model was disabled for everyone Friday…
+  keyPhrases:
+  - Fable ban
+  - local models
+  - Qwen / DeepSeek / Gemma / Llama
+  - quantization
+  - Ollama / LM Studio
+  - the fragility of vendor lock-in
+  bulletPoints:
+  - time: 0
+    text: Just as the creator was about to spend the weekend building with Fable,
+      the model was disabled for everyone Friday night after a government letter landed.
+  - time: 23
+    text: He says the incident exposed how fragile it is to build a business or creative
+      workflow on models running on someone else's servers under someone else's terms.
+  - time: 45
+    text: He declares that this weekend he will deliberately avoid frontier models
+      entirely and instead explain what local models are and why they suddenly matter
+      now.
+  - time: 64
+    text: He also promises to discuss the new revenue opportunities created by intelligence
+      that can now run for free on your own desk.
+  - time: 692
+    text: He highlights Qwen, DeepSeek, Gemma, and Llama as practical local-model
+      choices, each with different strengths.
+  - time: 790
+    text: He explains that quantization is a key concept for local deployment because
+      it reduces memory use enough to make running models on personal hardware realistic.
+  - time: 1404
+    text: Rather than just watching, he urges viewers to install Ollama or LM Studio,
+      run Qwen 3, and complete a real task entirely on a local setup.
+  sections:
+  - heading: The Ban Exposed the Fragility of Borrowed Infrastructure
+    time: 0
+    body: 'The creator says he had planned to spend the entire weekend finally building
+      an idea he had been sitting on with Fable 5, which he describes as the most
+      powerful AI model on Earth. Then, at 5:21 p.m. on Friday, the US government
+      sent a letter to Anthropic, and by that night the model had been disabled for
+      everyone without warning and without any opportunity to appeal.
+
+
+      The episode drove home how fragile it is to build businesses, workflows, and
+      creative processes on top of models that live on someone else''s servers and
+      operate under someone else''s rules. In his telling, the entire foundation disappeared
+      because of a single government letter.'
+    image: null
+  - heading: Why Local Models Are the Answer and Which Ones Matter
+    time: 45
+    body: 'That is why, he says, this weekend''s episode intentionally avoids frontier
+      models entirely and instead focuses on what local models are, why they have
+      suddenly become far more important than they were a week ago, which ones to
+      use, and what hardware they require. He also says there are revenue ideas that
+      only become possible once intelligence runs for free on your own desk.
+
+
+      His practical shortlist starts with Qwen as the first model to learn on, DeepSeek
+      for harder reasoning and coding tasks despite a 10 to 30 second thinking delay,
+      Google''s Gemma as a lightweight model with strong prose that can fit on a 16
+      GB machine or even a phone, and Meta''s Llama as the ecosystem choice backed
+      by a huge community and countless fine-tunes.'
+    image: null
+  - heading: Quantization and the Case for Building Something Nobody Can Shut Off
+    time: 790
+    body: 'The main technical concept he emphasizes is quantization, which reduces
+      a model''s memory footprint and makes local execution practical on consumer
+      hardware. Local models may not always be the absolute strongest, he says, but
+      they are good enough for 60 to 80 percent of everyday work and usable across
+      a surprisingly broad range of tasks.
+
+
+      His recommendation is not to passively agree and move on, but to install Ollama
+      or LM Studio, run Qwen 3, and complete a real task fully on local infrastructure.
+      If users pair local models with cloud models where appropriate, they can keep
+      operating even when the next ban or price hike hits. His closing line is a direct
+      challenge: build something today that nobody can stop.'
+    image: null
+  headerImage: /images/bdhUBBACglw/header.png
+  heroImage: /images/bdhUBBACglw/header.png
 ---
 
 ## ハイライト
