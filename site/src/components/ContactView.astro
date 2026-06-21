@@ -1,0 +1,90 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { localePath, type Locale } from "../i18n/ui";
+import { withBase } from "../lib/url";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const isEn = locale === "en";
+const editorialHref = withBase(localePath("/editorial-policy/", locale));
+const privacyHref = withBase(localePath("/privacy/", locale));
+const description = isEn
+  ? "Contact Claude Daily — report errors, request removal or correction from rights holders, or send general inquiries."
+  : "Claude Daily へのお問い合わせ窓口。掲載内容の誤り報告、権利者からの削除・修正依頼、一般的なご連絡の受付先を案内します。";
+---
+
+<BaseLayout title="Contact | Claude Daily" description={description} path="/contact/" locale={locale}>
+  <article class="mx-auto max-w-[52rem] space-y-10 leading-[1.95] text-ink/85">
+    <header>
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">Contact</p>
+      <h1 class="headline mt-3 text-3xl font-black leading-tight text-ink md:text-4xl">
+        {isEn ? "Contact" : "お問い合わせ"}
+      </h1>
+      <p class="mt-4 text-lg text-ink/75">
+        {isEn
+          ? "For inquiries about this site's content or operation, please use the channels below. We'll review and respond in turn."
+          : "当サイトの掲載内容や運営に関するご連絡は、以下の窓口からお願いいたします。内容を確認のうえ、順次対応いたします。"}
+      </p>
+    </header>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "1. How to reach us" : "1. お問い合わせ窓口"}</h2>
+      <ul class="list-disc space-y-2 pl-6">
+        <li>
+          {isEn ? "Email: " : "メール: "}
+          <a class="underline hover:text-coral" href="mailto:sugawalabo@gmail.com">sugawalabo@gmail.com</a>
+        </li>
+        <li>
+          X:
+          <a class="underline hover:text-coral" href="https://x.com/sugawalabo" target="_blank" rel="noreferrer">@sugawalabo</a>
+        </li>
+      </ul>
+      <p>
+        {isEn
+          ? "For urgent or detailed matters, email tends to be the smoothest way to reach us."
+          : "お急ぎの場合や込み入った内容の場合は、メールでお送りいただけるとやり取りがスムーズです。"}
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "2. Examples of inquiries" : "2. お問い合わせ内容の例"}</h2>
+      <ul class="list-disc space-y-2 pl-6">
+        {isEn ? (
+          <>
+            <li>Reports of errors or inappropriate wording in articles</li>
+            <li>Removal or correction requests from rights holders</li>
+            <li>General questions about our editorial policy or site operation</li>
+          </>
+        ) : (
+          <>
+            <li>掲載記事の誤りや不適切な表現のご報告</li>
+            <li>権利者の方からの掲載内容に関する削除・修正のご依頼</li>
+            <li>編集方針やサイト運営に関する一般的なご質問</li>
+          </>
+        )}
+      </ul>
+      <p>
+        {isEn ? "For rights-related matters, we will review and respond promptly, including correction or removal. Please also see our " : "権利関係のご連絡については、内容を確認のうえ、修正または削除を含めて速やかに対応いたします。掲載・要約の方針は"}
+        <a class="underline hover:text-coral" href={editorialHref}>Editorial Policy</a>
+        {isEn ? "." : "もあわせてご確認ください。"}
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "3. Notes" : "3. 補足"}</h2>
+      <p>
+        {isEn
+          ? "This site is independently operated and is not affiliated with Claude / Anthropic."
+          : "当サイトは個人運営であり、Claude / Anthropic 公式とは関係ありません。"}
+      </p>
+      <p>
+        {isEn ? "For how we handle personal data, please see our " : "個人情報の取り扱いについては"}
+        <a class="underline hover:text-coral" href={privacyHref}>{isEn ? "Privacy Policy" : "プライバシーポリシー"}</a>
+        {isEn ? "." : "をご確認ください。"}
+      </p>
+    </section>
+  </article>
+</BaseLayout>

@@ -1,0 +1,234 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionBlock from "./SectionBlock.astro";
+import {
+  buildArticlePath,
+  buildTopicHrefFromLabel,
+  findRelatedArticles,
+  getLocalizedDescription,
+  loadArticles,
+  localizeArticleData,
+  type Article,
+} from "../lib/articles";
+import { localePath, t, type Locale } from "../i18n/ui";
+import { withBase } from "../lib/url";
+
+interface Props {
+  article: Article;
+  locale: Locale;
+  isLegacyRoute?: boolean;
+}
+
+const { article, locale, isLegacyRoute = false } = Astro.props;
+const tr = t(locale);
+const { data } = article;
+const loc = localizeArticleData(article, locale);
+const allArticles = await loadArticles();
+const relatedArticles = findRelatedArticles(article, allArticles);
+const displayTitle = loc.articleTitle;
+const seoTitle = loc.seoTitle ?? displayTitle;
+const canonicalPath = buildArticlePath(article);
+const total = loc.sections.length;
+const minutes = Math.max(1, Math.round(data.durationSec / 60));
+const dateLocale = locale === "en" ? "en-US" : "ja-JP";
+
+const formatMmss = (seconds: number) => {
+  const m = Math.floor(seconds / 60);
+  const s = seconds % 60;
+  return `${String(m).padStart(2, "0")}:${String(s).padStart(2, "0")}`;
+};
+
+const youtubeUrl = (time: number) => `https://youtu.be/${data.videoId}?t=${time}`;
+const localThumbnail = withBase(`/images/${data.videoId}/thumbnail.webp`);
+const headerImageSrc = withBase(loc.headerImage);
+const heroImageSrc = withBase(loc.heroImage);
+const articleDescription = getLocalizedDescription(article, locale);
+const minLabel = locale === "en" ? `${minutes} ${tr("article.minVideo")}` : `${minutes}${tr("article.minVideo")}`;
+const allSlidesLabel = locale === "en" ? `${total} ${tr("article.allSlides")}` : `全 ${total} ${tr("article.allSlides")}`;
+// chip はアクセント1色（coral）に統一。
+const chipStyle = "border-coral/30 bg-coral/10 text-coralDark";
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "Article",
+  headline: seoTitle,
+  description: articleDescription,
+  image: [`https://www.claude-daily.com${heroImageSrc}`],
+  datePublished: data.fetchedAt.toISOString(),
+  dateModified: data.fetchedAt.toISOString(),
+  inLanguage: locale,
+  author: {
+    "@type": "Organization",
+    name: "Claude Daily",
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Claude Daily",
+    logo: {
+      "@type": "ImageObject",
+      url: "https://www.claude-daily.com/logo.png",
+    },
+  },
+  mainEntityOfPage: `https://www.claude-daily.com${localePath(canonicalPath, locale)}`,
+  isBasedOn: `https://youtu.be/${data.videoId}`,
+};
+---
+
+<BaseLayout
+  title={`${seoTitle} | Claude Daily`}
+  description={articleDescription}
+  path={canonicalPath}
+  locale={locale}
+  image={heroImageSrc}
+  type="article"
+  publishedTime={data.fetchedAt.toISOString()}
+  noindex={isLegacyRoute}
+  structuredData={structuredData}
+>
+  <article class="mx-auto max-w-[74rem] space-y-12 xl:max-w-[72rem]">
+    <section class="overflow-hidden rounded-slide border border-line/70 bg-paper shadow-slide">
+      <div class="space-y-0">
+        <div class="border-b border-line/60 px-6 py-6 md:px-8 md:py-8 xl:px-9">
+          <div class="flex flex-wrap items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">
+            <span class="truncate">{data.channel}</span>
+            <span aria-hidden="true">·</span>
+            <time>{data.fetchedAt.toLocaleDateString(dateLocale)}</time>
+            <span aria-hidden="true">·</span>
+            <span>{minLabel}</span>
+            <span aria-hidden="true">·</span>
+            <span>{total} {tr("article.slides")}</span>
+          </div>
+          <h1 class="headline mt-5 text-[1.65rem] font-black leading-[1.32] text-ink sm:text-[2rem] sm:leading-[1.18] md:text-[2.45rem] md:leading-[1.14] xl:max-w-[56rem] xl:text-[2.9rem]">{displayTitle}</h1>
+          <div class="mt-5 flex flex-wrap items-center gap-2">
+            {loc.keyPhrases.map((phrase) => (
+            <a
+              href={withBase(localePath(buildTopicHrefFromLabel(phrase), locale))}
+                class={`rounded-full border px-2.5 py-0.5 text-xs transition hover:-translate-y-0.5 hover:shadow-sm ${chipStyle}`}
+              >
+                #{phrase}
+              </a>
+            ))}
+          </div>
+        </div>
+        <div class="relative">
+          <img src={heroImageSrc} alt={data.title} class="aspect-video w-full object-cover object-center" />
+          <div class="absolute bottom-3 right-3 flex items-center gap-2 rounded-full bg-ink/70 px-3 py-1.5 text-[0.7rem] font-semibold text-paper backdrop-blur-sm md:bottom-4 md:right-4 md:gap-3 md:px-4 md:py-2 md:text-xs">
+            <span>{data.viewCount.toLocaleString(dateLocale)} {tr("article.views")}</span>
+            <span class="text-paper/40" aria-hidden="true">·</span>
+            <span>{loc.bulletPoints.length} {tr("article.highlights")}</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="rounded-slide border border-line/70 bg-paper p-8 shadow-card md:p-12">
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">{tr("article.tldr")}</p>
+      <ul class="mt-6 grid gap-4 md:grid-cols-2">
+        {loc.bulletPoints.map((point, index) => (
+          <li class="rounded-2xl bg-cream/70 p-5">
+            <div class="flex items-start gap-4">
+              <span class="grid h-9 w-9 shrink-0 place-items-center rounded-full bg-coral text-sm font-bold text-paper">{index + 1}</span>
+              <span class="leading-[1.9] text-ink/85">{point.text}</span>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    <section class="space-y-10">
+      <div>
+        <div class="flex items-baseline justify-between">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">{tr("article.readSlides")}</p>
+          <p class="text-xs text-clay">{allSlidesLabel}</p>
+        </div>
+        <nav class="mt-5 flex gap-2 overflow-x-auto pb-2" aria-label={tr("nav.timeline")}>
+          {loc.sections.map((section, index) => (
+            <a
+              href={`#slide-${index + 1}`}
+              class="group flex shrink-0 items-center gap-2 rounded-full border border-line bg-paper px-4 py-2 text-xs text-clay transition hover:border-coral hover:text-ink"
+            >
+              <span class="font-bold text-coral">{String(index + 1).padStart(2, "0")}</span>
+              <span class="text-[0.7rem] uppercase tracking-[0.18em]">{formatMmss(section.time)}</span>
+              <span class="max-w-[10rem] truncate text-ink/75 group-hover:text-ink">{section.heading}</span>
+            </a>
+          ))}
+        </nav>
+      </div>
+
+      {loc.sections.map((section, index) => (
+        <SectionBlock
+          section={section}
+          index={index + 1}
+          total={total}
+          timeLabel={formatMmss(section.time)}
+          youtubeUrl={youtubeUrl(section.time)}
+          locale={locale}
+        />
+      ))}
+    </section>
+
+    <section class="rounded-slide border border-line/70 bg-paper p-8 shadow-card md:p-10">
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-clay">{tr("article.source")}</p>
+      <div class="mt-5 grid gap-6 md:grid-cols-[1fr_1.4fr] md:items-center">
+        <a href={`https://youtu.be/${data.videoId}`} target="_blank" rel="noreferrer" class="block overflow-hidden rounded-2xl border border-line bg-cream">
+          <img src={localThumbnail} alt={data.title} class="aspect-video w-full object-cover" onerror={`this.onerror=null; this.src='${headerImageSrc}'`} />
+        </a>
+        <div class="space-y-3">
+          <p class="text-[0.7rem] uppercase tracking-[0.22em] text-clay">{data.channel}</p>
+          <h3 class="headline text-xl font-bold leading-snug text-ink">{data.title}</h3>
+          <div class="flex flex-wrap gap-4 text-xs text-clay">
+            <span>{tr("article.publishedOn")} {data.publishedAt.toLocaleDateString(dateLocale)}</span>
+            <span>{minutes} {tr("article.minutes")}</span>
+            <span>{data.viewCount.toLocaleString(dateLocale)} {tr("article.views")}</span>
+          </div>
+          <p class="text-sm leading-[1.95] text-ink/75">
+            {tr("article.sourceNote")}
+          </p>
+          <a
+            href={`https://youtu.be/${data.videoId}`}
+            target="_blank"
+            rel="noreferrer"
+            class="inline-flex items-center gap-2 rounded-full bg-coral px-5 py-2.5 text-sm font-semibold text-paper transition hover:bg-coralDark"
+          >
+            {tr("article.watchYoutube")}
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    {relatedArticles.length > 0 && (
+      <section class="rounded-slide border border-line/70 bg-paper p-8 shadow-card md:p-10">
+        <div class="flex items-center justify-between gap-3">
+          <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">{tr("article.related")}</p>
+          <p class="text-xs text-clay">{relatedArticles.length} {tr("unit.items")}</p>
+        </div>
+        <div class="mt-6 grid gap-4 md:grid-cols-3">
+          {relatedArticles.map((related) => {
+            const relatedLoc = localizeArticleData(related, locale);
+            return (
+            <a
+              href={withBase(localePath(buildArticlePath(related), locale))}
+              class="group overflow-hidden rounded-2xl border border-line/70 bg-cream/40 transition hover:-translate-y-0.5 hover:border-coral/40 hover:bg-cream"
+            >
+              <img
+                src={withBase(relatedLoc.headerImage)}
+                alt={relatedLoc.articleTitle}
+                class="aspect-video w-full object-cover object-center"
+              />
+              <div class="space-y-3 p-5">
+                <p class="text-[0.7rem] uppercase tracking-[0.2em] text-clay">{related.data.channel}</p>
+                <h3 class="headline line-clamp-3 text-lg font-bold leading-snug text-ink group-hover:text-coralDark">
+                  {relatedLoc.articleTitle}
+                </h3>
+                <p class="line-clamp-3 text-sm leading-7 text-ink/75">
+                  {relatedLoc.bulletPoints[0]?.text}
+                </p>
+              </div>
+            </a>
+            );
+          })}
+        </div>
+      </section>
+    )}
+  </article>
+</BaseLayout>

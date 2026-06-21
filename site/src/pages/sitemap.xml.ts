@@ -1,5 +1,6 @@
 import { getCollection } from "astro:content";
 import { buildArticlePath, loadDailyGroups, loadTopicGroups } from "../lib/articles";
+import { localePath, locales } from "../i18n/ui";
 
 const site = import.meta.env.SITE ?? "https://www.claude-daily.com";
 
@@ -13,44 +14,74 @@ const escapeXml = (value: string) =>
     .replaceAll('"', "&quot;")
     .replaceAll("'", "&apos;");
 
+interface SitemapEntry {
+  /** ロケール非依存のベースパス。両ロケールのエントリと hreflang を生成する。 */
+  basePath: string;
+  lastmod?: string;
+}
+
 export async function GET() {
   const articles = await getCollection("articles");
   const groups = await loadDailyGroups();
-  const topics = await loadTopicGroups();
   const latestFetchedAt = articles[0]?.data.fetchedAt.toISOString();
 
-  const urls = [
-    { loc: toUrl("/"), lastmod: latestFetchedAt },
-    { loc: toUrl("/about/"), lastmod: latestFetchedAt },
-    { loc: toUrl("/editorial-policy/"), lastmod: latestFetchedAt },
-    { loc: toUrl("/privacy/"), lastmod: latestFetchedAt },
-    { loc: toUrl("/contact/"), lastmod: latestFetchedAt },
-    { loc: toUrl("/notes/"), lastmod: latestFetchedAt },
-    { loc: toUrl("/archive/"), lastmod: latestFetchedAt },
-    { loc: toUrl("/topics/"), lastmod: latestFetchedAt },
+  // 両ロケールで同一スラッグを共有するページ（トピックは言語でスラッグが異なるため別扱い）。
+  const sharedEntries: SitemapEntry[] = [
+    { basePath: "/", lastmod: latestFetchedAt },
+    { basePath: "/about/", lastmod: latestFetchedAt },
+    { basePath: "/editorial-policy/", lastmod: latestFetchedAt },
+    { basePath: "/privacy/", lastmod: latestFetchedAt },
+    { basePath: "/contact/", lastmod: latestFetchedAt },
+    { basePath: "/notes/", lastmod: latestFetchedAt },
+    { basePath: "/archive/", lastmod: latestFetchedAt },
+    { basePath: "/topics/", lastmod: latestFetchedAt },
     ...groups.map((group) => ({
-      loc: toUrl(`/days/${group.date}/`),
+      basePath: `/days/${group.date}/`,
       lastmod: group.articles[0]?.data.fetchedAt.toISOString(),
     })),
     ...articles.map((article) => ({
-      loc: toUrl(buildArticlePath(article)),
+      basePath: buildArticlePath(article),
       lastmod: article.data.fetchedAt.toISOString(),
-    })),
-    ...topics.map((topic) => ({
-      loc: toUrl(`/topics/${topic.slug}/`),
-      lastmod: topic.articles[0]?.data.fetchedAt.toISOString() ?? latestFetchedAt,
     })),
   ];
 
+  const renderAlternates = (basePath: string): string =>
+    [...locales, "en" as const]
+      .map((loc, index) => {
+        const hreflang = index === locales.length ? "x-default" : loc;
+        return `    <xhtml:link rel="alternate" hreflang="${hreflang}" href="${escapeXml(
+          toUrl(localePath(basePath, loc))
+        )}" />`;
+      })
+      .join("\n");
+
+  const renderSharedUrls = (entry: SitemapEntry): string =>
+    locales
+      .map(
+        (loc) => `  <url>
+    <loc>${escapeXml(toUrl(localePath(entry.basePath, loc)))}</loc>
+${entry.lastmod ? `    <lastmod>${entry.lastmod}</lastmod>\n` : ""}${renderAlternates(entry.basePath)}
+  </url>`
+      )
+      .join("\n");
+
+  // トピックは言語ごとにスラッグが異なるため、各ロケールで個別に列挙する。
+  const topicUrls: string[] = [];
+  for (const loc of locales) {
+    const topics = await loadTopicGroups(loc);
+    for (const topic of topics) {
+      const lastmod = topic.articles[0]?.data.fetchedAt.toISOString() ?? latestFetchedAt;
+      topicUrls.push(`  <url>
+    <loc>${escapeXml(toUrl(localePath(`/topics/${topic.slug}/`, loc)))}</loc>
+${lastmod ? `    <lastmod>${lastmod}</lastmod>\n` : ""}  </url>`);
+    }
+  }
+
   const body = [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
-    ...urls.map(
-      ({ loc, lastmod }) => `  <url>
-    <loc>${escapeXml(loc)}</loc>
-    ${lastmod ? `<lastmod>${lastmod}</lastmod>` : ""}
-  </url>`
-    ),
+    '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">',
+    ...sharedEntries.map(renderSharedUrls),
+    ...topicUrls,
     "</urlset>",
     "",
   ].join("\n");

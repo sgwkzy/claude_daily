@@ -107,6 +107,24 @@ npm run dev
 - 画像生成は OpenAI `gpt-image-1` の image edit API を利用します。
 - サムネイル仕様と運用方針は [docs/thumbnail-directions.md](/F:/Work/claude-daily/docs/thumbnail-directions.md) を参照してください。
 
+## 多言語対応（英語デフォルト / 日本語 `/jp/`）
+
+サイトは英語をデフォルト（ルート `/`）、日本語を `/jp/` プレフィックスで配信するバイリンガル構成です。
+
+- ロケール判定・UI 文言・パス変換は `site/src/i18n/ui.ts` に集約しています（`/jp/` 始まりを `ja` と判定）。
+- 記事の表示テキストはフロントマターの `en` ブロック（英語）とトップレベル（日本語・原文）で持ち、`site/src/lib/articles.ts` の `localizeArticleData` が解決します。`en` が無い記事は日本語へフォールバックします。
+- バッチは要約後に `batch/translator.py` で英訳し、ヘッダー画像は `header.png`（英語）と `header.ja.png`（日本語）を AI で個別生成します。
+- 言語切り替えはヘッダーのトグル（選択を `localStorage` に保存）と、初回訪問時の `navigator.language` による自動誘導（ルート閲覧時に `ja` ブラウザのみ `/jp/` へ）で行います。
+- 各ページに hreflang 相互リンク（en / ja / x-default=en）を出力し、`sitemap.xml` は両言語 URL を、RSS は `rss.xml`（英語）と `jp/rss.xml`（日本語）を生成します。
+
+既存記事へ英語ブロックと英語ヘッダー画像を後付けするバックフィル:
+
+```powershell
+python .\batch\backfill_translations.py --limit 5
+```
+
+`--dry-run` でプレースホルダ動作確認、`en` 済み記事はスキップ（冪等）。`/jp/**` 公開後は Search Console / IndexNow へ再送信して再インデックスしてください。
+
 ## GitHub Actions
 
 - `batch.yml`: 1 日 3 回 cron 実行し、生成された記事と画像をコミットします。

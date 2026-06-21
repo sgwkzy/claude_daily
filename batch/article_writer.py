@@ -6,7 +6,25 @@ from pathlib import Path
 import yaml
 
 from .article_metadata import build_article_slug, build_seo_title, build_summary_text
-from .models import ArticleFrontmatter, SummaryResult, VideoCandidate
+from .models import ArticleFrontmatter, ArticleTranslation, SummaryResult, VideoCandidate
+
+
+def build_translation(
+    translation: SummaryResult,
+    header_image: str,
+    hero_image: str | None = None,
+) -> ArticleTranslation:
+    """翻訳済み ``SummaryResult`` をフロントマターの ``en`` ブロックへ整形する。"""
+    return ArticleTranslation(
+        articleTitle=translation.articleTitle,
+        seoTitle=build_seo_title(translation.articleTitle),
+        summary=build_summary_text(translation),
+        keyPhrases=translation.keyPhrases,
+        bulletPoints=translation.bulletPoints,
+        sections=translation.sections,
+        headerImage=header_image,
+        heroImage=hero_image or header_image,
+    )
 
 
 def build_frontmatter(
@@ -15,8 +33,16 @@ def build_frontmatter(
     header_image: str,
     hero_image: str | None = None,
     fetched_at: datetime | None = None,
+    translation: SummaryResult | None = None,
+    en_header_image: str | None = None,
+    en_hero_image: str | None = None,
 ) -> ArticleFrontmatter:
     article_title = summary.articleTitle
+    en_block = (
+        build_translation(translation, en_header_image or header_image, en_hero_image)
+        if translation is not None
+        else None
+    )
     return ArticleFrontmatter(
         videoId=candidate.video_id,
         title=candidate.title,
@@ -39,6 +65,7 @@ def build_frontmatter(
         keyPhrases=summary.keyPhrases,
         bulletPoints=summary.bulletPoints,
         sections=summary.sections,
+        en=en_block,
     )
 
 

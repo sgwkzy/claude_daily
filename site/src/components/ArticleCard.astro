@@ -1,5 +1,6 @@
 ---
 import { buildArticlePathFromTitle, buildTopicHrefFromLabel } from "../lib/articles";
+import { localePath, t, type Locale } from "../i18n/ui";
 import { withBase } from "../lib/url";
 
 interface BulletPoint {
@@ -17,6 +18,7 @@ interface Props {
   bulletPoints: BulletPoint[];
   summary?: string;
   articlePath?: string;
+  locale?: Locale;
 }
 
 const {
@@ -29,9 +31,11 @@ const {
   bulletPoints,
   summary,
   articlePath,
+  locale = "ja",
 } = Astro.props;
+const tr = t(locale);
 const headerImageSrc = withBase(headerImage);
-const articleHref = withBase(articlePath ?? buildArticlePathFromTitle(title, articleId));
+const articleHref = withBase(localePath(articlePath ?? buildArticlePathFromTitle(title, articleId), locale));
 const previewText = summary ?? bulletPoints[0]?.text;
 // chip はアクセント1色（coral）に統一。色はトピック種別を符号化しないため装飾的な多色巡回を廃止
 const chipStyle = "border-coral/30 bg-coral/10 text-coralDark";
@@ -49,7 +53,7 @@ const chipStyle = "border-coral/30 bg-coral/10 text-coralDark";
         <div class="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">
           <span class="truncate">{channel}</span>
           <span class="h-px w-6 bg-line"></span>
-          <time>{publishedAt.toLocaleDateString("ja-JP")}</time>
+          <time>{publishedAt.toLocaleDateString(locale === "en" ? "en-US" : "ja-JP")}</time>
         </div>
         <div class="space-y-4">
           <h2 class="headline line-clamp-3 text-[1.5rem] font-black leading-[1.18] text-ink md:text-[1.72rem]">{title}</h2>
@@ -60,11 +64,11 @@ const chipStyle = "border-coral/30 bg-coral/10 text-coralDark";
           )}
         </div>
         <div class="space-y-2 overflow-hidden pt-1">
-          <p class="text-[0.7rem] uppercase tracking-[0.24em] text-clay">触れている論点</p>
+          <p class="text-[0.7rem] uppercase tracking-[0.24em] text-clay">{tr("card.topics")}</p>
           <div class="flex flex-wrap gap-2">
           {keyPhrases.slice(0, 3).map((phrase) => (
             <a
-              href={withBase(buildTopicHrefFromLabel(phrase))}
+              href={withBase(localePath(buildTopicHrefFromLabel(phrase), locale))}
               class={`rounded-full border px-2.5 py-0.5 text-[0.7rem] transition hover:-translate-y-0.5 hover:shadow-sm ${chipStyle}`}
             >
               #{phrase}

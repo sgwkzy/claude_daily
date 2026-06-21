@@ -14,9 +14,10 @@ from .article_writer import build_frontmatter, write_article
 from .config import Settings
 from .header_image import HeaderContext, HeaderImageGenerator
 from .media import MediaManager
-from .models import PipelineStats, VideoCandidate
+from .models import PipelineStats, SummaryResult, VideoCandidate
 from .summarizer import TranscriptSummarizer
 from .transcript import TranscriptFetcher, compact_segments, preferred_languages
+from .translator import SummaryTranslator
 from .x_poster import PostPayload
 
 logger = logging.getLogger(__name__)
@@ -30,10 +31,63 @@ class PipelineDeps:
     settings: Settings
     transcript_fetcher: TranscriptFetcher
     summarizer: TranscriptSummarizer
+    translator: SummaryTranslator
     media: MediaManager
     header_generator: HeaderImageGenerator
     thumbnail_directions: list[str]
     dry_run: bool = False
+
+
+def _header_context(candidate: VideoCandidate, summary: SummaryResult) -> HeaderContext:
+    """要約（原文 or 翻訳）からヘッダー画像生成用のコンテキストを組み立てる。"""
+    return HeaderContext(
+        title=candidate.title,
+        article_title=summary.articleTitle,
+        channel=candidate.channel,
+        category_label=candidate.matched_keywords[0] if candidate.matched_keywords else "",
+        key_phrases=summary.keyPhrases,
+        bullet_points=[item.text for item in summary.bulletPoints],
+        section_headings=[section.heading for section in summary.sections],
+    )
+
+
+def _generate_header(
+    deps: PipelineDeps,
+    thumbnail_path: Path,
+    destination: Path,
+    candidate: VideoCandidate,
+    direction: str,
+    context: HeaderContext,
+    *,
+    language: str,
+) -> bool:
+    """1 言語分のヘッダー画像を生成する。失敗時はサムネイル流用へフォールバックする。
+
+    生成・フォールバックの双方が失敗した場合のみ ``False`` を返す。
+    """
+    try:
+        deps.header_generator.generate(
+            thumbnail_path,
+            destination,
+            candidate.title,
+            dry_run=deps.dry_run,
+            direction=direction,
+            context=context,
+            language=language,
+        )
+        return True
+    except Exception as error:
+        print(
+            f"ヘッダー画像生成({language})に失敗したためサムネイルを使用します: {candidate.video_id} / {error}"
+        )
+        try:
+            destination.write_bytes(thumbnail_path.read_bytes())
+            return True
+        except Exception as fallback_error:
+            print(
+                f"ヘッダーのフォールバック({language})にも失敗しました: {candidate.video_id} / {fallback_error}"
+            )
+            return False
 
 
 def process_candidate(
@@ -109,56 +163,68 @@ def process_candidate(
         logger.exception("Media processing failed: video_id=%s", candidate.video_id)
         return None
 
-    # --- ヘッダー画像生成（失敗時はサムネイルにフォールバック）---
-    header_path = image_dir / "header.png"
-    header_context = HeaderContext(
-        title=candidate.title,
-        article_title=summary.articleTitle,
-        channel=candidate.channel,
-        category_label=candidate.matched_keywords[0] if candidate.matched_keywords else "",
-        key_phrases=summary.keyPhrases,
-        bullet_points=[item.text for item in summary.bulletPoints],
-        section_headings=[section.heading for section in summary.sections],
-    )
+    # --- 英語翻訳（失敗してもログのみ。日本語記事は生成を続行する）---
+    translation: SummaryResult | None
     try:
-        generated_headers = []
-        for index, direction in enumerate(deps.thumbnail_directions):
-            is_primary = index == 0
-            destination = header_path if is_primary else image_dir / f"header-{direction}.png"
-            prompt_dump = (
-                image_dir / f"header-{direction}.prompt.txt" if len(deps.thumbnail_directions) > 1 else None
-            )
-            generated_headers.append(
-                deps.header_generator.generate(
-                    thumbnail_path,
-                    destination,
-                    candidate.title,
-                    dry_run=deps.dry_run,
-                    direction=direction,
-                    context=header_context,
-                    prompt_dump_path=prompt_dump,
-                )
-            )
-        if generated_headers and generated_headers[0] != header_path:
-            header_path.write_bytes(generated_headers[0].read_bytes())
+        translation = deps.translator.translate(summary, dry_run=deps.dry_run)
     except Exception as error:
-        print(f"ヘッダー画像生成に失敗したためサムネイルを使用します: {candidate.video_id} / {error}")
+        translation = None
+        print(f"英訳に失敗したため日本語のみで記事化します: {candidate.video_id} / {error}")
+        logger.exception("Translation failed: video_id=%s", candidate.video_id)
+
+    # --- ヘッダー画像生成（日本語＝原文 / 英語＝翻訳、失敗時はサムネイルにフォールバック）---
+    # 翻訳がある場合は en=header.png / ja=header.ja.png に分け、サイトは en を既定表示する。
+    # 翻訳が無い場合は header.png 1 枚（日本語）に集約し、英語表示は日本語へフォールバックする。
+    ja_header_path = image_dir / ("header.ja.png" if translation is not None else "header.png")
+    en_header_path = image_dir / "header.png"
+    primary_direction = deps.thumbnail_directions[0]
+    ja_context = _header_context(candidate, summary)
+
+    ja_ok = _generate_header(
+        deps, thumbnail_path, ja_header_path, candidate, primary_direction, ja_context, language="ja"
+    )
+    if not ja_ok:
+        stats.skipped_errors += 1
+        stats.failed_header += 1
+        print(f"ヘッダーのフォールバックにも失敗したためスキップします: {candidate.video_id}")
+        logger.exception("Header fallback failed: video_id=%s", candidate.video_id)
+        return None
+
+    en_header_image: str | None = None
+    if translation is not None:
+        en_context = _header_context(candidate, translation)
+        if _generate_header(
+            deps, thumbnail_path, en_header_path, candidate, primary_direction, en_context, language="en"
+        ):
+            en_header_image = f"/images/{candidate.video_id}/{en_header_path.name}"
+        else:
+            print(f"英語ヘッダー画像を生成できなかったため日本語画像を流用します: {candidate.video_id}")
+
+    # 比較用の追加方針（日本語のみ・opt-in）。primary 以外を任意出力する。
+    for direction in deps.thumbnail_directions[1:]:
         try:
-            header_path.write_bytes(thumbnail_path.read_bytes())
-        except Exception as fallback_error:
-            stats.skipped_errors += 1
-            stats.failed_header += 1
-            print(f"ヘッダーのフォールバックにも失敗したためスキップします: {candidate.video_id} / {fallback_error}")
-            logger.exception("Header fallback failed: video_id=%s", candidate.video_id)
-            return None
+            deps.header_generator.generate(
+                thumbnail_path,
+                image_dir / f"header-{direction}.png",
+                candidate.title,
+                dry_run=deps.dry_run,
+                direction=direction,
+                context=ja_context,
+                prompt_dump_path=image_dir / f"header-{direction}.prompt.txt",
+                language="ja",
+            )
+        except Exception as error:
+            print(f"比較用ヘッダー({direction})の生成に失敗しました: {candidate.video_id} / {error}")
 
     # --- 記事書き込み ---
     try:
         frontmatter = build_frontmatter(
             candidate=candidate,
             summary=summary,
-            header_image=f"/images/{candidate.video_id}/{header_path.name}",
-            hero_image=f"/images/{candidate.video_id}/{header_path.name}",
+            header_image=f"/images/{candidate.video_id}/{ja_header_path.name}",
+            hero_image=f"/images/{candidate.video_id}/{ja_header_path.name}",
+            translation=translation,
+            en_header_image=en_header_image,
         )
         write_article(frontmatter, article_path)
     except Exception as error:

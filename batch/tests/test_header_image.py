@@ -46,3 +46,29 @@ def test_header_image_builds_directional_prompt(tmp_path: Path) -> None:
     assert "Category chip text: Claude Code." in prompt_text
     assert "Key phrases: Claude Code; MCP; agents." in prompt_text
     assert "Article takeaways: CLIから実装まで進める; 社内ツール接続で文脈共有する." in prompt_text
+
+
+def test_header_image_english_prompt(tmp_path: Path) -> None:
+    source = tmp_path / "src.webp"
+    source.write_bytes(b"demo")
+    prompt_path = tmp_path / "header-en.prompt.txt"
+    context = HeaderContext(
+        title="Claude Code workflow",
+        article_title="A practical guide to Claude Code",
+        channel="Demo Channel",
+    )
+    generator = HeaderImageGenerator(api_key=None, style_prompt="style")
+    generator.generate(
+        source,
+        tmp_path / "header.png",
+        "Claude Code workflow",
+        dry_run=True,
+        direction="editorial-rebuild",
+        context=context,
+        prompt_dump_path=prompt_path,
+        language="en",
+    )
+    prompt_text = prompt_path.read_text(encoding="utf-8")
+    assert "English article headline: A practical guide to Claude Code." in prompt_text
+    assert "Composition: left side with strong English headline text" in prompt_text
+    assert "Japanese headline text" not in prompt_text

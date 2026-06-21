@@ -1,4 +1,6 @@
 ---
+import { t, type Locale } from "../i18n/ui";
+
 interface Section {
   heading: string;
   time: number;
@@ -11,9 +13,12 @@ interface Props {
   total: number;
   timeLabel: string;
   youtubeUrl: string;
+  locale?: Locale;
 }
 
-const { section, index, total, timeLabel, youtubeUrl } = Astro.props;
+const { section, index, total, timeLabel, youtubeUrl, locale = "ja" } = Astro.props;
+const tr = t(locale);
+const watchLabel = locale === "en" ? `${tr("section.watchAt")} ${timeLabel}` : `${timeLabel} ${tr("section.watchAt")}`;
 const paragraphs = section.body.split(/\n{2,}|(?<=。)\n/).map((p) => p.trim()).filter(Boolean);
 const numberLabel = String(index).padStart(2, "0");
 ---
@@ -35,7 +40,7 @@ const numberLabel = String(index).padStart(2, "0");
         class="inline-flex items-center gap-2 rounded-full border border-line bg-cream px-3.5 py-1.5 text-[0.72rem] font-semibold tracking-[0.14em] text-clay transition hover:border-coral hover:text-ink"
       >
         <svg class="h-3 w-3 text-coral" viewBox="0 0 16 16" fill="currentColor" aria-hidden="true"><path d="M3 1l10 7-10 7V1z"/></svg>
-        {timeLabel} で観る
+        {watchLabel}
       </a>
     </header>
 

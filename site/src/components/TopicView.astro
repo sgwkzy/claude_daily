@@ -1,0 +1,91 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import ArticleCard from "./ArticleCard.astro";
+import {
+  buildArticlePath,
+  buildTopicHref,
+  getArticleId,
+  getLocalizedDescription,
+  loadTopicGroups,
+  localizeArticleData,
+  type TopicGroup,
+} from "../lib/articles";
+import { localePath, t, type Locale } from "../i18n/ui";
+import { withBase } from "../lib/url";
+
+interface Props {
+  slug: string;
+  locale: Locale;
+}
+
+const { slug, locale } = Astro.props;
+const tr = t(locale);
+const topics = await loadTopicGroups(locale);
+const topic: TopicGroup | undefined = slug ? topics.find((entry) => entry.slug === slug) : undefined;
+
+if (!topic) {
+  throw new Error(locale === "en" ? "Topic not found." : "指定されたトピックが見つかりません。");
+}
+
+const latestArticle = topic.articles[0];
+const heroImage = latestArticle ? localizeArticleData(latestArticle, locale).headerImage : undefined;
+const title =
+  locale === "en"
+    ? `Articles about ${topic.label} | Claude Daily`
+    : `${topic.label} の記事一覧 | Claude Daily`;
+const description =
+  locale === "en"
+    ? `Summaries of Claude, Anthropic, and MCP videos related to ${topic.label}. ${topic.articles.length} articles in total.`
+    : `${topic.label} に関連するClaude・Anthropic・MCP系動画の要約記事をまとめて読めます。全 ${topic.articles.length} 件。`;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: title,
+  url: `https://www.claude-daily.com${localePath(buildTopicHref(topic.slug), locale)}`,
+  inLanguage: locale,
+  description,
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path={buildTopicHref(topic.slug)}
+  locale={locale}
+  image={heroImage}
+  structuredData={structuredData}
+>
+  <article class="space-y-10">
+    <section class="rounded-slide border border-line/70 bg-paper p-8 shadow-card md:p-10">
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">{tr("topic.label")}</p>
+      <h1 class="headline mt-4 text-3xl font-black leading-tight text-ink md:text-5xl">{topic.label}</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-[1.9] text-ink/75">
+        {tr("topic.lead")}
+      </p>
+      <div class="mt-6 flex flex-wrap items-center gap-3 text-sm text-clay">
+        <span class="rounded-full bg-cream px-4 py-2 font-semibold text-ink">{topic.articles.length} {tr("topic.articlesUnit")}</span>
+        <a href={withBase(localePath("/topics/", locale))} class="underline transition hover:text-coral">{tr("topic.viewOthers")}</a>
+      </div>
+    </section>
+
+    <section class="space-y-8">
+      {topic.articles.map((article) => {
+        const loc = localizeArticleData(article, locale);
+        return (
+        <ArticleCard
+          articleId={getArticleId(article)}
+          articlePath={buildArticlePath(article)}
+          title={loc.articleTitle}
+          channel={article.data.channel}
+          headerImage={loc.headerImage}
+          publishedAt={article.data.fetchedAt}
+          keyPhrases={loc.keyPhrases}
+          bulletPoints={loc.bulletPoints}
+          summary={getLocalizedDescription(article, locale)}
+          locale={locale}
+        />
+        );
+      })}
+    </section>
+  </article>
+</BaseLayout>
