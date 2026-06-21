@@ -1,0 +1,116 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { localePath, type Locale } from "../i18n/ui";
+import { withBase } from "../lib/url";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const isEn = locale === "en";
+const editorialHref = withBase(localePath("/editorial-policy/", locale));
+const description = isEn
+  ? "About Claude Daily — what this site is, who it's for, and how we summarize YouTube videos."
+  : "Claude Daily について。どんなサイトか、誰向けか、どのようにYouTube動画を要約しているかを説明します。";
+---
+
+<BaseLayout title="About | Claude Daily" description={description} path="/about/" locale={locale}>
+  <article class="mx-auto max-w-[52rem] space-y-10 leading-[1.95] text-ink/85">
+    <header>
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">About</p>
+      <h1 class="headline mt-3 text-3xl font-black leading-tight text-ink md:text-4xl">
+        {isEn ? "About Claude Daily" : "Claude Daily について"}
+      </h1>
+      <p class="mt-4 text-lg text-ink/75">
+        {isEn
+          ? "A daily digest that collects YouTube videos about Claude, Claude Code, Anthropic, and MCP and turns them into short, readable summaries."
+          : "Claude・Claude Code・Anthropic・MCP まわりのYouTube動画を毎日収集し、日本語で短く読める形に整理するダイジェストサイトです。"}
+      </p>
+    </header>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "1. What this site does" : "1. このサイトがやっていること"}</h2>
+      <p>
+        {isEn
+          ? "We regularly collect relevant YouTube videos (including English-language ones) and turn them into articles based on their transcripts and metadata. The goal is to let you grasp the main topics and key points quickly, without watching long videos from start to finish."
+          : "当サイトは、英語圏を含む YouTube 上の関連動画を定期的に収集し、字幕やメタデータをもとに記事化しています。長い動画を最初から視聴しなくても、主要トピックや要点を短時間で把握できることを目的としています。"}
+      </p>
+      <p>
+        {isEn
+          ? "Every article clearly lists the source video's title, channel, publish date, and link, so you can always return to the original source when you need to."
+          : "すべての記事には元動画のタイトル、チャンネル名、公開日、動画リンクを明記し、読者が必要に応じて一次情報へ戻れる構成にしています。"}
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "2. Who it's for" : "2. 想定している読者"}</h2>
+      <ul class="list-disc space-y-2 pl-6">
+        {isEn ? (
+          <>
+            <li>People who want to follow Claude / Claude Code trends quickly</li>
+            <li>People who want a quick overview of Anthropic and MCP news</li>
+            <li>People who want to know what a video covers before watching it</li>
+            <li>People who want to track several related videos on a daily basis</li>
+          </>
+        ) : (
+          <>
+            <li>Claude / Claude Code の動向を短時間で追いたい人</li>
+            <li>Anthropic や MCP の情報を日本語でざっと把握したい人</li>
+            <li>動画視聴前に「何が話されているか」を先に知りたい人</li>
+            <li>複数の関連動画を日次でまとめて追いたい人</li>
+          </>
+        )}
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "3. How articles are made" : "3. 記事の作り方"}</h2>
+      <p>
+        {isEn
+          ? "Articles are not written entirely by hand; they are generated automatically from YouTube's public information and transcript data. We then add headings, key points, and slide-style sections to make them easy to read."
+          : "記事は完全な手書きではなく、YouTube の公開情報と字幕データをもとに自動生成しています。そのうえで、見出し、要点、スライド風の区切りを付け、読みやすい形に整えています。"}
+      </p>
+      <p>
+        {isEn
+          ? "For that reason, our articles are meant to be an index and digest for quickly diving into the original video — not a replacement for it."
+          : "そのため、当サイトの記事は「元動画の代替」ではなく、「元動画に素早く入るための索引・ダイジェスト」として利用されることを想定しています。"}
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "4. What we value" : "4. できるだけ大切にしていること"}</h2>
+      <ul class="list-disc space-y-2 pl-6">
+        {isEn ? (
+          <>
+            <li>Making it easy to return to the original video</li>
+            <li>Conveying a video's points briefly and without exaggeration</li>
+            <li>Delivering a consistent format that's easy to follow daily</li>
+            <li>Being transparent that content is auto-generated</li>
+          </>
+        ) : (
+          <>
+            <li>元動画へすぐ戻れること</li>
+            <li>動画の論点を短く、誇張せずに伝えること</li>
+            <li>毎日追いやすい一貫したフォーマットで届けること</li>
+            <li>自動生成であることを隠さず明示すること</li>
+          </>
+        )}
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "5. Notes" : "5. 補足"}</h2>
+      <p>
+        {isEn
+          ? "This site is independently operated and is not affiliated with Claude / Anthropic."
+          : "当サイトは個人運営であり、Claude / Anthropic 公式とは関係ありません。"}
+      </p>
+      <p>
+        {isEn ? "For our collection and summarization policy, please see the " : "収集方針や要約ルール、修正対応については"}
+        <a class="underline hover:text-coral" href={editorialHref}>Editorial Policy</a>
+        {isEn ? "." : "をご確認ください。"}
+      </p>
+    </section>
+  </article>
+</BaseLayout>

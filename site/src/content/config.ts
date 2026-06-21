@@ -13,6 +13,19 @@ const sectionSchema = z.object({
   body: z.string().min(1)
 });
 
+// 既定では英語の翻訳ブロック。トップレベルが日本語（原文）を表すのに対し、
+// このオブジェクトは別ロケール向けの表示テキストと画像の上書きを表す。
+const translationSchema = z.object({
+  articleTitle: z.string().min(1),
+  seoTitle: z.string().min(1),
+  summary: z.string().min(1),
+  keyPhrases: z.array(z.string()),
+  bulletPoints: z.array(bulletPointSchema),
+  sections: z.array(sectionSchema),
+  headerImage: z.string().min(1),
+  heroImage: z.string().min(1).nullable().optional()
+});
+
 const articles = defineCollection({
   loader: glob({
     pattern: "**/*.md",
@@ -39,7 +52,8 @@ const articles = defineCollection({
     proposedByLLM: z.boolean(),
     keyPhrases: z.array(z.string()),
     bulletPoints: z.array(bulletPointSchema),
-    sections: z.array(sectionSchema)
+    sections: z.array(sectionSchema),
+    en: z.optional(translationSchema.nullable())
   })
 });
 

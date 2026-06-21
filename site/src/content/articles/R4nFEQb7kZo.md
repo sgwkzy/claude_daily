@@ -10,8 +10,8 @@ channelId: UCsoc5Ad-fC7wWie2PH4rPcw
 publishedAt: '2026-06-18T15:00:06Z'
 fetchedAt: '2026-06-19T00:52:38.910395Z'
 originalThumbnail: https://i.ytimg.com/vi/R4nFEQb7kZo/maxresdefault.jpg
-headerImage: /images/R4nFEQb7kZo/header.png
-heroImage: /images/R4nFEQb7kZo/header.png
+headerImage: /images/R4nFEQb7kZo/header.ja.png
+heroImage: /images/R4nFEQb7kZo/header.ja.png
 viewCount: 184097
 durationSec: 1342
 sourceLanguage: en
@@ -72,6 +72,100 @@ sections:
 
     さらに、ペンタゴン契約を得たOpenAIの巨額赤字と1兆ドルIPOの矛盾に触れ、業界全体の歪みへと話を広げて締めくくった。'
   image: null
+en:
+  articleTitle: How "Fix This Code" Triggered a Global Shutdown of Claude Fable 5
+    and Mythos 5
+  seoTitle: How "Fix This Code" Triggered a Global Shutdown of Claude Fable
+  summary: The video opens by claiming that the three-word prompt "fix this code"
+    became the trigger for disabling the most…
+  keyPhrases:
+  - Claude Fable 5
+  - Mythos 5
+  - export controls
+  - jailbreak
+  - Free Fable
+  - national security
+  bulletPoints:
+  - time: 0
+    text: The video opens by claiming that the three-word prompt "fix this code" became
+      the trigger for disabling the most powerful AI models on Earth for every user.
+  - time: 27
+    text: On June 12, 2026, Anthropic received a US export-control directive ordering
+      it to immediately disable Claude Fable 5 and Mythos 5 not only in the US but
+      worldwide, citing national security.
+  - time: 64
+    text: The so-called jailbreak at the center of the case turned out to be asking
+      the model to fix code, an act far closer to ordinary software maintenance than
+      a dramatic guardrail breach.
+  - time: 663
+    text: More than 100 security professionals from Nvidia, Adobe, Zoom, Google, and
+      elsewhere signed the public "Free Fable" letter, arguing that comparable code-review
+      capability exists in GPT-5.5, other Claude models, and Moonshot AI's Kimi 2.7.
+  - time: 697
+    text: The letter warned that stripping security professionals of one of their
+      best defensive tools while adversaries keep improving is itself dangerous, and
+      that claims of Fable as a uniquely severe threat contradict the evidence.
+  - time: 711
+    text: The video says that in February 2026, the Pentagon asked Anthropic to support
+      any lawful purpose, including fully autonomous weapons and large-scale domestic
+      surveillance, and that Amodei publicly refused on conscience grounds.
+  - time: 1318
+    text: By contrast, it argues that OpenAI, after securing Pentagon business, is
+      preparing a trillion-dollar IPO while losing $122 for every $1 it makes, underscoring
+      what the creator sees as a distorted landscape.
+  sections:
+  - heading: A Three-Word Jailbreak and a Worldwide Shutdown
+    time: 0
+    body: 'The video traces the sequence of events behind a sudden Friday-evening
+      shutdown order. Anthropic was instructed, under export-control measures, to
+      disable Fable 5 and Mythos 5 worldwide with immediate effect.
+
+
+      The nominal trigger was a jailbreak that boiled down to asking the model to
+      fix code. The creator treats the national-security framing with heavy irony,
+      arguing that what was described as a cyberweapon-class threat looked more like
+      basic software maintenance.
+
+
+      That mismatch, between the severity of the official response and the mundanity
+      of the underlying prompt, becomes the video''s starting point.'
+    image: null
+  - heading: Security Experts Push Back on the "Unique Threat" Narrative
+    time: 663
+    body: 'The segment highlights the public "Free Fable" letter signed by more than
+      100 security professionals. Their argument is that comparable capability already
+      exists in GPT-5.5 and in other models from other vendors.
+
+
+      In other words, the claim that Fable alone represents some exceptional danger
+      does not line up with the evidence. The video specifically cites China''s Kimi
+      2.7 as another model capable of similar code-review work.
+
+
+      The letter goes further, warning that taking one of the best defensive tools
+      away from security professionals could weaken the defenders while adversaries
+      continue to improve their own capabilities.'
+    image: null
+  - heading: What the Real Priority Should Be
+    time: 1253
+    body: 'The creator argues that regulatory attention is pointed at the wrong target.
+      The more serious issues, in this telling, are cognitive influence, surveillance
+      infrastructure, job displacement, corporate cost crises, and backlash against
+      data centers.
+
+
+      Against that backdrop, a three-word jailbreak against a model that more than
+      100 specialists say is not materially more capable than its competitors does
+      not look like an emergency at all. Everything else does.
+
+
+      The video closes by widening the frame further, pointing to the contradiction
+      of OpenAI pursuing a trillion-dollar IPO while carrying enormous losses after
+      securing Pentagon contracts, and using that contrast to criticize the broader
+      shape of the industry.'
+    image: null
+  headerImage: /images/R4nFEQb7kZo/header.png
+  heroImage: /images/R4nFEQb7kZo/header.png
 ---
 
 ## ハイライト

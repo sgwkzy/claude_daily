@@ -9,7 +9,8 @@ channelId: UCsBjURrPoezykLs9EqgamOA
 publishedAt: '2026-06-12T10:25:40.273696Z'
 fetchedAt: '2026-06-12T10:25:40.273696Z'
 originalThumbnail: https://i.ytimg.com/vi/0pgCBV8CTZY/maxresdefault.jpg
-headerImage: /images/0pgCBV8CTZY/header.png
+headerImage: /images/0pgCBV8CTZY/header.ja.png
+heroImage: /images/0pgCBV8CTZY/header.ja.png
 viewCount: 891486
 durationSec: 303
 sourceLanguage: en
@@ -68,6 +69,95 @@ sections:
 
     2025年のMITレポートでは、AI導入に総額300億ドル以上を投じた300社以上のうち、95%が測定可能な収益効果やROIを達成できなかったことが明らかになった。AI投資ブームの実態と期待値の大きな乖離が浮き彫りになっている。'
   image: null
+en:
+  articleTitle: 'Anthropic’s Contradiction: IPO Momentum, Pause Calls, and AI’s ROI
+    Problem'
+  seoTitle: 'Anthropic’s Contradiction: IPO Momentum, Pause Calls, and AI’s R'
+  summary: Anthropic filed for an IPO at a valuation above OpenAI's, formally cementing
+    its position as one of the leaders in the…
+  keyPhrases:
+  - recursive self-improvement
+  - AI layoff trap
+  - Anthropic IPO
+  - Claude Mythos
+  - demand death spiral
+  - AI deployment ROI
+  bulletPoints:
+  - time: 0
+    text: Anthropic filed for an IPO at a valuation above OpenAI's, formally cementing
+      its position as one of the leaders in the AI race.
+  - time: 23
+    text: At the same time, Anthropic warned about the dangers of recursive self-improvement
+      and argued that all AI development should be paused temporarily.
+  - time: 57
+    text: A report from Anthropic's think tank says AI is getting dangerously close
+      to recursive self-improvement.
+  - time: 122
+    text: Claude Mythos is said to outperform humans on research tasks 64% of the
+      time in benchmarks, underscoring how quickly model capabilities are advancing.
+  - time: 158
+    text: A Boston University economist predicts an "AI layoff trap," in which automation
+      creates a vicious cycle of collapsing demand.
+  - time: 221
+    text: The rise of agentic AI has doubled app releases, but actual usage rates
+      and review counts have declined instead.
+  - time: 234
+    text: An MIT study found that 95% of more than 300 companies that adopted AI failed
+      to achieve measurable revenue gains.
+  sections:
+  - heading: Anthropic's IPO and its call to pause development
+    time: 0
+    body: 'Anthropic filed for an IPO at a valuation above OpenAI''s, strengthening
+      its status as one of the top companies in the AI industry. Claude has long been
+      regarded as one of the strongest AI programming systems, and enormous amounts
+      of capital are flowing into the company.
+
+
+      At the same time, however, Anthropic has taken the contradictory step of warning
+      that AI is nearing a critical point of recursive self-improvement and calling
+      for a temporary industry-wide pause in development. The tension between accelerating
+      its own work while warning about the risks has become a major talking point.'
+    image: null
+  - heading: Rising AI capability and the risk of recursive self-improvement
+    time: 57
+    body: 'According to a report published by Anthropic''s think tank, modern AI is
+      approaching a level where it can rewrite code autonomously and upgrade itself
+      without human intervention. Claude Mythos is said to outperform humans on research
+      tasks 64% of the time, while an OpenAI system reportedly refuted a geometry
+      conjecture that mathematicians had failed to solve for 80 years.
+
+
+      AI systems already have access to data centers, robots, and weapons systems.
+      Combined with improving autonomous decision-making, that is making scenarios
+      once confined to science fiction feel increasingly plausible.'
+    image: null
+  - heading: The AI layoff trap and the risk of economic collapse
+    time: 158
+    body: 'A paper from a Boston University economist argues mathematically that AI
+      automation could trigger an economic death spiral. Companies may capture the
+      savings from replacing workers with AI, but those displaced workers are also
+      consumers, so their lost spending reduces demand across entire industries.
+
+
+      In the extreme, companies could end up in a contradictory state of effectively
+      infinite productivity paired with zero demand. The paper''s warning is that
+      AI may not solve economic problems so much as create a new kind of crisis.'
+    image: null
+  - heading: 'AI''s reality: growing adoption, weak real-world impact'
+    time: 221
+    body: 'Agentic AI has nearly doubled the number of releases on the iOS App Store,
+      but actual app review counts and meaningful user uptake are trending down. The
+      irony is that while AI is helping flood the market with more apps, it is not
+      producing more apps that people genuinely use.
+
+
+      A 2025 MIT report found that among more than 300 companies that spent over $30
+      billion in total on AI adoption, 95% failed to achieve measurable revenue impact
+      or ROI. The gap between the AI investment boom and its real business returns
+      is becoming harder to ignore.'
+    image: null
+  headerImage: /images/0pgCBV8CTZY/header.png
+  heroImage: /images/0pgCBV8CTZY/header.png
 ---
 
 ## ハイライト

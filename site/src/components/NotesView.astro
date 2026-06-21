@@ -1,0 +1,96 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { t, type Locale } from "../i18n/ui";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const isEn = locale === "en";
+const tr = t(locale);
+
+const notesByLocale: Record<Locale, { date: string; title: string; body: string }[]> = {
+  en: [
+    {
+      date: "2026-06-18",
+      title: "Added topic pages",
+      body:
+        "Published a topic index and individual topic pages based on keyPhrases. You can now follow related videos across articles by tag, browsing by theme rather than one-off posts.",
+    },
+    {
+      date: "2026-06-18",
+      title: "Launched RSS and related articles",
+      body:
+        "Added an RSS feed to make it easier to follow new posts, and related articles at the end of each piece. The priority is a natural path to the next article once you finish reading.",
+    },
+    {
+      date: "2026-06-18",
+      title: "Added About and Editorial Policy",
+      body:
+        "Documented what this site aims to do, which videos we pick up, and how far we treat our summaries as published pages. We keep emphasizing that summaries are auto-generated and that readers can return to the source.",
+    },
+    {
+      date: "2026-06-14",
+      title: "Organized pre-launch checks",
+      body:
+        "Turned post-launch essentials like Search Console, GA4, sitemap, and IndexNow into a checklist. Beyond just adding articles, we focus on being discoverable.",
+    },
+  ],
+  ja: [
+    {
+      date: "2026-06-18",
+      title: "トピックページを追加",
+      body:
+        "keyPhrases をもとにトピック一覧と個別トピックページを公開しました。記事ごとのタグから横断的に関連動画を辿れるようにし、単発記事ではなく論点単位で回遊できる構成に寄せています。",
+    },
+    {
+      date: "2026-06-18",
+      title: "RSS と関連記事を公開",
+      body:
+        "新着を追いやすいよう RSS フィードを追加し、記事末尾には関連記事を表示するようにしました。読み終わりで次の記事へ自然に移れることを優先しています。",
+    },
+    {
+      date: "2026-06-18",
+      title: "About と Editorial Policy を整備",
+      body:
+        "このサイトが何を目指しているか、どのような動画を拾い、どこまでを要約として扱うかを公開ページとして明文化しました。自動要約であることと一次情報へ戻れることを引き続き重視します。",
+    },
+    {
+      date: "2026-06-14",
+      title: "公開前チェック項目を整理",
+      body:
+        "Search Console、GA4、sitemap、IndexNow など公開後に効く導線をチェックリストとして整理しました。単に記事を増やすだけでなく、見つけてもらえる状態を作る方針です。",
+    },
+  ],
+};
+
+const notes = notesByLocale[locale];
+const description = isEn
+  ? "Claude Daily editor's notes. Short records of site improvements, summarization policy, and discovery changes."
+  : "Claude Daily の編集メモ。サイト改善、要約方針、公開導線の変更などを短く記録しています。";
+---
+
+<BaseLayout title={isEn ? "Notes | Claude Daily" : "編集メモ | Claude Daily"} description={description} path="/notes/" locale={locale}>
+  <article class="mx-auto max-w-[58rem] space-y-10">
+    <header class="rounded-slide border border-line/70 bg-paper p-8 shadow-card md:p-10">
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">Notes</p>
+      <h1 class="headline mt-4 text-3xl font-black leading-tight text-ink md:text-5xl">{tr("nav.notes")}</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-[1.9] text-ink/75">
+        {isEn
+          ? "A page for short records of site improvements, summarization tweaks, and discovery changes. The aim is to make it visible what we're trying to improve right now."
+          : "サイトの改善、要約方針の調整、公開導線の変更などを短く残していくページです。「いま何を良くしようとしているか」が見える状態を目指しています。"}
+      </p>
+    </header>
+
+    <section class="space-y-5">
+      {notes.map((note) => (
+        <article class="rounded-slide border border-line/70 bg-paper p-7 shadow-card md:p-8">
+          <p class="text-xs font-semibold uppercase tracking-[0.24em] text-clay">{note.date}</p>
+          <h2 class="headline mt-3 text-2xl font-bold leading-snug text-ink">{note.title}</h2>
+          <p class="mt-4 leading-[1.95] text-ink/80">{note.body}</p>
+        </article>
+      ))}
+    </section>
+  </article>
+</BaseLayout>

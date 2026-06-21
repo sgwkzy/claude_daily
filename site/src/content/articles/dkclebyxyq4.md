@@ -1,7 +1,7 @@
 ---
 videoId: DkClEbyXyq4
-slug: claude-code-complete-guide
 title: 【神回！】絶対理解できる！『Claude Code』完全入門マニュアル！【使うと人生が変わる便利なAI 】
+slug: claude-code-complete-guide
 seoTitle: Claude Code完全入門 ガチで使える実践ポイント整理
 summary: Claude Codeの基本的な使い方から、実務に乗せるときの考え方までをまとめた入門要約です。長尺動画の要点だけを短時間で確認できます。
 channel: パソコン博士TAIKI
@@ -9,8 +9,8 @@ channelId: UCYhXmcP7xSyGd5RFe15YJOg
 publishedAt: '2026-06-12T10:00:03Z'
 fetchedAt: '2026-06-13T08:52:50.759443Z'
 originalThumbnail: https://i.ytimg.com/vi/DkClEbyXyq4/maxresdefault.jpg
-headerImage: /images/DkClEbyXyq4/header.png
-heroImage: /images/DkClEbyXyq4/header.png
+headerImage: /images/DkClEbyXyq4/header.ja.png
+heroImage: /images/DkClEbyXyq4/header.ja.png
 viewCount: 141317
 durationSec: 3462
 sourceLanguage: ja
@@ -60,6 +60,82 @@ sections:
 
     これは単なる導入手順ではなく、便利さと安全性を両立するための実務的な知恵として紹介されている。動画全体として、Claude Codeは強力だが、使い方の設計まで含めて理解すると本当の価値が出る、という方向で締めくくられていた。'
   image: null
+en:
+  articleTitle: 'Claude Code Beginner''s Manual: AI Agents, Context Limits, and Safer
+    Setup'
+  seoTitle: 'Claude Code Beginner''s Manual: AI Agents, Context Limits, and Sa'
+  summary: The opening shows Claude Code monitoring global news, logistics, and even
+    flight delays, presenting it as a working…
+  keyPhrases:
+  - Claude Code
+  - AI agents
+  - context management
+  - /compact
+  - GitHub Codespaces
+  bulletPoints:
+  - time: 0
+    text: The opening shows Claude Code monitoring global news, logistics, and even
+      flight delays, presenting it as a working agent rather than just a chat AI.
+  - time: 27
+    text: The video then lays out a beginner-friendly, systematic guide to building
+      AI agents in Claude Code that keep working on your behalf.
+  - time: 84
+    text: It also shows how tedious office work, like organizing invoices into Excel,
+      can be handled quickly when you give the agent instructions at the folder level.
+  - time: 1673
+    text: Midway through, the host uses the `/context` command to check conversation
+      context usage and explains that decision quality drops when too much information
+      accumulates.
+  - time: 1774
+    text: To avoid that degradation, he recommends `/compact`, using history compression
+      and fresh conversations to keep the model's working memory clear.
+  - time: 3349
+    text: Near the end, he introduces GitHub Codespaces as a safer way to expose only
+      selected files to Claude Code inside a controlled box.
+  sections:
+  - heading: The Basics of Claude Code and AI Agents
+    time: 27
+    body: 'The first half of the video explains Claude Code not as an AI that simply
+      answers questions, but as an AI agent that can actually operate a computer and
+      move work forward. Examples include monitoring global trade routes and news,
+      as well as turning invoices into Excel spreadsheets, all to show what kinds
+      of work can be automated in practice.
+
+
+      The core message is not just faster text generation. It is the ability to hand
+      over coherent blocks of work involving files and folders. Even replacing small
+      daily annoyances, the host argues, can materially change how much time people
+      spend on routine tasks.'
+    image: null
+  - heading: Managing Context With /compact Instead of Letting History Sprawl
+    time: 1673
+    body: 'The middle section explains that the longer Claude Code is used, the more
+      conversation history accumulates, increasing context consumption and lowering
+      decision quality. Using `/context`, users can check current usage, and the video
+      cites forum knowledge suggesting that performance degradation starts to appear
+      gradually once usage climbs past around 40 percent.
+
+
+      The recommended response is `/compact`, which compresses history or carries
+      key information into a new conversation so the model retains working space.
+      The more complex the task, the more this kind of context management becomes
+      a practical differentiator.'
+    image: null
+  - heading: A Practical, Safer Way to Use Claude Code With Codespaces
+    time: 3349
+    body: 'In the final section, the host shows how to use a GitHub repository and
+      Codespaces to limit what Claude Code can touch to a cloud-based workspace. The
+      main advantage, he says, is that even individuals can use a free tier while
+      avoiding the need to expose their local PC directly.
+
+
+      The point is not just setup convenience. It is presented as a practical way
+      to balance usefulness and safety. The video''s broader conclusion is that Claude
+      Code is powerful, but its real value appears when people understand not only
+      how to use it, but how to structure that use responsibly.'
+    image: null
+  headerImage: /images/DkClEbyXyq4/header.png
+  heroImage: /images/DkClEbyXyq4/header.png
 ---
 
 ## ハイライト

@@ -1,0 +1,233 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import {
+  buildArticlePath,
+  buildTopicHrefFromLabel,
+  formatDateLabel,
+  formatShortDate,
+  getArticleId,
+  loadDailyGroups,
+  loadTopicGroups,
+  localizeArticleData,
+} from "../lib/articles";
+import { localePath, t, type Locale } from "../i18n/ui";
+import { withBase } from "../lib/url";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = t(locale);
+const isEn = locale === "en";
+const groups = await loadDailyGroups();
+const topics = await loadTopicGroups(locale);
+const totalArticles = groups.reduce((sum, g) => sum + g.articles.length, 0);
+
+const normalize = (value: string): string => value.normalize("NFKC").toLowerCase();
+const featuredTags = topics.slice(0, 30);
+
+const labels = {
+  title: isEn ? "Archive (all articles) | Claude Daily" : "アーカイブ（過去記事一覧） | Claude Daily",
+  heading: isEn ? "Article archive" : "過去記事アーカイブ",
+  lead: isEn
+    ? `Browse all ${totalArticles} summaries by date. Filter by title or tag to find what you're after.`
+    : `これまでに公開した全 ${totalArticles} 本の要約記事を日付ごとに一覧できます。タイトルやタグで絞り込んで、気になる記事を探せます。`,
+  searchPlaceholder: isEn ? "Filter by title or tag" : "タイトル・タグで絞り込み",
+  searchAria: isEn ? "Filter articles by title or tag" : "記事をタイトルやタグで絞り込み",
+  filterByTag: isEn ? "Filter by tag" : "タグで絞り込み",
+  emptyTitle: isEn ? "No articles match your filters." : "条件に一致する記事がありません。",
+  emptyHint: isEn ? "Try a different search term or tag." : "検索語やタグの選択を変えてみてください。",
+  description: isEn
+    ? "Claude Daily archive. Browse every summary about Claude, Claude Code, Anthropic, and MCP by date and filter by title or tag."
+    : "Claude Daily の過去記事アーカイブ。Claude・Claude Code・Anthropic・MCP に関する全要約記事を日付ごとに一覧し、タイトルやタグでその場で絞り込めます。",
+  allCount: isEn ? `All ${totalArticles}` : `全 ${totalArticles} 件`,
+};
+// 絞り込みスクリプトへ渡すカウント表記テンプレート（%V%=可視数, %T%=総数）。
+const countTemplates = {
+  all: isEn ? "All %T%" : "全 %T% 件",
+  ratio: isEn ? "%V% / %T%" : "%V% / %T% 件",
+};
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: labels.title,
+  url: `https://www.claude-daily.com${localePath("/archive/", locale)}`,
+  inLanguage: locale,
+  description: labels.description,
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Claude Daily",
+    url: "https://www.claude-daily.com/",
+  },
+};
+---
+
+<BaseLayout
+  title={labels.title}
+  description={labels.description}
+  path="/archive/"
+  locale={locale}
+  structuredData={structuredData}
+>
+  <article class="mx-auto max-w-[74rem] space-y-10">
+    <header class="rounded-slide border border-line/70 bg-paper p-8 shadow-card md:p-10">
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">{tr("nav.archive")}</p>
+      <h1 class="headline mt-4 text-3xl font-black leading-tight text-ink md:text-5xl">{labels.heading}</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-[1.9] text-ink/75">
+        {labels.lead}
+      </p>
+
+      <div class="mt-6 space-y-4">
+        <div class="relative">
+          <input
+            id="archive-search"
+            type="search"
+            inputmode="search"
+            autocomplete="off"
+            placeholder={labels.searchPlaceholder}
+            aria-label={labels.searchAria}
+            class="w-full rounded-full border border-line/70 bg-cream/40 px-5 py-3 text-base text-ink shadow-inner outline-none transition placeholder:text-clay focus:border-coral/50 focus:bg-paper"
+          />
+        </div>
+
+        {featuredTags.length > 0 && (
+          <div>
+            <p class="text-[0.65rem] uppercase tracking-[0.28em] text-clay">{labels.filterByTag}</p>
+            <div id="archive-tags" class="mt-3 flex flex-wrap gap-2">
+              {featuredTags.map((tag) => (
+                <button
+                  type="button"
+                  class="archive-tag rounded-full border border-line/70 bg-paper px-3 py-1.5 text-sm text-ink transition hover:border-coral/40 hover:bg-cream aria-pressed:border-coral aria-pressed:bg-coral aria-pressed:text-paper"
+                  data-tag={normalize(tag.label)}
+                  aria-pressed="false"
+                >
+                  {tag.label}
+                  <span class="ml-1 text-xs text-clay aria-pressed:text-paper/80">{tag.articles.length}</span>
+                </button>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <p id="archive-count" class="text-xs text-clay" aria-live="polite">{labels.allCount}</p>
+      </div>
+    </header>
+
+    <div id="archive-list" class="space-y-10">
+      {groups.map((group) => (
+        <section class="archive-day rounded-slide border border-line/70 bg-paper p-6 shadow-card md:p-8" data-date={group.date}>
+          <h2 class="headline text-xl font-bold text-ink md:text-2xl">{formatDateLabel(group.date, locale)}</h2>
+          <ul class="mt-5 space-y-3">
+            {group.articles.map((article) => {
+              const loc = localizeArticleData(article, locale);
+              const title = loc.articleTitle;
+              const tags = loc.keyPhrases ?? [];
+              return (
+                <li
+                  class="archive-card rounded-[1.5rem] border border-line/60 bg-cream/30 p-5 transition hover:border-coral/40 hover:bg-cream"
+                  data-title={normalize(title)}
+                  data-tags={tags.map((t) => normalize(t)).join("|")}
+                  data-id={getArticleId(article)}
+                >
+                  <div class="flex flex-col gap-2">
+                    <a href={withBase(localePath(buildArticlePath(article), locale))} class="group">
+                      <span class="text-[0.65rem] uppercase tracking-[0.2em] text-clay">{formatShortDate(group.date)}</span>
+                      <h3 class="headline mt-1 text-lg font-bold leading-snug text-ink group-hover:text-coralDark">{title}</h3>
+                    </a>
+                    {tags.length > 0 && (
+                      <div class="mt-1 flex flex-wrap gap-1.5">
+                        {tags.map((tag) => (
+                          <a
+                            href={withBase(localePath(buildTopicHrefFromLabel(tag), locale))}
+                            class="rounded-full bg-paper px-2.5 py-0.5 text-xs font-medium text-clay transition hover:text-coral"
+                          >
+                            {tag}
+                          </a>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
+      ))}
+    </div>
+
+    <section
+      id="archive-empty"
+      hidden
+      class="rounded-slide border border-line/70 bg-paper p-10 text-center shadow-card"
+    >
+      <p class="text-lg text-ink/75">{labels.emptyTitle}</p>
+      <p class="mt-2 text-sm text-clay">{labels.emptyHint}</p>
+    </section>
+  </article>
+
+  <script is:inline define:vars={{ countTemplates }}>
+    (function () {
+      const search = document.getElementById("archive-search");
+      const tagContainer = document.getElementById("archive-tags");
+      const countEl = document.getElementById("archive-count");
+      const emptyEl = document.getElementById("archive-empty");
+      const cards = Array.from(document.querySelectorAll(".archive-card"));
+      const days = Array.from(document.querySelectorAll(".archive-day"));
+      const total = cards.length;
+
+      const normalize = (value) => value.normalize("NFKC").toLowerCase();
+      const activeTags = new Set();
+
+      const apply = () => {
+        const query = normalize((search && search.value.trim()) || "");
+        let visible = 0;
+
+        for (const card of cards) {
+          const title = card.dataset.title || "";
+          const tags = (card.dataset.tags || "").split("|").filter(Boolean);
+          const haystack = `${title} ${tags.join(" ")}`;
+          const matchesQuery = query === "" || haystack.includes(query);
+          const matchesTags =
+            activeTags.size === 0 || Array.from(activeTags).every((t) => tags.includes(t));
+          const show = matchesQuery && matchesTags;
+          card.hidden = !show;
+          if (show) visible += 1;
+        }
+
+        for (const day of days) {
+          const hasVisible = day.querySelector(".archive-card:not([hidden])");
+          day.hidden = !hasVisible;
+        }
+
+        if (countEl) {
+          countEl.textContent =
+            visible === total
+              ? countTemplates.all.replace("%T%", total)
+              : countTemplates.ratio.replace("%V%", visible).replace("%T%", total);
+        }
+        if (emptyEl) emptyEl.hidden = visible !== 0;
+      };
+
+      if (search) search.addEventListener("input", apply);
+
+      if (tagContainer)
+        tagContainer.addEventListener("click", (event) => {
+          const button = event.target.closest(".archive-tag");
+          if (!button) return;
+          const tag = button.dataset.tag || "";
+          if (!tag) return;
+          if (activeTags.has(tag)) {
+            activeTags.delete(tag);
+            button.setAttribute("aria-pressed", "false");
+          } else {
+            activeTags.add(tag);
+            button.setAttribute("aria-pressed", "true");
+          }
+          apply();
+        });
+
+      apply();
+    })();
+  </script>
+</BaseLayout>

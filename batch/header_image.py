@@ -44,9 +44,10 @@ class HeaderImageGenerator:
         direction: str = "editorial-rebuild",
         context: HeaderContext | None = None,
         prompt_dump_path: Path | None = None,
+        language: str = "ja",
     ) -> Path:
         destination.parent.mkdir(parents=True, exist_ok=True)
-        prompt = self._build_prompt(title, direction=direction, context=context)
+        prompt = self._build_prompt(title, direction=direction, context=context, language=language)
         if prompt_dump_path:
             prompt_dump_path.parent.mkdir(parents=True, exist_ok=True)
             prompt_dump_path.write_text(prompt, encoding="utf-8")
@@ -80,19 +81,23 @@ class HeaderImageGenerator:
         _normalize_header_image(base64.b64decode(image_base64), destination)
         return destination
 
-    def _build_prompt(self, title: str, *, direction: str, context: HeaderContext | None) -> str:
+    def _build_prompt(
+        self, title: str, *, direction: str, context: HeaderContext | None, language: str = "ja"
+    ) -> str:
         if direction not in SUPPORTED_DIRECTIONS:
             supported = ", ".join(sorted(SUPPORTED_DIRECTIONS))
             raise ValueError(f"未対応のサムネイル方針です: {direction} / supported={supported}")
         if context is None:
             context = HeaderContext(title=title, channel="")
 
+        language_label = "English" if language == "en" else "Japanese"
+        language_article = "an" if language == "en" else "a"
         key_phrase_text = _compact_list(context.key_phrases, limit=3)
         bullet_text = _compact_list(context.bullet_points, limit=2)
         section_text = _compact_list(context.section_headings, limit=3)
         headline_text = context.article_title.strip() or context.title
         source_label = f"Source video title: {context.title}."
-        article_label = f"Japanese article headline: {headline_text}."
+        article_label = f"{language_label} article headline: {headline_text}."
         channel_label = f"Channel: {context.channel}." if context.channel else ""
         category_label = f"Category chip text: {context.category_label}." if context.category_label else ""
         style = f"Visual style: {self.style_prompt}."
@@ -101,7 +106,7 @@ class HeaderImageGenerator:
             return " ".join(
                 part
                 for part in (
-                    "Create a widescreen 16:9 editorial explainer hero image for a Japanese AI article.",
+                    f"Create a widescreen 16:9 editorial explainer hero image for {language_article} {language_label} AI article.",
                     article_label,
                     source_label,
                     channel_label,
@@ -112,7 +117,7 @@ class HeaderImageGenerator:
                     "Generate the entire background and composition from scratch rather than editing or preserving the original video thumbnail.",
                     "Style: premium magazine-style AI explainer image.",
                     "Use a warm beige, coral, charcoal palette with restrained clutter, cinematic lighting, and clear visual hierarchy.",
-                    "Composition: left side with strong Japanese headline text and a small category chip; right side with the main visual scene inspired by the article.",
+                    f"Composition: left side with strong {language_label} headline text and a small category chip; right side with the main visual scene inspired by the article.",
                     "The image should feel like an article hero, not a noisy YouTube thumbnail.",
                     "Avoid Claude Daily branding inside the image.",
                     "Avoid screenshots, giant floating faces, sensational arrows, red circles, and cluttered overlays.",

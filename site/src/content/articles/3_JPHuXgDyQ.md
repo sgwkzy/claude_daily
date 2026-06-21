@@ -10,8 +10,8 @@ channelId: UCsMica-v34Irf9KVTh6xx-g
 publishedAt: '2026-06-16T20:50:47Z'
 fetchedAt: '2026-06-19T00:52:38.910395Z'
 originalThumbnail: https://i.ytimg.com/vi/3_JPHuXgDyQ/maxresdefault.jpg
-headerImage: /images/3_JPHuXgDyQ/header.png
-heroImage: /images/3_JPHuXgDyQ/header.png
+headerImage: /images/3_JPHuXgDyQ/header.ja.png
+heroImage: /images/3_JPHuXgDyQ/header.ja.png
 viewCount: 41850
 durationSec: 1427
 sourceLanguage: en
@@ -73,6 +73,101 @@ sections:
 
     データベースレベルで多くを強制できるため最も安全なアプローチになると述べ、内部・外部を問わずユーザーが自然言語でDBと対話できる強力さを、設計上の注意とともに勧めて締めくくった。'
   image: null
+en:
+  articleTitle: 'How to Build a Postgres MCP Server: Four Layers of Defense for Natural-Language
+    SQL'
+  seoTitle: 'How to Build a Postgres MCP Server: Four Layers of Defense for N'
+  summary: At POSETTE, Microsoft's Pamela explains the full range of Postgres MCP
+    architectures, from exploratory servers that…
+  keyPhrases:
+  - MCP
+  - PostgreSQL
+  - least-privilege roles
+  - GitHub Copilot
+  - SQL security
+  - Model Context Protocol
+  bulletPoints:
+  - time: 16
+    text: At POSETTE, Microsoft's Pamela explains the full range of Postgres MCP architectures,
+      from exploratory servers that let agents send arbitrary SQL to fully typed operational
+      servers.
+  - time: 62
+    text: The talk opens with a demo in which GitHub Copilot, using Opus 4.6, answers
+      a question about which bee species are active locally in April by issuing SQL
+      through MCP.
+  - time: 120
+    text: MCP stands for Model Context Protocol, an open protocol that defines how
+      AI apps and agents retrieve context from external tools and data sources. It
+      was proposed by Anthropic and is now part of the Linux Foundation.
+  - time: 666
+    text: By using least-privilege roles that grant only SELECT access to a specific
+      schema, the system can block INSERT, DROP, DELETE, and even CTE-based evasions
+      at the database level.
+  - time: 718
+    text: To be confident that agents can safely generate their own SQL, multiple
+      protection layers are required, since tricky queries can slip through any single
+      layer.
+  - time: 754
+    text: Potential DDoS-like queries such as `pg_sleep()` or massive `CROSS JOIN`s
+      are handled by enforcing tool timeouts such as 30 seconds.
+  - time: 1306
+    text: The talk concludes that exploratory, read-only, and fully typed server designs
+      each have strengths and tradeoffs, and should be combined according to the situation.
+  sections:
+  - heading: What MCP is and how it works with Postgres
+    time: 62
+    body: 'The session opens with a demo in which GitHub Copilot, working through
+      Opus 4.6, queries Postgres and answers a question using local bee observation
+      data. The agent recognizes the MCP server, decides to use it, and executes SQL
+      on its own.
+
+
+      MCP is an open protocol that defines how AI applications and agents retrieve
+      context from external data sources. It was first proposed by Anthropic, later
+      broadly adopted, and now sits under the Linux Foundation.
+
+
+      Before MCP, every data source typically required a custom integration. Pamela
+      explains that by putting an MCP server in front of each source, developers now
+      get a common access mechanism instead.'
+    image: null
+  - heading: Four layers of defense for natural-language SQL
+    time: 666
+    body: 'The core of the talk is a defensive design that makes it safer to let agents
+      write SQL freely. The first layer is a least-privilege role that allows only
+      SELECT access to a specific schema, blocking INSERT, DROP, and DELETE at the
+      database level.
+
+
+      Even CTE-based evasions using `WITH` clauses can be stopped when the database
+      itself enforces those restrictions. Function calls with side effects can likewise
+      be prevented through the least-privilege role.
+
+
+      On top of that, DDoS-style operations such as `pg_sleep()` or huge `CROSS JOIN`s
+      are handled by giving the tool a timeout and terminating the query. The message
+      is that only by combining multiple layers can teams have confidence in executing
+      generated SQL.'
+    image: null
+  - heading: Choosing the right server design for the job
+    time: 1306
+    body: 'In the closing section, Pamela reviews several ways to build an MCP server
+      on top of Postgres. An exploratory design is flexible because it can answer
+      a wide range of questions, but it also carries the risk of permitting any SQL
+      operation.
+
+
+      A fully typed toolset is safer, but the scope of questions it can answer is
+      narrower. Between those extremes sits the option of read-only SQL queries.
+
+
+      She concludes that because so much can be enforced at the database level, this
+      becomes the safest practical approach. The talk ends by recommending natural-language
+      database interaction for both internal and external users, while emphasizing
+      the need for careful server design.'
+    image: null
+  headerImage: /images/3_JPHuXgDyQ/header.png
+  heroImage: /images/3_JPHuXgDyQ/header.png
 ---
 
 ## ハイライト

@@ -1,0 +1,13 @@
+---
+import DayView from "../../../components/DayView.astro";
+import { loadDailyGroups } from "../../../lib/articles";
+
+export async function getStaticPaths() {
+  const groups = await loadDailyGroups();
+  return groups.map((group) => ({ params: { date: group.date } }));
+}
+
+const { date } = Astro.params;
+---
+
+<DayView date={date!} locale="ja" />

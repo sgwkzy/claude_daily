@@ -1,75 +1,13 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import ArticleCard from "../../components/ArticleCard.astro";
-import {
-  buildArticlePath,
-  buildTopicHref,
-  getArticleDescription,
-  getArticleId,
-  loadTopicGroups,
-} from "../../lib/articles";
-import { withBase } from "../../lib/url";
+import TopicView from "../../components/TopicView.astro";
+import { loadTopicGroups } from "../../lib/articles";
 
 export async function getStaticPaths() {
-  const topics = await loadTopicGroups();
+  const topics = await loadTopicGroups("en");
   return topics.map((topic) => ({ params: { slug: topic.slug } }));
 }
 
 const { slug } = Astro.params;
-const topics = await loadTopicGroups();
-const topic = slug ? topics.find((entry) => entry.slug === slug) : undefined;
-
-if (!topic) {
-  throw new Error("指定されたトピックが見つかりません。");
-}
-
-const latestArticle = topic.articles[0];
-const description = `${topic.label} に関連するClaude・Anthropic・MCP系動画の要約記事をまとめて読めます。全 ${topic.articles.length} 件。`;
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: `${topic.label} の記事一覧 | Claude Daily`,
-  url: `https://www.claude-daily.com${buildTopicHref(topic.slug)}`,
-  inLanguage: "ja",
-  description,
-};
 ---
 
-<BaseLayout
-  title={`${topic.label} の記事一覧 | Claude Daily`}
-  description={description}
-  path={buildTopicHref(topic.slug)}
-  image={latestArticle?.data.headerImage}
-  structuredData={structuredData}
->
-  <article class="space-y-10">
-    <section class="rounded-slide border border-line/70 bg-paper p-8 shadow-card md:p-10">
-      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">Topic</p>
-      <h1 class="headline mt-4 text-3xl font-black leading-tight text-ink md:text-5xl">{topic.label}</h1>
-      <p class="mt-4 max-w-3xl text-lg leading-[1.9] text-ink/75">
-        このトピックに触れている動画要約を新しい順にまとめています。
-        同じ論点を複数のチャンネルで比較したいときに使えます。
-      </p>
-      <div class="mt-6 flex flex-wrap items-center gap-3 text-sm text-clay">
-        <span class="rounded-full bg-cream px-4 py-2 font-semibold text-ink">{topic.articles.length} 記事</span>
-        <a href={withBase("/topics/")} class="underline transition hover:text-coral">他のトピックを見る</a>
-      </div>
-    </section>
-
-    <section class="space-y-8">
-      {topic.articles.map((article) => (
-        <ArticleCard
-          articleId={getArticleId(article)}
-          articlePath={buildArticlePath(article)}
-          title={article.data.articleTitle ?? article.data.title}
-          channel={article.data.channel}
-          headerImage={article.data.headerImage}
-          publishedAt={article.data.fetchedAt}
-          keyPhrases={article.data.keyPhrases}
-          bulletPoints={article.data.bulletPoints}
-          summary={getArticleDescription(article)}
-        />
-      ))}
-    </section>
-  </article>
-</BaseLayout>
+<TopicView slug={slug!} locale="en" />

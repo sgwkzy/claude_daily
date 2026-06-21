@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DailyView from "./DailyView.astro";
+import { loadDailyGroups, localizeArticleData, resolveDay } from "../lib/articles";
+import { t, type Locale } from "../i18n/ui";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = t(locale);
+const groups = await loadDailyGroups();
+const latest = groups[0];
+const day = latest ? resolveDay(groups, latest.date) : undefined;
+const allDates = groups.map((g) => g.date);
+const latestArticle = day?.articles[0];
+const heroImage = latestArticle ? localizeArticleData(latestArticle, locale).headerImage : undefined;
+const pageDescription =
+  locale === "en"
+    ? "Daily English digests of YouTube videos about Claude, Claude Code, Anthropic, and MCP. Read the key points in minutes and keep up with the latest AI agent and LLM topics."
+    : "Claude・Claude Code・Anthropic・MCPに関するYouTube動画を毎日収集し、日本語で要点だけ読めるダイジェストにまとめます。AIエージェント・LLMの最新トピックを短時間でキャッチアップできます。";
+const pageTitle =
+  locale === "en"
+    ? "Claude Daily｜Daily digest of Claude, Claude Code, Anthropic & MCP"
+    : "Claude Daily｜Claude・Claude Code・Anthropic・MCPの毎日ダイジェスト";
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Claude Daily",
+  url: locale === "en" ? "https://www.claude-daily.com/" : "https://www.claude-daily.com/jp/",
+  inLanguage: locale,
+  description: pageDescription,
+};
+---
+
+<BaseLayout
+  title={pageTitle}
+  description={pageDescription}
+  path="/"
+  locale={locale}
+  image={heroImage}
+  structuredData={structuredData}
+>
+  {day ? (
+    <DailyView day={day} totalDays={groups.length} allDates={allDates} latestDate={latest!.date} locale={locale} />
+  ) : (
+    <section class="rounded-slide border border-line/70 bg-paper p-10 text-center shadow-card">
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">{tr("index.lastBrief")}</p>
+      <p class="mt-3 text-lg text-ink/75">
+        {locale === "en" ? "No articles yet. Run the batch to see articles here." : "まだ記事がありません。バッチを実行すると記事がここに表示されます。"}
+      </p>
+    </section>
+  )}
+</BaseLayout>

@@ -7,6 +7,7 @@ from batch.models import PipelineStats, VideoCandidate
 from batch.pipeline import PipelineDeps, process_candidate
 from batch.summarizer import TranscriptSummarizer
 from batch.transcript import TranscriptFetcher
+from batch.translator import SummaryTranslator
 from batch.x_poster import PostPayload
 
 
@@ -47,6 +48,7 @@ def _make_deps(root: Path) -> PipelineDeps:
         settings=settings,
         transcript_fetcher=TranscriptFetcher(),
         summarizer=TranscriptSummarizer(api_key=None),
+        translator=SummaryTranslator(api_key=None),
         media=MediaManager(root / settings.pipeline.temp_dir),
         header_generator=HeaderImageGenerator(api_key=None, style_prompt="test style"),
         thumbnail_directions=["editorial-rebuild"],
@@ -72,8 +74,12 @@ def test_process_candidate_creates_article_and_returns_payload(tmp_path: Path) -
     article_text = article_path.read_text(encoding="utf-8")
     assert "seoTitle:" in article_text
     assert "summary:" in article_text
-    header_path = tmp_path / "images" / "dryrun-pipeline" / "header.png"
-    assert header_path.exists()
+    # 英語ブロックと日英 2 枚のヘッダー画像が生成される。
+    assert "en:" in article_text
+    en_header_path = tmp_path / "images" / "dryrun-pipeline" / "header.png"
+    ja_header_path = tmp_path / "images" / "dryrun-pipeline" / "header.ja.png"
+    assert en_header_path.exists()
+    assert ja_header_path.exists()
 
 
 def test_process_candidate_skips_existing(tmp_path: Path) -> None:

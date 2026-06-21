@@ -9,7 +9,8 @@ channelId: UCrDwWp7EBBv4NwvScIpBDOA
 publishedAt: '2026-06-12T04:46:32.241259Z'
 fetchedAt: '2026-06-12T04:46:32.241259Z'
 originalThumbnail: https://i.ytimg.com/vi/Y9Wz2PV404E/maxresdefault.jpg
-headerImage: /images/Y9Wz2PV404E/header.png
+headerImage: /images/Y9Wz2PV404E/header.ja.png
+heroImage: /images/Y9Wz2PV404E/header.ja.png
 viewCount: 599055
 durationSec: 114
 sourceLanguage: en
@@ -60,6 +61,85 @@ sections:
 
     コーディング以外にも、金融・研究・経済・法律など、従来は常に人間の監督が必要だった複雑なタスクに対応できる。Anthropicは「なぜ解決に長年かかったのかと後から振り返るような問題に取り組んでほしい」と呼びかけ、モデルの可能性をユーザーが切り開くことへの期待を示した。'
   image: null
+en:
+  articleTitle: Introducing Claude Fable 5
+  seoTitle: Introducing Claude Fable 5
+  summary: Anthropic announced Claude Fable 5, released to the public as its most
+    capable model yet. It is the first model to…
+  keyPhrases:
+  - Claude Fable 5
+  - Mythos-class model
+  - cybersecurity vulnerabilities
+  - Opus 4.8
+  - autonomous AI
+  - safety system
+  bulletPoints:
+  - time: 0
+    text: Anthropic announced Claude Fable 5, released to the public as its most capable
+      model yet. It is the first model to combine Mythos-class capabilities with safety
+      measures.
+  - time: 18
+    text: The previous-generation model, 'Claude Mythos preview,' turned out to be
+      able to find thousands of cybersecurity vulnerabilities, and was withheld from
+      public release due to the risk of misuse.
+  - time: 27
+    text: Instead, it was provided to experts protecting the world's critical software
+      and used to fix vulnerabilities before attackers could exploit them.
+  - time: 44
+    text: Fable 5 includes an unprecedentedly cautious safety system that automatically
+      detects requests in high-risk areas such as cybersecurity and biology.
+  - time: 60
+    text: Requests judged to be high-risk are redirected to Opus 4.8, a design that
+      harnesses Fable's capabilities while avoiding cyber and biological risks.
+  - time: 78
+    text: Fable 5 is designed for ambitious work, able to handle complex tasks in
+      finance, research, economics, and law for days at a time without human supervision.
+  - time: 99
+    text: It closes by encouraging users to tackle the kind of hard problems that,
+      in hindsight, make you wonder 'why did this take so many years to solve,' expressing
+      high expectations for what users will do with it.
+  sections:
+  - heading: Overview and Announcement of Fable 5
+    time: 0
+    body: 'Anthropic has released Claude Fable 5 to the public. It is the most capable
+      model the company has ever shipped, and is positioned as the first model to
+      combine Mythos-class capabilities with safety measures suitable for general
+      use.
+
+
+      The previous-generation Mythos preview was capable enough to detect thousands
+      of cybersecurity vulnerabilities, and Anthropic declined to release it publicly
+      out of concern that the same capability could be repurposed for attacks. It
+      was then offered on a limited basis to security experts protecting the world''s
+      critical software infrastructure and used to fix vulnerabilities.'
+    image: null
+  - heading: An Innovative Safety System
+    time: 44
+    body: 'Fable 5 ships with the most carefully designed safety system in the Claude
+      series to date. Requests touching high-risk domains such as cybersecurity and
+      biology are automatically detected and reviewed.
+
+
+      Requests judged to be high-risk are redirected to Opus 4.8. This lets users
+      harness Fable''s exceptional capabilities while preventing uses that carry cyberattack
+      or biological risk. The safeguards are currently set broadly, but are slated
+      for continual refinement so that safe requests can be better allowed.'
+    image: null
+  - heading: Advanced Autonomy and Areas of Application
+    time: 78
+    body: 'Fable 5 is designed for ambitious work and can stay engaged with a problem
+      far longer than previous models. It has high autonomy and can operate for days
+      at a time without human intervention.
+
+
+      Beyond coding, it can handle complex tasks in finance, research, economics,
+      and law, areas that previously always required human supervision. Anthropic
+      urged users to ''take on problems that, in hindsight, make you wonder why they
+      took so many years to solve,'' signaling its hope that users will unlock the
+      model''s potential.'
+    image: null
+  headerImage: /images/Y9Wz2PV404E/header.png
+  heroImage: /images/Y9Wz2PV404E/header.png
 ---
 
 ## ハイライト

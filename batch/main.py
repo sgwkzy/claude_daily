@@ -18,6 +18,7 @@ from batch.pipeline import PipelineDeps, process_candidate
 from batch.ranker import dedupe_and_rank
 from batch.summarizer import TranscriptSummarizer
 from batch.transcript import TranscriptFetcher
+from batch.translator import SummaryTranslator
 from batch.trend_proposer import TrendProposer
 from batch.utils import unique_preserving_order
 from batch.x_poster import PostPayload, XPoster, post_articles_with_delay
@@ -62,6 +63,7 @@ def main() -> int:
     fetcher = YouTubeFetcher(api_keys["youtube"], settings)
     transcript_fetcher = TranscriptFetcher()
     summarizer = TranscriptSummarizer(api_keys["anthropic"])
+    translator = SummaryTranslator(api_keys["anthropic"])
     media = MediaManager(root / settings.pipeline.temp_dir)
     header_generator = HeaderImageGenerator(api_keys["openai"], settings.prompts.header_style)
     logger = logging.getLogger(__name__)
@@ -84,6 +86,7 @@ def main() -> int:
         settings=settings,
         transcript_fetcher=transcript_fetcher,
         summarizer=summarizer,
+        translator=translator,
         media=media,
         header_generator=header_generator,
         thumbnail_directions=thumbnail_directions,

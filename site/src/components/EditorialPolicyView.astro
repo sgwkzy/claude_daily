@@ -1,0 +1,143 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { localePath, type Locale } from "../i18n/ui";
+import { withBase } from "../lib/url";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const isEn = locale === "en";
+const lastUpdated = "2026-06-18";
+const contactHref = withBase(localePath("/contact/", locale));
+const description = isEn
+  ? "Claude Daily editorial policy. How we choose videos, how we summarize, how we handle accuracy, and our correction policy."
+  : "Claude Daily の編集方針。動画の選定基準、要約方法、正確性の扱い、修正ポリシーを説明します。";
+---
+
+<BaseLayout title="Editorial Policy | Claude Daily" description={description} path="/editorial-policy/" locale={locale}>
+  <article class="mx-auto max-w-[52rem] space-y-10 leading-[1.95] text-ink/85">
+    <header>
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">Editorial Policy</p>
+      <h1 class="headline mt-3 text-3xl font-black leading-tight text-ink md:text-4xl">{isEn ? "Editorial Policy" : "編集方針"}</h1>
+      <p class="mt-3 text-xs text-clay">{isEn ? "Last updated" : "最終更新"}: {lastUpdated}</p>
+    </header>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "1. Topics we cover" : "1. 取り上げるテーマ"}</h2>
+      <p>
+        {isEn
+          ? "This site mainly covers YouTube videos related to Claude, Claude Code, Anthropic, MCP, and the surrounding AI agent development space."
+          : "当サイトは、Claude、Claude Code、Anthropic、MCP、およびその周辺の AI エージェント開発に関連する YouTube 動画を主な対象とします。"}
+      </p>
+      <p>
+        {isEn
+          ? "We don't aim to cover every AI video; we prioritize those most relevant to the themes above."
+          : "すべての AI 動画を網羅することは目的ではなく、上記テーマと関連性が高いものを優先して掲載します。"}
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "2. How we select videos" : "2. 動画の選定基準"}</h2>
+      <ul class="list-disc space-y-2 pl-6">
+        {isEn ? (
+          <>
+            <li>Clear reference to Claude / Anthropic / MCP</li>
+            <li>A YouTube video viewable as public information</li>
+            <li>Content that can be understood from transcripts and metadata</li>
+            <li>Daily balance so it isn't all highly redundant content</li>
+          </>
+        ) : (
+          <>
+            <li>Claude / Anthropic / MCP に対する言及が明確であること</li>
+            <li>公開情報として視聴できる YouTube 動画であること</li>
+            <li>字幕やメタデータから内容把握が可能であること</li>
+            <li>重複度が高い内容ばかりにならないよう、日次でバランスを取ること</li>
+          </>
+        )}
+      </ul>
+      <p>
+        {isEn
+          ? "We don't decide mechanically by view count or channel size alone; we weigh topicality, relevance, and clarity together."
+          : "再生数やチャンネル規模だけで機械的に決めるのではなく、話題性・関連度・内容の明確さを合わせて判断します。"}
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "3. How summaries are created" : "3. 要約の作成方法"}</h2>
+      <p>
+        {isEn
+          ? "Articles are generated automatically from information such as the video title, description, publish date, and transcript. The body prioritizes being easy to grasp, structured as slide-level summaries and short bullet points."
+          : "記事は、動画タイトル、説明文、公開日時、字幕などの情報をもとに自動生成しています。本文は「要点を掴みやすいこと」を優先し、スライド単位の要約と短い箇条書きで構成しています。"}
+      </p>
+      <p>
+        {isEn
+          ? "However, machine summaries can misread, misattribute context, or lose nuance. To confirm exact wording or intent, please check the original video."
+          : "ただし、機械要約には誤読、文脈の取り違え、ニュアンスの欠落が起こり得ます。厳密な表現や発言の意図を確認したい場合は、必ず元動画をご確認ください。"}
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "4. Accuracy and updates" : "4. 正確性と更新"}</h2>
+      <p>
+        {isEn
+          ? "We strive to improve accuracy but do not guarantee completeness or currency. Changes on the video side — transcript edits, title changes, or unpublishing — may cause an article and its source to diverge later."
+          : "当サイトは正確性の向上に努めますが、内容の完全性・最新性を保証するものではありません。動画側の字幕修正、タイトル変更、公開停止などにより、記事内容と一次情報の状態が後から一致しなくなる場合があります。"}
+      </p>
+      <p>
+        {isEn
+          ? "When we find clear errors or inappropriate wording, we correct, unpublish, or remove as needed."
+          : "明らかな誤りや不適切な表現を確認した場合は、必要に応じて修正、非公開化、削除を行います。"}
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "5. Citation and rights" : "5. 引用・権利への配慮"}</h2>
+      <p>
+        {isEn
+          ? "Copyright of source videos belongs to their respective rights holders. We take the position of providing summaries that aid understanding while preserving a path to the publicly available video."
+          : "元動画の著作権は各権利者に帰属します。当サイトは、公開されている動画への導線を保ちながら、内容理解の補助となる要約を提供する立場を取ります。"}
+      </p>
+      <p>
+        {isEn
+          ? "If a rights holder contacts us about published content, we will review and respond promptly, including correction or removal."
+          : "権利者の方から掲載内容に関するご連絡をいただいた場合は、内容を確認のうえ、修正または削除を含めて速やかに対応します。"}
+      </p>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "6. Our operating stance" : "6. 運営上のスタンス"}</h2>
+      <ul class="list-disc space-y-2 pl-6">
+        {isEn ? (
+          <>
+            <li>Avoid exaggerated headlines and assertive rephrasing</li>
+            <li>Clearly link to the primary source</li>
+            <li>Make it clear to readers that content is auto-generated</li>
+            <li>Keep article-body policy separate from whether ads or analytics are used</li>
+          </>
+        ) : (
+          <>
+            <li>誇張的な見出しや断定的な言い換えを避ける</li>
+            <li>一次情報へのリンクを明示する</li>
+            <li>自動生成であることを読者に分かる形で示す</li>
+            <li>広告や分析導入の有無にかかわらず、記事本文の方針は分離して扱う</li>
+          </>
+        )}
+      </ul>
+    </section>
+
+    <section class="space-y-3">
+      <h2 class="text-xl font-bold text-ink">{isEn ? "7. Contact" : "7. 連絡先"}</h2>
+      <p>
+        {isEn ? "For matters about our editorial policy or content, please email " : "編集方針や掲載内容に関するご連絡は、メール"}
+        <a class="underline hover:text-coral" href="mailto:sugawalabo@gmail.com">sugawalabo@gmail.com</a>
+        {isEn ? " or reach the operator's X account " : "または運営者の X アカウント"}
+        <a class="underline hover:text-coral" href="https://x.com/sugawalabo" target="_blank" rel="noreferrer"> @sugawalabo </a>
+        {isEn ? ". For details, see the " : "までお願いいたします。詳しくは"}
+        <a class="underline hover:text-coral" href={contactHref}>{isEn ? "Contact page" : "お問い合わせページ"}</a>
+        {isEn ? "." : "をご確認ください。"}
+      </p>
+    </section>
+  </article>
+</BaseLayout>

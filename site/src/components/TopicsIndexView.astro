@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { buildTopicHref, loadTopicGroups, localizeArticleData } from "../lib/articles";
+import { localePath, t, type Locale } from "../i18n/ui";
+import { withBase } from "../lib/url";
+
+interface Props {
+  locale: Locale;
+}
+
+const { locale } = Astro.props;
+const tr = t(locale);
+const topics = await loadTopicGroups(locale);
+const featuredTopics = topics.slice(0, 24);
+const description = tr("topics.description");
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: tr("topics.title"),
+  url: `https://www.claude-daily.com${localePath("/topics/", locale)}`,
+  inLanguage: locale,
+  description,
+};
+---
+
+<BaseLayout
+  title={tr("topics.title")}
+  description={description}
+  path="/topics/"
+  locale={locale}
+  structuredData={structuredData}
+>
+  <article class="mx-auto max-w-[74rem] space-y-10">
+    <header class="rounded-slide border border-line/70 bg-paper p-8 shadow-card md:p-10">
+      <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">{tr("nav.topics")}</p>
+      <h1 class="headline mt-4 text-3xl font-black leading-tight text-ink md:text-5xl">{tr("topics.heading")}</h1>
+      <p class="mt-4 max-w-3xl text-lg leading-[1.9] text-ink/75">
+        {tr("topics.lead")}
+      </p>
+    </header>
+
+    <section class="rounded-slide border border-line/70 bg-paper p-8 shadow-card md:p-10">
+      <div class="flex items-center justify-between gap-3">
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">{tr("topics.featured")}</p>
+        <p class="text-xs text-clay">{topics.length} {tr("topics.totalUnit")}</p>
+      </div>
+      <div class="mt-6 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+        {featuredTopics.map((topic) => (
+          <a
+            href={withBase(localePath(buildTopicHref(topic.slug), locale))}
+            class="group rounded-[1.75rem] border border-line/70 bg-cream/40 p-5 transition hover:-translate-y-0.5 hover:border-coral/40 hover:bg-cream"
+          >
+            <div class="flex items-start justify-between gap-3">
+              <h2 class="headline text-xl font-bold leading-snug text-ink group-hover:text-coralDark">{topic.label}</h2>
+              <span class="rounded-full bg-paper px-3 py-1 text-xs font-semibold text-clay">{topic.articles.length} {tr("topic.articlesUnit")}</span>
+            </div>
+            <p class="mt-4 line-clamp-3 text-sm leading-7 text-ink/75">
+              {localizeArticleData(topic.articles[0], locale).bulletPoints[0]?.text}
+            </p>
+            <p class="mt-4 text-xs uppercase tracking-[0.22em] text-clay">
+              {tr("topics.latest")}: {topic.articles[0]?.data.channel}
+            </p>
+          </a>
+        ))}
+      </div>
+    </section>
+  </article>
+</BaseLayout>

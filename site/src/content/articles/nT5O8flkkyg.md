@@ -10,8 +10,8 @@ channelId: UCUMZ7gohGI9HcU9VNsr2FJQ
 publishedAt: '2026-06-17T16:00:27Z'
 fetchedAt: '2026-06-20T10:03:36.216571Z'
 originalThumbnail: https://i.ytimg.com/vi/nT5O8flkkyg/maxresdefault.jpg
-headerImage: /images/nT5O8flkkyg/header.png
-heroImage: /images/nT5O8flkkyg/header.png
+headerImage: /images/nT5O8flkkyg/header.ja.png
+heroImage: /images/nT5O8flkkyg/header.ja.png
 viewCount: 261517
 durationSec: 180
 sourceLanguage: en
@@ -60,6 +60,88 @@ sections:
 
     決定的だったのは信頼の崩壊である。相手を信頼できない、掲げる価値観が実態と異なる、誠実さを欠く、不穏な行動パターンが見える——そう感じたとき、その会社と働き続けるのは難しいと語った。ビジョンも信頼も共有できないなら争わず別々の道を進めばよい、市場と世論がいずれ決着をつける、というのが彼の到達点だった。'
   image: null
+en:
+  articleTitle: 'Why Anthropic Broke With Sam Altman: Dario Amodei Says Trust Collapsed'
+  seoTitle: 'Why Anthropic Broke With Sam Altman: Dario Amodei Says Trust Col'
+  summary: Asked about the moment in India when he appeared to refuse a handshake
+    with Sam Altman on stage, Amodei said the…
+  keyPhrases:
+  - Anthropic
+  - Dario Amodei
+  - OpenAI
+  - Sam Altman
+  - AI safety
+  - trust
+  bulletPoints:
+  - time: 0
+    text: Asked about the moment in India when he appeared to refuse a handshake with
+      Sam Altman on stage, Amodei said the summit was highly chaotic and everyone
+      was suddenly told to link hands after last-minute staging changes.
+  - time: 50
+    text: When asked whether leaders building the world's most important technology
+      can really cooperate on existential risk if they cannot even shake hands, he
+      said trusted actors should align first.
+  - time: 60
+    text: He described an industry order in which trusted players act together and
+      force less trusted actors to adopt the same standards.
+  - time: 108
+    text: On leaving OpenAI, he said ordinary disagreement over safety is not enough
+      to make someone quit a company, but that the decisive factor was lack of trust.
+  - time: 126
+    text: He said that once you feel you cannot trust someone, their stated values
+      diverge from reality, they lack integrity, or they show disturbing patterns
+      of behavior, continuing to work together becomes extremely difficult.
+  - time: 156
+    text: He concluded that there is little point fighting with someone who shares
+      neither your vision nor your trust, and that both sides should go their separate
+      ways and let the market and public opinion decide.
+  sections:
+  - heading: What Really Happened in the Handshake Incident
+    time: 0
+    body: 'In Bloomberg''s interview, Amodei is asked about the moment at an AI summit
+      in India when he appeared to refuse a handshake with Altman. His explanation
+      is almost comically literal: the summit was run in a state of extreme confusion,
+      speaker positions and sequence changed at the last minute, and after the photos
+      they were suddenly told to join hands.
+
+
+      He invokes the image of Prime Minister Narendra Modi unexpectedly urging everyone
+      to hold hands, emphasizing that international summits with heads of state often
+      descend into this kind of staging chaos. While careful not to single out India
+      for criticism, he gently pushes back on media readings that tried to assign
+      deeper meaning to the moment.'
+    image: null
+  - heading: A Worldview Built on Trusted Actors Coordinating First
+    time: 60
+    body: 'Amodei says that some players in the industry are more trustworthy than
+      others, and that Anthropic is not the only one he would put in that category.
+      His ideal outcome is a system in which trusted actors first align with one another
+      and then push less trusted players into a position where they have little choice
+      but to adopt the same standards.
+
+
+      Even if some participants would not choose the right behavior on their own,
+      a trustworthy majority can structure the field so the rest have no real alternative.
+      It is a pragmatic view of existential-risk coordination, one that relies less
+      on goodwill than on incentives and industry structure.'
+    image: null
+  - heading: The Core of His OpenAI Exit Was "Trust"
+    time: 108
+    body: 'On the question that has become Silicon Valley folklore, why he left OpenAI,
+      Amodei says that disagreement over safety alone is not enough to justify leaving
+      a company. Internal differences of opinion are normal.
+
+
+      What proved decisive, he says, was a collapse of trust. If you feel you cannot
+      trust the other party, that their professed values do not match reality, that
+      they are not acting with integrity, or that they show unsettling behavioral
+      patterns, then continuing to work at that company becomes very difficult. If
+      two sides share neither vision nor trust, his conclusion is that they should
+      stop fighting, go separate ways, and let the market and public opinion render
+      the verdict.'
+    image: null
+  headerImage: /images/nT5O8flkkyg/header.png
+  heroImage: /images/nT5O8flkkyg/header.png
 ---
 
 ## ハイライト

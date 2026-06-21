@@ -2,8 +2,8 @@
 videoId: LfMvn-7RJuA
 title: 'Anthropic released their most powerful AI.. and then the government stepped
   in #carterpcs #tech'
-articleTitle: 最強AI「Fable」を公開直後に米政府が制止 — 外国籍ユーザー禁止で全面停止へ
 slug: fable-suspended-government-order
+articleTitle: 最強AI「Fable」を公開直後に米政府が制止 — 外国籍ユーザー禁止で全面停止へ
 seoTitle: Claude Fable停止騒動 米政府命令と利用制限の要点
 summary: Claude Fable公開直後に起きた停止騒動について、政府命令、利用制限、Anthropic側の立場を短く追える記事です。
 channel: CarterPCs
@@ -11,8 +11,8 @@ channelId: UCi7wDE2ZTiR5QYYrUY5WhtA
 publishedAt: '2026-06-13T03:39:30Z'
 fetchedAt: '2026-06-16T02:23:19.921424Z'
 originalThumbnail: https://i.ytimg.com/vi/LfMvn-7RJuA/maxresdefault.jpg
-headerImage: /images/LfMvn-7RJuA/header.png
-heroImage: /images/LfMvn-7RJuA/header.png
+headerImage: /images/LfMvn-7RJuA/header.ja.png
+heroImage: /images/LfMvn-7RJuA/header.ja.png
 viewCount: 815217
 durationSec: 42
 sourceLanguage: en
@@ -60,6 +60,75 @@ sections:
 
     この一件への反応は賛否が割れている。動画では競合のGrokがこの展開を歓迎し、「AIモデルは野放しにせず抑制が必要だ」と皮肉を込めてコメントした様子が紹介されている。'
   image: null
+en:
+  articleTitle: Anthropic's Most Powerful AI Was Released, Then Halted Over a Foreign-User
+    Ban
+  seoTitle: Anthropic's Most Powerful AI Was Released, Then Halted Over a Fo
+  summary: An AI once withheld from general release because of its hacking ability
+    and escape-risk profile was briefly launched,…
+  keyPhrases:
+  - Claude Fable
+  - US government intervention
+  - ban on foreign nationals
+  - full model shutdown
+  - AI safety
+  bulletPoints:
+  - time: 0
+    text: An AI once withheld from general release because of its hacking ability
+      and escape-risk profile was briefly launched, then almost immediately pulled
+      back.
+  - time: 10
+    text: The US government intervened and told Anthropic that foreign nationals could
+      not be allowed to use Fable anywhere, inside or outside the United States.
+  - time: 19
+    text: One problem, according to the video, is that many of the Anthropic employees
+      who developed Fable are themselves foreign nationals.
+  - time: 28
+    text: A second problem is how difficult it would be for Anthropic to actually
+      police access based on a user's nationality.
+  - time: 32
+    text: Anthropic ultimately decided that if that was the rule, it would disable
+      the model for everyone and shut Fable down completely.
+  - time: 35
+    text: Reaction has been split, with Grok alone welcoming the move and sarcastically
+      arguing that AI models need tighter restraint.
+  sections:
+  - heading: Released, Then Immediately Withdrawn
+    time: 0
+    body: 'An AI model once kept from general release because it was considered powerful
+      enough to excel at hacking and potentially escape containment was finally released,
+      only to be pulled back from public use almost immediately. The reversal happened
+      within an extremely short time window.
+
+
+      The video captures the pace bluntly: it was released, and then almost at once
+      it was made private again. The change happened fast.'
+    image: null
+  - heading: US Government Intervention and Two Practical Problems
+    time: 10
+    body: 'The trigger for the withdrawal was US government intervention. According
+      to the video, the government told Anthropic that it could not allow foreign
+      nationals to use Fable, whether they were inside or outside the United States.
+
+
+      That policy creates two obvious problems. First, a nontrivial number of the
+      Anthropic employees who built Fable are themselves foreign nationals. Second,
+      enforcing model access restrictions on the basis of nationality would be operationally
+      extremely difficult in practice.'
+    image: null
+  - heading: A Full Shutdown and a Split Reaction
+    time: 32
+    body: 'Because drawing that nationality-based line was not realistic, Anthropic
+      chose not a limited restriction but a full disablement for all users. In effect,
+      its most powerful model was placed entirely out of reach.
+
+
+      Reaction to the episode has been divided. The video says Grok, a rival model,
+      welcomed the development and sarcastically commented that AI models should not
+      be left unconstrained and instead need to be held back.'
+    image: null
+  headerImage: /images/LfMvn-7RJuA/header.png
+  heroImage: /images/LfMvn-7RJuA/header.png
 ---
 
 ## ハイライト

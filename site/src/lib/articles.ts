@@ -1,7 +1,73 @@
 import type { CollectionEntry } from "astro:content";
 import { getCollection } from "astro:content";
+import type { Locale } from "../i18n/ui";
 
 export type Article = CollectionEntry<"articles">;
+
+export interface LocalizedBulletPoint {
+  time: number;
+  text: string;
+}
+
+export interface LocalizedSection {
+  heading: string;
+  time: number;
+  body: string;
+  image?: string | null;
+}
+
+export interface LocalizedArticle {
+  title: string; // 元動画タイトル（言語非依存）
+  articleTitle: string;
+  seoTitle?: string;
+  summary?: string;
+  keyPhrases: string[];
+  bulletPoints: LocalizedBulletPoint[];
+  sections: LocalizedSection[];
+  headerImage: string;
+  heroImage: string;
+}
+
+/**
+ * 記事の表示テキスト・画像を指定ロケールへ解決する。トップレベルは日本語（原文）、
+ * `en` ブロックは英語。`en` が無ければ日本語へフォールバックするため、部分翻訳でも破綻しない。
+ */
+export const localizeArticleData = (article: Article, locale: Locale): LocalizedArticle => {
+  const d = article.data;
+  if (locale === "en" && d.en) {
+    return {
+      title: d.title,
+      articleTitle: d.en.articleTitle,
+      seoTitle: d.en.seoTitle,
+      summary: d.en.summary,
+      keyPhrases: d.en.keyPhrases,
+      bulletPoints: d.en.bulletPoints,
+      sections: d.en.sections,
+      headerImage: d.en.headerImage,
+      heroImage: d.en.heroImage ?? d.en.headerImage,
+    };
+  }
+  return {
+    title: d.title,
+    articleTitle: d.articleTitle ?? d.title,
+    seoTitle: d.seoTitle,
+    summary: d.summary,
+    keyPhrases: d.keyPhrases,
+    bulletPoints: d.bulletPoints,
+    sections: d.sections,
+    headerImage: d.headerImage,
+    heroImage: d.heroImage ?? d.headerImage,
+  };
+};
+
+export const getLocalizedDescription = (article: Article, locale: Locale): string => {
+  const loc = localizeArticleData(article, locale);
+  if (loc.summary) return loc.summary;
+  if (loc.bulletPoints[0]?.text) return loc.bulletPoints[0].text;
+  return locale === "en"
+    ? `An English summary of "${loc.articleTitle}" from ${article.data.channel}.`
+    : `${article.data.channel}の動画「${loc.articleTitle}」を日本語で要約した記事。`;
+};
 
 export interface DayGroup {
   date: string; // YYYY-MM-DD
@@ -131,12 +197,12 @@ export const buildArticlePathFromTitle = (
   explicitSlug?: string
 ): string => `/articles/${buildArticleSlug(title, articleId, explicitSlug)}/`;
 
-export const loadTopicGroups = async (): Promise<TopicGroup[]> => {
+export const loadTopicGroups = async (locale: Locale = "ja"): Promise<TopicGroup[]> => {
   const articles = await loadArticles();
   const labelToArticles = new Map<string, Article[]>();
 
   for (const article of articles) {
-    for (const phrase of article.data.keyPhrases) {
+    for (const phrase of localizeArticleData(article, locale).keyPhrases) {
       const list = labelToArticles.get(phrase) ?? [];
       list.push(article);
       labelToArticles.set(phrase, list);
@@ -161,7 +227,7 @@ export const loadTopicGroups = async (): Promise<TopicGroup[]> => {
       if (right.articles.length !== left.articles.length) {
         return right.articles.length - left.articles.length;
       }
-      return left.label.localeCompare(right.label, "ja");
+      return left.label.localeCompare(right.label, locale);
     });
 };
 
@@ -187,10 +253,18 @@ export const resolveDay = (groups: DayGroup[], date: string): ResolvedDay | unde
 };
 
 const WEEKDAY_LABELS = ["日", "月", "火", "水", "木", "金", "土"];
+const EN_WEEKDAYS = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+const EN_MONTHS = [
+  "Jan", "Feb", "Mar", "Apr", "May", "Jun",
+  "Jul", "Aug", "Sep", "Oct", "Nov", "Dec",
+];
 
-export const formatDateLabel = (date: string): string => {
+export const formatDateLabel = (date: string, locale: Locale = "ja"): string => {
   const [y, m, d] = date.split("-").map((part) => parseInt(part, 10));
   const dt = new Date(Date.UTC(y, m - 1, d));
+  if (locale === "en") {
+    return `${EN_MONTHS[m - 1]} ${d}, ${y} (${EN_WEEKDAYS[dt.getUTCDay()]})`;
+  }
   return `${y}年${m}月${d}日 (${WEEKDAY_LABELS[dt.getUTCDay()]})`;
 };
 

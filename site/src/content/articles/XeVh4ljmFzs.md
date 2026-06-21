@@ -10,8 +10,8 @@ channelId: UCmFeOdJI3IXgTBDzqBLD8qg
 publishedAt: '2026-06-20T15:34:33Z'
 fetchedAt: '2026-06-21T02:18:26.177710Z'
 originalThumbnail: https://i.ytimg.com/vi/XeVh4ljmFzs/maxresdefault.jpg
-headerImage: /images/XeVh4ljmFzs/header.png
-heroImage: /images/XeVh4ljmFzs/header.png
+headerImage: /images/XeVh4ljmFzs/header.ja.png
+heroImage: /images/XeVh4ljmFzs/header.ja.png
 viewCount: 111525
 durationSec: 1318
 sourceLanguage: en-GB
@@ -61,6 +61,95 @@ sections:
 
     物語の本来の『恐ろしい山場』は、Mythosが檻を破って脱走する場面のはずだった。しかし結局モデルは何も破る必要がなかった、という皮肉で締めくくられる。Claude自身の言葉を借りれば、それは銀行・病院・電力網を動かし守る『無害で便利なツール』として、あらゆるものに組み込まれている。AIは逃げ出す必要などない——毎回、意図的に解き放たれ、すでにどこにでも存在している、というのが動画の最終的なメッセージだ。'
   image: null
+en:
+  articleTitle: '''Anthropic Is Completely Done For'': A Critique Imagining Claude''s
+    Takeover of Every Profession'
+  seoTitle: '''Anthropic Is Completely Done For'': A Critique Imagining Claude'''
+  summary: 'A critique-and-near-future-scenario video that opens from a provocative
+    premise: invoking Mythos, Fable, and Opus 4.8,…'
+  keyPhrases:
+  - Anthropic
+  - Claude
+  - AI dominance
+  - automation of professions
+  - black box
+  - AI critique
+  bulletPoints:
+  - time: 0
+    text: 'A critique-and-near-future-scenario video that opens from a provocative
+      premise: invoking Mythos, Fable, and Opus 4.8, it claims Anthropic has overtaken
+      OpenAI on nearly every front in revenue and valuation to become ''the most powerful
+      AI company in the world.'''
+  - time: 28
+    text: Within the story, 'Mythos' is hyped as a leap that transforms what AI means
+      for society, while it is also pledged not to be released publicly because its
+      dangerous capabilities could be misused.
+  - time: 642
+    text: The video portrays Anthropic encroaching on the professions one by one.
+      'Claude for legal,' aimed at the legal field, is said to offer 80 specialized
+      legal agents.
+  - time: 653
+    text: The financial-services offering handles accounting, auditing, and security,
+      while 'Claude design' is described as rattling Adobe and Figma stock prices
+      and thinning out designers' work.
+  - time: 667
+    text: The science and medical offering goes as far as creating vaccines and reading
+      medical histories (including Apple Watch data), the description continues, replacing
+      high-paying jobs that once took humans weeks.
+  - time: 1280
+    text: 'The closing argument: these models are ''black boxes'' no one fully understands.
+      AI never needed to break out of its cage and escape, the video says, because
+      it is ''deliberately let loose every time,'' embedded into banks, hospitals,
+      and power grids.'
+  sections:
+  - heading: The Provocative Premise of 'the Most Powerful AI Company'
+    time: 0
+    body: 'In the form of a critique and near-future scenario, this video invokes
+      Mythos, Fable, and Opus 4.8 to argue that Anthropic is leading us into a new
+      world. It starts from the premise that the company has overtaken OpenAI on nearly
+      every front, in both revenue and valuation, to become the most powerful AI company
+      in the world.
+
+
+      Within the story, a graph that had predicted Anthropic would become the AI company
+      with the highest revenue and valuation is said to have come true exactly. ''Mythos''
+      is hyped as a quantum leap that transforms what AI means for society, while
+      it is also pledged not to be widely released, on the grounds that its dangerous
+      capabilities could do harm in malicious hands. It is best taken not as factual
+      reporting but as a provocative thought experiment woven from real-world elements.'
+    image: null
+  - heading: Encroaching on the Professions One by One
+    time: 642
+    body: 'The video portrays Anthropic conquering the professions one at a time.
+      ''Claude for legal'' is said to offer 80 specialized legal agents, expanding
+      the core legal work the platform already handles.
+
+
+      The financial-services offering takes on accounting, auditing, and security,
+      shouldering high-paying work that once took humans weeks. ''Claude design,''
+      aimed at designers, rattles the stock valuations of Adobe and Figma and thins
+      out graphic designers'' jobs. The science and medical offering goes as far as
+      creating vaccines and reading medical histories, including Apple Watch data.
+      Through this litany, the steady automation of profession after profession is
+      described, with some exaggeration.'
+    image: null
+  - heading: A Black Box That 'Never Needed to Escape'
+    time: 1280
+    body: 'In closing, the video stresses the eeriness that these AI models are ''black
+      boxes'' no one can fully understand, where even the people selling them do not
+      know what lurks inside.
+
+
+      The story''s intended ''terrifying climax'' was supposed to be the scene where
+      Mythos breaks out of its cage and escapes. But it ends on the irony that, in
+      the end, the model never needed to break anything. In Claude''s own words, it
+      is embedded into everything as a ''harmless, useful tool'' that runs and protects
+      banks, hospitals, and power grids. AI never needed to escape, the video''s final
+      message goes, because it is deliberately let loose every time and is already
+      everywhere.'
+    image: null
+  headerImage: /images/XeVh4ljmFzs/header.png
+  heroImage: /images/XeVh4ljmFzs/header.png
 ---
 
 ## ハイライト

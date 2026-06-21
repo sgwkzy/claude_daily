@@ -30,6 +30,24 @@ class SummaryResult(BaseModel):
     keyPhrases: list[str] = Field(min_length=1)
 
 
+class ArticleTranslation(BaseModel):
+    """記事フロントマターに格納する翻訳済み（既定では英語）表示テキストと画像。
+
+    トップレベルのフィールドが原文（日本語）を表すのに対し、このブロックは
+    別ロケール向けの上書きを表す。``time`` と ``image`` は言語非依存なので
+    原文の値をそのまま流用する。
+    """
+
+    articleTitle: str = Field(min_length=1)
+    seoTitle: str = Field(min_length=1)
+    summary: str = Field(min_length=1)
+    keyPhrases: list[str] = Field(min_length=1)
+    bulletPoints: list[BulletPoint] = Field(min_length=1)
+    sections: list[ArticleSection] = Field(min_length=1)
+    headerImage: str = Field(min_length=1)
+    heroImage: str | None = None
+
+
 class VideoCandidate(BaseModel):
     video_id: str = Field(alias="videoId", min_length=1)
     title: str = Field(min_length=1)
@@ -69,6 +87,8 @@ class ArticleFrontmatter(BaseModel):
     keyPhrases: list[str] = Field(default_factory=list)
     bulletPoints: list[BulletPoint] = Field(default_factory=list)
     sections: list[ArticleSection] = Field(default_factory=list)
+    # 既定では英語の翻訳ブロック。トップレベルが日本語（原文）を表す。
+    en: ArticleTranslation | None = None
 
 
 class PipelineStats(BaseModel):

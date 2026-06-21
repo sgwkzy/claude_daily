@@ -1,7 +1,6 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
-import DailyView from "../../components/DailyView.astro";
-import { loadDailyGroups, resolveDay, formatDateLabel } from "../../lib/articles";
+import DayView from "../../components/DayView.astro";
+import { loadDailyGroups } from "../../lib/articles";
 
 export async function getStaticPaths() {
   const groups = await loadDailyGroups();
@@ -9,38 +8,6 @@ export async function getStaticPaths() {
 }
 
 const { date } = Astro.params;
-const groups = await loadDailyGroups();
-const day = date ? resolveDay(groups, date) : undefined;
-const latestDate = groups[0]?.date;
-
-if (!day || !latestDate) {
-  throw new Error("指定された日付のブリーフが見つかりません。");
-}
-
-const allDates = groups.map((g) => g.date);
-const leadArticle = day.articles[0];
-const description = `${formatDateLabel(day.date)}に公開・整理したClaude・Claude Code・Anthropic・MCP関連動画の要点まとめ。${day.articles.length}本の記事を一覧で読めます。`;
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  name: `${formatDateLabel(day.date)} のブリーフ | Claude Daily`,
-  url: `https://www.claude-daily.com/days/${day.date}/`,
-  inLanguage: "ja",
-  description,
-  isPartOf: {
-    "@type": "WebSite",
-    name: "Claude Daily",
-    url: "https://www.claude-daily.com/",
-  },
-};
 ---
 
-<BaseLayout
-  title={`${formatDateLabel(day.date)}のClaude関連YouTube要約 | Claude Daily`}
-  description={description}
-  path={`/days/${day.date}/`}
-  image={leadArticle?.data.headerImage}
-  structuredData={structuredData}
->
-  <DailyView day={day} totalDays={groups.length} allDates={allDates} latestDate={latestDate} />
-</BaseLayout>
+<DayView date={date!} locale="en" />

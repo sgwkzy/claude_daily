@@ -10,8 +10,8 @@ channelId: UCxZfa0CeFxtTw3ukM8B-75w
 publishedAt: '2026-06-17T01:30:24Z'
 fetchedAt: '2026-06-19T00:52:38.910395Z'
 originalThumbnail: https://i.ytimg.com/vi/aBXbQtr2I5c/maxresdefault.jpg
-headerImage: /images/aBXbQtr2I5c/header.png
-heroImage: /images/aBXbQtr2I5c/header.png
+headerImage: /images/aBXbQtr2I5c/header.ja.png
+heroImage: /images/aBXbQtr2I5c/header.ja.png
 viewCount: 80818
 durationSec: 955
 sourceLanguage: zh-TW
@@ -71,6 +71,96 @@ sections:
 
     結論として、Anthropicの一件は各国に警鐘を鳴らすと同時に、ハードウェアに新市場を開いたと締めくくった。'
   image: null
+en:
+  articleTitle: What Anthropic's Ban Signals About the US-China AI Race and National
+    AI Stacks
+  seoTitle: What Anthropic's Ban Signals About the US-China AI Race and Nati
+  summary: Taiwanese commentator Chen Fengxin frames the Anthropic episode as a symbolic
+    moment that fuses science and technology…
+  keyPhrases:
+  - Anthropic
+  - US-China AI competition
+  - export controls
+  - Chen Fengxin
+  - AI data centers
+  - DeepSeek
+  bulletPoints:
+  - time: 7
+    text: Taiwanese commentator Chen Fengxin frames the Anthropic episode as a symbolic
+      moment that fuses science and technology with geopolitics.
+  - time: 29
+    text: She argues Anthropic is not only highly competitive in large language models
+      but more successful than OpenAI as a business, with an eventual IPO outlook
+      she sees as even stronger.
+  - time: 93
+    text: The US government, citing national security, required Anthropic to block
+      all foreign users from Fable 5 and Mythos 5, and she describes the scope as
+      unusually strict.
+  - time: 520
+    text: In her view, Anthropic is strongest because it focused from the outset on
+      the kinds of AI enterprises actually need, especially the ability to complete
+      hard business tasks.
+  - time: 856
+    text: She notes that few countries can match the capital the US poured into LLM
+      development, while the deepest talent pools remain concentrated in the US and
+      mainland China.
+  - time: 901
+    text: She says the ban is forcing many mid-sized countries to start by building
+      their own AI data centers as a form of self-defense against US dependence.
+  - time: 930
+    text: Her conclusion is that the Anthropic episode serves as a warning shot for
+      governments while also opening a new market for hardware and infrastructure
+      technology.
+  sections:
+  - heading: A Ban That Bound Technology and Geopolitics Together
+    time: 7
+    body: 'Chen Fengxin opens by arguing that the Anthropic measures made technology
+      and geopolitics impossible to separate. The move came immediately after a major
+      US AI company released important new models.
+
+
+      The focal point was a model originally known as Claude and renamed Fable 5,
+      alongside Mythos 5, a version specialized for vulnerability discovery. Because
+      of concerns that the models were powerful enough to be abused by hackers, she
+      says restrictions had been placed on release from the beginning.
+
+
+      The US government then asked Anthropic to prevent foreign users from accessing
+      both models on national security grounds.'
+    image: null
+  - heading: Why She Sees Anthropic as the Most Competitive Lab
+    time: 518
+    body: 'Chen argues that the frontier LLM race has effectively narrowed to OpenAI''s
+      ChatGPT, Anthropic''s Claude, and Google''s Gemini, and that Anthropic currently
+      holds the strongest competitive position.
+
+
+      Her reasoning comes down to how the companies developed. While OpenAI began
+      with a mass consumer-facing strategy, Anthropic focused from the start on enterprise
+      AI and the tasks businesses actually need handled.
+
+
+      As a result, she says Anthropic now delivers the highest completion quality
+      on the hardest corporate workflows and has built the more successful business
+      model.'
+    image: null
+  - heading: Why Countries Are Being Pushed Toward National AI Systems
+    time: 873
+    body: 'The second half turns to the global ripple effects of the ban. The question
+      is whether countries will now be forced to pursue domestic development in both
+      data centers and model competition.
+
+
+      Matching the scale of US investment is difficult, and talent remains concentrated
+      in the US and China. Even so, Chen says mid-sized countries are beginning with
+      AI data centers in order to secure a minimum level of strategic self-reliance.
+
+
+      Her conclusion is that the Anthropic incident warns countries about overdependence
+      while simultaneously creating a new market around hardware.'
+    image: null
+  headerImage: /images/aBXbQtr2I5c/header.png
+  heroImage: /images/aBXbQtr2I5c/header.png
 ---
 
 ## ハイライト

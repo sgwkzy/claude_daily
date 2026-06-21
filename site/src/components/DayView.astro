@@ -1,0 +1,62 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import DailyView from "./DailyView.astro";
+import {
+  formatDateLabel,
+  loadDailyGroups,
+  localizeArticleData,
+  resolveDay,
+} from "../lib/articles";
+import { localePath, type Locale } from "../i18n/ui";
+
+interface Props {
+  date: string;
+  locale: Locale;
+}
+
+const { date, locale } = Astro.props;
+const groups = await loadDailyGroups();
+const day = date ? resolveDay(groups, date) : undefined;
+const latestDate = groups[0]?.date;
+
+if (!day || !latestDate) {
+  throw new Error(locale === "en" ? "Brief not found for the given date." : "指定された日付のブリーフが見つかりません。");
+}
+
+const allDates = groups.map((g) => g.date);
+const leadArticle = day.articles[0];
+const dateLabel = formatDateLabel(day.date, locale);
+const heroImage = leadArticle ? localizeArticleData(leadArticle, locale).headerImage : undefined;
+const description =
+  locale === "en"
+    ? `Key takeaways from Claude, Claude Code, Anthropic, and MCP videos curated on ${dateLabel}. Read all ${day.articles.length} articles in one place.`
+    : `${dateLabel}に公開・整理したClaude・Claude Code・Anthropic・MCP関連動画の要点まとめ。${day.articles.length}本の記事を一覧で読めます。`;
+const title =
+  locale === "en"
+    ? `Claude-related YouTube summaries for ${dateLabel} | Claude Daily`
+    : `${dateLabel}のClaude関連YouTube要約 | Claude Daily`;
+const structuredData = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  name: locale === "en" ? `${dateLabel} brief | Claude Daily` : `${dateLabel} のブリーフ | Claude Daily`,
+  url: `https://www.claude-daily.com${localePath(`/days/${day.date}/`, locale)}`,
+  inLanguage: locale,
+  description,
+  isPartOf: {
+    "@type": "WebSite",
+    name: "Claude Daily",
+    url: "https://www.claude-daily.com/",
+  },
+};
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  path={`/days/${day.date}/`}
+  locale={locale}
+  image={heroImage}
+  structuredData={structuredData}
+>
+  <DailyView day={day} totalDays={groups.length} allDates={allDates} latestDate={latestDate} locale={locale} />
+</BaseLayout>

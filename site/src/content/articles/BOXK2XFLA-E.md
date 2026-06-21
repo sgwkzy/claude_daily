@@ -10,8 +10,8 @@ channelId: UC0C-17n9iuUQPylguM1d-lQ
 publishedAt: '2026-06-17T14:00:31Z'
 fetchedAt: '2026-06-18T04:16:38.388661Z'
 originalThumbnail: https://i.ytimg.com/vi/BOXK2XFLA-E/maxresdefault.jpg
-headerImage: /images/BOXK2XFLA-E/header.png
-heroImage: /images/BOXK2XFLA-E/header.png
+headerImage: /images/BOXK2XFLA-E/header.ja.png
+heroImage: /images/BOXK2XFLA-E/header.ja.png
 viewCount: 30637
 durationSec: 1105
 sourceLanguage: en
@@ -65,6 +65,86 @@ sections:
     エージェントは他の道具と違い、『周囲の世界が変わる』ことと『内部のモデルが良くなる』ことの2方向で壊れる。保守とはその2つの動く対象の間で適合を保ち続ける営みだ。著者はStewart
     Brandの『The Maintenance of Everything』を、保守の思考を学べる一冊として薦めている。'
   image: null
+en:
+  articleTitle: 'AI Agents Do Not Improve by Addition: Lessons From Vercel and Agent
+    Maintenance'
+  seoTitle: 'AI Agents Do Not Improve by Addition: Lessons From Vercel and Ag'
+  summary: Vercel reportedly improved its agents by removing 80 percent of their tools
+    rather than adding more.
+  keyPhrases:
+  - AI agents
+  - Vercel
+  - harness
+  - Codex
+  - Claude Code
+  - maintenance
+  bulletPoints:
+  - time: 0
+    text: Vercel reportedly improved its agents by removing 80 percent of their tools
+      rather than adding more.
+  - time: 12
+    text: The video frames that as a healthy counterexample to the idea that more
+      features and permissions automatically make agents better.
+  - time: 54
+    text: Instead of designing from an idealized playbook, Vercel studied the real
+      workflows of its best performers and built from observed behavior.
+  - time: 522
+    text: The speaker argues Codex is powerful not only because of the model but because
+      OpenAI keeps maintaining the surrounding harness.
+  - time: 560
+    text: He says the Claude Code team is making a similar bet by investing heavily
+      in the harness around terminals, browsers, and related tools.
+  - time: 1025
+    text: He closes by asking whether the agent's output is actually being read, changing
+      work, and saving time even after human review.
+  - time: 1046
+    text: 'Agents, he argues, break in two directions: when the world changes around
+      them and when the internal models inside them evolve.'
+  - time: 1083
+    text: He recommends the book "The Maintenance of Everything" as a way to think
+      more clearly about keeping technical systems working.
+  sections:
+  - heading: How Vercel Got Better Results by Removing Tools
+    time: 0
+    body: 'Vercel improved the performance of its internal agent by removing 80 percent
+      of its tools. The example is presented as a useful counterpoint to the common
+      assumption that agents automatically improve when given more context, memory,
+      tools, permissions, and autonomy.
+
+
+      The key, the speaker says, was careful observation of how the company''s best
+      salespeople actually worked. Rather than building around an idealized process
+      on paper, the team studied what they ignored, what they responded to, and where
+      human judgment still mattered, then designed the agent around the workflow that
+      existed in reality.'
+    image: null
+  - heading: Why the Harness Matters More Than People Admit
+    time: 522
+    body: 'Codex is strong, the speaker argues, not just because the model itself
+      is strong, but because OpenAI keeps investing in the harness around it: terminals,
+      desktop apps, IDEs, browsers, computer-use flows, approvals, and sandboxes.
+
+
+      That makes it more than a smart chatbot. It becomes a carefully maintained workbench
+      for mechanical work. He argues that the Claude Code team is making the same
+      strategic bet by investing heavily in the harness, treating the place where
+      real work happens as the starting point for agent design.'
+    image: null
+  - heading: Agent Maintenance as the Next Real Technical Discipline
+    time: 1046
+    body: 'The final point is that agent value has to be audited. Are people actually
+      reading the outputs? Did the outputs change the work? After review, are they
+      still saving time, or are they quietly adding more overhead?
+
+
+      Agents differ from ordinary tools because they can break in two ways at once:
+      the surrounding world changes, and the internal models get upgraded. Maintenance
+      is the practice of preserving fit between those two moving targets. To think
+      about that more clearly, the speaker recommends Stewart Brand''s "The Maintenance
+      of Everything."'
+    image: null
+  headerImage: /images/BOXK2XFLA-E/header.png
+  heroImage: /images/BOXK2XFLA-E/header.png
 ---
 
 ## ハイライト

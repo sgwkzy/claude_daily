@@ -10,8 +10,8 @@ channelId: UCUMZ7gohGI9HcU9VNsr2FJQ
 publishedAt: '2026-06-17T12:00:14Z'
 fetchedAt: '2026-06-19T00:52:38.910395Z'
 originalThumbnail: https://i.ytimg.com/vi/x2VHFgyawPE/maxresdefault.jpg
-headerImage: /images/x2VHFgyawPE/header.png
-heroImage: /images/x2VHFgyawPE/header.png
+headerImage: /images/x2VHFgyawPE/header.ja.png
+heroImage: /images/x2VHFgyawPE/header.ja.png
 viewCount: 171642
 durationSec: 4205
 sourceLanguage: en
@@ -71,6 +71,102 @@ sections:
 
     彼は、会社の歴史全体を見て最も整合的な仮説は何かを各人に問いかけ、自分たちは誠実に正しい方向を目指していると締めくくった。'
   image: null
+en:
+  articleTitle: 'Inside the Mind of Anthropic CEO Dario Amodei: The Weight of Exponential
+    Growth and a Bet on ''Doing the Right Thing'''
+  seoTitle: 'Inside the Mind of Anthropic CEO Dario Amodei: The Weight of Exp'
+  summary: Asked about sleep, Amodei said he is 'learning the skill of resting and
+    sleeping under abnormal pressure,' candidly…
+  keyPhrases:
+  - Dario Amodei
+  - Anthropic
+  - exponential growth
+  - job loss
+  - AI safety
+  - corporate ethics
+  bulletPoints:
+  - time: 7
+    text: Asked about sleep, Amodei said he is 'learning the skill of resting and
+      sleeping under abnormal pressure,' candidly acknowledging the mental load of
+      leading the company.
+  - time: 25
+    text: 'He likens the pace of AI to a spaceship accelerating to relativistic speeds:
+      every time he sleeps and wakes, days have passed on Earth, and he is constantly
+      processing several days'' worth of change in a single day.'
+  - time: 82
+    text: He calls swinging between 'everything is fine' and 'panic now' a hallmark
+      of immature decision-making. Like a surgeon or a soldier going into an operation,
+      the mature approach is to respond calmly, neither overestimating nor underestimating
+      the danger.
+  - time: 2032
+    text: Even as AI advances, he predicts that physical-world manufacturing and human-centered
+      work will remain. He notes that while he values discoveries AI makes in medicine,
+      people will still want to talk to people in important moments, so jobs rooted
+      in human relationships will grow in value.
+  - time: 2091
+    text: He strongly pushes back on the criticism that his warnings about job loss
+      are 'doom marketing that benefits Anthropic,' arguing that confronting risks
+      and offering ideas to address them is different from profiting by stoking fear.
+  - time: 4099
+    text: He references having voluntarily cut off model access for China, taking
+      a loss of hundreds of millions of dollars, a price that amounted to a substantial
+      share of revenue at the time, paid for its values without anyone ordering it.
+  - time: 4133
+    text: Admitting the company is far from perfect and has made many mistakes, he
+      argues that across its entire history the most consistent hypothesis is that
+      it is 'genuinely trying to do the right thing,' and closes by leaving the judgment
+      to each person.
+  sections:
+  - heading: The Weight of Exponential Growth and Staying Composed
+    time: 21
+    body: 'Bloomberg''s extended interview opens with Amodei''s personal burden. On
+      the subject of sleep, he admits he is still in the middle of learning how to
+      rest under pressure.
+
+
+      His analogy of AI''s acceleration to a spaceship traveling at relativistic speed
+      is telling: every time he sleeps and wakes, days have passed in the outside
+      world, and it feels like he is constantly dealing with several days'' worth
+      of change in a single day.
+
+
+      On top of that, he warns that swinging violently between crisis and optimism
+      is immature decision-making. Like a surgeon or a soldier, maturity means responding
+      rationally, neither overestimating nor underestimating the danger.'
+    image: null
+  - heading: The Jobs That Remain in the AI Era and a Rebuttal to 'Doom Marketing'
+    time: 2032
+    body: 'On the impact on employment, Amodei believes physical-world manufacturing
+      and human-centered jobs will remain. Even if AI can handle customer service
+      better, people will still want to talk to people in the moments that matter.
+
+
+      He pushes back hard on critics like Jensen Huang who argued he ''conflates tasks
+      with jobs'' and is ''fear-mongering to benefit Anthropic.'' He draws a line
+      between confronting risk and proposing solutions versus profiting from fear.
+
+
+      The role of aligning AI with someone''s values and intent will remain with humans,
+      he says, though how substantial that role will be is hard to read.'
+    image: null
+  - heading: The Price of Defending Its Values and the Company's Posture
+    time: 4099
+    body: 'Toward the end, Amodei lists the prices his company has paid for its values:
+      declining to release its most powerful model, and losing hundreds of millions
+      of dollars by cutting off access for China.
+
+
+      Neither, he stresses, was an action ordered by anyone; both were voluntary decisions.
+      Organizations are always imperfect and dysfunctional, but he says they have
+      tried to do the right thing while fixing themselves along the way.
+
+
+      He asks each viewer to consider, looking at the company''s entire history, what
+      the most consistent hypothesis is, and concludes that they are sincerely aiming
+      in the right direction.'
+    image: null
+  headerImage: /images/x2VHFgyawPE/header.png
+  heroImage: /images/x2VHFgyawPE/header.png
 ---
 
 ## ハイライト
