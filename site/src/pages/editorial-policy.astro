@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import { withBase } from "../lib/url";
 
 const lastUpdated = "2026-06-18";
 const description =
@@ -88,9 +89,13 @@ const description =
     <section class="space-y-3">
       <h2 class="text-xl font-bold text-ink">7. 連絡先</h2>
       <p>
-        編集方針や掲載内容に関するご連絡は、運営者の X アカウント
+        編集方針や掲載内容に関するご連絡は、メール
+        <a class="underline hover:text-coral" href="mailto:sugawalabo@gmail.com">sugawalabo@gmail.com</a>
+        または運営者の X アカウント
         <a class="underline hover:text-coral" href="https://x.com/sugawalabo" target="_blank" rel="noreferrer"> @sugawalabo </a>
-        までお願いいたします。
+        までお願いいたします。詳しくは
+        <a class="underline hover:text-coral" href={withBase("/contact/")}>お問い合わせページ</a>
+        をご確認ください。
       </p>
     </section>
   </article>

@@ -23,7 +23,10 @@ export async function GET() {
     { loc: toUrl("/"), lastmod: latestFetchedAt },
     { loc: toUrl("/about/"), lastmod: latestFetchedAt },
     { loc: toUrl("/editorial-policy/"), lastmod: latestFetchedAt },
+    { loc: toUrl("/privacy/"), lastmod: latestFetchedAt },
+    { loc: toUrl("/contact/"), lastmod: latestFetchedAt },
     { loc: toUrl("/notes/"), lastmod: latestFetchedAt },
+    { loc: toUrl("/archive/"), lastmod: latestFetchedAt },
     { loc: toUrl("/topics/"), lastmod: latestFetchedAt },
     ...groups.map((group) => ({
       loc: toUrl(`/days/${group.date}/`),
