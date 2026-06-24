@@ -66,8 +66,10 @@ const en = {
   "index.lastBrief": "LAST BRIEF",
   "index.heroTitleA": "Catch up on Claude videos",
   "index.heroTitleB": "just by reading.",
-  "index.heroSubtitle":
-    "We collect videos about Claude, Claude Code, Anthropic, and MCP every day and auto-generate slide-style summaries from their transcripts.",
+  "index.heroSubtitleA":
+    "We collect videos about Claude, Claude Code, Anthropic, and MCP every day ",
+  "index.heroSubtitleB":
+    "and auto-generate slide-style summaries from their transcripts.",
   "index.dailyBrief": "Daily Brief",
   "index.datesWithArticles": "Dates with articles",
   "index.latest": "Latest",
@@ -129,8 +131,10 @@ const ja: Dict = {
   "index.lastBrief": "LAST BRIEF",
   "index.heroTitleA": "Claudeを語る動画を、",
   "index.heroTitleB": "読むだけで掴む。",
-  "index.heroSubtitle":
-    "Claude・Claude Code・Anthropic・MCPに関する動画を毎日収集し、字幕からスライド風の日本語まとめを自動生成しています。",
+  "index.heroSubtitleA":
+    "Claude・Claude Code・Anthropic・MCPに関する動画を毎日収集し、",
+  "index.heroSubtitleB":
+    "字幕からスライド風の日本語まとめを自動生成しています。",
   "index.dailyBrief": "Daily Brief",
   "index.datesWithArticles": "記事のある日付",
   "index.latest": "最新",
