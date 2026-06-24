@@ -1,0 +1,5 @@
+SocksPort 127.0.0.1:9050
+DataDirectory F:\Work\claude-daily\batch\tor\data
+Log notice file F:\Work\claude-daily\batch\tor\tor.log
+GeoIPFile C:\Users\User\Tor Browser\Browser\TorBrowser\Data\Tor\geoip
+GeoIPv6File C:\Users\User\Tor Browser\Browser\TorBrowser\Data\Tor\geoip6

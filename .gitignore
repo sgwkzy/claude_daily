@@ -26,6 +26,10 @@ site/preview-card-copy-*.png
 site/public/images/_samples/
 *.bak
 
+# Tor フォールバックのランタイム状態（torrc のみ追跡、データ/ログは除外）
+batch/tor/data/
+batch/tor/tor.log
+
 # ドライラン生成のテスト記事・画像（本番には載せない）
 site/src/content/articles/dryrun-*.md
 site/public/images/dryrun-*/
