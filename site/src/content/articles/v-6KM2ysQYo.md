@@ -66,6 +66,8 @@ sections:
 
     産業構造の見立てはバランスが良い。インディーゲームが大好きで、ソロ開発者の生産物には常々感心している投稿者は、これらのツールがインディー開発者を置き換えるとは思っていない。むしろ、雑用
     (trivial tasks) をコーディングエージェントに渡して、本人が高付加価値タスクに集中できるようにする方向に向かう。次の技術展開を楽しみにしている、と締めくくる。'
+editorial: ゲーム未経験者がUnreal Engine 5.8とClaude CodeでGTA 6風を2時間で組んだ事実は、エンジン習熟という参入障壁が崩れ始めたことを示す。転機はUnreal側にMCPサーバーが載ったことで、AIがエディタを直接操作できる点にある。重要なのはplanning
+  mode——実装前にメカニクスや設計を議論させる使い方で、一発生成より設計対話が成果を左右する。投稿者の『置き換えではなく雑用を渡してハイチケット作業に集中』という結論は、AI開発支援の最も現実的な見立てだ。
 en:
   articleTitle: Claude Code × Unreal Engine 5.8 — A First-Timer Built a GTA 6-Style
     World in Two Hours
@@ -153,6 +155,14 @@ en:
       They make their lives easier — hand the trivial work to the agent, focus your
       time on the higher-leverage parts of the game. That''s the future he''s watching
       for.'
+  editorial: A game-development novice assembling a GTA 6-style scene in two hours
+    with Unreal Engine 5.8 and Claude Code shows the barrier of engine mastery beginning
+    to fall. The turning point is the MCP server on the Unreal side letting AI operate
+    the editor directly. What matters is planning mode — discussing mechanics and
+    design before implementation, where design dialogue, not one-shot generation,
+    drives the result. The creator's conclusion — not replacement, but handing off
+    chores to focus on high-ticket work — is the most realistic read on AI-assisted
+    development.
   headerImage: /images/v-6KM2ysQYo/header.png
   heroImage: /images/v-6KM2ysQYo/header.png
 ---
@@ -193,3 +203,7 @@ Leon van Zylの動画オープニングは衝撃的だ。『私はゲームを�
 投稿者の総括は冷静だ。エージェントの完了に時間がかかった理由は、MCPサーバーがまだ新しいから。今後Epicが洗練させて、複数エージェントが同じシーンを同時編集できる経路を作る可能性が高い。現状は同期的で、一度に1編集しかできないため『エージェントチームを編成して各エージェントが別の変更を担当』という理想像にはまだ届いていない。
 
 産業構造の見立てはバランスが良い。インディーゲームが大好きで、ソロ開発者の生産物には常々感心している投稿者は、これらのツールがインディー開発者を置き換えるとは思っていない。むしろ、雑用 (trivial tasks) をコーディングエージェントに渡して、本人が高付加価値タスクに集中できるようにする方向に向かう。次の技術展開を楽しみにしている、と締めくくる。
+
+## 編集部の視点
+
+ゲーム未経験者がUnreal Engine 5.8とClaude CodeでGTA 6風を2時間で組んだ事実は、エンジン習熟という参入障壁が崩れ始めたことを示す。転機はUnreal側にMCPサーバーが載ったことで、AIがエディタを直接操作できる点にある。重要なのはplanning mode——実装前にメカニクスや設計を議論させる使い方で、一発生成より設計対話が成果を左右する。投稿者の『置き換えではなく雑用を渡してハイチケット作業に集中』という結論は、AI開発支援の最も現実的な見立てだ。

@@ -67,6 +67,7 @@ sections:
 
     同日、Anthropic自身も別の発表をしている。AIの進化は予想より速く、人間の関与は減り、AIが自身のより高度な版を書き始めつつある — 再帰的自己改良
     (recursive self-improvement) が数十年でなく数年で来うる。Anthropic共同創業者Jack Clarkはブレーキペダルの比喩で訴える。複数国のAIラボが同じ条件で一時停止できる選択肢を持つこと。冷戦時、対立国同士が核軍拡を安定化させた前例があるように、AIでも同じことが必要になるかもしれない、と。'
+editorial: Zakariaの『AIのFed（連邦準備制度）』案が、90分通告という劇的な事件から引き出された建設的な論点だ。事前評価・透明な閾値・段階的対応・全社平等のルールという設計は、場当たり的な停止命令が同盟国に送る『米国はAIを恣意的にオン/オフできる』という不信への処方箋になる。同日にAnthropicが再帰的自己改良の加速を語った対比も鋭く、規制の制度設計が能力カーブに追いついていない現実を浮き彫りにする。AIガバナンスは技術ではなく制度の問題だと示す回だ。
 en:
   articleTitle: The 90-Minute Ultimatum Trump Gave Anthropic — Fareed Zakaria Makes
     the Case for a 'Fed for AI'
@@ -172,6 +173,14 @@ en:
       national labs under shared conditions. Cold War nuclear arms-control precedents
       show two rival powers can stabilise a race when both want to. AI may need the
       same.'
+  editorial: Zakaria's proposal for a 'Fed for AI' is the constructive point drawn
+    out of the dramatic 90-minute ultimatum. A design of pre-evaluation, transparent
+    thresholds, a graduated response ladder, and rules equal for all firms is a prescription
+    against the distrust an ad hoc shutdown signals to allies — that the US can switch
+    AI on and off at will. The contrast with Anthropic warning the same day about
+    accelerating recursive self-improvement is sharp, highlighting that institutional
+    design hasn't kept up with the capability curve. This is an episode showing AI
+    governance is an institutional problem, not a technical one.
   headerImage: /images/t7N7eZ68yFg/header.png
   heroImage: /images/t7N7eZ68yFg/header.png
 ---
@@ -212,3 +221,7 @@ Trump政権の対応は深く混乱している。2週間半前に大統領は�
 Zakariaの提案は明快だ。『AIの連邦準備制度』を作る。FRBは公的権威と民間専門知を組み合わせ、市場と恒常対話しつつ独立性を保ち、検査・ストレステスト・資本要件・指針公表・段階的介入で機能してきた。これはまさに先端AIに必要な構造だ。フロンティア開発者に評価のための事前リリースアクセスを求め、危険な能力の透明な閾値を設定し、警告→是正→条件付きデプロイ→制限という対応ラダーを敷き、ルールは全社平等に適用する。米国がまず作り、欧州と日本が並列機関を作って民主主義国が標準を協調する形だ。
 
 同日、Anthropic自身も別の発表をしている。AIの進化は予想より速く、人間の関与は減り、AIが自身のより高度な版を書き始めつつある — 再帰的自己改良 (recursive self-improvement) が数十年でなく数年で来うる。Anthropic共同創業者Jack Clarkはブレーキペダルの比喩で訴える。複数国のAIラボが同じ条件で一時停止できる選択肢を持つこと。冷戦時、対立国同士が核軍拡を安定化させた前例があるように、AIでも同じことが必要になるかもしれない、と。
+
+## 編集部の視点
+
+Zakariaの『AIのFed（連邦準備制度）』案が、90分通告という劇的な事件から引き出された建設的な論点だ。事前評価・透明な閾値・段階的対応・全社平等のルールという設計は、場当たり的な停止命令が同盟国に送る『米国はAIを恣意的にオン/オフできる』という不信への処方箋になる。同日にAnthropicが再帰的自己改良の加速を語った対比も鋭く、規制の制度設計が能力カーブに追いついていない現実を浮き彫りにする。AIガバナンスは技術ではなく制度の問題だと示す回だ。

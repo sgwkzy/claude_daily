@@ -1,4 +1,24 @@
 {
+ "Axol9AzdVIs": {
+  "ja": "Eliの『なぜ米国製AIに基盤を載せるのか』という問いは、技術論ではなく信頼の構造を突いている。性能で劣っても止められないローカルを選ぶという判断は、Fable禁輸が各国の主権AI志向を後押しした流れと地続きだ。注目すべきは『恐怖を売ってきたAnthropicが、その恐怖で殴られる』という皮肉で、安全性をマーケティングの軸にすることのビジネス的リスクを示す。性能の絶対値より『誰の都合で止まりうるか』が選定基準になりつつある。",
+  "en": "Eli's question — why build your foundation on US-made AI — targets the structure of trust rather than technology. Choosing a local model you can't be cut off from, even at lower performance, is continuous with how the Fable embargo pushed nations toward sovereign AI. The striking irony is that Anthropic, which sold fear, is now being hit with it — showing the business risk of making safety your marketing axis. The selection criterion is shifting from absolute capability to whose convenience can shut you down."
+ },
+ "HtKx75MwDBc": {
+  "ja": "『プロンプトを書くな、ループを設計しろ』は、抽象レイヤーを一段上げる宣言だ。4台のClaude Codeを24/7自走させる運用の核心は、構築・修正・検証・ゴール・記憶という5要素で、特に『ゴールと検証の対』がなければループは終われないという原則にある。操作者から建築家へという比喩は誇張ではなく、プロンプトが一度で消費されるのに対しループは席を外しても回り続けるという実務的な差を指す。再現性のある自動化を志すなら、良い指示よりループ設計が効く。",
+  "en": "'Don't write prompts, design loops' declares a move up one level of abstraction. The core of running four Claude Code machines 24/7 is five elements — build, fix, verify, goal, memory — and above all the principle that a loop can't end without a goal-and-verification pair. The operator-to-architect metaphor isn't hyperbole; it points to the practical difference that a prompt is consumed once while a loop keeps running when you leave your seat. For reproducible automation, loop design beats good instructions."
+ },
+ "hwbut4oUyN8": {
+  "ja": "『士業は保険屋になる』という結論が、AI合格そのものより重要だ。自作AIがSCAQに10戦10勝しても、顧客の税務相談に署名して責任を取れるわけではない——ここに自動化が届く範囲と人間が残る範囲の境界が鮮明に出る。報酬の意味が調査費から賠償責任の保険料へ移るという見立ては、専門職の価値の再定義として説得力がある。ハイブリッド検索＋HyDE＋リランキングで52点が70点台に跳ねた事実は、RAG設計の工夫が成果を決めることの好例でもある。",
+  "en": "The conclusion that 'professionals become insurers' matters more than the AI passing the exam. Even with a self-built AI going 10-for-10 on the SCAQ, it cannot sign off on a client's tax advice and bear liability — sharply drawing the line between what automation reaches and where humans remain. The view that fees shift from research cost to a liability-insurance premium is a persuasive redefinition of professional value. That hybrid search plus HyDE plus reranking lifted 52 to the 70s is also a clean example of RAG design deciding the outcome."
+ },
+ "t7N7eZ68yFg": {
+  "ja": "Zakariaの『AIのFed（連邦準備制度）』案が、90分通告という劇的な事件から引き出された建設的な論点だ。事前評価・透明な閾値・段階的対応・全社平等のルールという設計は、場当たり的な停止命令が同盟国に送る『米国はAIを恣意的にオン/オフできる』という不信への処方箋になる。同日にAnthropicが再帰的自己改良の加速を語った対比も鋭く、規制の制度設計が能力カーブに追いついていない現実を浮き彫りにする。AIガバナンスは技術ではなく制度の問題だと示す回だ。",
+  "en": "Zakaria's proposal for a 'Fed for AI' is the constructive point drawn out of the dramatic 90-minute ultimatum. A design of pre-evaluation, transparent thresholds, a graduated response ladder, and rules equal for all firms is a prescription against the distrust an ad hoc shutdown signals to allies — that the US can switch AI on and off at will. The contrast with Anthropic warning the same day about accelerating recursive self-improvement is sharp, highlighting that institutional design hasn't kept up with the capability curve. This is an episode showing AI governance is an institutional problem, not a technical one."
+ },
+ "v-6KM2ysQYo": {
+  "ja": "ゲーム未経験者がUnreal Engine 5.8とClaude CodeでGTA 6風を2時間で組んだ事実は、エンジン習熟という参入障壁が崩れ始めたことを示す。転機はUnreal側にMCPサーバーが載ったことで、AIがエディタを直接操作できる点にある。重要なのはplanning mode——実装前にメカニクスや設計を議論させる使い方で、一発生成より設計対話が成果を左右する。投稿者の『置き換えではなく雑用を渡してハイチケット作業に集中』という結論は、AI開発支援の最も現実的な見立てだ。",
+  "en": "A game-development novice assembling a GTA 6-style scene in two hours with Unreal Engine 5.8 and Claude Code shows the barrier of engine mastery beginning to fall. The turning point is the MCP server on the Unreal side letting AI operate the editor directly. What matters is planning mode — discussing mechanics and design before implementation, where design dialogue, not one-shot generation, drives the result. The creator's conclusion — not replacement, but handing off chores to focus on high-ticket work — is the most realistic read on AI-assisted development."
+ },
  "0DVUjpClqgI": {
   "ja": "ワンプロンプトでMinecraftやGTA風クローンが「動く」ところまで到達した事実は、華々しさの議論より重要だ。注目すべきは、モデルが自分で指示を補強しながら長い生成を完走した点で、これは単発の応答品質ではなく自律的な作業継続力が実用段階に入ったことを示す。粗さは残るが、プロトタイプ制作のコストが時間単位から分単位へ下がる流れは、個人開発者の企画検証のやり方を確実に変える。",
   "en": "What matters here is not whether the games are polished, but that a single prompt reached a playable Minecraft- or GTA-style clone at all. The striking part is the model rewriting its own instructions to carry a long build to completion — a sign that autonomous task persistence, not just single-response quality, is becoming practical. The rough edges remain, but collapsing prototype cost from hours to minutes will reshape how solo developers validate ideas."

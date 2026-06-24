@@ -64,6 +64,7 @@ sections:
 
 
     プロンプトは1メッセージ送れば使い切られる消費財だが、ループは自分が席にいなくても回り続ける。だから我々はもうエージェントの操作者ではなく『建築家』であるべきだ。3年以上動画を上げてきた投稿者の中核テーゼ『未来のプログラミング言語は自然言語』が、いまループという形で具体的な実装手法に落ちた、という総括で締める。チャンネルのマントラ『買うな、構築せよ、そしてループでより良く構築せよ』に繋がる。'
+editorial: 『プロンプトを書くな、ループを設計しろ』は、抽象レイヤーを一段上げる宣言だ。4台のClaude Codeを24/7自走させる運用の核心は、構築・修正・検証・ゴール・記憶という5要素で、特に『ゴールと検証の対』がなければループは終われないという原則にある。操作者から建築家へという比喩は誇張ではなく、プロンプトが一度で消費されるのに対しループは席を外しても回り続けるという実務的な差を指す。再現性のある自動化を志すなら、良い指示よりループ設計が効く。
 en:
   articleTitle: Stop Writing Prompts, Start Designing Loops — Running Four Claude
     Code Boxes 24/7
@@ -152,6 +153,13 @@ en:
       been pushing that thesis for over a year and a half on the channel; loops are
       where it finally cashes out into a concrete workflow. Channel mantra to close:
       don''t buy, build, and build better with loops.'
+  editorial: '''Don''t write prompts, design loops'' declares a move up one level
+    of abstraction. The core of running four Claude Code machines 24/7 is five elements
+    — build, fix, verify, goal, memory — and above all the principle that a loop can''t
+    end without a goal-and-verification pair. The operator-to-architect metaphor isn''t
+    hyperbole; it points to the practical difference that a prompt is consumed once
+    while a loop keeps running when you leave your seat. For reproducible automation,
+    loop design beats good instructions.'
   headerImage: /images/HtKx75MwDBc/header.png
   heroImage: /images/HtKx75MwDBc/header.png
 ---
@@ -192,3 +200,7 @@ Anthropic内部でClaude Codeを率いる人物自身が壇上で『プロンプ
 結論部で投稿者は明快なテーゼを提示する。『ツールを操作するな、エージェントを編成してツールを操作させ、さらにループでエージェント編成を編成せよ』。一段抽象を上げ、プロンプトを書くのをやめて『設計』を始める、という呼びかけだ。
 
 プロンプトは1メッセージ送れば使い切られる消費財だが、ループは自分が席にいなくても回り続ける。だから我々はもうエージェントの操作者ではなく『建築家』であるべきだ。3年以上動画を上げてきた投稿者の中核テーゼ『未来のプログラミング言語は自然言語』が、いまループという形で具体的な実装手法に落ちた、という総括で締める。チャンネルのマントラ『買うな、構築せよ、そしてループでより良く構築せよ』に繋がる。
+
+## 編集部の視点
+
+『プロンプトを書くな、ループを設計しろ』は、抽象レイヤーを一段上げる宣言だ。4台のClaude Codeを24/7自走させる運用の核心は、構築・修正・検証・ゴール・記憶という5要素で、特に『ゴールと検証の対』がなければループは終われないという原則にある。操作者から建築家へという比喩は誇張ではなく、プロンプトが一度で消費されるのに対しループは席を外しても回り続けるという実務的な差を指す。再現性のある自動化を志すなら、良い指示よりループ設計が効く。

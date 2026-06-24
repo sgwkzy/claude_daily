@@ -64,6 +64,7 @@ sections:
 
     対外的影響も語られた。UKでAI反発が小さいのは、UKがAIデータセンターを建てていないから。建設しなければ反対運動も起こらないが、AI産業の中心地にもなれない。EUが対米強硬姿勢を取ると宣言しても実際に何が実行されるかは別問題で、長期的には米国の恣意的政策が同盟国の主権AI志向
     (sovereign AI) と『取り上げられうる米国製品』という認識を強化している。AnthropicとTrump政権の摩擦は、その構造的代償の最初の請求書だ、とEliは締めくくる。'
+editorial: Eliの『なぜ米国製AIに基盤を載せるのか』という問いは、技術論ではなく信頼の構造を突いている。性能で劣っても止められないローカルを選ぶという判断は、Fable禁輸が各国の主権AI志向を後押しした流れと地続きだ。注目すべきは『恐怖を売ってきたAnthropicが、その恐怖で殴られる』という皮肉で、安全性をマーケティングの軸にすることのビジネス的リスクを示す。性能の絶対値より『誰の都合で止まりうるか』が選定基準になりつつある。
 en:
   articleTitle: Anthropic's Fear-Mongering Has Caught Up With Them — Eli the Computer
     Guy on Lost Trust in US AI
@@ -155,6 +156,13 @@ en:
       is hardening two trends: allies'' move toward sovereign AI, and the perception
       that US AI products are something that can be taken away. The Anthropic / Trump
       friction is the first invoice on that structural cost.'
+  editorial: Eli's question — why build your foundation on US-made AI — targets the
+    structure of trust rather than technology. Choosing a local model you can't be
+    cut off from, even at lower performance, is continuous with how the Fable embargo
+    pushed nations toward sovereign AI. The striking irony is that Anthropic, which
+    sold fear, is now being hit with it — showing the business risk of making safety
+    your marketing axis. The selection criterion is shifting from absolute capability
+    to whose convenience can shut you down.
   headerImage: /images/Axol9AzdVIs/header.png
   heroImage: /images/Axol9AzdVIs/header.png
 ---
@@ -195,3 +203,7 @@ Eliの本論はビジネス論だ。技術的にはAnthropicのモデルは依�
 番組ではDavid Sacks (All-In Podcast) の論法『AIは米国経済に良いのだから、米国人なら支持すべき』も検証された。確かに昨年AIブームはGDPを約1%押し上げ、Manhattan規模のデータセンター建設は実質的な需要を生んでいる。コヒーレントな論ではあるが、これでは規制の必要性に対する答えにならない、とEliは一蹴。
 
 対外的影響も語られた。UKでAI反発が小さいのは、UKがAIデータセンターを建てていないから。建設しなければ反対運動も起こらないが、AI産業の中心地にもなれない。EUが対米強硬姿勢を取ると宣言しても実際に何が実行されるかは別問題で、長期的には米国の恣意的政策が同盟国の主権AI志向 (sovereign AI) と『取り上げられうる米国製品』という認識を強化している。AnthropicとTrump政権の摩擦は、その構造的代償の最初の請求書だ、とEliは締めくくる。
+
+## 編集部の視点
+
+Eliの『なぜ米国製AIに基盤を載せるのか』という問いは、技術論ではなく信頼の構造を突いている。性能で劣っても止められないローカルを選ぶという判断は、Fable禁輸が各国の主権AI志向を後押しした流れと地続きだ。注目すべきは『恐怖を売ってきたAnthropicが、その恐怖で殴られる』という皮肉で、安全性をマーケティングの軸にすることのビジネス的リスクを示す。性能の絶対値より『誰の都合で止まりうるか』が選定基準になりつつある。

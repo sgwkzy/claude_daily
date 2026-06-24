@@ -64,6 +64,7 @@ sections:
 
 
     投稿者の本当の主張は別軸にある。公認会計士・弁護士の戦うゾーンが変わる。顧客が士業に払うお金の意味が『調査費・分析費』から『保険料』に変わるのだ。今でも士業賠償責任保険は存在するが、おまけの位置づけで、報酬の主軸はプロフェッショナルサービス料だ。これが逆転して、報酬の主軸が賠償責任引受料になる。士業はAIと人間のチェック役＋責任引受人として、保険料ベースのビジネスモデルへ移行する。AIを早く受け入れた士業は件数を10倍に増やして保険料ベースで回し、抵抗組は時間単価で徐々に苦しくなる、というのが10年後・20年後の景色になる、と動画は締めくくる。'
+editorial: 『士業は保険屋になる』という結論が、AI合格そのものより重要だ。自作AIがSCAQに10戦10勝しても、顧客の税務相談に署名して責任を取れるわけではない——ここに自動化が届く範囲と人間が残る範囲の境界が鮮明に出る。報酬の意味が調査費から賠償責任の保険料へ移るという見立ては、専門職の価値の再定義として説得力がある。ハイブリッド検索＋HyDE＋リランキングで52点が70点台に跳ねた事実は、RAG設計の工夫が成果を決めることの好例でもある。
 en:
   articleTitle: Every Licensed Professional Becomes an Insurer — My AI Just Passed
     the Singapore CPA Exam 10 for 10
@@ -161,6 +162,13 @@ en:
       professionals who embrace AI scale 10× on case volume and run on premium-based
       pricing. The holdouts keep billing hourly and get squeezed. That''s the 10–20
       year view he says became unmistakable from this one experiment.'
+  editorial: The conclusion that 'professionals become insurers' matters more than
+    the AI passing the exam. Even with a self-built AI going 10-for-10 on the SCAQ,
+    it cannot sign off on a client's tax advice and bear liability — sharply drawing
+    the line between what automation reaches and where humans remain. The view that
+    fees shift from research cost to a liability-insurance premium is a persuasive
+    redefinition of professional value. That hybrid search plus HyDE plus reranking
+    lifted 52 to the 70s is also a clean example of RAG design deciding the outcome.
   headerImage: /images/hwbut4oUyN8/header.png
   heroImage: /images/hwbut4oUyN8/header.png
 ---
@@ -201,3 +209,7 @@ AIの実装は3つの工夫を組み合わせている。第1にハイブリッ�
 投稿者はここからが本題だ、と言う。これはAIが公認会計士になったという話ではない。試験に受かったところで、AIが顧客の税務相談に乗って書類に署名し、賠償責任まで取れるわけではない。
 
 投稿者の本当の主張は別軸にある。公認会計士・弁護士の戦うゾーンが変わる。顧客が士業に払うお金の意味が『調査費・分析費』から『保険料』に変わるのだ。今でも士業賠償責任保険は存在するが、おまけの位置づけで、報酬の主軸はプロフェッショナルサービス料だ。これが逆転して、報酬の主軸が賠償責任引受料になる。士業はAIと人間のチェック役＋責任引受人として、保険料ベースのビジネスモデルへ移行する。AIを早く受け入れた士業は件数を10倍に増やして保険料ベースで回し、抵抗組は時間単価で徐々に苦しくなる、というのが10年後・20年後の景色になる、と動画は締めくくる。
+
+## 編集部の視点
+
+『士業は保険屋になる』という結論が、AI合格そのものより重要だ。自作AIがSCAQに10戦10勝しても、顧客の税務相談に署名して責任を取れるわけではない——ここに自動化が届く範囲と人間が残る範囲の境界が鮮明に出る。報酬の意味が調査費から賠償責任の保険料へ移るという見立ては、専門職の価値の再定義として説得力がある。ハイブリッド検索＋HyDE＋リランキングで52点が70点台に跳ねた事実は、RAG設計の工夫が成果を決めることの好例でもある。
