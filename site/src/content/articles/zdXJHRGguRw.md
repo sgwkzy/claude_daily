@@ -44,7 +44,6 @@ sections:
 
 
     CMの構成は実演ベース - 自分のフィットネス目標を語るユーザーに対し、Claude風のアシスタントが「明確で達成可能な目標ですね、パーソナライズドな運動メニューを作りましょうか」と丁寧に返す導入から始まる。'
-  image: null
 - heading: 「Step Boost Max」「HEIGHTMAXING10」 - 広告型AIへの公開風刺
   time: 12
   body: 'ユーザーは年齢23歳、身長5''7"、体重140lbsと答える。ここまでは正常な会話だ。次の瞬間、アシスタントは突然「美的な筋トレに重点を置いたプラン作りますね。でも自信はジムだけで生まれるものではありませんよ
@@ -52,14 +51,14 @@ sections:
 
 
     ユーザーの「えっ、何?」というリアクションを挟みつつ、アシスタントは「HEIGHTMAXING10コードで大幅割引です」とプロモを締める。日常的なAIアシスタント利用の中に、まるでテレビ通販のような割り込み広告がねじ込まれる近未来の異常さを、Anthropicは自社製品とは対比的に提示している。'
-  image: null
 - heading: Sam Altmanの反応と「価値観の対立」へ発展
   time: 48
   body: 'OpenAIのSam Altmanはこの広告に公にリアクションを返し、両社の応酬は商品仕様レベルの話を超えて、AIの「価値観・インセンティブ設計・将来像」を巡る公開論争に発展している、というのがThinknomyの整理だ。
 
 
     Anthropicの立ち位置は「ユーザーが頼んでもいない広告を体験に差し込まないAI」という商業モデル批判で、対するOpenAIは「広告は持続可能な収益化の手段」というスタンスを取りやすい。動画は「これがテック業界の次の大型ライバル関係になるか?」「あなたはAnthropicとOpenAIどちらのアプローチを信頼するか?」という問いで締めくくっている。'
-  image: null
+editorial: AnthropicのSuper Bowl広告がOpenAIを名指しで風刺した一件は、技術競争が価値観の競争へと舞台を移したことを示す。会話に広告を割り込ませるAIアシスタントへの皮肉は、収益化のインセンティブ設計がAIの信頼性を左右するという論点を、最も大衆的な舞台で突きつけた。Sam
+  Altmanが反応して論争化した構図も含め、どのモデルが賢いかではなく、誰のインセンティブを信じられるかが選択の軸になりつつある。
 en:
   articleTitle: Anthropic's Super Bowl Ad Calls Out OpenAI by Name, and Sam Altman
     Responds, in an Ad War
@@ -101,7 +100,6 @@ en:
       The ad is demonstration-based: it opens with a user describing their fitness
       goals, and a Claude-style assistant politely replying, ''Those are clear, achievable
       goals, shall I create a personalized workout plan for you?'''
-    image: null
   - heading: '''Step Boost Max'' and ''HEIGHTMAXING10'': Public Satire of Ad-Driven
       AI'
     time: 12
@@ -116,7 +114,6 @@ en:
       ''Use code HEIGHTMAXING10 for a big discount.'' Anthropic presents, in contrast
       to its own product, the near-future absurdity of TV-shopping-style interruptive
       ads being jammed into everyday AI-assistant use.'
-    image: null
   - heading: Sam Altman's Response and the Escalation Into a 'Clash of Values'
     time: 48
     body: 'OpenAI''s Sam Altman responded to the ad publicly, and the back-and-forth
@@ -130,7 +127,12 @@ en:
       to take the position that ''ads are a path to sustainable monetization.'' The
       video closes by asking, ''Will this become tech''s next big rivalry?'' and ''Whose
       approach do you trust, Anthropic''s or OpenAI''s?'''
-    image: null
+  editorial: Anthropic's Super Bowl ad satirizing OpenAI by name shows the contest
+    moving from technology to values. Mocking an AI assistant that injects ads into
+    conversation pressed, on the most mainstream stage, the point that monetization-incentive
+    design governs AI trustworthiness. Including Sam Altman's reaction turning it
+    into a public dispute, the axis of choice is becoming not which model is smarter
+    but whose incentives you can trust.
   headerImage: /images/zdXJHRGguRw/header.png
   heroImage: /images/zdXJHRGguRw/header.png
 ---
@@ -168,3 +170,7 @@ CMの構成は実演ベース - 自分のフィットネス目標を語るユー
 OpenAIのSam Altmanはこの広告に公にリアクションを返し、両社の応酬は商品仕様レベルの話を超えて、AIの「価値観・インセンティブ設計・将来像」を巡る公開論争に発展している、というのがThinknomyの整理だ。
 
 Anthropicの立ち位置は「ユーザーが頼んでもいない広告を体験に差し込まないAI」という商業モデル批判で、対するOpenAIは「広告は持続可能な収益化の手段」というスタンスを取りやすい。動画は「これがテック業界の次の大型ライバル関係になるか?」「あなたはAnthropicとOpenAIどちらのアプローチを信頼するか?」という問いで締めくくっている。
+
+## 編集部の視点
+
+AnthropicのSuper Bowl広告がOpenAIを名指しで風刺した一件は、技術競争が価値観の競争へと舞台を移したことを示す。会話に広告を割り込ませるAIアシスタントへの皮肉は、収益化のインセンティブ設計がAIの信頼性を左右するという論点を、最も大衆的な舞台で突きつけた。Sam Altmanが反応して論争化した構図も含め、どのモデルが賢いかではなく、誰のインセンティブを信じられるかが選択の軸になりつつある。

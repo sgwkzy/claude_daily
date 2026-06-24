@@ -46,21 +46,20 @@ sections:
 
 
     彼は、行き詰まるたびに自動でGemini Deep Researchをバックエンドで呼び出し、ファイルの不具合の原因を突き止めるループをClaude Codeで組んだ。亡くなった人の音声メモを取り戻すなど、ビジネスで実際に役立つ使い方をしている。'
-  image: null
 - heading: 予測不能さという最大の問題
   time: 501
   body: '彼の不満は技術ではなく、企業のビジネスの進め方にある。提供方針が突然変わる様子を、トランプ関税の乱高下になぞらえる。今日110ドルの商品が、ツイート一つで翌日210ドルになるような環境では、商売の利益計画が立たないという。
 
 
     そのうえで『企業に必要なのは最良の規制環境ではなく、一貫した環境だ』と説く。たとえ儲かる機会があっても、ルールが定まらず予測できない相手からは、商売人はむしろ離れていくと指摘する。'
-  image: null
 - heading: 優れた技術と、取引したくない相手
   time: 991
   body: '顧客を監視する用途ではなく、亡き祖母の最後の音声メモを取り戻すような、本当に価値ある使い方をしている人々に向けて彼は問いかける。どれほど性能が良くても、毎朝が新たな揉め事のような不安定な相手と取引したいかと。
 
 
     相手を、合鍵で勝手に家に入って片付けた翌日に怒り出す『最悪の元恋人』にたとえる。編集する時間もない勢い任せのラントだと断りつつ、それでもこれが1兆ドル規模のIPOを目指す企業の話なのだと皮肉って締めくくる。'
-  image: null
+editorial: Rossmannの『便利だが取引したくない』という評は、技術論ではなく信頼の問題を突いている。企業がツールに求めるのは最高性能ではなく一貫性で、上限・価格・モデル提供が予告なく変わる環境は、それ自体が導入リスクになる。Claude
+  Codeを業務基盤に据えるなら、能力評価と同じ重みで『提供の安定性』を評価軸に入れるべきだ。停止騒動や課金変更の文脈で、この指摘は一層重い。
 en:
   articleTitle: Claude Code Is Useful, but Anthropic Lacks the Consistency Businesses
     Need
@@ -108,7 +107,6 @@ en:
       in the background whenever it got stuck, helping identify the source of the
       file problem. He presents this as a real business use case, including recovering
       voice memos left by someone who had passed away.'
-    image: null
   - heading: 'The core complaint: unpredictability'
     time: 501
     body: 'His frustration is not with the technology itself, but with how the company
@@ -122,7 +120,6 @@ en:
       or commercial environment, they need a consistent one. Even when there is money
       to be made, merchants will pull back if the rules keep shifting and the counterparties
       cannot be predicted.'
-    image: null
   - heading: Powerful technology from a partner he would not trust
     time: 991
     body: 'Rossmann frames his criticism around people using these systems for genuinely
@@ -136,7 +133,12 @@ en:
       your house with a spare key, cleans everything up, and then gets angry the next
       day. He admits the video is an unedited rant, but ends by underlining the irony
       that this is a company aspiring to a trillion-dollar IPO.'
-    image: null
+  editorial: Rossmann's verdict — useful, but not someone to do business with — targets
+    trust rather than technology. What enterprises want from a tool is consistency,
+    not peak performance, and an environment where limits, pricing, and model availability
+    change without notice is itself an adoption risk. If you build on Claude Code,
+    weigh provider stability as heavily as capability. Against the backdrop of shutdowns
+    and billing changes, the point lands harder.
   headerImage: /images/2lfMtyXCNKg/header.png
   heroImage: /images/2lfMtyXCNKg/header.png
 ---
@@ -176,3 +178,7 @@ Rossmannはまず、Claude Code自体は本当に役立つと認める。店に�
 顧客を監視する用途ではなく、亡き祖母の最後の音声メモを取り戻すような、本当に価値ある使い方をしている人々に向けて彼は問いかける。どれほど性能が良くても、毎朝が新たな揉め事のような不安定な相手と取引したいかと。
 
 相手を、合鍵で勝手に家に入って片付けた翌日に怒り出す『最悪の元恋人』にたとえる。編集する時間もない勢い任せのラントだと断りつつ、それでもこれが1兆ドル規模のIPOを目指す企業の話なのだと皮肉って締めくくる。
+
+## 編集部の視点
+
+Rossmannの『便利だが取引したくない』という評は、技術論ではなく信頼の問題を突いている。企業がツールに求めるのは最高性能ではなく一貫性で、上限・価格・モデル提供が予告なく変わる環境は、それ自体が導入リスクになる。Claude Codeを業務基盤に据えるなら、能力評価と同じ重みで『提供の安定性』を評価軸に入れるべきだ。停止騒動や課金変更の文脈で、この指摘は一層重い。

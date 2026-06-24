@@ -46,21 +46,19 @@ sections:
 
     同日には日本国内でAnthropicが「Code with Claude」イベントを開催しており、Claude CodeやFable 5担当者へのインタビューも行われた。Claude
     Codeを全社的に活用することで開発速度が飛躍的に向上しているという証言が得られており、その詳細は後日改めて報告される予定とのこと。'
-  image: null
 - heading: 安全設計と能力評価
   time: 885
   body: 'Fable 5のサイバー攻撃能力はシステムカード上「0」と評価されている。これはモデル本体に対してサイバーセキュリティ関連の能力を一切拒否するアラインメントを施したためではなく、Fable本体とは別に構築された外部判定AIがリクエストの危険度を評価してフィルタリングする方式を採用したことによるものだ。
 
 
     このアプローチはAnthropicやOpenAIが以前から用いてきた手法であるが、根本的な問題も内包している。プロンプトインジェクションやジェイルブレイクによってフィルターを突破された場合、アラインメントを施していないモデル本体が危険な出力を無制限に行うリスクがある。一方で安全を優先してフィルターを過剰に厳しく設定すると、役員向けプレゼン作成やAIとの人格形成テストといった無害な用途まで拒否されるという過剰制限の問題がSNS上で多数報告されており、バランスの取り方が大きな課題として浮上している。'
-  image: null
 - heading: インフラ不足と課金高騰
   time: 1901
   body: 'AI性能の急速な向上に対し、それを支えるデータセンターの物理的な建設が追いついていない状況が深刻化している。各地で工事が進行しているものの、資材・人員・電力設備の調達には相当な時間がかかり、「人間にとって最も分かりやすいボトルネック」と表現された。
 
 
     この計算資源の慢性的な不足が、Anthropicのサービス料金高騰（俗に「課金地獄」）に直結している。Fable 5・ミュトス5の価格設定を見ると、「思っていたより先は遠い、こんなにお金が必要だったのか」という現実認識を改めて突きつけられる形となっている。スケーリング則への期待が高まってAGIへの道が近いと感じられた時期とは様相が変わり、アムダールの法則的な連鎖ボトルネックが各所で顕在化しているとまとめられた。'
-  image: null
+editorial: Fable 5の安全設計を『モデル本体ではなく外部AIフィルターで危険を遮断する方式』と整理した点が、この解説の核心だ。フィルター方式は突破されれば無制限の危険出力に転じ、厳しくすればプレゼン作成すら拒否する——能力と安全のトレードオフが構造的に解けていないことを示す。さらにデータセンター不足が『課金地獄』を生むという指摘は、AIの進化がインフラのボトルネックに律速される現実を冷静に映している。
 en:
   articleTitle: Claude Fable 5, External Filters, and Why AI Infrastructure Is Now
     the Bottleneck
@@ -115,7 +113,6 @@ en:
       to the segment, those conversations pointed to sharply faster development inside
       Anthropic by placing Claude Code at the center of company workflows, with a
       fuller report promised later.'
-    image: null
   - heading: How the Safety Design Shapes the Capability Rating
     time: 885
     body: 'Fable 5''s cyberattack capability is rated "0" in the system card. The
@@ -133,7 +130,6 @@ en:
       or running personality-formation tests with AI. The segment says many such overblocking
       examples have already surfaced on social media, making the calibration problem
       a central issue.'
-    image: null
   - heading: Compute Shortages, Higher Prices, and the Real Bottleneck
     time: 1901
     body: 'The video argues that physical data center construction is no longer keeping
@@ -150,7 +146,12 @@ en:
       more expensive than many expected. The mood has shifted from scaling-law optimism
       toward a more Amdahl''s-law view, where solving one bottleneck simply reveals
       the next.'
-    image: null
+  editorial: The core insight is framing Fable 5's safety as 'an external AI filter
+    blocking danger, not the model itself.' A filter approach flips to unrestricted
+    dangerous output if breached, and over-tightening it refuses even slide decks
+    — showing the capability-versus-safety trade-off remains structurally unsolved.
+    The note that data-center shortages create a 'billing hell' soberly captures how
+    AI progress is rate-limited by infrastructure bottlenecks.
   headerImage: /images/Fv8OC7skxT0/header.png
   heroImage: /images/Fv8OC7skxT0/header.png
 ---
@@ -189,3 +190,7 @@ Fable 5のサイバー攻撃能力はシステムカード上「0」と評価さ
 AI性能の急速な向上に対し、それを支えるデータセンターの物理的な建設が追いついていない状況が深刻化している。各地で工事が進行しているものの、資材・人員・電力設備の調達には相当な時間がかかり、「人間にとって最も分かりやすいボトルネック」と表現された。
 
 この計算資源の慢性的な不足が、Anthropicのサービス料金高騰（俗に「課金地獄」）に直結している。Fable 5・ミュトス5の価格設定を見ると、「思っていたより先は遠い、こんなにお金が必要だったのか」という現実認識を改めて突きつけられる形となっている。スケーリング則への期待が高まってAGIへの道が近いと感じられた時期とは様相が変わり、アムダールの法則的な連鎖ボトルネックが各所で顕在化しているとまとめられた。
+
+## 編集部の視点
+
+Fable 5の安全設計を『モデル本体ではなく外部AIフィルターで危険を遮断する方式』と整理した点が、この解説の核心だ。フィルター方式は突破されれば無制限の危険出力に転じ、厳しくすればプレゼン作成すら拒否する——能力と安全のトレードオフが構造的に解けていないことを示す。さらにデータセンター不足が『課金地獄』を生むという指摘は、AIの進化がインフラのボトルネックに律速される現実を冷静に映している。

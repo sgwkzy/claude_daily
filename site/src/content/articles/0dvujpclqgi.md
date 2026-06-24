@@ -43,7 +43,6 @@ sections:
 
 
     投稿者は、もしこれで本当に形になるなら他のモデルを使う意味がさらに薄れると感じており、単なるデモではなくモデル選定の分水嶺として見ている。Fable 5の強さを話題先行と切り捨てず、まずは実作業に置いて確かめる姿勢が一貫している。'
-  image: null
 - heading: FortniteとGTAまで広げる強気のテスト
   time: 276
   body: 'Minecraftだけではなく、より負荷の高いFortnite風、さらにGTA風の生成まで試している点がこの動画の特徴になっている。特にGTA級の広い世界や操作感を短時間でどこまで再現できるかは、Fable
@@ -51,14 +50,13 @@ sections:
 
 
     投稿者は、完成品の厳密さよりも「ここまでを一気に立ち上げられる」という事実に注目している。ベンチマーク値ではなく、実際に遊べるものを短時間で作る能力があるかが重要だという見方だ。'
-  image: null
 - heading: 粗さは残るが短時間生成の衝撃が勝る
   time: 449
   body: '終盤で示されたGTA風クローンには、プレイヤーモデルなど粗さの残る部分がある一方で、広いマップ、木や影の配置、滑らかな移動など、短時間生成としては十分に印象的な要素が揃っていた。投稿者は、制限がなければさらに先まで伸ばせた可能性にも触れている。
 
 
     結論として、この動画は「完成度100%の代替ゲーム」を示すものではなく、「1時間でここまで作れてしまう」という制作速度の飛躍を見せる内容だった。10年前なら不可能だった水準が、いまは個人の検証動画で現れているという衝撃を前面に出している。'
-  image: null
+editorial: ワンプロンプトでMinecraftやGTA風クローンが「動く」ところまで到達した事実は、華々しさの議論より重要だ。注目すべきは、モデルが自分で指示を補強しながら長い生成を完走した点で、これは単発の応答品質ではなく自律的な作業継続力が実用段階に入ったことを示す。粗さは残るが、プロトタイプ制作のコストが時間単位から分単位へ下がる流れは、個人開発者の企画検証のやり方を確実に変える。
 en:
   articleTitle: 'Claude Fable 5 Put to the Test: Minecraft, Fortnite, and GTA-Style
     Games'
@@ -107,7 +105,6 @@ en:
       treating this as a flashy demo, he frames it as a meaningful inflection point
       in model selection and evaluates Fable 5 through real work rather than headline
       claims.'
-    image: null
   - heading: An aggressive test that expands to Fortnite and GTA
     time: 276
     body: 'What sets the video apart is that it does not stop at Minecraft. It also
@@ -120,7 +117,6 @@ en:
       than in the fact that they can be stood up this quickly at all. His focus is
       not benchmark scores but whether the model can produce something playable in
       a short window.'
-    image: null
   - heading: Rough edges remain, but the speed is the real shock
     time: 449
     body: 'The GTA-style clone shown late in the video still has rough spots, including
@@ -135,7 +131,12 @@ en:
       video''s central impact comes from showing that a level of production speed
       that would have been unthinkable a decade ago is now appearing in an individual
       test video.'
-    image: null
+  editorial: What matters here is not whether the games are polished, but that a single
+    prompt reached a playable Minecraft- or GTA-style clone at all. The striking part
+    is the model rewriting its own instructions to carry a long build to completion
+    — a sign that autonomous task persistence, not just single-response quality, is
+    becoming practical. The rough edges remain, but collapsing prototype cost from
+    hours to minutes will reshape how solo developers validate ideas.
   headerImage: /images/0DVUjpClqgI/header.png
   heroImage: /images/0DVUjpClqgI/header.png
 ---
@@ -174,3 +175,7 @@ Minecraftだけではなく、より負荷の高いFortnite風、さらにGTA風
 終盤で示されたGTA風クローンには、プレイヤーモデルなど粗さの残る部分がある一方で、広いマップ、木や影の配置、滑らかな移動など、短時間生成としては十分に印象的な要素が揃っていた。投稿者は、制限がなければさらに先まで伸ばせた可能性にも触れている。
 
 結論として、この動画は「完成度100%の代替ゲーム」を示すものではなく、「1時間でここまで作れてしまう」という制作速度の飛躍を見せる内容だった。10年前なら不可能だった水準が、いまは個人の検証動画で現れているという衝撃を前面に出している。
+
+## 編集部の視点
+
+ワンプロンプトでMinecraftやGTA風クローンが「動く」ところまで到達した事実は、華々しさの議論より重要だ。注目すべきは、モデルが自分で指示を補強しながら長い生成を完走した点で、これは単発の応答品質ではなく自律的な作業継続力が実用段階に入ったことを示す。粗さは残るが、プロトタイプ制作のコストが時間単位から分単位へ下がる流れは、個人開発者の企画検証のやり方を確実に変える。

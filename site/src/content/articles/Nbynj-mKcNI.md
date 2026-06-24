@@ -49,21 +49,20 @@ sections:
 
 
     ベンチマーク上の位置取りは、Anthropicの Fable がトップ、次点でGPT 5.5、Opusがやや下、というのが著者の見立て。その並びにGLM 5.2が肉薄してきた、というのが本当の衝撃だ。閉じたフロンティアモデル一強の構図が、オープンソース勢の追い上げで揺らぎつつあることが、ベンチマークと実利用の両面から見えてきた。'
-  image: null
 - heading: Codex『record and replay』 — 画面操作をスキル化する
   time: 617
   body: 'Codex側の新機能『record and replay』も大きな前進だ。Codexのcomputer use機能を利用し、画面操作を録画し、それをスキルとして登録する。以降はCodexがそのスキルを呼び出して自動操作できる。
 
 
     実演では『Typefullyに最新動画を下書きアップロードする』タスクをスキル化し、Codex computer useで実際に走らせた。最大30分の録画まで対応し、長い操作も学習できる。実演中はTypefully側の512MB上限で動画アップが弾かれたが、Comet上でクリック・アップロードのフローは確実に再現できていた。録画から自動化までの距離が大きく縮まった、と評価できる。'
-  image: null
 - heading: スーパーアプリ時代の競合構図 — Googleへの注文
   time: 1258
   body: '今後のロードマップでは、中国勢からさらにオープンソースモデルが登場予定で、Geminiも新モデルとスーパーアプリ路線の発表が予想される。著者は『スーパーアプリ時代に既に100日入っている』と述べ、各社の方向性がいよいよ問われる局面だと指摘する。
 
 
     特に厳しい言葉が向けられるのがGoogleだ。Antigravity / AI Studio / Jules / Gemini Desktopなど候補が多すぎて、コンテンツ制作者として『どれを推せばいいか分からない』と本音を吐露。製品ラインの絞り込みと『スーパーアプリ』としての顔の確立が、Googleが本気で競争に戻るための条件だと述べた。'
-  image: null
+editorial: 週まとめの中で最も実務的に重いのはCodexの『record and replay』だ。画面操作を録画してそのままスキル化し自動実行できるなら、自動化の参入障壁はコード記述から『手順を一度やって見せる』ことへ下がる。GLM
+  5.2が1/5〜1/6のコストでフロンティアに迫る流れと合わせると、エージェント構築の民主化が二方向（作りやすさと安さ）で同時に進んでいるのが分かる。
 en:
   articleTitle: An Insane Week for AI Agents — GLM 5.2, Codex Skills, Claude, and
     Cursor
@@ -120,7 +119,6 @@ en:
       with that group. The single-frontier-leader narrative is collapsing in real
       time — both benchmarks and live use show the open-source side genuinely catching
       up.'
-    image: null
   - heading: Codex's 'record and replay' — turning screen actions into skills
     time: 617
     body: 'On the Codex side, ''record and replay'' is a serious step forward. Codex''s
@@ -134,7 +132,6 @@ en:
       limit blocked the actual file in the demo, but the click-through, navigation,
       and upload flow on Comet executed correctly. The distance between ''record once''
       and ''automate from now on'' just got dramatically shorter.'
-    image: null
   - heading: The super-app race and a pointed message for Google
     time: 1258
     body: 'Looking forward, more Chinese open-source models are coming, and Gemini
@@ -148,7 +145,12 @@ en:
       no clear answer. Google has too many products, none of which feels like the
       super app. Picking *one* and committing is the prerequisite for Google getting
       back into real competition — that''s the takeaway.'
-    image: null
+  editorial: The most operationally significant item in the roundup is Codex's 'record
+    and replay.' If you can record screen actions, turn them into a skill, and auto-execute,
+    the barrier to automation drops from writing code to 'demonstrating the steps
+    once.' Combined with GLM 5.2 nearing the frontier at a fifth to a sixth of the
+    cost, the democratization of agent building is advancing on two axes at once —
+    ease and affordability.
   headerImage: /images/Nbynj-mKcNI/header.png
   heroImage: /images/Nbynj-mKcNI/header.png
 ---
@@ -188,3 +190,7 @@ Codex側の新機能『record and replay』も大きな前進だ。Codexのcompu
 今後のロードマップでは、中国勢からさらにオープンソースモデルが登場予定で、Geminiも新モデルとスーパーアプリ路線の発表が予想される。著者は『スーパーアプリ時代に既に100日入っている』と述べ、各社の方向性がいよいよ問われる局面だと指摘する。
 
 特に厳しい言葉が向けられるのがGoogleだ。Antigravity / AI Studio / Jules / Gemini Desktopなど候補が多すぎて、コンテンツ制作者として『どれを推せばいいか分からない』と本音を吐露。製品ラインの絞り込みと『スーパーアプリ』としての顔の確立が、Googleが本気で競争に戻るための条件だと述べた。
+
+## 編集部の視点
+
+週まとめの中で最も実務的に重いのはCodexの『record and replay』だ。画面操作を録画してそのままスキル化し自動実行できるなら、自動化の参入障壁はコード記述から『手順を一度やって見せる』ことへ下がる。GLM 5.2が1/5〜1/6のコストでフロンティアに迫る流れと合わせると、エージェント構築の民主化が二方向（作りやすさと安さ）で同時に進んでいるのが分かる。

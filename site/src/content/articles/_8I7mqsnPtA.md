@@ -49,7 +49,6 @@ sections:
 
 
     完成したHarnessは有料ツールの「上位互換かつ完全代替」を標榜し、月額・運用費がいずれもゼロ。さらに公式LINEアカウントをパッと作れるところまで内包しているため、これまでコストの壁で諦めていた個人や小規模事業者まで救う。インタビュアー側も100万円規模の発注を予定していたLINE構築をHarnessで賄えたと話している。'
-  image: null
 - heading: Claude Code 11画面同時運用と差分プロンプトの設計
   time: 320
   body: '野田氏のPCは画面分割ツールでClaude Codeを11個並列起動している。Harnessプロジェクトの実装、ワークショップ準備、ヒアリングシート設計など、思いついたタスクをその場で横に差し込んで並行処理させる体制で、本人いわく「11倍の生産性」を実現するための運用形態だ。
@@ -59,7 +58,6 @@ sections:
 
 
     ワークショップで新規受講者に最初に必ずやらせるという演習も共有された。「過去のChatGPT会話履歴から、AIで全部できること(緑)/AIでもできること(黄)/自分にしかできないこと(赤)を絵文字で分類してください」と投げると、毎回同じ質問を無意識に繰り返している部分が可視化される、というものだ。'
-  image: null
 - heading: 「0円配布」を支える流動性の哲学とポストドーパミン経済
   time: 667
   body: 'なぜ無料でばら撒くのか。野田氏は「流動性を高めること自体が気持ちいい」と説明する。Netflix / Apple Music / Spotifyのように、かつて映画館やレコード店でアクセス上限のあった体験が、サブスクで無限化されてきた構図と地続きの発想だ。LINEツールの値段や複雑な管理画面という制約を、AIで溶かして液体化したい、というモチベーションが背骨にある。
@@ -70,7 +68,6 @@ sections:
 
     AIによってプロ品質の制作が誰でも可能になり、SNSはAIスロップで埋まる。野田氏はこの裏返しとして「本当に価値のあるものを少しの人が作って配布する」回帰の流れが来ると予想する。LINE
     Harnessはこの新しい潮流の中で先回りして「場所」を作っておく狙いがある。'
-  image: null
 - heading: 次のレイヤー - エージェントtoエージェントと人間の合意形成
   time: 1716
   body: '対談の終盤、野田氏は次に来る技術潮流として「ヒューマン・イン・ザ・ループ」と「エージェントtoエージェント」を挙げた。前者はAIが計画から実行まで担い、必要なときだけ人間に承認を求めるパイプライン。Adoness社が掲げる「TODO」ではなく「DOD(Definition
@@ -81,7 +78,7 @@ sections:
 
 
     最後に語られたビジョンは「世界政府」だ。AIが流動性を高める方向に進めば、国境という制約も次第に溶け、地域分業の発想に近づくのではないかという長期予測で、野田氏自身も実現は遠いと留保している。'
-  image: null
+editorial: 月5万円のLINEツールをClaude Codeで作り直し0円で配るという実践は、『ハーネスで0円』という思想の実演だ。11画面同時起動の並列開発体制や、公式ドキュメントと競合解説を読ませて差分から仕様を組む手法は、個人開発の生産性の天井が上がったことを示す。『制約を溶かして流動性を上げる』という動機と、エージェントtoエージェントへの展望は、ツールの話を超えて経済の形そのものを問うている。
 en:
   articleTitle: How Noda Is Driving LINE Automation to Zero Cost With Claude Code
   seoTitle: How Noda Is Driving LINE Automation to Zero Cost With Claude Cod
@@ -133,7 +130,6 @@ en:
       door for individuals and small businesses that previously gave up because of
       cost. The interviewer says Harness ended up covering a LINE build-out that would
       otherwise have required an order worth around 1 million yen.'
-    image: null
   - heading: Running Claude Code on 11 Screens and Designing Better Prompts
     time: 320
     body: 'Noda runs 11 parallel Claude Code instances on his PC using a screen-splitting
@@ -155,7 +151,6 @@ en:
       first: "Using your past ChatGPT conversation history, classify what AI can do
       entirely (green), what AI can also do (yellow), and what only you can do (red),
       using emoji." The goal is to reveal the questions people keep repeating unconsciously.'
-    image: null
   - heading: The Liquidity Thesis Behind Free Distribution and the Post-Dopamine Economy
     time: 667
     body: 'Why give it away for free? Noda says there is something inherently satisfying
@@ -178,7 +173,6 @@ en:
       fill with AI slop, Noda predicts a countertrend: a return to a world where a
       small number of people create and distribute genuinely valuable things. His
       goal with LINE Harness is to build that "place" ahead of the curve.'
-    image: null
   - heading: 'The Next Layer: Agent-to-Agent Systems and Human Consensus'
     time: 1716
     body: 'Near the end of the discussion, Noda points to two emerging technology
@@ -203,7 +197,13 @@ en:
       pushing toward greater liquidity, he argues, even borders as constraints may
       gradually dissolve, moving the world closer to a model of regional specialization,
       though he adds that realization is still far off.'
-    image: null
+  editorial: Rebuilding a ¥50k/month LINE tool in Claude Code and giving it away for
+    free is a live demonstration of the 'free via the harness' philosophy. Running
+    11 windows in parallel, and composing specs from the diff between official docs
+    and competitor explainers, show the ceiling of solo-developer productivity rising.
+    The motive of 'dissolving constraints to increase liquidity,' and the outlook
+    toward agent-to-agent interaction, push past tooling to question the shape of
+    the economy itself.
   headerImage: /images/_8I7mqsnPtA/header.png
   heroImage: /images/_8I7mqsnPtA/header.png
 ---
@@ -257,3 +257,7 @@ AIによってプロ品質の制作が誰でも可能になり、SNSはAIスロ�
 後者については、Google A2Aプロトコルに名指しで言及した。お互いのAIエージェントが翻訳役として挟まり、利益配分や意見の合意形成のような、複数人プロジェクトで最も面倒な部分をAIが補助する世界を想定している。「気難しいけれど能力のある人を、エージェント越しに連れてこれるようになる」と野田氏は語る。「動画も多面化する。今は一本アップして終わりだが、視聴者ごとに字幕レベル・ビジュアル・難易度が変換される」など、コンテンツ流通の構造変化にも触れた。
 
 最後に語られたビジョンは「世界政府」だ。AIが流動性を高める方向に進めば、国境という制約も次第に溶け、地域分業の発想に近づくのではないかという長期予測で、野田氏自身も実現は遠いと留保している。
+
+## 編集部の視点
+
+月5万円のLINEツールをClaude Codeで作り直し0円で配るという実践は、『ハーネスで0円』という思想の実演だ。11画面同時起動の並列開発体制や、公式ドキュメントと競合解説を読ませて差分から仕様を組む手法は、個人開発の生産性の天井が上がったことを示す。『制約を溶かして流動性を上げる』という動機と、エージェントtoエージェントへの展望は、ツールの話を超えて経済の形そのものを問うている。

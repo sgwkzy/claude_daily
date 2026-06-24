@@ -50,7 +50,6 @@ sections:
 
 
     そして米政府は国家安全保障を理由に、これら2モデルを外国人が使えないよう制限するようAnthropicへ要求した。'
-  image: null
 - heading: なぜAnthropicが最も競争力を持つのか
   time: 518
   body: '陳鳳馨は、最前線の大規模言語モデルはOpenAIのChatGPT、AnthropicのClaude、GoogleのGeminiにほぼ絞られるとした上で、最も競争力があるのはAnthropicだと見る。
@@ -60,7 +59,6 @@ sections:
 
 
     その結果、企業が抱える最も困難な業務において完遂度が最も高く、ビジネスモデルとしても成功していると評価する。'
-  image: null
 - heading: 各国が迫られる「自国AI」への動き
   time: 873
   body: '後半では、今回の禁止が世界に与える波及効果が語られる。データセンターでもモデル競争でも、各国が自前の開発を迫られる局面が訪れるのかという問いだ。
@@ -70,7 +68,7 @@ sections:
 
 
     結論として、Anthropicの一件は各国に警鐘を鳴らすと同時に、ハードウェアに新市場を開いたと締めくくった。'
-  image: null
+editorial: 台湾の評論家・陳鳳馨の分析が示すのは、外国人利用禁止が各国に『自前のAIデータセンターから着手せよ』という思考を迫った点だ。米国製AIへの依存リスクが顕在化すれば、中堅国は自衛として自国AI回帰に動く——禁止措置は皮肉にもハードウェアとインフラに新市場を生む。能力競争の話に隠れがちだが、AIの覇権は人材プールとインフラの所在という地理的条件に強く規定されている。
 en:
   articleTitle: What Anthropic's Ban Signals About the US-China AI Race and National
     AI Stacks
@@ -127,7 +125,6 @@ en:
 
       The US government then asked Anthropic to prevent foreign users from accessing
       both models on national security grounds.'
-    image: null
   - heading: Why She Sees Anthropic as the Most Competitive Lab
     time: 518
     body: 'Chen argues that the frontier LLM race has effectively narrowed to OpenAI''s
@@ -143,7 +140,6 @@ en:
       As a result, she says Anthropic now delivers the highest completion quality
       on the hardest corporate workflows and has built the more successful business
       model.'
-    image: null
   - heading: Why Countries Are Being Pushed Toward National AI Systems
     time: 873
     body: 'The second half turns to the global ripple effects of the ban. The question
@@ -158,7 +154,12 @@ en:
 
       Her conclusion is that the Anthropic incident warns countries about overdependence
       while simultaneously creating a new market around hardware.'
-    image: null
+  editorial: 'Taiwanese commentator Chen Feng-hsin''s analysis shows the foreign-use
+    ban pushing nations toward ''starting with their own AI data centers.'' As dependence
+    on US-made AI becomes a visible risk, mid-tier countries move toward sovereign
+    AI as self-defense — the ban ironically creating new markets in hardware and infrastructure.
+    Easy to miss amid capability talk, AI hegemony is strongly constrained by geographic
+    factors: where the talent pool and infrastructure sit.'
   headerImage: /images/aBXbQtr2I5c/header.png
   heroImage: /images/aBXbQtr2I5c/header.png
 ---
@@ -204,3 +205,7 @@ en:
 米国が燃やした資金規模に他国が追いつくのは難しく、人材は米中に集中している。それでも中堅国は、まずAIデータセンターから着手して自衛の機制を確保しようと動き始めていると指摘する。
 
 結論として、Anthropicの一件は各国に警鐘を鳴らすと同時に、ハードウェアに新市場を開いたと締めくくった。
+
+## 編集部の視点
+
+台湾の評論家・陳鳳馨の分析が示すのは、外国人利用禁止が各国に『自前のAIデータセンターから着手せよ』という思考を迫った点だ。米国製AIへの依存リスクが顕在化すれば、中堅国は自衛として自国AI回帰に動く——禁止措置は皮肉にもハードウェアとインフラに新市場を生む。能力競争の話に隠れがちだが、AIの覇権は人材プールとインフラの所在という地理的条件に強く規定されている。

@@ -46,21 +46,19 @@ sections:
 
 
     扱うのは、AIエージェント領域における9つの『不可避なトレンド』。理解すれば、どのツールを使っていてもエージェント活用が10倍うまくなるという。最新のTipsや小技、奇妙なプロンプトエンジニアリングのハックは扱わない。そうした多くは来年には変わり、おそらく無意味になるからだ。'
-  image: null
 - heading: 'トレンド5: 基礎スキルが最上位に来る'
   time: 1023
   body: '紹介される論点の一つ、トレンド5は『foundational skills（基礎スキル）が最上位に来る』というものだ。AIが賢くなるほど（これはトレンド1）、エージェント向けの再利用可能な指示＝スキルを作ることが容易になる。
 
 
     汎用エージェント、とりわけクラウドエージェントが iMessage や Slack といった日常ツールに入り込むにつれ、最終的に重要になるのは基礎スキルだという。階層で捉えると、最上層にプロンプトハックなどの小技、中層にCodexやClaudeといったツール（クラウド側はPokeやChorusなど）、そしてその土台に基礎スキルが位置する、という整理が示される。'
-  image: null
 - heading: '終盤のトレンド: ローカルモデルと常駐音声AI'
   time: 1985
   body: '終盤では、GLM 5.2 のようなローカルモデルがはるかに安価で大幅に高性能になっていると指摘し、今すぐ調べ始めることを強く勧める。
 
 
     さらに、デモで示した『Jarvis』のように、リアルタイム音声が進化している点を挙げる。リアルタイム音声とコンピュータ操作（computer use）の組み合わせは実に面白く、まだ初期段階だが、近い将来は声でスマホやPCを操作できるようになる。AIエージェントは背景でアクションを起こし、私たちのコンピュータ上で直接操作も行う——超人的なAIアシスタントが常駐する未来になる、と締めくくった。'
-  image: null
+editorial: 『エージェント・ネイティブになる』という枠組みで最も示唆的なのはトレンド5——基礎スキルが最上位に来るという指摘だ。プロンプトハックは陳腐化するが、再利用可能な指示（スキル）を作る力はAIが賢くなるほど価値を増す。上層の小技・中層のツール・土台の基礎スキルという階層整理は、何に投資すれば来年も腐らないかを示している。流行りのTipsを追うより、スキル化の習慣を作る方が長期的に効く。
 en:
   articleTitle: 'Becoming Agent-Native: 9 Durable AI Skills That Put You Ahead of
     99%'
@@ -109,7 +107,6 @@ en:
       matter which tool you prefer. The creator deliberately avoids the latest tips,
       tricks, and weird prompt-engineering hacks because most of them will change
       by next year and probably become irrelevant.'
-    image: null
   - heading: 'Trend 5: Foundational Skills Become the Main Advantage'
     time: 1023
     body: 'One of the central arguments, Trend 5, is that "foundational skills rise
@@ -123,7 +120,6 @@ en:
       layer, tools such as Codex and Claude in the middle layer, with products like
       Poke and Chorus on the cloud side, and foundational skills as the base layer
       underneath them all.'
-    image: null
   - heading: 'The Closing Trend: Local Models and Always-On Voice AI'
     time: 1985
     body: 'Near the end, the speaker argues that local models such as GLM 5.2 have
@@ -137,7 +133,12 @@ en:
       will be able to control phones and PCs by voice, while AI agents run actions
       in the background and directly operate the computer for them. The closing vision
       is a future of always-on, superhuman AI assistants.'
-    image: null
+  editorial: In the 'become agent-native' framework, the most suggestive is Trend
+    5 — foundational skills rise to the top. Prompt hacks go stale, but the ability
+    to author reusable instructions (skills) grows more valuable as AI gets smarter.
+    The layering — surface tricks, middle-layer tools, foundational skills as the
+    base — shows what to invest in so it won't rot next year. Building a habit of
+    skill-making beats chasing trendy tips over the long run.
   headerImage: /images/vhyna9ur6Gc/header.png
   heroImage: /images/vhyna9ur6Gc/header.png
 ---
@@ -176,3 +177,7 @@ en:
 終盤では、GLM 5.2 のようなローカルモデルがはるかに安価で大幅に高性能になっていると指摘し、今すぐ調べ始めることを強く勧める。
 
 さらに、デモで示した『Jarvis』のように、リアルタイム音声が進化している点を挙げる。リアルタイム音声とコンピュータ操作（computer use）の組み合わせは実に面白く、まだ初期段階だが、近い将来は声でスマホやPCを操作できるようになる。AIエージェントは背景でアクションを起こし、私たちのコンピュータ上で直接操作も行う——超人的なAIアシスタントが常駐する未来になる、と締めくくった。
+
+## 編集部の視点
+
+『エージェント・ネイティブになる』という枠組みで最も示唆的なのはトレンド5——基礎スキルが最上位に来るという指摘だ。プロンプトハックは陳腐化するが、再利用可能な指示（スキル）を作る力はAIが賢くなるほど価値を増す。上層の小技・中層のツール・土台の基礎スキルという階層整理は、何に投資すれば来年も腐らないかを示している。流行りのTipsを追うより、スキル化の習慣を作る方が長期的に効く。

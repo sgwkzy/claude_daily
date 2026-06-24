@@ -46,21 +46,19 @@ sections:
 
     これまでClaudeで作られたゲームは確かに動くものの、カプセル状のキャラクター、灰色の箱、世界全体に一枚のテクスチャ、といった見た目だった。コードは見事でもビジュアルが非常に質素だったのだ。今回はその弱点を、Claude（Fable
     5）と Higgsfield の MCP の組み合わせで解決する。'
-  image: null
 - heading: 30秒セットアップとMCPによる『見えないインフラ』
   time: 83
   body: '準備はわずか30秒・2ステップ。まず Higgsfield（Hixel）MCP のコネクタをClaudeに貼り付けてサインインすると、Claudeが本物のアセット（スキンやテクスチャ）を生成できるようになる。
 
 
     プレーンなAIチャットボットでもゲームをデプロイすること自体は可能だが、その場合は人間が仲介役として動く必要がある。MCP はインフラを『見えなく』し、ゲームを書くのと同じプロンプトがそのままホスティングまで担う。結果として、数分でプレイ可能なリンクが手に入り、デプロイの頭痛から解放される。各銃には固有の形状と個性があり、スナイパーはズームして高威力、バズーカは煙の軌跡を残してブロックを破壊できる。'
-  image: null
 - heading: 大手スタジオの反応と『先行優位は今』
   time: 585
   body: '自作なので評価が甘くなることを自覚した投稿者は、3本すべてを、ゲームを生業とするスタジオSmilegateに送った。同社のシューター『Crossfire』は2007年から運営され、6.7億人以上のプレイヤーを抱える。
 
 
     そのCEOが、視聴者と同じ映像を台本も補足もなしに視聴した。3文のプロンプトから昨日作られた3本のゲームを、その規模のスタジオが見てどう反応したか——AIゲームに対する先入観を揺さぶる場面だとされる。半年後には誰もが同じことをしてマーケットプレイスは飽和する。これが優位になる『窓』は今であり、新しいプラットフォームで勝つのは早く動く者だ、と締めくくる。すべてのゲーム・MCP・スキル・プロンプトは概要欄で公開されている。'
-  image: null
+editorial: コード0行で作った3Dゲームに一晩で4000人が集まったという結果は、制作と配信の境界が消えたことを示す。Higgsfield MCPがリアルなスキンとテクスチャを供給し、書くのと同じプロンプトがホスティングまで担う——MCPが『見えないインフラ』として機能する好例だ。Webカメラで手を追跡するフルーツ斬りのような発想が30秒セットアップで形になる時代に、差別化はもはや技術ではなくアイデアの速度に移っている。
 en:
   articleTitle: 'Building Real 3D Games with Claude + Higgsfield MCP: Three Multiplayer
     Titles in a Day, Played by ~4,000 People'
@@ -112,7 +110,6 @@ en:
       characters, gray boxes, and a single texture stretched across the whole world.
       The code was impressive, but the visuals were extremely plain. This time, that
       weakness is solved by combining Claude (Fable 5) with the Higgsfield MCP.'
-    image: null
   - heading: 30-Second Setup and 'Invisible Infrastructure' via MCP
     time: 83
     body: 'Setup takes just 30 seconds and two steps. First, paste the Higgsfield
@@ -126,7 +123,6 @@ en:
       link in minutes, free of deployment headaches. Each gun has its own shape and
       personality: the sniper zooms in for high damage, and the bazooka leaves a trail
       of smoke and can destroy blocks.'
-    image: null
   - heading: A Major Studio's Reaction and 'The Window Is Now'
     time: 585
     body: 'Aware that he would judge his own work too kindly, the creator sent all
@@ -141,7 +137,12 @@ en:
       be saturated. The ''window'' for an advantage is now, and the winners on a new
       platform are those who move fast, he concludes. All of the games, MCPs, skills,
       and prompts are shared in the description.'
-    image: null
+  editorial: Drawing 4,000 players overnight to a 3D game built with zero lines of
+    code shows the boundary between creation and distribution has dissolved. Higgsfield
+    MCP supplies real skins and textures, and the same prompt that writes the game
+    also handles hosting — a prime example of MCP as 'invisible infrastructure.' When
+    a webcam hand-tracking fruit-slicer takes shape in a 30-second setup, differentiation
+    has moved from technology to the speed of ideas.
   headerImage: /images/XzEgfmesG8c/header.png
   heroImage: /images/XzEgfmesG8c/header.png
 ---
@@ -180,3 +181,7 @@ en:
 自作なので評価が甘くなることを自覚した投稿者は、3本すべてを、ゲームを生業とするスタジオSmilegateに送った。同社のシューター『Crossfire』は2007年から運営され、6.7億人以上のプレイヤーを抱える。
 
 そのCEOが、視聴者と同じ映像を台本も補足もなしに視聴した。3文のプロンプトから昨日作られた3本のゲームを、その規模のスタジオが見てどう反応したか——AIゲームに対する先入観を揺さぶる場面だとされる。半年後には誰もが同じことをしてマーケットプレイスは飽和する。これが優位になる『窓』は今であり、新しいプラットフォームで勝つのは早く動く者だ、と締めくくる。すべてのゲーム・MCP・スキル・プロンプトは概要欄で公開されている。
+
+## 編集部の視点
+
+コード0行で作った3Dゲームに一晩で4000人が集まったという結果は、制作と配信の境界が消えたことを示す。Higgsfield MCPがリアルなスキンとテクスチャを供給し、書くのと同じプロンプトがホスティングまで担う——MCPが『見えないインフラ』として機能する好例だ。Webカメラで手を追跡するフルーツ斬りのような発想が30秒セットアップで形になる時代に、差別化はもはや技術ではなくアイデアの速度に移っている。

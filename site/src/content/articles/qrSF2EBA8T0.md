@@ -49,21 +49,19 @@ sections:
 
 
     そのAWS基盤の中でもっとも勢いがあるのが、AnthropicのClaude。Bedrock経由でセキュアにClaudeを使える環境提供が、国内顧客に圧倒的に支持されている。サーバーワークスはAWSパートナーとしてBedrockを軸にClaudeを実運用し、その手応えを率直に共有した。'
-  image: null
 - heading: AIDLCと多モデル戦略 — Claudeを安全に使い倒すコスト設計
   time: 731
   body: '大石氏は『AIDLC（AI-Driven Lifecycle）』という新しい開発手法を提唱した。エンジニアと業務を理解した人間がその場で一緒に座り、AIを使ってアプリケーションを最後まで一気に作り切る形だ。仕様策定からコード生成までツールが自動でサポートするため、生産性が劇的に上がるという。すでに顧客導入が始まっており、サーバーワークスの提供するソリューションの中核に位置づけられている。
 
 
     AWS側はコーディングエージェント『Kiro』を提供し、4月にはOpenAIとの提携でCodexもBedrock上でサポート開始。多モデル戦略を進める中でも、Claudeが現時点で圧倒的に人気だと安田氏は語る。一方で、Claudeをそのまま使い続けるとコストが嵩む現実も指摘。Bedrockであれば配下のオープンモデル（推論コスト無料のモデルもある）と組み合わせて、簡単なプログラミングやQAはコスト効率の高いモデルへ流すといったハイブリッド設計が組める。'
-  image: null
 - heading: 『社長エージェントは作らない』 — AIガバナンスと長期視点
   time: 1559
   body: '印象的だったのは、サーバーワークスの明確なAIガバナンス方針だ。『社長エージェントは絶対に作らない』。社長の判断や個性をエージェント化すると、それが何十年も会社に残り、時代変化への追随能力を失わせる、という見立てがある。社長の残像を会社に残さず、価値観だけは正しくAIに入れる。これは『AIをただ使う』ではなく『どう使わないか』の設計でもある。
 
 
     最後に両氏は視聴者へメッセージを送る。AWSは生成AIの基盤・テクノロジー提供で挑戦を支援する立場、サーバーワークスはAWSパートナーとして堀と戦略を持って長期で取り組み続ける立場。共通しているのは、生成AIの企業業績へのインパクトには遅延効果があるという認識で、今年すぐではなく中長期に実行し続けられる会社こそが生成AI時代の勝者になる、と締め括った。'
-  image: null
+editorial: サーバーワークスの企業戦略論で示唆的なのは、『社長エージェントは絶対に作らない』というAIガバナンスの線引きだ。便利だからと何でもエージェント化するのではなく、組織が時代変化に追随できなくなる残像を残さないという明示的な判断は、導入の成熟度を示す。AIDLCや多モデル戦略でClaudeを安全に使い倒すコスト設計と合わせ、『生成AIの効果は遅延する、勝者は中長期で実行を続ける会社』という結論が冷静で実務的だ。
 en:
   articleTitle: AWS × Claude In-House — Serverworks On How Japanese Enterprises Win
     the AI-Agent Era
@@ -126,7 +124,6 @@ en:
       enterprise customers are signing for. Serverworks operates Claude on Bedrock
       in production as an AWS partner, and the conversation is built on that real
       operational footing.'
-    image: null
   - heading: AIDLC and a multi-model stance — using Claude safely without going broke
     time: 731
     body: 'Oishi proposes AIDLC (AI-Driven Lifecycle), a new way to build software.
@@ -142,7 +139,6 @@ en:
       fast. Bedrock''s value is letting you route simple coding or QA work through
       cheaper open models — some at zero inference cost — and reserve Claude for what
       actually needs it. That''s the hybrid design that keeps the bill sane.'
-    image: null
   - heading: '''No CEO agent'' — explicit AI governance and the long game'
     time: 1559
     body: 'The most pointed moment was Serverworks'' governance line: they will not
@@ -159,7 +155,13 @@ en:
       The shared frame: generative AI''s effect on business performance arrives with
       delay, not this quarter. The companies that can hold the moat and keep executing
       over a medium-to-long horizon will be the winners of the generative AI era.'
-    image: null
+  editorial: 'What''s suggestive in Serverworks'' enterprise-strategy view is the
+    governance line: ''we will never build a CEO agent.'' Rather than agentifying
+    everything because it''s convenient, the explicit choice not to leave behind an
+    afterimage that prevents the organization from adapting signals adoption maturity.
+    Combined with cost design for using Claude safely via AIDLC and a multi-model
+    strategy, the conclusion — generative AI''s effect is delayed, and the winners
+    keep executing over the long term — is sober and practical.'
   headerImage: /images/qrSF2EBA8T0/header.png
   heroImage: /images/qrSF2EBA8T0/header.png
 ---
@@ -200,3 +202,7 @@ AWS側はコーディングエージェント『Kiro』を提供し、4月には
 印象的だったのは、サーバーワークスの明確なAIガバナンス方針だ。『社長エージェントは絶対に作らない』。社長の判断や個性をエージェント化すると、それが何十年も会社に残り、時代変化への追随能力を失わせる、という見立てがある。社長の残像を会社に残さず、価値観だけは正しくAIに入れる。これは『AIをただ使う』ではなく『どう使わないか』の設計でもある。
 
 最後に両氏は視聴者へメッセージを送る。AWSは生成AIの基盤・テクノロジー提供で挑戦を支援する立場、サーバーワークスはAWSパートナーとして堀と戦略を持って長期で取り組み続ける立場。共通しているのは、生成AIの企業業績へのインパクトには遅延効果があるという認識で、今年すぐではなく中長期に実行し続けられる会社こそが生成AI時代の勝者になる、と締め括った。
+
+## 編集部の視点
+
+サーバーワークスの企業戦略論で示唆的なのは、『社長エージェントは絶対に作らない』というAIガバナンスの線引きだ。便利だからと何でもエージェント化するのではなく、組織が時代変化に追随できなくなる残像を残さないという明示的な判断は、導入の成熟度を示す。AIDLCや多モデル戦略でClaudeを安全に使い倒すコスト設計と合わせ、『生成AIの効果は遅延する、勝者は中長期で実行を続ける会社』という結論が冷静で実務的だ。

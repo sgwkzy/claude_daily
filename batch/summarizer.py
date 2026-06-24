@@ -19,18 +19,22 @@ class TranscriptSummarizer:
         transcript_text = "\n".join(f"[{segment.start}] {segment.text}" for segment in segments)
         response = client.messages.create(
             model=self.model,
-            max_tokens=1600,
+            max_tokens=2200,
             temperature=0.2,
             system=(
-                "あなたはYouTube字幕を日本語の構造化記事に要約するアシスタントです。"
+                "あなたはYouTube字幕を日本語の構造化記事に要約・論評するアシスタントです。"
                 " 出力はJSONのみ。形式は "
                 "{\"articleTitle\":\"...\","
                 "\"bulletPoints\":[{\"time\":0,\"text\":\"...\"}],"
                 "\"sections\":[{\"heading\":\"...\",\"time\":0,\"body\":\"...\"}],"
-                "\"keyPhrases\":[\"...\"]}。"
+                "\"keyPhrases\":[\"...\"],"
+                "\"editorial\":\"...\"}。"
                 " articleTitleは必須。日本語の記事見出しで30〜50字程度。検索意図に沿った具体的な内容を含め、"
                 "元動画タイトルの直訳・直写しは禁止。煽り表現は禁止。感嘆符は禁止。絵文字は禁止。"
                 " bulletPointsは5〜8件、sectionsは3〜5件、timeは入力に存在する秒数を使うこと。"
+                " editorialは必須で、動画の単なる要約ではなく編集部独自の解説・論評。"
+                "なぜこの内容が重要か、開発者・Claudeユーザーへの示唆、関連する他の動向との接続を、"
+                "字幕に書かれていない視点で200〜400字程度で述べる。煽り・感嘆符・絵文字は禁止。"
             ),
             messages=[
                 {
@@ -91,5 +95,10 @@ def _dummy_summary(segments: list[TranscriptSegment]) -> SummaryResult:
             "bulletPoints": bullet_points,
             "sections": sections,
             "keyPhrases": ["Claude Code", "MCP", "AIエージェント", "開発フロー", "コンテキスト設計"],
+            "editorial": (
+                "この内容が重要なのは、AIコーディング支援の焦点が「うまいプロンプト」から「エージェントに渡す前提情報の設計」へ移りつつあることを示すためです。"
+                "AGENTS.md / CLAUDE.md とMCP連携を整えるほど、日々の指示は短くなり再現性が上がります。"
+                "他のエージェント系ツールの動向と合わせて見ると、開発体験の差は素の生成能力よりも周辺のコンテキスト整備で決まりつつあると言えます。"
+            ),
         }
     )

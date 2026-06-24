@@ -48,7 +48,6 @@ sections:
 
     大きな改善点は3つ。まず効率改善で使用上限まで持つ時間を延長。次に既存のデザインシステムをリポジトリ・デザインファイル・コードベースから取り込めるようにし、毎回ゼロから組ませる無駄を排除。さらにClaude
     Codeとの双方向ハンドオフを実装し、デザイン⇔実装の往復で発生していたトークン浪費を構造的に減らした。'
-  image: null
 - heading: エディタ再構築とインポート経路の拡大
   time: 40
   body: 'ダッシュボードはミニマルなまま刷新され、生成可能なデザインタイプが上部に並ぶ。新たにモーショングラフィックスやループといったアニメーション領域が前面に出されたのが特徴で、Claude
@@ -56,7 +55,6 @@ sections:
 
 
     ファイル起点のスタートも強化された。Figmaファイル、JPEG、PNG、HTMLに加え、GitHubリポジトリやローカルコードを直接インポートできるようになった。エディタ自体も再構築され、ドラッグ・リサイズ・整列が実コントロールで動くため、わずかな位置調整のたびにLLMを叩いてトークンを消費する従来の挙動を回避できる。'
-  image: null
 - heading: Claude Codeとの双方向ハンドオフが本命
   time: 463
   body: '実演ではユーザーリサーチプラットフォーム向けSaaSダッシュボードのプロンプトで検証。『デザインシステムに厳密に従って逸脱しないこと』と明示すれば、取り込み済みシステムを守った3レイアウトのバリエーションが生成された。
@@ -65,7 +63,7 @@ sections:
     本命機能はClaude Code側からClaude Designプロジェクトを丸ごとインポートし、逆方向にも継続編集できる点だ。コード派の開発者はClaude
     Codeで続け、デザイナー視点のキャンバスが必要になったらClaude Designに戻る、という双方向ワークフローが現実的になった。動画作者は『4月から待っていた2大機能はデザインシステム取り込みとClaude
     Codeハンドオフ』と評価する。使用上限は共有プール化・効率改善・手動編集機能で改善したが、Claude Proプランでは依然として早期に枯渇しがちで、完全解消ではない点も率直に指摘している。'
-  image: null
+editorial: Claude Designの大型更新で本命はClaude Codeとの双方向ハンドオフだ。デザイナー視点のキャンバスとコード視点を行き来できるなら、これまで分断されていたデザインと実装の境界が一つのワークフローに溶ける。一方で『100万ユーザーが15分で上限を溶かす』という初期問題は、生成AI製品の本質的なコスト構造を露わにする——体験の良さと提供コストのバランスが、機能数以上に製品の生死を分ける。
 en:
   articleTitle: Claude Design Gets a Major Update — Two-Way Handoff with Claude Code
     and Design System Imports
@@ -120,7 +118,6 @@ en:
       design files, or a codebase — no more rebuilding it from scratch every session.
       Third, a true bi-directional handoff with Claude Code removes the token-burn
       round trips that used to happen between design and implementation.'
-    image: null
   - heading: A rebuilt editor and wider import options
     time: 40
     body: 'The dashboard keeps its minimal feel but reorganises the main design types
@@ -132,7 +129,6 @@ en:
       you can now point Claude Design straight at a GitHub repo or upload local code.
       The editor itself was rebuilt: drag, resize, and align are real controls now,
       so small layout tweaks no longer cost a full LLM round trip.'
-    image: null
   - heading: The Claude Code two-way handoff is the headline feature
     time: 463
     body: 'In the demo, a user research SaaS dashboard prompt with the phrase ''adhere
@@ -146,7 +142,12 @@ en:
       it. The video''s creator calls this and the design-system import the two features
       he''s been waiting for since April. The usage limit is improved, but Claude
       Pro users will still hit the ceiling — it''s a real fix, not a complete one.'
-    image: null
+  editorial: 'The headline of Claude Design''s major update is the two-way handoff
+    with Claude Code. Moving between a designer''s canvas and a coder''s view dissolves
+    the long-standing split between design and implementation into one workflow. Meanwhile
+    the early problem — a million users melting their limits in 15 minutes — exposes
+    the intrinsic cost structure of generative-AI products: balancing experience quality
+    against delivery cost decides a product''s survival more than feature count.'
   headerImage: /images/VtD-KTeyxaU/header.png
   heroImage: /images/VtD-KTeyxaU/header.png
 ---
@@ -186,3 +187,7 @@ Claude Designは2ヶ月前のローンチ直後に初週で100万ユーザーを
 実演ではユーザーリサーチプラットフォーム向けSaaSダッシュボードのプロンプトで検証。『デザインシステムに厳密に従って逸脱しないこと』と明示すれば、取り込み済みシステムを守った3レイアウトのバリエーションが生成された。
 
 本命機能はClaude Code側からClaude Designプロジェクトを丸ごとインポートし、逆方向にも継続編集できる点だ。コード派の開発者はClaude Codeで続け、デザイナー視点のキャンバスが必要になったらClaude Designに戻る、という双方向ワークフローが現実的になった。動画作者は『4月から待っていた2大機能はデザインシステム取り込みとClaude Codeハンドオフ』と評価する。使用上限は共有プール化・効率改善・手動編集機能で改善したが、Claude Proプランでは依然として早期に枯渇しがちで、完全解消ではない点も率直に指摘している。
+
+## 編集部の視点
+
+Claude Designの大型更新で本命はClaude Codeとの双方向ハンドオフだ。デザイナー視点のキャンバスとコード視点を行き来できるなら、これまで分断されていたデザインと実装の境界が一つのワークフローに溶ける。一方で『100万ユーザーが15分で上限を溶かす』という初期問題は、生成AI製品の本質的なコスト構造を露わにする——体験の良さと提供コストのバランスが、機能数以上に製品の生死を分ける。

@@ -53,7 +53,6 @@ sections:
 
     前回のアクションRPG制作時、エージェント運用の是非をGemini / GPT / Claudeの3AIに聞いたところ、いずれも『今の段階でエージェントを使うのはお勧めしない、何も分からなくなる』という見解で見送った。今回はUnityの基礎理解が進んだことを前提に、Claude
     Code + Unity MCPでアニメ調オープンワールドの背景制作という具体目標で本格運用に挑む。'
-  image: null
 - heading: 予想外のシナジー — 参考画像 → ガラスマネージャー → 色合わせ自動化
   time: 1873
   body: '意外な発見もあった。ガラスマネージャーに参考画像を渡して『色を合わせて』と依頼すると、Claude Codeがツールを使って自動で色を合わせてくれる。狙って組んだフローではなく、たまたま噛み合った組み合わせだ。明るすぎる色味になっても『もう少し落ち着かせて』と指示すると即座に修正。彩度が少し落ちつつもアニメ調の良い色味に着地した。
@@ -61,7 +60,6 @@ sections:
 
     地形ツールでも工夫が見えた。道だけを自動でへこませるツールを作ったが、自分でブラシで凹凸をつけた背景の上で使うとブラシ加工が消えてしまう問題が発生。Claude
     Codeに『そこも配慮して』と依頼したら、その点を尊重した修正版を返してきた。AIが既存の手作業を破壊しない振る舞いに収まる、というのは実プロダクションでは大きな安心材料になる。'
-  image: null
 - heading: 実用線の引き方 — 時間がかかる場面とClaude Codeが真価を発揮する場面
   time: 3749
   body: '実用結論は明確だ。Claude Code+MCPは万能ではなく、時間がかかる場面も多い。AIを介さない方が早い局面は普通にある。だから現実的には、ツール化して自分でサクサクできるところは自分で進め、大規模作業や反復作業をClaudeに任せるという役割分担になる。一体キャラを実装したら『これに倣って他のキャラもやっといて』と頼めるのが反復作業での強さだ。
@@ -70,7 +68,7 @@ sections:
     Claude Codeの真価はバグ追跡力にある。Unity内部に直接入り、原因を実験的に切り分けて特定する能力が極めて強い。複雑なシステム構築・反復作業・デバッグ、この3点こそClaude
     Codeを使うべき領域だと制作者は結論する。最終的なアニメ調オープンワールドは前作より明確に雰囲気が良くなり、『だいぶ作れた』という評価。ただしフィールド作成ツール自体の制作には膨大な時間がかかったため、同じものをAsset
     Storeで数千円販売予定。『買った方が安い』という率直な総括で締めくくる。'
-  image: null
+editorial: Unity MCPでアニメ調オープンワールドに挑んだ検証の白眉は、『AIに任せない方が早い局面も多い』という率直な結論だ。Claude Codeの真価は一発生成ではなくバグ追跡力——エンジン内部に入って原因を実験的に切り分ける能力にある。ツール化できる単純作業は自分で、大規模・反復・デバッグはAIにという線引きは、エージェント活用の最も現実的な指針を示している。
 en:
   articleTitle: Can Claude Code × Unity MCP Build an Anime-Style Open World? A 65-Minute
     Field Test
@@ -134,7 +132,6 @@ en:
       so it was skipped. This time, with a stronger working knowledge of Unity, the
       creator commits to running Claude Code + Unity MCP at full strength, targeting
       an anime-style open-world background as the concrete goal.'
-    image: null
   - heading: Unexpected synergies — reference image → Grass Manager → auto colour
       match
     time: 1873
@@ -150,7 +147,6 @@ en:
       would have flattened the brushwork. After being told ''please respect those,''
       Claude Code returned a version that explicitly preserved the brush-made bumps.
       AI behavior that doesn''t trample your manual work matters a lot for real production.'
-    image: null
   - heading: Where to use Claude Code and where to stop
     time: 3749
     body: 'The practical conclusion is honest. Not everything benefits from AI. Claude
@@ -169,7 +165,12 @@ en:
       took serious work to build, so the creator is shipping it on the Asset Store
       at a few thousand yen — ''cheaper than building it yourself again, even with
       Claude helping.'''
-    image: null
+  editorial: The highlight of this anime-style open-world experiment with Unity MCP
+    is the honest conclusion that 'in many moments it's faster not to delegate.' Claude
+    Code's real strength isn't one-shot generation but bug tracing — entering the
+    engine internals and isolating causes experimentally. Doing simple, tool-able
+    tasks yourself while handing large, repetitive, and debugging work to AI offers
+    the most realistic guideline for agent use.
   headerImage: /images/QGaqvRLpx3U/header.png
   heroImage: /images/QGaqvRLpx3U/header.png
 ---
@@ -210,3 +211,7 @@ en:
 実用結論は明確だ。Claude Code+MCPは万能ではなく、時間がかかる場面も多い。AIを介さない方が早い局面は普通にある。だから現実的には、ツール化して自分でサクサクできるところは自分で進め、大規模作業や反復作業をClaudeに任せるという役割分担になる。一体キャラを実装したら『これに倣って他のキャラもやっといて』と頼めるのが反復作業での強さだ。
 
 Claude Codeの真価はバグ追跡力にある。Unity内部に直接入り、原因を実験的に切り分けて特定する能力が極めて強い。複雑なシステム構築・反復作業・デバッグ、この3点こそClaude Codeを使うべき領域だと制作者は結論する。最終的なアニメ調オープンワールドは前作より明確に雰囲気が良くなり、『だいぶ作れた』という評価。ただしフィールド作成ツール自体の制作には膨大な時間がかかったため、同じものをAsset Storeで数千円販売予定。『買った方が安い』という率直な総括で締めくくる。
+
+## 編集部の視点
+
+Unity MCPでアニメ調オープンワールドに挑んだ検証の白眉は、『AIに任せない方が早い局面も多い』という率直な結論だ。Claude Codeの真価は一発生成ではなくバグ追跡力——エンジン内部に入って原因を実験的に切り分ける能力にある。ツール化できる単純作業は自分で、大規模・反復・デバッグはAIにという線引きは、エージェント活用の最も現実的な指針を示している。

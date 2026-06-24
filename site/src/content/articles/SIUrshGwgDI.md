@@ -48,7 +48,6 @@ sections:
 
     Amodei氏は「モデルが実際にどう使われたか正確にはわからない。戦争で起きるミスは本当に痛ましい。ただし、いま語られているユースケースは我々のred linesにすら違反していない」と回答。司会らは「女子校を狙って100人超を殺害した事案がred
     line違反でないと言うのなら、その基準は何のために設定されているのか」と強い言葉で批判した。'
-  image: null
 - heading: それでも『業界内では倫理派』のままという皮肉
   time: 80
   body: '番組は同時に、Amodei氏がPentagonとの議論で「人間が判断に一切関与しない完全自律殺傷システム」の受託を断った経緯にも触れている。これによりPete
@@ -56,14 +55,13 @@ sections:
 
 
     だからこそ番組は『その彼ですらこの程度の回答にしかならないなら、業界全体のバーがいかに低いかが浮き彫りになる』と指摘する。倫理派CEOと『red line違反ではない』回答が同居している事実が、AI業界の現状をよく示しているという読み方だ。'
-  image: null
 - heading: Stanford walk outと『非対称な監視』
   time: 556
   body: '話題はStanfordの卒業式に飛び、Sundar Pichai氏の祝辞中に学生が大規模なwalk outを行ったエピソードへ。直接の発端はGoogleとIDFの契約だが、ガザがAI軍事技術のテスト場になっているとの認識と結びついており、commencementでAIに触れたスピーカーがブーイングを受ける流れも生じている。
 
 
     後半では、Ringカメラの映像を警察が「半径10ブロック分まとめて匿名提出してください」と要請できる構造や、その映像がAI訓練データへ流れる可能性まで議論。『政府には少なくとも投票がある。Meta株を500ドル分買って意見できる程度の株主に過ぎない我々は、AIを握る私企業に対して何のコントロールも持たない』という構図を、最大の懸念として整理している。'
-  image: null
+editorial: 「女子校襲撃はred lineに当たらない」というAmodei発言の批判的検討は、AI企業の倫理基準が実際の事案でどう機能するかを問う重い回だ。最も倫理を語る企業ですら、自社モデルの悪用可能性に対して明確な線を引けていない——掲げる原則と現実の運用の距離が露わになる。完全自律殺傷を拒んだ経緯と並べると、倫理は宣言ではなく個々の判断の積み重ねでしか測れないことが分かる。
 en:
   articleTitle: 'When a "Red Line" Is Not a Red Line: Breaking Points on Amodei and
     Iran'
@@ -118,7 +116,6 @@ en:
       being discussed did not even violate Anthropic''s red lines. The hosts respond
       sharply: if an incident involving more than 100 girls killed at a targeted school
       is not a red-line violation, then what purpose do those standards serve at all?'
-    image: null
   - heading: The Irony That This Still Counts as the "Ethical" Position in AI
     time: 80
     body: 'At the same time, the show notes that Amodei had previously refused Pentagon
@@ -133,7 +130,6 @@ en:
       bar remains across the industry. The coexistence of an "ethics-first" CEO and
       a "this is not a red-line violation" answer is, in their view, a clear snapshot
       of the current state of AI governance.'
-    image: null
   - heading: The Stanford Walkout and the Problem of Asymmetric Surveillance
     time: 556
     body: 'The discussion then jumps to Stanford''s commencement ceremony, where students
@@ -150,7 +146,13 @@ en:
       they argue, is asymmetry of control: governments are at least subject to elections,
       but ordinary people have virtually no meaningful control over private companies
       that own the AI systems, beyond the token influence of being small shareholders.'
-    image: null
+  editorial: The critical examination of Amodei's 'the girls'-school attack doesn't
+    cross a red line' is a weighty piece on how AI firms' ethical standards function
+    in real cases. Even the most ethics-vocal company can't draw a clear line against
+    potential misuse of its model — exposing the distance between stated principles
+    and actual operation. Set beside its refusal of fully autonomous lethal use, it
+    shows ethics can only be measured through accumulated individual judgments, not
+    declarations.
   headerImage: /images/SIUrshGwgDI/header.png
   heroImage: /images/SIUrshGwgDI/header.png
 ---
@@ -190,3 +192,7 @@ Amodei氏は「モデルが実際にどう使われたか正確にはわから�
 話題はStanfordの卒業式に飛び、Sundar Pichai氏の祝辞中に学生が大規模なwalk outを行ったエピソードへ。直接の発端はGoogleとIDFの契約だが、ガザがAI軍事技術のテスト場になっているとの認識と結びついており、commencementでAIに触れたスピーカーがブーイングを受ける流れも生じている。
 
 後半では、Ringカメラの映像を警察が「半径10ブロック分まとめて匿名提出してください」と要請できる構造や、その映像がAI訓練データへ流れる可能性まで議論。『政府には少なくとも投票がある。Meta株を500ドル分買って意見できる程度の株主に過ぎない我々は、AIを握る私企業に対して何のコントロールも持たない』という構図を、最大の懸念として整理している。
+
+## 編集部の視点
+
+「女子校襲撃はred lineに当たらない」というAmodei発言の批判的検討は、AI企業の倫理基準が実際の事案でどう機能するかを問う重い回だ。最も倫理を語る企業ですら、自社モデルの悪用可能性に対して明確な線を引けていない——掲げる原則と現実の運用の距離が露わになる。完全自律殺傷を拒んだ経緯と並べると、倫理は宣言ではなく個々の判断の積み重ねでしか測れないことが分かる。

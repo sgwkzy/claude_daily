@@ -51,7 +51,6 @@ sections:
 
 
     AI界はハイプに満ちているが、私たちが日々使っているツールの作者2人が揃って同じことを言うなら聞く価値がある。動画作者はこの提言を受けて『ループエンジニアリング』を深掘りし、3パート構成で解説する。ループとは何か／成功するループの4要素／技術知識ゼロでも今日作れる最初のループ、という流れだ。'
-  image: null
 - heading: ループの本質 — ゴールと検証の不可分性
   time: 320
   body: '通常のプロンプトは1回実行して止まる。対してループは、特定のゴールが完了するまで何度でも自走するプロンプトの集合体だ。Boris氏自身の働き方を引用すると『ループが回っている。ループが
@@ -59,7 +58,6 @@ sections:
 
 
     成功するループにはゴールと検証が必ずセットで必要となる。検証ができなければゴールが達成された証拠が無く、ループは終われない。技術タスクは比較的単純で、『このドメインにサイトをデプロイ、ロード時間2秒未満』というゴールなら、AIがドメインへアクセスして期待コンテンツ確認・ロード時間計測・/engineer-reviewスキルの承認、を自動で繰り返せばよい。'
-  image: null
 - heading: 非技術タスクと人間チェックポイント — 最初のループを作るコツ
   time: 367
   body: '非技術タスクのループは『抽象を検証可能な形に橋渡しする』ところがキモだ。『コードの良し悪し』のような曖昧な概念も、/engineer-reviewスキルを通せば『承認／非承認』の二値判定に落とせる。同じ発想を非技術タスクにも適用すれば、定量化しにくい結果でも検証可能なステップを設計できる。
@@ -68,7 +66,7 @@ sections:
     ルールはシンプルで、ゴールが定量化しにくいほど小さなサブゴールへ分解し、各チェックポイントで成果を確認する。AIをインターン扱いしてみよう。『社内パーティを企画して』と丸投げすると何でもしてしまうが、『日程』『会場』『テーマ』のような重要分岐点では人間が必ず判断する。これがループのhuman
     verification checkpointだ。非定量タスクほど、AIが誤った方向へ進むと残り全てが台無しになる分岐点を人間が押さえる設計が重要になる。動画作者は『loop
     orchestration skillとして小さく始めるのが最良の入口だ』と締め括る。'
-  image: null
+editorial: 「もうプロンプトしない、僕の仕事はループを書くことだ」というBoris Cherny氏の提言は、抽象レイヤーの一段上への移行を宣言している。要点は『ゴールと検証は不可分』という原則——達成を検証できなければループは終われない。非定量タスクを検証可能な二値に落とし込み、誤れば全てが台無しになる分岐点に人間のチェックポイントを置く設計思想は、エージェント運用の最も実践的な骨格を与える。
 en:
   articleTitle: Stop Prompting Claude — Loop Engineering and the Four Things Every
     Loop Needs
@@ -132,7 +130,6 @@ en:
       video author takes the claim seriously and breaks loop engineering into three
       parts: what a loop actually is, the four ingredients of a successful loop, and
       how a non-technical person can build their first one today.'
-    image: null
   - heading: What a loop actually is — goal and verification are inseparable
     time: 320
     body: 'A normal prompt runs once and stops. A loop is a prompt structure that
@@ -146,7 +143,6 @@ en:
       tasks make this easy. ''Deploy this site and make sure it loads in under 2 seconds''
       has obvious verification: hit the domain, check content, time the load, and
       run /engineer-review for the final yes/no.'
-    image: null
   - heading: Non-technical loops and human checkpoints — building your first one
     time: 367
     body: 'Non-technical loops are about bridging an abstract goal to a verifiable
@@ -162,7 +158,12 @@ en:
       where one wrong turn ruins the rest of the run, and verify those by hand. The
       author''s closing advice: pick something small and build a single loop orchestration
       skill for it. That''s how the muscle gets built.'
-    image: null
+  editorial: 'Boris Cherny''s claim — ''I no longer prompt; my job is to write loops''
+    — declares a move up one level of abstraction. The crux is the principle that
+    goal and verification are inseparable: a loop can''t end if you can''t verify
+    completion. Reducing non-quantitative tasks to a verifiable binary and placing
+    human checkpoints at branch points where a wrong turn ruins everything gives the
+    most practical skeleton for operating agents.'
   headerImage: /images/YAS4ojuhbW4/header.png
   heroImage: /images/YAS4ojuhbW4/header.png
 ---
@@ -203,3 +204,7 @@ AI界はハイプに満ちているが、私たちが日々使っているツー
 非技術タスクのループは『抽象を検証可能な形に橋渡しする』ところがキモだ。『コードの良し悪し』のような曖昧な概念も、/engineer-reviewスキルを通せば『承認／非承認』の二値判定に落とせる。同じ発想を非技術タスクにも適用すれば、定量化しにくい結果でも検証可能なステップを設計できる。
 
 ルールはシンプルで、ゴールが定量化しにくいほど小さなサブゴールへ分解し、各チェックポイントで成果を確認する。AIをインターン扱いしてみよう。『社内パーティを企画して』と丸投げすると何でもしてしまうが、『日程』『会場』『テーマ』のような重要分岐点では人間が必ず判断する。これがループのhuman verification checkpointだ。非定量タスクほど、AIが誤った方向へ進むと残り全てが台無しになる分岐点を人間が押さえる設計が重要になる。動画作者は『loop orchestration skillとして小さく始めるのが最良の入口だ』と締め括る。
+
+## 編集部の視点
+
+「もうプロンプトしない、僕の仕事はループを書くことだ」というBoris Cherny氏の提言は、抽象レイヤーの一段上への移行を宣言している。要点は『ゴールと検証は不可分』という原則——達成を検証できなければループは終われない。非定量タスクを検証可能な二値に落とし込み、誤れば全てが台無しになる分岐点に人間のチェックポイントを置く設計思想は、エージェント運用の最も実践的な骨格を与える。

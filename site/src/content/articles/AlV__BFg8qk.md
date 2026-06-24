@@ -46,21 +46,19 @@ sections:
 
 
     そこで取り組んできたのが、より速く作り、より多く反復できるツール群だ。『あなたのソース、あなたのパイプライン、あなたのワークフロー』という、開発者にツールの完全な制御を渡してエンジンは黙って下がる、というUnreal本来の哲学は変えず、それを大規模言語モデルに適用したのだと説明する。'
-  image: null
 - heading: Claude CodeをつなぐMCPサーバー
   time: 66
   body: 'Unreal Engine 5.8では、エンジンと任意のモデルの間を橋渡しするMCPサーバーが実装された。このプレゼンではClaude Codeを使っているが、Gemini、独自のカスタムモデルなど、好きなモデルを接続できる。有効化の手順もシンプルで、プラグインをオンにし、少し設定し、モデルに接続するだけだ。
 
 
     さらにEpicは、MCPサーバーに加えてPCG Primitiveプラグインと自社開発のスキルを5.8の一部として当日出荷すると発表した。すべてオープンで拡張自由であり、ダウンロードして自分のモデルを向け、何ができるか試してほしいと呼びかける。自分のチームのプリミティブや事例、スキルを積み上げるほど、プロジェクトの全員にとって有用になっていく仕組みだ。'
-  image: null
 - heading: 成果と実験的ステータス
   time: 476
   body: 'デモで示された内容は、手作業なら数か月かかるところを、MCPサーバーとUnrealを使ってアーティストが数日で作り上げたものだという。技術的な摩擦を下げれば、より多く反復でき、より良いゲームが作れる——それが今回構築したものの核心だと強調された。
 
 
     一方で、これを支えるMCPサーバーはあくまで実験的な段階にあり、画像・動画生成として見せた機能は来年初頭に提供予定とされる。Epicは、モデルが真に有用であるためには技術的複雑さを下げるだけでなく、作り手に対して『何を作るか』の完全な創造的コントロールを与えることが不可欠だと位置づけ、この取り組みを共に進む旅だと締めくくった。'
-  image: null
+editorial: Unreal Engine 5.8がMCPサーバーを標準で積むという決定は、ゲームエンジンが特定のAIに縛られず『好きなモデルを接続できる』中立的なインターフェースを選んだことを意味する。数か月の作業を数日に縮める効果よりも、エンジン側が哲学として『あなたのパイプライン』を掲げてLLMを後付け可能にした設計判断が重い。実験段階とはいえ、制作ツールがAI連携を前提に作り替えられていく流れの先頭事例だ。
 en:
   articleTitle: Unreal Engine 5.8 Adds Experimental MCP Support for Claude Code Workflows
   seoTitle: Unreal Engine 5.8 Adds Experimental MCP Support for Claude Code
@@ -113,7 +111,6 @@ en:
       source, your pipeline, your workflow," where developers keep full control and
       the engine gets out of the way. Instead, it is extending that philosophy to
       large language models.'
-    image: null
   - heading: An MCP Server That Connects Claude Code to Unreal
     time: 66
     body: 'Unreal Engine 5.8 introduces an MCP server that acts as a bridge between
@@ -128,7 +125,6 @@ en:
       it at their own models, and see what becomes possible. The more a team adds
       its own primitives, examples, and skills, the more useful the system becomes
       across the project.'
-    image: null
   - heading: Early Results and an Explicitly Experimental Status
     time: 476
     body: 'According to the demo, work that would have taken months manually was completed
@@ -141,7 +137,12 @@ en:
       the image and video generation capabilities shown onstage are slated for release
       early next year. The broader goal, the company says, is not only to reduce technical
       complexity but to give creators complete control over what they choose to make.'
-    image: null
+  editorial: 'Unreal Engine 5.8 shipping an MCP server by default means the engine
+    chose a neutral interface — connect any model — rather than locking to one AI.
+    More than compressing months of work into days, the weight is in the design stance:
+    the engine frames ''your pipeline'' as philosophy and makes the LLM a pluggable
+    layer. Experimental as it is, this is a leading case of authoring tools being
+    rebuilt around AI integration as a premise.'
   headerImage: /images/AlV__BFg8qk/header.png
   heroImage: /images/AlV__BFg8qk/header.png
 ---
@@ -180,3 +181,7 @@ Unreal Engine 5.8では、エンジンと任意のモデルの間を橋渡しす
 デモで示された内容は、手作業なら数か月かかるところを、MCPサーバーとUnrealを使ってアーティストが数日で作り上げたものだという。技術的な摩擦を下げれば、より多く反復でき、より良いゲームが作れる——それが今回構築したものの核心だと強調された。
 
 一方で、これを支えるMCPサーバーはあくまで実験的な段階にあり、画像・動画生成として見せた機能は来年初頭に提供予定とされる。Epicは、モデルが真に有用であるためには技術的複雑さを下げるだけでなく、作り手に対して『何を作るか』の完全な創造的コントロールを与えることが不可欠だと位置づけ、この取り組みを共に進む旅だと締めくくった。
+
+## 編集部の視点
+
+Unreal Engine 5.8がMCPサーバーを標準で積むという決定は、ゲームエンジンが特定のAIに縛られず『好きなモデルを接続できる』中立的なインターフェースを選んだことを意味する。数か月の作業を数日に縮める効果よりも、エンジン側が哲学として『あなたのパイプライン』を掲げてLLMを後付け可能にした設計判断が重い。実験段階とはいえ、制作ツールがAI連携を前提に作り替えられていく流れの先頭事例だ。

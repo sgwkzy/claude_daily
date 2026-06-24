@@ -52,14 +52,12 @@ sections:
 
     問題提起が鋭い。『2026年にもなってAIを普通のチャットボックスのように使い、毎回プロンプトを書いて、毎回コンテキストを再説明して、結局自分で作業するという使い方をしている人は文字通り遅れている』。Claudeパワーユーザーは
     Skills や Cowork を使い、ユーザーが何もしなくてもClaudeが大小のタスクをこなし続けるワークフローを既に構築している。レギュラーのコマンドや指示すらせずに、だ。動画はそこへ追いつく道筋を示すことを目的とする。'
-  image: null
 - heading: 非エンジニアの体験 — 『意味は分からないけど見ていて楽しい』
   time: 1547
   body: '実演は、自分のアプリのアイデアをClaudeに伝えると、いくつかの質問が来て最終コンセプトの確認に進む形だ。『Build it』と一言入力するとClaudeのキャンバスが分割し、左に会話、右にClaudeが実コードを書き始める。
 
 
     投稿者の感想がそのまま非エンジニアのリアルだ。『私はソフトウェアエンジニアではないが、自分自身のアプリを作れる。コードが書かれていく様子を目の前で見ることができる。意味は分からないけれど見ていて楽しい』。途中でエラーが出ればClaudeに修正を頼むだけでよく、Claude自身が直す。Top-Leftの切替アイコンでPreview（動くアプリ）とCode（実装）を行き来できる。生成されたアプリは生活最適化のための9つの主機能と、それぞれの下位機能を備えた構造で、タップで機能間を移動できる本格的なものだった。'
-  image: null
 - heading: Claude Codeでジムアプリを10分 — 非プログラマの守備範囲はどこまでか
   time: 3102
   body: 'Claude Codeのデモは衝撃的だ。ジムアプリのフル実装をわずか10分で完成させる。同じ規模の作業は通常の開発者なら最低1ヶ月かかると投稿者は補足する。ファイル群はClaude
@@ -69,7 +67,7 @@ sections:
     ここで投稿者は率直な線引きをする。『私はプログラマではないので、このアプリをどうデプロイしてみんなのスマホからダウンロードできるようにするかは教えられない。私の仕事はClaude
     Codeの機能を理解させることまでだ』。Claude Codeはより複雑な作業も可能だが、それを引き出すには開発者レベルの知識が必要だ、という現実的な認識も示す。動画後に身についているのは、Claudeの設定最適化、ClaudeとGPTの違い、各モデルの挙動、トークン節約、Claudeチャットの使い方、Cowork、Dispatch、Artifactsのライブ化、そしてClaude
     Code実行までという充実したラインナップだ。'
-  image: null
+editorial: 「AIをチャットボックスとして使う時代は遅れている」という問題提起は煽りに聞こえるが、Skills/Cowork前提のワークフローと、非エンジニアがジムアプリを10分で生成する体験は地続きだ。重要なのは『意味は分からないけど見ていて楽しい』という非エンジニアの率直な感想で、これは理解より委譲が先行する新しい関係を示す。一方で投稿者が『デプロイは教えられない』と線を引く点に、自動化が届く範囲と人間が残る範囲の現実的な境界が見える。
 en:
   articleTitle: Hindi Claude Full Course — Skills, Cowork, and Claude Code Explained
     to Beginners in 53 Minutes
@@ -132,7 +130,6 @@ en:
       behind.'' Power users have already built workflows with Skills and Cowork where
       they do almost nothing themselves. Claude handles tasks large and small autonomously,
       without per-task commands. This video is the path to catching up to that pattern.'
-    image: null
   - heading: The non-engineer experience — 'I don't understand the code, but watching
       is fun'
     time: 1547
@@ -149,7 +146,6 @@ en:
       Code (implementation). The finished demo app had nine major life-optimisation
       features with sub-features under each, navigable by tap — a real, substantial
       app.'
-    image: null
   - heading: Claude Code builds a gym app in 10 minutes — and the honest scope of
       what's taught
     time: 3102
@@ -167,7 +163,13 @@ en:
       settings optimisation, Claude vs GPT differences, how the different models behave,
       token saving, Claude chat usage, what Cowork is for, what Dispatch enables,
       making Artifacts live, and running Claude Code — a genuinely full lineup.'
-    image: null
+  editorial: The claim that 'using AI as a chat box is behind the times' sounds like
+    hype, but the Skills/Cowork workflow and a non-engineer generating a gym app in
+    ten minutes are part of the same continuum. The telling detail is the honest reaction
+    — 'I don't understand it, but it's fun to watch' — which marks a new relationship
+    where delegation precedes understanding. Yet the creator's line, 'I can't teach
+    you deployment,' reveals the practical boundary between what automation reaches
+    and where humans remain.
   headerImage: /images/9vsg5kSYeEg/header.png
   heroImage: /images/9vsg5kSYeEg/header.png
 ---
@@ -208,3 +210,7 @@ en:
 Claude Codeのデモは衝撃的だ。ジムアプリのフル実装をわずか10分で完成させる。同じ規模の作業は通常の開発者なら最低1ヶ月かかると投稿者は補足する。ファイル群はClaude Code実験用フォルダに整理されて配置されている。
 
 ここで投稿者は率直な線引きをする。『私はプログラマではないので、このアプリをどうデプロイしてみんなのスマホからダウンロードできるようにするかは教えられない。私の仕事はClaude Codeの機能を理解させることまでだ』。Claude Codeはより複雑な作業も可能だが、それを引き出すには開発者レベルの知識が必要だ、という現実的な認識も示す。動画後に身についているのは、Claudeの設定最適化、ClaudeとGPTの違い、各モデルの挙動、トークン節約、Claudeチャットの使い方、Cowork、Dispatch、Artifactsのライブ化、そしてClaude Code実行までという充実したラインナップだ。
+
+## 編集部の視点
+
+「AIをチャットボックスとして使う時代は遅れている」という問題提起は煽りに聞こえるが、Skills/Cowork前提のワークフローと、非エンジニアがジムアプリを10分で生成する体験は地続きだ。重要なのは『意味は分からないけど見ていて楽しい』という非エンジニアの率直な感想で、これは理解より委譲が先行する新しい関係を示す。一方で投稿者が『デプロイは教えられない』と線を引く点に、自動化が届く範囲と人間が残る範囲の現実的な境界が見える。

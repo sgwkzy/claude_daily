@@ -50,7 +50,6 @@ sections:
 
 
     この『自然言語で指示するだけ』というアプローチが、動画全体を貫くテーマになっている。'
-  image: null
 - heading: Fable 5がBlender/Godotを直接駆動
   time: 67
   body: '最初の山場は、Blender MCPを通じてFable 5にドラゴンを3Dモデリングさせる場面だ。制作者は参照画像を渡し、創造的に作り込むよう指示して、あとは作業を見守るだけだった。
@@ -60,7 +59,6 @@ sections:
 
 
     人がモデリングを一切していないにもかかわらず成果が出ており、同じ課題で他モデルを上回ったと制作者は評価する。'
-  image: null
 - heading: 映画的演出とAAA品質への作り込み
   time: 321
   body: 'ゲームらしさを高める段階では、欲しいアクション映画体験を言葉で説明するだけでキルカメラ演出が実装された。撃墜した敵を海へ落ちるまでカメラが追う仕掛けだ。
@@ -70,7 +68,8 @@ sections:
 
 
     最後に、至近距離での爆破でスローモーションに入りカメラが旋回する映画的演出を加え、Web版とGodot版がほぼ同一の仕上がりに到達したと締めくくる。'
-  image: null
+editorial: BlenderもGodotも未経験から12時間でAAA風ゲームに到達した記録は、専門ツールの習熟という参入障壁が崩れ始めたことを示す。注目すべきはFable
+  5が自らレンダリングして批評し、見せる前に自分のミスを直していた点——生成だけでなく自己評価のループが回り始めている。途中でBlender製を捨てて別の3D生成ツールに切り替える柔軟さも含め、制作は『何を作るか』の判断に集約されていく。
 en:
   articleTitle: Zero Experience to an AAA-Style Game in 12 Hours With Claude Fable
     5 and MCP Tools
@@ -127,7 +126,6 @@ en:
 
       That approach, issuing instructions through natural language alone, serves as
       the central theme running through the entire build.'
-    image: null
   - heading: Fable 5 Directly Drives Blender and Godot
     time: 67
     body: 'The first major milestone comes when Fable 5 is asked to 3D-model a dragon
@@ -143,7 +141,6 @@ en:
 
       Despite the human creator doing none of the modeling directly, the result is
       strong enough that they say it outperformed other models on the same assignment.'
-    image: null
   - heading: Cinematic Direction and the Push Toward AAA Quality
     time: 321
     body: 'As the creator shifts from prototyping to making the game feel more cinematic,
@@ -160,7 +157,12 @@ en:
       Finally, a close-range explosion effect is added, triggering slow motion and
       a circling camera move. The video ends by saying the web version and the Godot
       version now look almost the same.'
-    image: null
+  editorial: Reaching an AAA-style game in 12 hours with zero Blender or Godot experience
+    shows the barrier of mastering specialist tools beginning to fall. The notable
+    part is Fable 5 rendering, critiquing, and fixing its own mistakes before showing
+    them — a self-evaluation loop, not just generation, is starting to turn. Including
+    the flexibility to abandon the Blender model midway for another 3D tool, creation
+    concentrates into the judgment of what to make.
   headerImage: /images/QkckeI0tITg/header.png
   heroImage: /images/QkckeI0tITg/header.png
 ---
@@ -206,3 +208,7 @@ Fable 5は胴体や翼、角、光る目まで一からモデルを構築した�
 よりAAAらしい見栄えを求め、当初のBlender製ドラゴンを捨て、GPTで画像を生成し3Dアセット生成ツールNeural 4Dでモデル化する方針に切り替えた。
 
 最後に、至近距離での爆破でスローモーションに入りカメラが旋回する映画的演出を加え、Web版とGodot版がほぼ同一の仕上がりに到達したと締めくくる。
+
+## 編集部の視点
+
+BlenderもGodotも未経験から12時間でAAA風ゲームに到達した記録は、専門ツールの習熟という参入障壁が崩れ始めたことを示す。注目すべきはFable 5が自らレンダリングして批評し、見せる前に自分のミスを直していた点——生成だけでなく自己評価のループが回り始めている。途中でBlender製を捨てて別の3D生成ツールに切り替える柔軟さも含め、制作は『何を作るか』の判断に集約されていく。

@@ -52,7 +52,6 @@ sections:
 
 
     MCP以前は各データソースごとにカスタム統合が必要だったが、今はソースごとにMCPサーバーを置けば共通の取得手段が手に入る、とパメラは説明する。'
-  image: null
 - heading: 自然言語SQLを安全にする4層防御
   time: 666
   body: '中核は、エージェントに自由なSQLを書かせても安全にするための防御設計だ。まず最小権限ロールで特定スキーマへのSELECTのみを許可し、INSERTやDROP、DELETEをデータベースレベルで遮断する。
@@ -62,7 +61,6 @@ sections:
 
 
     さらにpg_sleepや巨大なCROSS JOINのようなDDoS的操作に対しては、ツールにタイムアウトを設定して強制終了させる。これら複数の層を重ねて初めて、生成SQLの実行に確信が持てるという。'
-  image: null
 - heading: 用途に応じたサーバー設計の選択
   time: 1306
   body: '終盤、パメラはPostgres上にMCPサーバーを構築する複数の方法を振り返る。あらゆる質問に答えられる探索型は柔軟だが、あらゆるSQL操作を許してしまうリスクを伴う。
@@ -72,7 +70,7 @@ sections:
 
 
     データベースレベルで多くを強制できるため最も安全なアプローチになると述べ、内部・外部を問わずユーザーが自然言語でDBと対話できる強力さを、設計上の注意とともに勧めて締めくくった。'
-  image: null
+editorial: 自然言語でDBを操作させる魅力の裏には、必ずセキュリティの問いが残る。最小権限ロールでSELECTのみを許し、CTEやDDoS的クエリをDB層で物理的に止めるという設計思想は、MCPに限らず『エージェントに権限を渡す』あらゆる場面に効く原則だ。プロンプトでの注意喚起は突破されうるが、データベースの権限境界は突破されない。AIに何かを任せるなら、信頼の防壁はアプリ層ではなく一段下に置くべきだという好例である。
 en:
   articleTitle: 'How to Build a Postgres MCP Server: Four Layers of Defense for Natural-Language
     SQL'
@@ -130,7 +128,6 @@ en:
       Before MCP, every data source typically required a custom integration. Pamela
       explains that by putting an MCP server in front of each source, developers now
       get a common access mechanism instead.'
-    image: null
   - heading: Four layers of defense for natural-language SQL
     time: 666
     body: 'The core of the talk is a defensive design that makes it safer to let agents
@@ -148,7 +145,6 @@ en:
       are handled by giving the tool a timeout and terminating the query. The message
       is that only by combining multiple layers can teams have confidence in executing
       generated SQL.'
-    image: null
   - heading: Choosing the right server design for the job
     time: 1306
     body: 'In the closing section, Pamela reviews several ways to build an MCP server
@@ -165,7 +161,12 @@ en:
       becomes the safest practical approach. The talk ends by recommending natural-language
       database interaction for both internal and external users, while emphasizing
       the need for careful server design.'
-    image: null
+  editorial: The appeal of natural-language database access always leaves a security
+    question. Granting SELECT-only via a least-privilege role and physically blocking
+    CTEs and DDoS-style queries at the database layer is a principle that applies
+    far beyond MCP — to any case of handing an agent permissions. Prompt-level warnings
+    can be bypassed; a database permission boundary cannot. It is a clean example
+    of placing the trust barrier one layer below the application, not within it.
   headerImage: /images/3_JPHuXgDyQ/header.png
   heroImage: /images/3_JPHuXgDyQ/header.png
 ---
@@ -211,3 +212,7 @@ MCP以前は各データソースごとにカスタム統合が必要だった�
 一方、完全に型付けされたツールは安全だが、答えられる質問の範囲は限定される。その中間に読み取り専用のSQLクエリという選択肢がある。
 
 データベースレベルで多くを強制できるため最も安全なアプローチになると述べ、内部・外部を問わずユーザーが自然言語でDBと対話できる強力さを、設計上の注意とともに勧めて締めくくった。
+
+## 編集部の視点
+
+自然言語でDBを操作させる魅力の裏には、必ずセキュリティの問いが残る。最小権限ロールでSELECTのみを許し、CTEやDDoS的クエリをDB層で物理的に止めるという設計思想は、MCPに限らず『エージェントに権限を渡す』あらゆる場面に効く原則だ。プロンプトでの注意喚起は突破されうるが、データベースの権限境界は突破されない。AIに何かを任せるなら、信頼の防壁はアプリ層ではなく一段下に置くべきだという好例である。

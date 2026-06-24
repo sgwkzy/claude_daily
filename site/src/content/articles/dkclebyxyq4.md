@@ -44,7 +44,6 @@ sections:
 
 
     ここで強調されるのは、単に速い文章生成ではなく、ファイルやフォルダを相手にまとまった作業を任せられることだ。業務の小さな面倒を置き換えるだけでも、日常の作業時間が大きく変わるというメッセージが一貫している。'
-  image: null
 - heading: コンテキスト管理と/compressではなく/compact運用
   time: 1673
   body: '中盤では、Claude Codeを長く使うほど会話履歴が膨らみ、コンテキスト使用量が増えて判断品質が落ちる点を解説している。`/context`
@@ -52,14 +51,14 @@ sections:
 
 
     その対策として紹介されるのが ` /compact ` で、履歴を圧縮したり、重要情報を引き継いで新規会話へ移ったりして、モデルの作業余白を保つ考え方だ。難しい仕事を任せるほど、このコンテキスト管理が実運用の差になると位置づけている。'
-  image: null
 - heading: Codespacesで安全に使う実務的な方法
   time: 3349
   body: '終盤では、GitHubのリポジトリと Codespaces を使って、Claude Codeに触らせる範囲をクラウド上の作業部屋に限定する方法が示される。個人利用でも無料枠があり、自分のPC本体を直接触らせずに運用できる点が大きな利点として説明されている。
 
 
     これは単なる導入手順ではなく、便利さと安全性を両立するための実務的な知恵として紹介されている。動画全体として、Claude Codeは強力だが、使い方の設計まで含めて理解すると本当の価値が出る、という方向で締めくくられていた。'
-  image: null
+editorial: Claude Code完全入門として実務的に効くのは、コンテキスト管理の章だ。『情報を溜め込みすぎると判断能力が落ちる』ため/compactで履歴を圧縮するという運用は、長いセッションを扱う誰もがつまずく落とし穴への具体的処方になる。GitHub
+  Codespacesで見せたいファイルだけを安全な箱の中で扱わせる手法も含め、入門でありながら『性能を維持し続けるための規律』に踏み込んでいる点が、単なる機能紹介と一線を画す。
 en:
   articleTitle: 'Claude Code Beginner''s Manual: AI Agents, Context Limits, and Safer
     Setup'
@@ -106,7 +105,6 @@ en:
       over coherent blocks of work involving files and folders. Even replacing small
       daily annoyances, the host argues, can materially change how much time people
       spend on routine tasks.'
-    image: null
   - heading: Managing Context With /compact Instead of Letting History Sprawl
     time: 1673
     body: 'The middle section explains that the longer Claude Code is used, the more
@@ -120,7 +118,6 @@ en:
       key information into a new conversation so the model retains working space.
       The more complex the task, the more this kind of context management becomes
       a practical differentiator.'
-    image: null
   - heading: A Practical, Safer Way to Use Claude Code With Codespaces
     time: 3349
     body: 'In the final section, the host shows how to use a GitHub repository and
@@ -133,7 +130,12 @@ en:
       to balance usefulness and safety. The video''s broader conclusion is that Claude
       Code is powerful, but its real value appears when people understand not only
       how to use it, but how to structure that use responsibly.'
-    image: null
+  editorial: What works practically in this Claude Code primer is the chapter on context
+    management. The practice of compacting history with /compact because 'hoarding
+    too much information degrades judgment' is a concrete prescription for a pitfall
+    everyone hits in long sessions. Including the technique of exposing only chosen
+    files inside the safe box of GitHub Codespaces, it goes beyond feature tours by
+    addressing the discipline of sustaining performance over time.
   headerImage: /images/DkClEbyXyq4/header.png
   heroImage: /images/DkClEbyXyq4/header.png
 ---
@@ -172,3 +174,7 @@ en:
 終盤では、GitHubのリポジトリと Codespaces を使って、Claude Codeに触らせる範囲をクラウド上の作業部屋に限定する方法が示される。個人利用でも無料枠があり、自分のPC本体を直接触らせずに運用できる点が大きな利点として説明されている。
 
 これは単なる導入手順ではなく、便利さと安全性を両立するための実務的な知恵として紹介されている。動画全体として、Claude Codeは強力だが、使い方の設計まで含めて理解すると本当の価値が出る、という方向で締めくくられていた。
+
+## 編集部の視点
+
+Claude Code完全入門として実務的に効くのは、コンテキスト管理の章だ。『情報を溜め込みすぎると判断能力が落ちる』ため/compactで履歴を圧縮するという運用は、長いセッションを扱う誰もがつまずく落とし穴への具体的処方になる。GitHub Codespacesで見せたいファイルだけを安全な箱の中で扱わせる手法も含め、入門でありながら『性能を維持し続けるための規律』に踏み込んでいる点が、単なる機能紹介と一線を画す。

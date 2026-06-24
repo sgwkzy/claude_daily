@@ -47,21 +47,19 @@ sections:
 
 
     Claudeが返したのは住宅清掃、退去前ディープクリーニング、商業オフィス清掃、カーペット清掃の4業態。検証者はこのうち他チャネルで既に検証済みのものや差別化困難なものを除外し、最終的に「カーペット清掃」一本に絞り込んだ。これが実験中ほぼ唯一の人間側の判断となる。'
-  image: null
 - heading: 現場運用と広告で露呈した「計画書の穴」
   time: 589
   body: '初案件はワンオペで約3時間。仕上がり自体は良好だったが、Claudeの事業計画書には現れない実務上の摩擦が複数発生した。ホースが現場まで届かず機材を担いで上階へ運ぶことになったり、機材を小型車に積み下ろしする手間に顧客から「バンに替えた方がいい」と指摘される場面もあった。
 
 
     集客では、Facebookオーガニック投稿は数日続けてもリード獲得ゼロ。Claude側の計画にあった月£150・日割り約£5の有料広告に切り替え、検証者の判断で日額£10に倍増させたところでようやくリードが入り始めた。AIが机上で組んだ予算と、現場で実際に必要な火力には乖離があったことになる。'
-  image: null
 - heading: 2週間の決算と「次の2週間で黒字化」見立て
   time: 1295
   body: '2週間のチャレンジを通じた成績は、受注11件・売上£685。一方で機材費£700、ヒューバー£60、消耗品£70、広告費£51の合計£881が投下されており、現時点では約£196の赤字だ。
 
 
     それでも検証者は「機材は一度きりの投資で、同じペースを2週続ければ十分黒字化する。住宅清掃と比べてもこちらの方が顧客獲得が明らかに楽だった」と総括している。サービス業の検証としては、AIによる業態選定と価格・広告設計が「初期投資を回収できるラインに2週間で到達した」点を、肯定的に位置づけている。'
-  image: null
+editorial: Claudeの助言だけでカーペット清掃業を立ち上げる実験で価値があるのは、計画書には現れない現場の穴が露呈した点だ。ホースの長さ不足や搬入困難という運用課題は、AIの事業計画がいかに整っていても物理世界の摩擦を予測しきれないことを示す。2週間で£196の赤字という数字も含め、AIは戦略の骨格を組めるが、実行の細部は人間が現場で埋めるしかないという現実的な教訓を残す。
 en:
   articleTitle: 'Launching a Carpet Cleaning Business With Only Claude’s Advice: £685
     in Two Weeks'
@@ -114,7 +112,6 @@ en:
       options he had already covered on other channels or considered difficult to
       differentiate, and ultimately narrowed the experiment to carpet cleaning alone.
       That becomes almost the only meaningful human decision in the entire project.'
-    image: null
   - heading: Operational reality and the holes in the plan
     time: 589
     body: 'The first job took about three hours as a one-person operation. The cleaning
@@ -131,7 +128,6 @@ en:
       personal judgment before leads finally started coming in. The gap between the
       AI''s desk-based budget assumptions and the real level of spend needed on the
       ground became clear.'
-    image: null
   - heading: Two-week results and the case for profitability in the next round
     time: 1295
     body: 'Across the two-week challenge, the business booked 11 jobs and generated
@@ -147,7 +143,12 @@ en:
       as evidence that AI-driven niche selection, pricing, and ad planning can get
       a service operation to the brink of recovering its initial investment within
       two weeks.'
-    image: null
+  editorial: The value of launching a carpet-cleaning business on Claude's advice
+    alone is that it exposed gaps the plan never showed. Operational snags — hoses
+    too short, equipment hard to carry in — show that however polished an AI business
+    plan is, it can't fully predict physical-world friction. Including the £196 loss
+    over two weeks, it leaves the practical lesson that AI can frame the strategy,
+    but the details of execution must still be filled in by humans on site.
   headerImage: /images/_-jZ6eV3DP4/header.png
   heroImage: /images/_-jZ6eV3DP4/header.png
 ---
@@ -187,3 +188,7 @@ Claudeが返したのは住宅清掃、退去前ディープクリーニング�
 2週間のチャレンジを通じた成績は、受注11件・売上£685。一方で機材費£700、ヒューバー£60、消耗品£70、広告費£51の合計£881が投下されており、現時点では約£196の赤字だ。
 
 それでも検証者は「機材は一度きりの投資で、同じペースを2週続ければ十分黒字化する。住宅清掃と比べてもこちらの方が顧客獲得が明らかに楽だった」と総括している。サービス業の検証としては、AIによる業態選定と価格・広告設計が「初期投資を回収できるラインに2週間で到達した」点を、肯定的に位置づけている。
+
+## 編集部の視点
+
+Claudeの助言だけでカーペット清掃業を立ち上げる実験で価値があるのは、計画書には現れない現場の穴が露呈した点だ。ホースの長さ不足や搬入困難という運用課題は、AIの事業計画がいかに整っていても物理世界の摩擦を予測しきれないことを示す。2週間で£196の赤字という数字も含め、AIは戦略の骨格を組めるが、実行の細部は人間が現場で埋めるしかないという現実的な教訓を残す。

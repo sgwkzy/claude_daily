@@ -52,7 +52,6 @@ sections:
 
     投稿者の実例は強烈で、Claudeに『Owletソックや関連センサーで構成したベビー用ダッシュボードを、意味のあるセクションで作って』と日本語ならぬドイツ語で書いただけでダッシュボードが完成。YAML一行も書かず、Automation一つも組まず、テンプレートにも触らずに済んだ。妻もこの仕組みでHome
     AssistantのオートメーションをClaudeに作らせるようになった、というのが家庭内パラダイムシフトを象徴している。'
-  image: null
 - heading: 接続セットアップ — Claude以外のクライアントへの広がり
   time: 1052
   body: 'セキュリティ面はMCPの標準挙動でカバーされる。新しいツールをAIが初めて呼ぶときに必ず許可確認が出るため、意図しない自動操作は走らない。テストとして『システムにエンティティはいくつある？』と聞いただけで、Home
@@ -62,14 +61,13 @@ sections:
     Claude Desktopなら接続はほぼ完了で済むが、動画はCursor / Antigravity / VS Code / WezTerm / LM Studioでの接続もカバー。多くのクライアントは設定の中に
     mcp.json を持ち、そこへ Home Assistant MCP サーバの URL ブロックを足すだけで使えるようになる。LM Studio では Developer
     配下のサーバ設定から開く点が他と少し違う。'
-  image: null
 - heading: 本気のユースケースとローカル運用の限界
   time: 2049
   body: '実運用としては、まず1〜2個の単純な例で挙動を掴むのが第一歩。AIが提案するAutomationやコードの品質、対話の感覚を確かめてから、本格的な要件——『この要件を実装したいが手段が分からない、考えてダッシュボードを作ってくれ』のようなプロンプト——に踏み込むのが安全だ。実際にやると、それなりの形のダッシュボードが返ってきて、1〜2回プロンプトを返すだけで動作する状態になる。投稿者は『これは玩具ではなくパラダイムシフトだ』と評する。
 
 
     プライバシー懸念があるユーザー向けに OllamaやLM Studioによるローカル運用も紹介。Home Assistantという自宅の根幹を握るシステムだからこそローカル志向は理にかなう。一方で、米国の大手AIモデルに比べるとローカルモデルの性能は通常落ちる、と投稿者は率直に指摘する。クラウド前提のパワーとローカル前提の自衛、どちらに振るかは個々の価値判断になる。'
-  image: null
+editorial: YAMLもオートメーションも書かずにスマートホームを丸ごと組めるという話は、MCPの本質が『AIに話す』から『AIに理解させる』への移行であることを示す好例だ。配偶者まで使い始めたという逸話が操作障壁の低下を物語る一方、毎回の許可確認とローカルLLMの性能限界という二つの現実的制約も率直に語られている。利便性とコントロールのトレードオフをどこで取るかが、家庭内自動化の設計判断になる。
 en:
   articleTitle: Home Assistant MCP — How Claude Builds Your Whole Smart Home With
     Zero YAML
@@ -130,7 +128,6 @@ en:
       no template tinkering. His wife now uses the same setup herself to have Claude
       build Home Assistant automations. A household-level paradigm shift, condensed
       into one demo.'
-    image: null
   - heading: Hooking it up — beyond Claude, into Cursor, VS Code, and LM Studio
     time: 1052
     body: 'Security is sane by default. The first time the AI tries to call a new
@@ -146,7 +143,6 @@ en:
       have an mcp.json somewhere in settings where you paste the Home Assistant MCP
       server URL block. LM Studio is the odd one out — its mcp.json lives under Developer
       → Server.'
-    image: null
   - heading: Real use, and the limits of going local
     time: 2049
     body: 'The recommended path is to start with one or two simple examples. Get a
@@ -162,7 +158,12 @@ en:
       The honest trade-off: local models usually don''t match the quality of the big
       US cloud models. Whether to lean cloud or local is a values call, and the creator
       names that trade-off without flinching.'
-    image: null
+  editorial: Wiring an entire smart home without writing YAML or automations is a
+    clean illustration of MCP's shift from 'talking to' an AI to 'making it understand.'
+    The anecdote of a spouse adopting it shows how far the barrier has dropped, while
+    the per-action permission prompt and the performance ceiling of local LLMs are
+    named as honest constraints. Where you set the trade-off between convenience and
+    control becomes the core design decision for home automation.
   headerImage: /images/AL391nkWGIc/header.png
   heroImage: /images/AL391nkWGIc/header.png
 ---
@@ -203,3 +204,7 @@ Claude Desktopなら接続はほぼ完了で済むが、動画はCursor / Antigr
 実運用としては、まず1〜2個の単純な例で挙動を掴むのが第一歩。AIが提案するAutomationやコードの品質、対話の感覚を確かめてから、本格的な要件——『この要件を実装したいが手段が分からない、考えてダッシュボードを作ってくれ』のようなプロンプト——に踏み込むのが安全だ。実際にやると、それなりの形のダッシュボードが返ってきて、1〜2回プロンプトを返すだけで動作する状態になる。投稿者は『これは玩具ではなくパラダイムシフトだ』と評する。
 
 プライバシー懸念があるユーザー向けに OllamaやLM Studioによるローカル運用も紹介。Home Assistantという自宅の根幹を握るシステムだからこそローカル志向は理にかなう。一方で、米国の大手AIモデルに比べるとローカルモデルの性能は通常落ちる、と投稿者は率直に指摘する。クラウド前提のパワーとローカル前提の自衛、どちらに振るかは個々の価値判断になる。
+
+## 編集部の視点
+
+YAMLもオートメーションも書かずにスマートホームを丸ごと組めるという話は、MCPの本質が『AIに話す』から『AIに理解させる』への移行であることを示す好例だ。配偶者まで使い始めたという逸話が操作障壁の低下を物語る一方、毎回の許可確認とローカルLLMの性能限界という二つの現実的制約も率直に語られている。利便性とコントロールのトレードオフをどこで取るかが、家庭内自動化の設計判断になる。

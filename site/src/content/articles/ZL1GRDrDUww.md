@@ -47,7 +47,6 @@ sections:
 
 
     そのうえで自らの立場を明確にする。トランプ政権を良い政権だとは思っておらず、一方でAnthropicも「ガスライティング的でひどい会社」だと考えているとし、どちらかの陣営を応援しているわけではない中立的な批判であることを強調している。'
-  image: null
 - heading: 脱線：Claudeの新しい課金方針への不満
   time: 615
   body: '話題は一度脱線し、6月15日に発表されたClaudeの課金変更へと移る。有料プランに「プログラム利用向けの月次クレジット」が付与され、Agent
@@ -55,14 +54,13 @@ sections:
 
 
     コミュニティに深く関わっていない人にはクレジット付与は朗報に見えるが、投稿者はこれを実質的な改悪だと主張する。プログラム内でClaudeを使う分は据え置きだが、自作スクリプトから同じプロンプトを投げると「API課金レート」が適用される。端末の前で完了を待たずに作業を自動化したいユーザーほど不利になる構造だと批判している。'
-  image: null
 - heading: 「安全性」の論理破綻という核心
   time: 1176
   body: '本題に戻り、投稿者はFable禁止の論理そのものを突く。もしモデルがそれほど危険なら、なぜ米国市民にはアクセスを与えるのか。本当に安全のためなら誰にも使わせないのが筋であり、外国籍者だけを禁じるのは筋が通らないと指摘する。
 
 
     米国市民なら誰もCIAや政府サーバーへの侵入、JFKやエプスタイン関連の非公開情報の取得などを試みない、という前提自体がありえないと皮肉る。結論として、安全を気にするふりをするAnthropicと、ハッキング被害を気にするふりをする政府の双方が、上から下まで建前だらけだと断じている。'
-  image: null
+editorial: Rossmannの批判が鋭いのは、政権にもAnthropicにも与しない中立の立場から『安全性の論理破綻』を突く点だ。本当に危険なら米国市民にも使わせるべきでないのに外国籍だけを禁じる——この矛盾は安全保障という建前の薄さを露わにする。脱線して語られるClaudeの課金変更（利用場所でコストが変わる）への不満も、提供条件が予告なく動く環境への根本的な不信として一貫している。
 en:
   articleTitle: 'Dissecting the Fable Shutdown Furor: Rossmann''s Critique of the
     ''Safety'' Pretext and Its Contradictions'
@@ -115,7 +113,6 @@ en:
       is a good one, and at the same time considers Anthropic ''a gaslighting, awful
       company,'' stressing that this is a neutral critique and that he is not rooting
       for either camp.'
-    image: null
   - heading: 'A Digression: Frustration With Claude''s New Billing Policy'
     time: 615
     body: 'The topic digresses for a moment to Claude''s billing change announced
@@ -130,7 +127,6 @@ en:
       scripts applies the ''API billing rate.'' He criticizes it as a structure that
       penalizes precisely the users who want to automate work without sitting in front
       of the terminal waiting for it to finish.'
-    image: null
   - heading: 'The Core: The Logical Collapse of ''Safety'''
     time: 1176
     body: 'Returning to the main point, the creator attacks the very logic of the
@@ -144,7 +140,12 @@ en:
       or Epstein. His conclusion: both Anthropic, pretending to care about safety,
       and the government, pretending to care about hacking victims, are full of pretext
       from top to bottom.'
-    image: null
+  editorial: Rossmann's critique is sharp because, siding with neither the administration
+    nor Anthropic, it targets the 'logical collapse of the safety argument.' If it's
+    truly dangerous, US citizens shouldn't use it either, yet only foreign nationals
+    are barred — a contradiction that exposes the thinness of the security pretext.
+    His tangent about Claude's billing change (cost varies by where you call it) is
+    consistent as a deeper distrust of an environment whose terms shift without notice.
   headerImage: /images/ZL1GRDrDUww/header.png
   heroImage: /images/ZL1GRDrDUww/header.png
 ---
@@ -184,3 +185,7 @@ en:
 本題に戻り、投稿者はFable禁止の論理そのものを突く。もしモデルがそれほど危険なら、なぜ米国市民にはアクセスを与えるのか。本当に安全のためなら誰にも使わせないのが筋であり、外国籍者だけを禁じるのは筋が通らないと指摘する。
 
 米国市民なら誰もCIAや政府サーバーへの侵入、JFKやエプスタイン関連の非公開情報の取得などを試みない、という前提自体がありえないと皮肉る。結論として、安全を気にするふりをするAnthropicと、ハッキング被害を気にするふりをする政府の双方が、上から下まで建前だらけだと断じている。
+
+## 編集部の視点
+
+Rossmannの批判が鋭いのは、政権にもAnthropicにも与しない中立の立場から『安全性の論理破綻』を突く点だ。本当に危険なら米国市民にも使わせるべきでないのに外国籍だけを禁じる——この矛盾は安全保障という建前の薄さを露わにする。脱線して語られるClaudeの課金変更（利用場所でコストが変わる）への不満も、提供条件が予告なく動く環境への根本的な不信として一貫している。

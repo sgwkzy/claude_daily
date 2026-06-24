@@ -22,6 +22,7 @@ def build_translation(
         keyPhrases=translation.keyPhrases,
         bulletPoints=translation.bulletPoints,
         sections=translation.sections,
+        editorial=translation.editorial,
         headerImage=header_image,
         heroImage=hero_image or header_image,
     )
@@ -65,6 +66,7 @@ def build_frontmatter(
         keyPhrases=summary.keyPhrases,
         bulletPoints=summary.bulletPoints,
         sections=summary.sections,
+        editorial=summary.editorial,
         en=en_block,
     )
 
@@ -83,8 +85,12 @@ def render_article(frontmatter: ArticleFrontmatter) -> str:
         body_lines.append("")
         body_lines.append(section.body)
         body_lines.append("")
+    if frontmatter.editorial:
+        body_lines.extend(["## 編集部の視点", "", frontmatter.editorial, ""])
     metadata = yaml.safe_dump(
-        frontmatter.model_dump(mode="json"),
+        # None のフィールドは出力しない。Astro の zod `.optional()` は明示的な
+        # null を弾くため、欠損キーとして扱わせる（articleTitle / editorial など）。
+        frontmatter.model_dump(mode="json", exclude_none=True),
         allow_unicode=True,
         sort_keys=False,
         default_flow_style=False,

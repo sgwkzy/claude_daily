@@ -51,7 +51,6 @@ sections:
 
 
     なぜこの一件が国家安全保障の問題として扱われたのか、その不釣り合いさが本編の出発点になっている。'
-  image: null
 - heading: 「ユニークな脅威」論への専門家の反論
   time: 663
   body: '100名を超えるセキュリティ専門家が署名した『Free Fable』公開書簡が紹介される。彼らは、同等の能力はGPT-5.5や他社・他モデルにも存在すると主張する。
@@ -61,7 +60,6 @@ sections:
 
 
     むしろ最良の防御ツールを専門家から奪うことが、敵対勢力に対して防御側を不利にする危険な判断だと書簡は警告している。'
-  image: null
 - heading: 本当に問うべき優先順位とは
   time: 1253
   body: '制作者は、規制の関心が誤った場所に向いていると論じる。認知への影響、監視インフラ、雇用の置き換え、企業のコスト危機、データセンターへの反発こそ本質的な論点だという。
@@ -71,7 +69,8 @@ sections:
 
 
     さらに、ペンタゴン契約を得たOpenAIの巨額赤字と1兆ドルIPOの矛盾に触れ、業界全体の歪みへと話を広げて締めくくった。'
-  image: null
+editorial: 「fix this code」の3語が最強モデルを全世界停止させたという構図は、ジェイルブレイクの定義そのものを問い直す。100名超のセキュリティ専門家が『同等の能力はGPT
+  5.5やKimiにもある』と署名した事実は、Fableだけを脅威とみなす論拠の薄さを突く。最良の防御ツールを守る側から取り上げる危うさという論点は、AI規制が能力の絶対値ではなく相対的な公平性で語られるべきことを示している。
 en:
   articleTitle: How "Fix This Code" Triggered a Global Shutdown of Claude Fable 5
     and Mythos 5
@@ -129,7 +128,6 @@ en:
 
       That mismatch, between the severity of the official response and the mundanity
       of the underlying prompt, becomes the video''s starting point.'
-    image: null
   - heading: Security Experts Push Back on the "Unique Threat" Narrative
     time: 663
     body: 'The segment highlights the public "Free Fable" letter signed by more than
@@ -145,7 +143,6 @@ en:
       The letter goes further, warning that taking one of the best defensive tools
       away from security professionals could weaken the defenders while adversaries
       continue to improve their own capabilities.'
-    image: null
   - heading: What the Real Priority Should Be
     time: 1253
     body: 'The creator argues that regulatory attention is pointed at the wrong target.
@@ -163,7 +160,12 @@ en:
       of OpenAI pursuing a trillion-dollar IPO while carrying enormous losses after
       securing Pentagon contracts, and using that contrast to criticize the broader
       shape of the industry.'
-    image: null
+  editorial: The image of three words — 'fix this code' — halting the strongest model
+    worldwide reinterrogates the very definition of a jailbreak. Over 100 security
+    experts signing that 'the same capability exists in GPT 5.5 and Kimi' exposes
+    the thin rationale for treating only Fable as a threat. The argument about the
+    danger of stripping the best defensive tool from defenders shows AI regulation
+    should be framed by relative fairness, not absolute capability.
   headerImage: /images/R4nFEQb7kZo/header.png
   heroImage: /images/R4nFEQb7kZo/header.png
 ---
@@ -209,3 +211,7 @@ en:
 100名の専門家が『競合と能力は変わらない』と言うモデルへの3語のジェイルブレイクは、緊急事態には見えないと切り捨てる。緊急なのはそれ以外のすべてだと強調する。
 
 さらに、ペンタゴン契約を得たOpenAIの巨額赤字と1兆ドルIPOの矛盾に触れ、業界全体の歪みへと話を広げて締めくくった。
+
+## 編集部の視点
+
+「fix this code」の3語が最強モデルを全世界停止させたという構図は、ジェイルブレイクの定義そのものを問い直す。100名超のセキュリティ専門家が『同等の能力はGPT 5.5やKimiにもある』と署名した事実は、Fableだけを脅威とみなす論拠の薄さを突く。最良の防御ツールを守る側から取り上げる危うさという論点は、AI規制が能力の絶対値ではなく相対的な公平性で語られるべきことを示している。

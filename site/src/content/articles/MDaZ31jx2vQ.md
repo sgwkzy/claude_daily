@@ -52,21 +52,19 @@ sections:
 
 
     公開から数日で全面停止に追い込まれた格好だ。Fable 5は元々、危険視されて一般公開を見送られたMythos相当の能力を安全装置付きで一般向けに提供するモデルとして発表されていた。'
-  image: null
 - heading: ブレーキを欲しがっていたAnthropicと、停止命令を出した米政府
   time: 30
   body: 'ここ数週間でAnthropicは業界全体の監督強化を主張し、ローマ教皇の支援まで取り付け、AI開発の一時停止というオプションを公的に検討する立場を取ってきた。引用された幹部発言は「AI業界にはアクセルだけがあって、車にブレーキペダルがない。我々はそのブレーキペダルを作るための作業をやりたい」というもの。
 
 
     ところがその直後、米政府はFable 5とMythosへのアクセスを外国人について停止せよと命令を下した。理由は国家安全保障上の懸念だ。結果としてサービスは全世界の全ユーザーに対して急遽無効化された。'
-  image: null
 - heading: Trump政権との対立構造と中国封じ込め
   time: 67
   body: '対立の発端はAnthropicが自社技術を自律型殺傷兵器に使用させない、と表明したことにあるとFRANCE 24は説明する。映像中にはTrump政権側の人物が「Anthropicは何をすべきかについて意思決定を持つべきでない、思想的に偏った狂人が経営している」と非難する発言も挿入されている。
 
 
     番組はこれを単一企業の問題に留めず、米国が中国の先進AIへのアクセスを断ち技術覇権競争を制しようとする、より広い枠組みの一部としても位置づけている。Anthropicの安全主義スタンスが、結果的に米政府との衝突を強める構造になっている。'
-  image: null
+editorial: FRANCE 24が国際ニュースとして扱ったこと自体が、この停止劇が一企業の話を超えた地政学イベントであることを示す。数週前まで規制強化と一時停止を訴えていたAnthropicが、今度は自社モデルを政府に止められる——『ブレーキを作りたい』という理念と、実際にブレーキを掛けられる立場の落差が皮肉だ。中国封じ込め政策の一環という構図まで含め、AIはもはやテック単独の文脈では読めない。
 en:
   articleTitle: US National Security Order Suspends Claude Fable 5 as Anthropic Clashes
     With Trump
@@ -118,7 +116,6 @@ en:
       Fable 5 had been presented as a version for general users that paired Mythos-level
       capability with added safety controls, after Mythos itself had been considered
       too risky for broad public release.'
-    image: null
   - heading: Anthropic Wanted Brakes. Washington Applied Them.
     time: 30
     body: 'In recent weeks, Anthropic had been publicly arguing for stronger oversight
@@ -131,7 +128,6 @@ en:
       Then the US government ordered the company to cut off foreign access to Fable
       5 and Mythos, citing national security concerns. In practice, the service was
       then disabled globally for all users.'
-    image: null
   - heading: Conflict With Trump and the Wider Push to Contain China
     time: 67
     body: 'FRANCE 24 says the clash stems from Anthropic''s position that its technology
@@ -144,7 +140,12 @@ en:
       broader US effort to deny China access to advanced AI and preserve technological
       dominance. In that reading, Anthropic''s safety-first posture has become one
       factor intensifying its conflict with the US government.'
-    image: null
+  editorial: That FRANCE 24 covered this as international news shows the shutdown
+    is a geopolitical event beyond one company. Anthropic, which weeks earlier urged
+    tighter rules and a pause, now has its own model halted by the government — an
+    irony between wanting to 'build the brakes' and being on the receiving end of
+    them. Framed as part of a China-containment policy, AI can no longer be read in
+    a purely technological context.
   headerImage: /images/MDaZ31jx2vQ/header.png
   heroImage: /images/MDaZ31jx2vQ/header.png
 ---
@@ -185,3 +186,7 @@ FRANCE 24はAnthropicがマーケティングで自社製品を「危険」と�
 対立の発端はAnthropicが自社技術を自律型殺傷兵器に使用させない、と表明したことにあるとFRANCE 24は説明する。映像中にはTrump政権側の人物が「Anthropicは何をすべきかについて意思決定を持つべきでない、思想的に偏った狂人が経営している」と非難する発言も挿入されている。
 
 番組はこれを単一企業の問題に留めず、米国が中国の先進AIへのアクセスを断ち技術覇権競争を制しようとする、より広い枠組みの一部としても位置づけている。Anthropicの安全主義スタンスが、結果的に米政府との衝突を強める構造になっている。
+
+## 編集部の視点
+
+FRANCE 24が国際ニュースとして扱ったこと自体が、この停止劇が一企業の話を超えた地政学イベントであることを示す。数週前まで規制強化と一時停止を訴えていたAnthropicが、今度は自社モデルを政府に止められる——『ブレーキを作りたい』という理念と、実際にブレーキを掛けられる立場の落差が皮肉だ。中国封じ込め政策の一環という構図まで含め、AIはもはやテック単独の文脈では読めない。

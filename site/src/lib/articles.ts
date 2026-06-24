@@ -24,6 +24,7 @@ export interface LocalizedArticle {
   keyPhrases: string[];
   bulletPoints: LocalizedBulletPoint[];
   sections: LocalizedSection[];
+  editorial?: string;
   headerImage: string;
   heroImage: string;
 }
@@ -43,6 +44,7 @@ export const localizeArticleData = (article: Article, locale: Locale): Localized
       keyPhrases: d.en.keyPhrases,
       bulletPoints: d.en.bulletPoints,
       sections: d.en.sections,
+      editorial: d.en.editorial ?? undefined,
       headerImage: d.en.headerImage,
       heroImage: d.en.heroImage ?? d.en.headerImage,
     };
@@ -55,6 +57,7 @@ export const localizeArticleData = (article: Article, locale: Locale): Localized
     keyPhrases: d.keyPhrases,
     bulletPoints: d.bulletPoints,
     sections: d.sections,
+    editorial: d.editorial ?? undefined,
     headerImage: d.headerImage,
     heroImage: d.heroImage ?? d.headerImage,
   };

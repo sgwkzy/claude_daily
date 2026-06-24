@@ -46,7 +46,6 @@ sections:
 
 
     実務上、誰が米国籍かそうでないかをサーバ側で完全に弁別することは不可能だ。Anthropicは結果としてモデルを完全に停止した。米政府は表向きジェイルブレイクとセキュリティホールを停止理由として挙げているという。'
-  image: null
 - heading: 自律型兵器への利用拒否が招いた政治的報復という読み
   time: 25
   body: 'Anthropicの反論は明快で、「OpenAIのGPT5でも同じ事ができる、つまりAnthropicだけが特別危険なわけではない」というものだ。c''t
@@ -54,14 +53,13 @@ sections:
 
 
     つまりこの停止令は純粋な技術的安全保障の問題というより、防衛産業との協調を拒んだ企業への懲罰的色彩を帯びている、というのが番組の読みだ。'
-  image: null
 - heading: 欧州人視点 - 米国製AIへの依存と「いつでも水道を止められる」リスク
   time: 40
   body: '番組終盤でレポーターは「欧州人として、この事態はより脅威に感じる」と踏み込む。欧州を含む世界の多くの組織や個人が米国製AIサービスに依存度を高めていく中で、米国政府の判断ひとつでサービス自体が即座に停止される現実が、今回の事件で初めて具体例として可視化されたという危機感だ。
 
 
     「水道の蛇口がどれだけ簡単に締められるか」というメタファーで締めくくられている。AIが社会インフラ化する以上、その制御権がどの国にあるか・誰が政治的判断で停止できるかは、欧州自身の技術主権の問題として正面から取り組む必要がある、という主張になっている。'
-  image: null
+editorial: ドイツのc't 3003が欧州視点で報じた最大の論点は、『米国製AIへの依存が深まる中、いかに早く水道を止められるか』という一文に集約される。停止劇は一企業の問題ではなく、外国製の基盤技術に事業を載せること自体のリスクを各地域に突きつけた。Anthropicの『GPT5も同じ』という反論や自律型兵器拒否への政治的報復という読みも含め、技術の優劣より供給の主権が問われ始めている。
 en:
   articleTitle: What Europe Should Learn From the Claude Shutdown, According to Germany’s
     c’t 3003
@@ -107,7 +105,6 @@ en:
       is and is not a U.S. national. Anthropic therefore shut the models down entirely.
       According to the program, the U.S. government publicly justified the move by
       pointing to jailbreaks and security holes.'
-    image: null
   - heading: A Political Penalty for Refusing Weapons Use?
     time: 25
     body: 'Anthropic’s rebuttal is straightforward: "OpenAI’s GPT-5 can do the same
@@ -121,7 +118,6 @@ en:
       In other words, the show suggests this was not purely a technical safety issue.
       It may also have carried a punitive element directed at a company that refused
       to align itself with the defense industry.'
-    image: null
   - heading: 'The European Warning: U.S. AI Dependence Can Be Cut Off Overnight'
     time: 40
     body: 'Toward the end, the reporter goes further and says that, from a European
@@ -135,7 +131,13 @@ en:
       off." If AI is becoming part of social infrastructure, then the question of
       which country controls it, and who can shut it off for political reasons, becomes
       a direct question of European technological sovereignty.'
-    image: null
+  editorial: 'The biggest point from Germany''s c''t 3003, reported from a European
+    vantage, distills into one line: as dependence on US-made AI deepens, how quickly
+    can the tap be shut off? The shutdown is not one company''s problem but confronts
+    every region with the risk of building businesses atop foreign foundational technology.
+    Including Anthropic''s ''GPT5 does the same'' rebuttal and the reading of political
+    retaliation over refusing autonomous weapons, the question has shifted from capability
+    to supply sovereignty.'
   headerImage: /images/tj87aylNN-c/header.png
   heroImage: /images/tj87aylNN-c/header.png
 ---
@@ -174,3 +176,7 @@ Anthropicの反論は明快で、「OpenAIのGPT5でも同じ事ができる、�
 番組終盤でレポーターは「欧州人として、この事態はより脅威に感じる」と踏み込む。欧州を含む世界の多くの組織や個人が米国製AIサービスに依存度を高めていく中で、米国政府の判断ひとつでサービス自体が即座に停止される現実が、今回の事件で初めて具体例として可視化されたという危機感だ。
 
 「水道の蛇口がどれだけ簡単に締められるか」というメタファーで締めくくられている。AIが社会インフラ化する以上、その制御権がどの国にあるか・誰が政治的判断で停止できるかは、欧州自身の技術主権の問題として正面から取り組む必要がある、という主張になっている。
+
+## 編集部の視点
+
+ドイツのc't 3003が欧州視点で報じた最大の論点は、『米国製AIへの依存が深まる中、いかに早く水道を止められるか』という一文に集約される。停止劇は一企業の問題ではなく、外国製の基盤技術に事業を載せること自体のリスクを各地域に突きつけた。Anthropicの『GPT5も同じ』という反論や自律型兵器拒否への政治的報復という読みも含め、技術の優劣より供給の主権が問われ始めている。

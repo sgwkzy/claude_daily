@@ -45,21 +45,19 @@ sections:
 
 
     初心者でもAIエージェント作成を驚くほど簡単にする中核機能があるとされ、ライブデモを通じて実際の使用例まで示される構成になっている。'
-  image: null
 - heading: エージェントとチャットの根本的な違い
   time: 42
   body: 'スキルを使う前提として、まず『AIエージェントとは何か』を理解する必要がある。エージェントは従業員のような存在で、タスクを与えると自分で実行し、結果を返してくる。単なるClaudeチャットとの決定的な違いは、エージェントが『ツール』を持っていることだ。チャットは言葉だけだが、エージェントはWeb検索・ファイル書き込み・コード実行・API呼び出しができる。
 
 
     しかも各ステップでどのツールを使うかを自分で選び、すべてを自律的に処理する。これが本物の自動化の姿であり、繰り返しの仕事を人が手を触れずに回したいなら、優れたプロンプトではなくエージェントが必要になる、というのが要点だ。'
-  image: null
 - heading: ライブデモで見えた自己改善ループの実像
   time: 850
   body: 'ニュースダイジェストを作る実演では、システムがRedditのリンクを直接取得できず、『各投稿が実在するReddit投稿にリンクすること』という要件を満たせずに失敗した。この一回の実行で約2700万トークン、金額にして約12ドルを消費しており、事前に個別の構成要素を検証していれば避けられたコストだったと反省が語られる。
 
 
     それでも、管理付きエージェントをループモードで動かす本来の狙いは『毎回の実行で自己改善する』ことにある。今回の失敗からシステムはRedditソーシングの修正方法を学習し、Web検索のみに切り替えれば30分かかっていた処理が2〜3分で、より良い応答になると提案してきた。初回セットアップだけで多くの教訓が得られた、と締めくくっている。'
-  image: null
+editorial: 公式スキル『Launch Your Agent』の価値は、数分でエージェントを立ち上げる手軽さより、失敗から学ぶループ設計の思想にある。実演でRedditソーシングに失敗し2700万トークン・12ドルを溶かした事実をそのまま見せる誠実さが、むしろ本質を伝える。エージェントは一発で完成せず、検証して直して回す前提で組むもの。『より良いプロンプトではなくエージェントが要る』という線引きは、自動化を志す人の出発点になる。
 en:
   articleTitle: Anthropic's 'Launch Your Agent' Skill Brings Managed Agents to Claude
     Code
@@ -111,7 +109,6 @@ en:
       The pitch is that it includes core functionality that makes building AI agents
       dramatically easier even for beginners, with a live demo showing what practical
       usage looks like.'
-    image: null
   - heading: Why Agents Are Fundamentally Different From Chat
     time: 42
     body: 'Before using the skill, the host says, it is important to understand what
@@ -126,7 +123,6 @@ en:
       entire workflow autonomously. That, the video argues, is what real automation
       looks like. If the goal is to run repetitive work without direct human intervention,
       agents matter more than prompt polish.'
-    image: null
   - heading: What the Live Demo Revealed About Self-Improving Loops
     time: 850
     body: 'In a demo that tried to create a news digest, the system failed because
@@ -142,7 +138,12 @@ en:
       alone would cut a 30-minute process down to 2 to 3 minutes while also improving
       the answer. The conclusion is that even the initial setup produced a large number
       of useful lessons.'
-    image: null
+  editorial: The value of the official 'Launch Your Agent' skill lies less in standing
+    up an agent in minutes than in its design philosophy of learning from failure.
+    The honesty of showing a live demo that failed at Reddit sourcing and burned 27M
+    tokens and $12 conveys the real point. Agents aren't finished in one shot; they're
+    built to be verified, fixed, and looped. The distinction — 'you need an agent,
+    not a better prompt' — is a useful starting line for anyone pursuing automation.
   headerImage: /images/D6Cfjy83MQA/header.png
   heroImage: /images/D6Cfjy83MQA/header.png
 ---
@@ -181,3 +182,7 @@ Anthropicが公開した無料・オープンソースのClaude Code向けスキ
 ニュースダイジェストを作る実演では、システムがRedditのリンクを直接取得できず、『各投稿が実在するReddit投稿にリンクすること』という要件を満たせずに失敗した。この一回の実行で約2700万トークン、金額にして約12ドルを消費しており、事前に個別の構成要素を検証していれば避けられたコストだったと反省が語られる。
 
 それでも、管理付きエージェントをループモードで動かす本来の狙いは『毎回の実行で自己改善する』ことにある。今回の失敗からシステムはRedditソーシングの修正方法を学習し、Web検索のみに切り替えれば30分かかっていた処理が2〜3分で、より良い応答になると提案してきた。初回セットアップだけで多くの教訓が得られた、と締めくくっている。
+
+## 編集部の視点
+
+公式スキル『Launch Your Agent』の価値は、数分でエージェントを立ち上げる手軽さより、失敗から学ぶループ設計の思想にある。実演でRedditソーシングに失敗し2700万トークン・12ドルを溶かした事実をそのまま見せる誠実さが、むしろ本質を伝える。エージェントは一発で完成せず、検証して直して回す前提で組むもの。『より良いプロンプトではなくエージェントが要る』という線引きは、自動化を志す人の出発点になる。

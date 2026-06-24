@@ -45,21 +45,19 @@ sections:
 
 
     動画では「公開した、と思ったらすぐに非公開に戻した。早かったね」と、展開の慌ただしさが端的に語られている。'
-  image: null
 - heading: 米政府の介入と二つの問題
   time: 10
   body: '撤回の引き金となったのは米政府の介入だ。政府はAnthropicに対し、米国の内外を問わず外国籍の人物にFableを使用させることを認めないと通告した。
 
 
     この方針には二つの難点がある。一つは、Fableを開発したAnthropicの従業員自体に外国籍者が少なくないこと。もう一つは、ユーザーの国籍に基づく利用制限を実務上どう取り締まるのかという執行の難しさである。'
-  image: null
 - heading: 全面停止と分かれる反応
   time: 32
   body: '国籍による線引きが現実的でないことから、Anthropicは限定的な制限ではなく全ユーザーに対する無効化という対応を選んだ。最も強力なモデルが、誰にも使えない状態に置かれたことになる。
 
 
     この一件への反応は賛否が割れている。動画では競合のGrokがこの展開を歓迎し、「AIモデルは野放しにせず抑制が必要だ」と皮肉を込めてコメントした様子が紹介されている。'
-  image: null
+editorial: 最強AIを公開直後に取り下げた一件で見落とせないのは、停止の引き金が技術ではなく『外国籍ユーザーを取り締まれない』という運用上の不可能性だった点だ。国籍で線を引く命令は、実装できないがゆえに『全員停止』という最大の副作用を生む。能力ではなくガバナンスの設計不全がサービスを止める——AIに依存する側にとって、これは性能評価では捉えられない種類のリスクである。
 en:
   articleTitle: Anthropic's Most Powerful AI Was Released, Then Halted Over a Foreign-User
     Ban
@@ -103,7 +101,6 @@ en:
 
       The video captures the pace bluntly: it was released, and then almost at once
       it was made private again. The change happened fast.'
-    image: null
   - heading: US Government Intervention and Two Practical Problems
     time: 10
     body: 'The trigger for the withdrawal was US government intervention. According
@@ -115,7 +112,6 @@ en:
       Anthropic employees who built Fable are themselves foreign nationals. Second,
       enforcing model access restrictions on the basis of nationality would be operationally
       extremely difficult in practice.'
-    image: null
   - heading: A Full Shutdown and a Split Reaction
     time: 32
     body: 'Because drawing that nationality-based line was not realistic, Anthropic
@@ -126,7 +122,12 @@ en:
       Reaction to the episode has been divided. The video says Grok, a rival model,
       welcomed the development and sarcastically commented that AI models should not
       be left unconstrained and instead need to be held back.'
-    image: null
+  editorial: In pulling the strongest AI right after launch, the overlooked point
+    is that the trigger was operational impossibility — you can't police users by
+    nationality — not technology. An order drawing a line by citizenship can't be
+    implemented, so it produces the maximal side effect of shutting everyone off.
+    Governance design failure, not capability, halts the service — a class of risk
+    that performance evaluation cannot capture for anyone depending on AI.
   headerImage: /images/LfMvn-7RJuA/header.png
   heroImage: /images/LfMvn-7RJuA/header.png
 ---
@@ -165,3 +166,7 @@ en:
 国籍による線引きが現実的でないことから、Anthropicは限定的な制限ではなく全ユーザーに対する無効化という対応を選んだ。最も強力なモデルが、誰にも使えない状態に置かれたことになる。
 
 この一件への反応は賛否が割れている。動画では競合のGrokがこの展開を歓迎し、「AIモデルは野放しにせず抑制が必要だ」と皮肉を込めてコメントした様子が紹介されている。
+
+## 編集部の視点
+
+最強AIを公開直後に取り下げた一件で見落とせないのは、停止の引き金が技術ではなく『外国籍ユーザーを取り締まれない』という運用上の不可能性だった点だ。国籍で線を引く命令は、実装できないがゆえに『全員停止』という最大の副作用を生む。能力ではなくガバナンスの設計不全がサービスを止める——AIに依存する側にとって、これは性能評価では捉えられない種類のリスクである。

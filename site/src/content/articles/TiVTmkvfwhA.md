@@ -48,21 +48,19 @@ sections:
 
 
     既存のOpusなどのモデルは引き続き使えるものの、『最強AI』として注目を集めていたFable 5の全面停止だったため、世界に衝撃が走った。番組はこの一件を『AIと安全保障』『規制と独占』『安全性は誰が決めるのか』の3つの切り口で読み解いていく。'
-  image: null
 - heading: 『安全』と高速リリースの矛盾をどう見るか
   time: 1051
   body: '専門家は、安全性を強調しながら極めて高速に先端モデルを投入するAnthropicの姿勢は『見た目は矛盾している』と認める。一方で、最先端モデルを自ら握っているからこそ危険性を早く察知し、社会へ提言できる面もあると分析する。
 
 
     巨額の資金調達が続くAI競争では『止まったら負け』という力学が働く。今回の停止は、自分たちの圧倒的な能力を一瞬だけ見せて引っ込めた動きにも映り、技術の進展と合意形成の両立の難しさを浮き彫りにした。'
-  image: null
 - heading: AIの安全性は誰が決めるのか
   time: 2202
   body: 'AIが代替可能なインフラへと変わるにつれ、工場の部品供給が止まると困るのと同様のサプライチェーンリスクが意識されるようになる。コストは上がっても、複数の選択肢を確保しておくべきだという論点が示される。
 
 
     ソブリンAIの議論も定義が論者ごとに異なり、現実的にはオープンウェイト化したモデルを目的別にチューニングして複数持つ選択肢が現実味を帯びる。先行者が作った規制で世界が固められていく中で、後から対応する難しさが指摘された。'
-  image: null
+editorial: 停止劇を『AIと安全保障』『規制と独占』『安全性は誰が決めるのか』の三論点で整理した構成が、この回の価値だ。安全を掲げながら高速に出す姿勢は矛盾に見えて、危険を最も早く察知できる立場でもある——この両義性を単純な偽善論で片付けない冷静さが要る。『止まったら負け』の競争と社会的合意形成の両立という難題は、今後数年のAI政策の通奏低音になる。
 en:
   articleTitle: The Fable 5 Halt Exposes the Collision Between AI Progress and National
     Security
@@ -115,7 +113,6 @@ en:
       globally. The program reads the event through three lenses: AI and national
       security, regulation and monopoly, and the question of who gets to decide what
       AI safety means.'
-    image: null
   - heading: How to Read the Tension Between Safety and Rapid Release
     time: 1051
     body: 'The experts acknowledge that Anthropic’s posture can look contradictory:
@@ -130,7 +127,6 @@ en:
       where Anthropic flashed overwhelming capability and then withdrew it. More broadly,
       the episode exposed how difficult it is to balance technological progress with
       the slower work of building social consensus.'
-    image: null
   - heading: Who Gets to Define AI Safety?
     time: 2202
     body: 'As AI turns into replaceable infrastructure, a supply-chain mindset starts
@@ -144,7 +140,12 @@ en:
       maintain multiple fine-tuned models built from open-weight systems for different
       purposes. The speakers warn that once early movers lock in the regulatory framework,
       it becomes much harder for others to respond later.'
-    image: null
+  editorial: 'The value of this piece is organizing the shutdown into three questions:
+    AI and security, regulation and monopoly, and who decides safety. Shipping fast
+    while preaching safety looks contradictory, yet it''s also the vantage point that
+    detects danger earliest — and it takes composure not to dismiss this ambivalence
+    as mere hypocrisy. Reconciling a ''stop and you lose'' race with social consensus-building
+    is the throughline of AI policy for years ahead.'
   headerImage: /images/TiVTmkvfwhA/header.png
   heroImage: /images/TiVTmkvfwhA/header.png
 ---
@@ -184,3 +185,7 @@ en:
 AIが代替可能なインフラへと変わるにつれ、工場の部品供給が止まると困るのと同様のサプライチェーンリスクが意識されるようになる。コストは上がっても、複数の選択肢を確保しておくべきだという論点が示される。
 
 ソブリンAIの議論も定義が論者ごとに異なり、現実的にはオープンウェイト化したモデルを目的別にチューニングして複数持つ選択肢が現実味を帯びる。先行者が作った規制で世界が固められていく中で、後から対応する難しさが指摘された。
+
+## 編集部の視点
+
+停止劇を『AIと安全保障』『規制と独占』『安全性は誰が決めるのか』の三論点で整理した構成が、この回の価値だ。安全を掲げながら高速に出す姿勢は矛盾に見えて、危険を最も早く察知できる立場でもある——この両義性を単純な偽善論で片付けない冷静さが要る。『止まったら負け』の競争と社会的合意形成の両立という難題は、今後数年のAI政策の通奏低音になる。

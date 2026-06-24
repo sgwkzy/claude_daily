@@ -45,6 +45,7 @@ const heroImageSrc = withBase(loc.heroImage);
 const articleDescription = getLocalizedDescription(article, locale);
 const minLabel = locale === "en" ? `${minutes} ${tr("article.minVideo")}` : `${minutes}${tr("article.minVideo")}`;
 const allSlidesLabel = locale === "en" ? `${total} ${tr("article.allSlides")}` : `全 ${total} ${tr("article.allSlides")}`;
+const editorialLabel = locale === "en" ? "Editor's Take" : "編集部の視点";
 // chip はアクセント1色（coral）に統一。
 const chipStyle = "border-coral/30 bg-coral/10 text-coralDark";
 const structuredData = {
@@ -165,6 +166,13 @@ const structuredData = {
         />
       ))}
     </section>
+
+    {loc.editorial && (
+      <section class="rounded-slide border border-coral/30 bg-cream/50 p-8 shadow-card md:p-10">
+        <p class="text-xs font-semibold uppercase tracking-[0.3em] text-coral">{editorialLabel}</p>
+        <p class="mt-5 whitespace-pre-line text-[1.02rem] leading-[2.05] text-ink/85">{loc.editorial}</p>
+      </section>
+    )}
 
     <section class="rounded-slide border border-line/70 bg-paper p-8 shadow-card md:p-10">
       <p class="text-xs font-semibold uppercase tracking-[0.3em] text-clay">{tr("article.source")}</p>

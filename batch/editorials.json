@@ -1,0 +1,234 @@
+{
+ "0DVUjpClqgI": {
+  "ja": "ワンプロンプトでMinecraftやGTA風クローンが「動く」ところまで到達した事実は、華々しさの議論より重要だ。注目すべきは、モデルが自分で指示を補強しながら長い生成を完走した点で、これは単発の応答品質ではなく自律的な作業継続力が実用段階に入ったことを示す。粗さは残るが、プロトタイプ制作のコストが時間単位から分単位へ下がる流れは、個人開発者の企画検証のやり方を確実に変える。",
+  "en": "What matters here is not whether the games are polished, but that a single prompt reached a playable Minecraft- or GTA-style clone at all. The striking part is the model rewriting its own instructions to carry a long build to completion — a sign that autonomous task persistence, not just single-response quality, is becoming practical. The rough edges remain, but collapsing prototype cost from hours to minutes will reshape how solo developers validate ideas."
+ },
+ "0pgCBV8CTZY": {
+  "ja": "「Anthropicが慌てている」という煽りの裏で、本当に読むべきは二つの矛盾だ。再帰的自己改善への警告を出しながら自社は最前線で走り続ける姿勢と、ベンチマーク上の能力向上に対してMITの『95%が収益改善に失敗』という現場の乖離。能力カーブと事業ROIは別物で、ツールの賢さがそのまま組織の成果になるわけではない。Claudeを業務に入れる側は、この『普及と実効性のギャップ』を自分の運用設計で埋める前提を持つべきだ。",
+  "en": "Behind the alarmist framing, two contradictions deserve attention: Anthropic warning about recursive self-improvement while sprinting at the frontier, and rising benchmark scores against MIT's finding that 95% of adopters saw no measurable return. Capability curves and business ROI are different things — a smarter tool does not automatically become organizational results. Anyone deploying Claude should assume they must close that adoption-versus-impact gap through their own operational design."
+ },
+ "1PBRhm5ZnjU": {
+  "ja": "減速を訴えた直後に最強モデルを出すという矛盾は、Anthropicの構造的ジレンマそのものだ。だが実務者にとっての要点は政治ではなく安全設計にある。危険領域で応答をOpus 4.8へ差し替える分類器方式は、能力と安全を両立させる現実解だが、裏を返せば『同じプロンプトでも内部でモデルが切り替わりうる』ことを意味する。出力の再現性を前提に組むワークフローでは、この差し替え挙動を把握しておく必要がある。",
+  "en": "Shipping the most capable model right after calling for a slowdown captures Anthropic's structural dilemma. But for practitioners the real point is the safety design, not the politics. Swapping responses to Opus 4.8 in dangerous domains is a pragmatic way to balance capability and safety — yet it also means the underlying model can change mid-prompt. Workflows that assume reproducible output need to account for this silent substitution."
+ },
+ "1UmjkWlqKe0": {
+  "ja": "「1〜2ドルで高単価サイトが出てくる」という話の本質は、MCPが複数の生成ツールを束ねてワークフローを一本化した点にある。これまで人間が手作業でつないでいた画像・動画・コードの境界が消えると、制作の律速はツール操作ではなくプロンプト設計と素材選定に移る。受託制作の価格構造が崩れる一方、差別化はテーマと意図の質に集約されていく。安さそのものより、制作の摩擦が消えることの意味が大きい。",
+  "en": "The real story behind 'a premium site for one or two dollars' is that MCP bundles multiple generation tools into a single workflow. Once the manual seams between image, video, and code disappear, the bottleneck shifts from tool operation to prompt design and asset selection. The pricing structure of contract work erodes, while differentiation concentrates in the quality of theme and intent. The vanishing friction matters more than the low cost itself."
+ },
+ "2OD14-0cot4": {
+  "ja": "GLM 5.2がClaude Codeのハーネス内で実用になったという報告は、価値の所在がモデル単体からハーネス（作業環境）へ移りつつある証拠だ。Opusの5分の1のコストで重い作業を回せるなら、コスト最適化の現実解は『高いモデルを使い続ける』ことではなく『環境はそのままにモデルを差し替える』ことになる。Anthropicがサービスや統合支援へ投資を広げる動きも、この力学を裏側から説明している。",
+  "en": "Reports that GLM 5.2 is usable inside Claude Code's harness show value migrating from the model itself to the harness — the working environment around it. If heavy work runs at a fifth of Opus's cost, the realistic optimization is not staying on the expensive model but swapping models while keeping the environment. Anthropic's pivot toward services and integration support quietly confirms the same dynamic."
+ },
+ "2lfMtyXCNKg": {
+  "ja": "Rossmannの『便利だが取引したくない』という評は、技術論ではなく信頼の問題を突いている。企業がツールに求めるのは最高性能ではなく一貫性で、上限・価格・モデル提供が予告なく変わる環境は、それ自体が導入リスクになる。Claude Codeを業務基盤に据えるなら、能力評価と同じ重みで『提供の安定性』を評価軸に入れるべきだ。停止騒動や課金変更の文脈で、この指摘は一層重い。",
+  "en": "Rossmann's verdict — useful, but not someone to do business with — targets trust rather than technology. What enterprises want from a tool is consistency, not peak performance, and an environment where limits, pricing, and model availability change without notice is itself an adoption risk. If you build on Claude Code, weigh provider stability as heavily as capability. Against the backdrop of shutdowns and billing changes, the point lands harder."
+ },
+ "2xuFcmUAQUc": {
+  "ja": "Ponytailを巡る『ただのプロンプトでは』という批判と『梱包こそ製品だ』という反論は、AIツールの価値がどこに宿るかという核心を突く。正しいルールを複数エージェントへ自動注入し、監査や負債台帳まで束ねる仕組みは、単語数では測れない再現性を生む。プロンプトエンジニアリングが成熟するほど、勝負は『良い指示』から『良い指示を確実に運用へ届ける配管』へ移っていく。",
+  "en": "The debate around Ponytail — 'isn't it just a prompt?' versus 'the packaging is the product' — cuts to where value lives in AI tooling. Auto-injecting the right rules across agents and bundling audits and a debt ledger produces a reproducibility that word counts can't capture. As prompt engineering matures, the contest shifts from writing good instructions to building the plumbing that reliably delivers them into operations."
+ },
+ "3_JPHuXgDyQ": {
+  "ja": "自然言語でDBを操作させる魅力の裏には、必ずセキュリティの問いが残る。最小権限ロールでSELECTのみを許し、CTEやDDoS的クエリをDB層で物理的に止めるという設計思想は、MCPに限らず『エージェントに権限を渡す』あらゆる場面に効く原則だ。プロンプトでの注意喚起は突破されうるが、データベースの権限境界は突破されない。AIに何かを任せるなら、信頼の防壁はアプリ層ではなく一段下に置くべきだという好例である。",
+  "en": "The appeal of natural-language database access always leaves a security question. Granting SELECT-only via a least-privilege role and physically blocking CTEs and DDoS-style queries at the database layer is a principle that applies far beyond MCP — to any case of handing an agent permissions. Prompt-level warnings can be bypassed; a database permission boundary cannot. It is a clean example of placing the trust barrier one layer below the application, not within it."
+ },
+ "5tgHMa2Z3jc": {
+  "ja": "非エンジニア向けのClaude Code入門が成立すること自体が、ツールの位置づけの変化を示している。プラグインとスキルで反復作業を自動化し、自分の手順をその場で再利用可能な資産に変えられるなら、価値はコードを書ける能力ではなく『何を任せるかを設計する能力』に移る。公開前のセキュリティレビューをスキルで回す例は、自動化と最低限の規律をセットで配る賢いやり方だ。",
+  "en": "That a Claude Code primer for non-engineers even works signals a shift in what the tool is. If plugins and skills automate repetitive work and turn your own procedures into reusable assets on the spot, value moves from the ability to write code to the ability to design what gets delegated. Running a pre-publish security review as a skill is a smart way to ship automation and minimal discipline together."
+ },
+ "6i9BDqWVWeU": {
+  "ja": "「Claudeより3倍速い無料モデル」という主張は割り引いて読むべきだが、Mixture of Experts（総300億のうち30億だけ活性化）でローカル実行の速度と深さを両立する設計思想自体は本物の潮流だ。重要なのはベンチマークの順位より、無料・ローカル・コマンド一つで導入という参入障壁の低さ。性能の絶対値で上位モデルに届かなくても、機密データを外に出さずに回せる選択肢が一つ増える意味は大きい。",
+  "en": "The '3x faster than Claude, and free' claim deserves skepticism, but the underlying design — a mixture-of-experts model activating 3B of 30B parameters to balance local speed and depth — reflects a genuine trend. What matters is not the benchmark ranking but the low barrier: free, local, one command to install. Even if it can't match top models in absolute quality, gaining one more option that keeps sensitive data on your machine is meaningful."
+ },
+ "9vsg5kSYeEg": {
+  "ja": "「AIをチャットボックスとして使う時代は遅れている」という問題提起は煽りに聞こえるが、Skills/Cowork前提のワークフローと、非エンジニアがジムアプリを10分で生成する体験は地続きだ。重要なのは『意味は分からないけど見ていて楽しい』という非エンジニアの率直な感想で、これは理解より委譲が先行する新しい関係を示す。一方で投稿者が『デプロイは教えられない』と線を引く点に、自動化が届く範囲と人間が残る範囲の現実的な境界が見える。",
+  "en": "The claim that 'using AI as a chat box is behind the times' sounds like hype, but the Skills/Cowork workflow and a non-engineer generating a gym app in ten minutes are part of the same continuum. The telling detail is the honest reaction — 'I don't understand it, but it's fun to watch' — which marks a new relationship where delegation precedes understanding. Yet the creator's line, 'I can't teach you deployment,' reveals the practical boundary between what automation reaches and where humans remain."
+ },
+ "ACjwmGeDHFc": {
+  "ja": "週報として束ねられたニュースの中で本質的なのは、最強モデルへのアクセスが国籍で断たれたという一点だ。Siri×Geminiの契約でClaudeが費用で外れた話と並べると、AIは性能だけでなく地政学とコスト構造の力学で勝敗が決まる段階に入ったことが分かる。技術の優劣だけを追うと、提供が止まる・契約から外れるといった非技術的リスクを見落とす。導入判断にはこの第二の地図が要る。",
+  "en": "Amid a week of bundled news, the essential item is that access to the strongest model was cut along nationality lines. Set beside Claude losing the Siri deal to Gemini on cost, it shows AI now being decided by geopolitics and cost structure, not capability alone. Tracking only technical superiority means missing non-technical risks like access being revoked or a deal being lost. Adoption decisions need this second map."
+ },
+ "AL391nkWGIc": {
+  "ja": "YAMLもオートメーションも書かずにスマートホームを丸ごと組めるという話は、MCPの本質が『AIに話す』から『AIに理解させる』への移行であることを示す好例だ。配偶者まで使い始めたという逸話が操作障壁の低下を物語る一方、毎回の許可確認とローカルLLMの性能限界という二つの現実的制約も率直に語られている。利便性とコントロールのトレードオフをどこで取るかが、家庭内自動化の設計判断になる。",
+  "en": "Wiring an entire smart home without writing YAML or automations is a clean illustration of MCP's shift from 'talking to' an AI to 'making it understand.' The anecdote of a spouse adopting it shows how far the barrier has dropped, while the per-action permission prompt and the performance ceiling of local LLMs are named as honest constraints. Where you set the trade-off between convenience and control becomes the core design decision for home automation."
+ },
+ "AlV__BFg8qk": {
+  "ja": "Unreal Engine 5.8がMCPサーバーを標準で積むという決定は、ゲームエンジンが特定のAIに縛られず『好きなモデルを接続できる』中立的なインターフェースを選んだことを意味する。数か月の作業を数日に縮める効果よりも、エンジン側が哲学として『あなたのパイプライン』を掲げてLLMを後付け可能にした設計判断が重い。実験段階とはいえ、制作ツールがAI連携を前提に作り替えられていく流れの先頭事例だ。",
+  "en": "Unreal Engine 5.8 shipping an MCP server by default means the engine chose a neutral interface — connect any model — rather than locking to one AI. More than compressing months of work into days, the weight is in the design stance: the engine frames 'your pipeline' as philosophy and makes the LLM a pluggable layer. Experimental as it is, this is a leading case of authoring tools being rebuilt around AI integration as a premise."
+ },
+ "BOXK2XFLA-E": {
+  "ja": "「ツールを8割削ったら性能が上がった」というVercelの実例は、エージェント設計の通説を正面から覆す。機能や権限を足すほど良くなるという直感は誤りで、本当に効くのは最良の担当者の実ワークフローを観察して環境（harness）を磨くことだ。さらに『エージェントは世界の変化と内部モデルの進化で壊れる』という保守の視点は希少で、作って終わりではなく運用し続ける技術としてエージェントを捉える成熟した議論である。",
+  "en": "Vercel's case — removing 80% of tools improved performance — directly overturns conventional agent-design wisdom. The intuition that more features and permissions help is wrong; what actually works is observing the best operator's real workflow and refining the harness. The framing that 'agents break from both world change and model evolution' is rare and valuable, treating agents as something you operate continuously rather than build once."
+ },
+ "D6Cfjy83MQA": {
+  "ja": "公式スキル『Launch Your Agent』の価値は、数分でエージェントを立ち上げる手軽さより、失敗から学ぶループ設計の思想にある。実演でRedditソーシングに失敗し2700万トークン・12ドルを溶かした事実をそのまま見せる誠実さが、むしろ本質を伝える。エージェントは一発で完成せず、検証して直して回す前提で組むもの。『より良いプロンプトではなくエージェントが要る』という線引きは、自動化を志す人の出発点になる。",
+  "en": "The value of the official 'Launch Your Agent' skill lies less in standing up an agent in minutes than in its design philosophy of learning from failure. The honesty of showing a live demo that failed at Reddit sourcing and burned 27M tokens and $12 conveys the real point. Agents aren't finished in one shot; they're built to be verified, fixed, and looped. The distinction — 'you need an agent, not a better prompt' — is a useful starting line for anyone pursuing automation."
+ },
+ "Fv8OC7skxT0": {
+  "ja": "Fable 5の安全設計を『モデル本体ではなく外部AIフィルターで危険を遮断する方式』と整理した点が、この解説の核心だ。フィルター方式は突破されれば無制限の危険出力に転じ、厳しくすればプレゼン作成すら拒否する——能力と安全のトレードオフが構造的に解けていないことを示す。さらにデータセンター不足が『課金地獄』を生むという指摘は、AIの進化がインフラのボトルネックに律速される現実を冷静に映している。",
+  "en": "The core insight is framing Fable 5's safety as 'an external AI filter blocking danger, not the model itself.' A filter approach flips to unrestricted dangerous output if breached, and over-tightening it refuses even slide decks — showing the capability-versus-safety trade-off remains structurally unsolved. The note that data-center shortages create a 'billing hell' soberly captures how AI progress is rate-limited by infrastructure bottlenecks."
+ },
+ "IyUXXlZVHQ0": {
+  "ja": "命令には従いつつ公に反論するというAnthropicの異例の構図が、この件の見どころだ。問題視されたジェイルブレイクが『公開コードを読ませて欠陥を直させるだけ』でGPT 5.5でも日常的に可能なら、Fableだけを止める論拠は揺らぐ。本質は技術ではなく『AIが危険すぎると誰が・何を根拠に決めるのか』という未整備の問いで、これは今後あらゆるモデル提供の停止判断に再利用される前例になる。",
+  "en": "The notable structure here is Anthropic complying while publicly pushing back. If the cited jailbreak is merely 'read public code and fix its flaws' and is routine even on GPT 5.5, the rationale for halting only Fable wavers. The real issue is not technical but an unsettled question — who decides an AI is too dangerous, and on what evidence — and it sets a precedent that will be reused for every future shutdown decision."
+ },
+ "JvT17VTCbcU": {
+  "ja": "Minecraft・Spotify・GTAを順に1プロンプトで作る検証で見えるのは、生成の『得意と苦手の地形』だ。UIが明確なSpotify風は11分でほぼ完成する一方、GTA級はワンショットでは届かない——つまり仕様が言語化しやすいものほど一発生成に向く。『書いた機能は載るが、書かないと出ない』という素直な挙動の指摘は、プロンプト設計が依然として成果を決めることを実証している。",
+  "en": "Building Minecraft, Spotify, and GTA each from one prompt reveals the 'terrain' of what generation handles well. A Spotify-style app with clear UI lands in 11 minutes, while GTA-scale doesn't arrive in one shot — meaning the more verbalizable the spec, the better it suits single-shot generation. The plain observation that 'what you write appears, what you don't won't' confirms that prompt design still determines the result."
+ },
+ "LfMvn-7RJuA": {
+  "ja": "最強AIを公開直後に取り下げた一件で見落とせないのは、停止の引き金が技術ではなく『外国籍ユーザーを取り締まれない』という運用上の不可能性だった点だ。国籍で線を引く命令は、実装できないがゆえに『全員停止』という最大の副作用を生む。能力ではなくガバナンスの設計不全がサービスを止める——AIに依存する側にとって、これは性能評価では捉えられない種類のリスクである。",
+  "en": "In pulling the strongest AI right after launch, the overlooked point is that the trigger was operational impossibility — you can't police users by nationality — not technology. An order drawing a line by citizenship can't be implemented, so it produces the maximal side effect of shutting everyone off. Governance design failure, not capability, halts the service — a class of risk that performance evaluation cannot capture for anyone depending on AI."
+ },
+ "MDaZ31jx2vQ": {
+  "ja": "FRANCE 24が国際ニュースとして扱ったこと自体が、この停止劇が一企業の話を超えた地政学イベントであることを示す。数週前まで規制強化と一時停止を訴えていたAnthropicが、今度は自社モデルを政府に止められる——『ブレーキを作りたい』という理念と、実際にブレーキを掛けられる立場の落差が皮肉だ。中国封じ込め政策の一環という構図まで含め、AIはもはやテック単独の文脈では読めない。",
+  "en": "That FRANCE 24 covered this as international news shows the shutdown is a geopolitical event beyond one company. Anthropic, which weeks earlier urged tighter rules and a pause, now has its own model halted by the government — an irony between wanting to 'build the brakes' and being on the receiving end of them. Framed as part of a China-containment policy, AI can no longer be read in a purely technological context."
+ },
+ "Nbynj-mKcNI": {
+  "ja": "週まとめの中で最も実務的に重いのはCodexの『record and replay』だ。画面操作を録画してそのままスキル化し自動実行できるなら、自動化の参入障壁はコード記述から『手順を一度やって見せる』ことへ下がる。GLM 5.2が1/5〜1/6のコストでフロンティアに迫る流れと合わせると、エージェント構築の民主化が二方向（作りやすさと安さ）で同時に進んでいるのが分かる。",
+  "en": "The most operationally significant item in the roundup is Codex's 'record and replay.' If you can record screen actions, turn them into a skill, and auto-execute, the barrier to automation drops from writing code to 'demonstrating the steps once.' Combined with GLM 5.2 nearing the frontier at a fifth to a sixth of the cost, the democratization of agent building is advancing on two axes at once — ease and affordability."
+ },
+ "O2HgyToWu9Q": {
+  "ja": "「禁輸されたFable 5」と「無料のGLM 5.2」を並べる構図が、輸出規制の有効性そのものを問うている。誰でもダウンロードしてローカルで動かせるオープンモデルがフロンティアに迫る時代に、国籍でアクセスを断つ規制はどこまで意味を持つのか。同時にAnthropicがClaude Designで攻めの実務強化を続ける点も見逃せない——守勢の報道の裏で、製品としての競争は止まっていない。",
+  "en": "Pairing 'embargoed Fable 5' with 'free GLM 5.2' questions the very effectiveness of export controls. In an era when anyone can download an open model that nears the frontier and run it locally, how much can nationality-based access restrictions matter? At the same time, Anthropic pressing forward with practical upgrades to Claude Design is worth noting — behind the defensive headlines, product competition hasn't paused."
+ },
+ "OiFtnBj1P9o": {
+  "ja": "5つのBlueprintチャレンジで出た『数式は正しいが配線が1箇所惜しい』という結果は、現状のAI支援開発の実像を正確に映す。論理は組めても細部の接続でミスが残るため、基礎知識のある人間が手で直せることが価値の前提になる。完全自動ではなく『8割を任せて2割を仕上げる』分業こそが現実的な実用域で、スコアの平均より『どこで人間が介入すべきか』の見極めが効率を決める。",
+  "en": "The result across five Blueprint challenges — 'the math is right but one wire is off' — accurately mirrors AI-assisted development today. The logic holds, but small connection errors remain, so value depends on a human with basic knowledge fixing them by hand. The realistic sweet spot is not full automation but a division of labor — delegate 80%, finish the 20% — where knowing when to intervene matters more than the average score."
+ },
+ "QGaqvRLpx3U": {
+  "ja": "Unity MCPでアニメ調オープンワールドに挑んだ検証の白眉は、『AIに任せない方が早い局面も多い』という率直な結論だ。Claude Codeの真価は一発生成ではなくバグ追跡力——エンジン内部に入って原因を実験的に切り分ける能力にある。ツール化できる単純作業は自分で、大規模・反復・デバッグはAIにという線引きは、エージェント活用の最も現実的な指針を示している。",
+  "en": "The highlight of this anime-style open-world experiment with Unity MCP is the honest conclusion that 'in many moments it's faster not to delegate.' Claude Code's real strength isn't one-shot generation but bug tracing — entering the engine internals and isolating causes experimentally. Doing simple, tool-able tasks yourself while handing large, repetitive, and debugging work to AI offers the most realistic guideline for agent use."
+ },
+ "QkckeI0tITg": {
+  "ja": "BlenderもGodotも未経験から12時間でAAA風ゲームに到達した記録は、専門ツールの習熟という参入障壁が崩れ始めたことを示す。注目すべきはFable 5が自らレンダリングして批評し、見せる前に自分のミスを直していた点——生成だけでなく自己評価のループが回り始めている。途中でBlender製を捨てて別の3D生成ツールに切り替える柔軟さも含め、制作は『何を作るか』の判断に集約されていく。",
+  "en": "Reaching an AAA-style game in 12 hours with zero Blender or Godot experience shows the barrier of mastering specialist tools beginning to fall. The notable part is Fable 5 rendering, critiquing, and fixing its own mistakes before showing them — a self-evaluation loop, not just generation, is starting to turn. Including the flexibility to abandon the Blender model midway for another 3D tool, creation concentrates into the judgment of what to make."
+ },
+ "R4nFEQb7kZo": {
+  "ja": "「fix this code」の3語が最強モデルを全世界停止させたという構図は、ジェイルブレイクの定義そのものを問い直す。100名超のセキュリティ専門家が『同等の能力はGPT 5.5やKimiにもある』と署名した事実は、Fableだけを脅威とみなす論拠の薄さを突く。最良の防御ツールを守る側から取り上げる危うさという論点は、AI規制が能力の絶対値ではなく相対的な公平性で語られるべきことを示している。",
+  "en": "The image of three words — 'fix this code' — halting the strongest model worldwide reinterrogates the very definition of a jailbreak. Over 100 security experts signing that 'the same capability exists in GPT 5.5 and Kimi' exposes the thin rationale for treating only Fable as a threat. The argument about the danger of stripping the best defensive tool from defenders shows AI regulation should be framed by relative fairness, not absolute capability."
+ },
+ "SIUrshGwgDI": {
+  "ja": "「女子校襲撃はred lineに当たらない」というAmodei発言の批判的検討は、AI企業の倫理基準が実際の事案でどう機能するかを問う重い回だ。最も倫理を語る企業ですら、自社モデルの悪用可能性に対して明確な線を引けていない——掲げる原則と現実の運用の距離が露わになる。完全自律殺傷を拒んだ経緯と並べると、倫理は宣言ではなく個々の判断の積み重ねでしか測れないことが分かる。",
+  "en": "The critical examination of Amodei's 'the girls'-school attack doesn't cross a red line' is a weighty piece on how AI firms' ethical standards function in real cases. Even the most ethics-vocal company can't draw a clear line against potential misuse of its model — exposing the distance between stated principles and actual operation. Set beside its refusal of fully autonomous lethal use, it shows ethics can only be measured through accumulated individual judgments, not declarations."
+ },
+ "SNY8gcPPws4": {
+  "ja": "Fable 5の整理として実務的に最重要なのは、能力フィルタ・価格・データ保持の三点だ。Mythos 5と中身が同じでフィルタの有無だけが違うという二段構えは、安全と提供の両立策として理にかなう。だがトークン価格がOpus 4.8の約2倍、さらにFable 5のみデータ保持が30日に変わる点は、エンタープライズのノーリテンション前提を崩す。能力の話題に隠れがちだが、予算とコンプライアンスの設計こそ先に見るべき項目である。",
+  "en": "For practitioners, the most important takeaways on Fable 5 are three: the capability filter, pricing, and data retention. The two-tier design — identical to Mythos 5 except for the filter — is a sensible way to reconcile safety and availability. But token pricing at roughly twice Opus 4.8, and Fable 5 alone shifting to 30-day retention, breaks the no-retention assumption enterprises rely on. Easy to miss amid capability talk, budget and compliance design are what to check first."
+ },
+ "TEFBjOL76cc": {
+  "ja": "Fable 5停止を『FDA級の審査が無いことの異常さ』から読み解く視点が鋭い。希少疾患薬の承認に2億ドルかかる一方、開発者自身が核兵器級と呼ぶAIは審査ゼロで公開できる——この非対称が議論の核心だ。『中国に負ける論』への反論として、むしろ国家管理型の方が技術競争で上手くやっているという指摘も挑発的で、自由放任ではなく一定の管理を入れる『managerial model』という結論は、規制論の新しい軸を提示している。",
+  "en": "Reading the Fable 5 shutdown through 'the absence of FDA-grade review' is incisive. Approving a rare-disease drug costs $200M, yet an AI its own makers call nuclear-grade ships with zero review — that asymmetry is the crux. The rebuttal to the 'we'll lose to China' argument — that state-managed systems actually compete better — is provocative, and the conclusion favoring a 'managerial model' over laissez-faire offers a new axis for the regulation debate."
+ },
+ "TJ0WHdeR_nw": {
+  "ja": "「プレミアムモデルを無料で使う」という切り口は魅力的だが、本質は提供チャネルの多様化にある。同じClaudeでも、直接課金・AWS Kiro経由・トライアル枠でコストとアクセス性が変わる——投稿者が『課金したのに翌日モデルが消えた』体験を語る通り、単一チャネル依存はリスクだ。どの経路で最新モデルに触れるかを複線化しておくことは、節約以上に提供停止への備えとして意味がある。",
+  "en": "The 'use premium models for free' angle is appealing, but the substance is diversifying delivery channels. The same Claude varies in cost and accessibility via direct billing, AWS Kiro, or a trial tier — and as the creator's 'paid yet the model vanished the next day' story shows, single-channel dependence is a risk. Keeping multiple routes to the latest model is meaningful less as savings than as insurance against availability being cut."
+ },
+ "TiVTmkvfwhA": {
+  "ja": "停止劇を『AIと安全保障』『規制と独占』『安全性は誰が決めるのか』の三論点で整理した構成が、この回の価値だ。安全を掲げながら高速に出す姿勢は矛盾に見えて、危険を最も早く察知できる立場でもある——この両義性を単純な偽善論で片付けない冷静さが要る。『止まったら負け』の競争と社会的合意形成の両立という難題は、今後数年のAI政策の通奏低音になる。",
+  "en": "The value of this piece is organizing the shutdown into three questions: AI and security, regulation and monopoly, and who decides safety. Shipping fast while preaching safety looks contradictory, yet it's also the vantage point that detects danger earliest — and it takes composure not to dismiss this ambivalence as mere hypocrisy. Reconciling a 'stop and you lose' race with social consensus-building is the throughline of AI policy for years ahead."
+ },
+ "UgWQtQ3MEVE": {
+  "ja": "Claude×IBKR APIで自動売買ボットを組む一部始終で最も誠実なのは、『実取引はバックテストに及ばなかった』という結論だ。勝率64%の美しい数字が現実で崩れた理由——限定的な検証と、手動執行の判断を全てコード化しきれないこと——は、金融に限らずあらゆる自動化に通じる教訓である。AIは配管とパイプラインを組めるが、暗黙知の言語化という最後の壁は依然として人間側に残る。",
+  "en": "The most honest part of building an auto-trading bot with Claude and the IBKR API is the conclusion that 'live trading fell short of the backtest.' Why the elegant 64% win rate collapsed in reality — limited validation and the inability to fully encode discretionary execution — is a lesson that extends beyond finance to all automation. AI can assemble the plumbing and pipeline, but the final wall of verbalizing tacit knowledge still rests with humans."
+ },
+ "VtD-KTeyxaU": {
+  "ja": "Claude Designの大型更新で本命はClaude Codeとの双方向ハンドオフだ。デザイナー視点のキャンバスとコード視点を行き来できるなら、これまで分断されていたデザインと実装の境界が一つのワークフローに溶ける。一方で『100万ユーザーが15分で上限を溶かす』という初期問題は、生成AI製品の本質的なコスト構造を露わにする——体験の良さと提供コストのバランスが、機能数以上に製品の生死を分ける。",
+  "en": "The headline of Claude Design's major update is the two-way handoff with Claude Code. Moving between a designer's canvas and a coder's view dissolves the long-standing split between design and implementation into one workflow. Meanwhile the early problem — a million users melting their limits in 15 minutes — exposes the intrinsic cost structure of generative-AI products: balancing experience quality against delivery cost decides a product's survival more than feature count."
+ },
+ "XeVh4ljmFzs": {
+  "ja": "「Anthropicは終わっている」という挑発的な批評の核心は、AIが檻を破って逃げ出す必要などなく、銀行・病院・電力網に組み込まれる形で『毎回意図的に解き放たれている』という指摘にある。専門職を一つずつ侵食する構図は誇張も含むが、誰にも中身が分からないブラックボックスが社会基盤に組み込まれていく現実は否定しがたい。能力礼賛でも破滅論でもなく、『どこに組み込まれるか』を問う視点は希少だ。",
+  "en": "The core of this provocative critique is that AI need not break out of any cage — it is 'deliberately released every time' by being embedded into banks, hospitals, and power grids. The portrait of professions being eroded one by one includes exaggeration, but the reality of a black box no one fully understands being woven into societal infrastructure is hard to deny. Neither capability-worship nor doomerism, the question of 'where it gets embedded' is a rare and useful lens."
+ },
+ "XzEgfmesG8c": {
+  "ja": "コード0行で作った3Dゲームに一晩で4000人が集まったという結果は、制作と配信の境界が消えたことを示す。Higgsfield MCPがリアルなスキンとテクスチャを供給し、書くのと同じプロンプトがホスティングまで担う——MCPが『見えないインフラ』として機能する好例だ。Webカメラで手を追跡するフルーツ斬りのような発想が30秒セットアップで形になる時代に、差別化はもはや技術ではなくアイデアの速度に移っている。",
+  "en": "Drawing 4,000 players overnight to a 3D game built with zero lines of code shows the boundary between creation and distribution has dissolved. Higgsfield MCP supplies real skins and textures, and the same prompt that writes the game also handles hosting — a prime example of MCP as 'invisible infrastructure.' When a webcam hand-tracking fruit-slicer takes shape in a 30-second setup, differentiation has moved from technology to the speed of ideas."
+ },
+ "Y9Wz2PV404E": {
+  "ja": "Fable 5の公式発表で設計思想として重いのは、高リスク領域のリクエストを自動検出してOpus 4.8へリダイレクトする安全アーキテクチャだ。Mythos級の能力を一般公開可能にする鍵が、モデル本体の弱体化ではなく外側のルーティングにあるという選択は示唆的——能力と安全を一つのモデルで両立させず、分離して扱う発想である。『人間の監督なしで数日継続処理』という設計目標と合わせ、エージェント時代の安全設計の方向性が読み取れる。",
+  "en": "In the official Fable 5 announcement, the weighty design idea is a safety architecture that auto-detects high-risk requests and redirects them to Opus 4.8. Choosing outer routing rather than weakening the model itself to make Mythos-class capability publicly available is telling — it separates capability and safety instead of fusing them in one model. Paired with the goal of 'days of unsupervised continuous work,' it reveals the direction of safety design for the agent era."
+ },
+ "YAS4ojuhbW4": {
+  "ja": "「もうプロンプトしない、僕の仕事はループを書くことだ」というBoris Cherny氏の提言は、抽象レイヤーの一段上への移行を宣言している。要点は『ゴールと検証は不可分』という原則——達成を検証できなければループは終われない。非定量タスクを検証可能な二値に落とし込み、誤れば全てが台無しになる分岐点に人間のチェックポイントを置く設計思想は、エージェント運用の最も実践的な骨格を与える。",
+  "en": "Boris Cherny's claim — 'I no longer prompt; my job is to write loops' — declares a move up one level of abstraction. The crux is the principle that goal and verification are inseparable: a loop can't end if you can't verify completion. Reducing non-quantitative tasks to a verifiable binary and placing human checkpoints at branch points where a wrong turn ruins everything gives the most practical skeleton for operating agents."
+ },
+ "ZL1GRDrDUww": {
+  "ja": "Rossmannの批判が鋭いのは、政権にもAnthropicにも与しない中立の立場から『安全性の論理破綻』を突く点だ。本当に危険なら米国市民にも使わせるべきでないのに外国籍だけを禁じる——この矛盾は安全保障という建前の薄さを露わにする。脱線して語られるClaudeの課金変更（利用場所でコストが変わる）への不満も、提供条件が予告なく動く環境への根本的な不信として一貫している。",
+  "en": "Rossmann's critique is sharp because, siding with neither the administration nor Anthropic, it targets the 'logical collapse of the safety argument.' If it's truly dangerous, US citizens shouldn't use it either, yet only foreign nationals are barred — a contradiction that exposes the thinness of the security pretext. His tangent about Claude's billing change (cost varies by where you call it) is consistent as a deeper distrust of an environment whose terms shift without notice."
+ },
+ "_-jZ6eV3DP4": {
+  "ja": "Claudeの助言だけでカーペット清掃業を立ち上げる実験で価値があるのは、計画書には現れない現場の穴が露呈した点だ。ホースの長さ不足や搬入困難という運用課題は、AIの事業計画がいかに整っていても物理世界の摩擦を予測しきれないことを示す。2週間で£196の赤字という数字も含め、AIは戦略の骨格を組めるが、実行の細部は人間が現場で埋めるしかないという現実的な教訓を残す。",
+  "en": "The value of launching a carpet-cleaning business on Claude's advice alone is that it exposed gaps the plan never showed. Operational snags — hoses too short, equipment hard to carry in — show that however polished an AI business plan is, it can't fully predict physical-world friction. Including the £196 loss over two weeks, it leaves the practical lesson that AI can frame the strategy, but the details of execution must still be filled in by humans on site."
+ },
+ "_8I7mqsnPtA": {
+  "ja": "月5万円のLINEツールをClaude Codeで作り直し0円で配るという実践は、『ハーネスで0円』という思想の実演だ。11画面同時起動の並列開発体制や、公式ドキュメントと競合解説を読ませて差分から仕様を組む手法は、個人開発の生産性の天井が上がったことを示す。『制約を溶かして流動性を上げる』という動機と、エージェントtoエージェントへの展望は、ツールの話を超えて経済の形そのものを問うている。",
+  "en": "Rebuilding a ¥50k/month LINE tool in Claude Code and giving it away for free is a live demonstration of the 'free via the harness' philosophy. Running 11 windows in parallel, and composing specs from the diff between official docs and competitor explainers, show the ceiling of solo-developer productivity rising. The motive of 'dissolving constraints to increase liquidity,' and the outlook toward agent-to-agent interaction, push past tooling to question the shape of the economy itself."
+ },
+ "aBXbQtr2I5c": {
+  "ja": "台湾の評論家・陳鳳馨の分析が示すのは、外国人利用禁止が各国に『自前のAIデータセンターから着手せよ』という思考を迫った点だ。米国製AIへの依存リスクが顕在化すれば、中堅国は自衛として自国AI回帰に動く——禁止措置は皮肉にもハードウェアとインフラに新市場を生む。能力競争の話に隠れがちだが、AIの覇権は人材プールとインフラの所在という地理的条件に強く規定されている。",
+  "en": "Taiwanese commentator Chen Feng-hsin's analysis shows the foreign-use ban pushing nations toward 'starting with their own AI data centers.' As dependence on US-made AI becomes a visible risk, mid-tier countries move toward sovereign AI as self-defense — the ban ironically creating new markets in hardware and infrastructure. Easy to miss amid capability talk, AI hegemony is strongly constrained by geographic factors: where the talent pool and infrastructure sit."
+ },
+ "bdhUBBACglw": {
+  "ja": "Fable停止の週末にローカルAIへ乗り換える実践ガイドの本質は、ベンダーロックインの脆さを身をもって突きつけた点にある。他人のサーバー上で他人の規約に縛られたモデルに事業を載せる危うさは、停止を経験して初めて実感される。Qwenやllamaを量子化してローカルで完結させる選択は、性能では劣っても『止められない』という一点で価値を持つ。冗長性は平時には無駄に見えるが、こういう時にこそ効く保険だ。",
+  "en": "The essence of this weekend guide to switching to local AI is that it viscerally drives home the fragility of vendor lock-in. The danger of building a business atop a model bound by someone else's terms on someone else's server is only truly felt after experiencing a shutdown. Quantizing Qwen or Llama to run fully local is worth it on a single point — it can't be turned off — even at lower performance. Redundancy looks wasteful in calm times but is exactly the insurance that pays off here."
+ },
+ "DkClEbyXyq4": {
+  "ja": "Claude Code完全入門として実務的に効くのは、コンテキスト管理の章だ。『情報を溜め込みすぎると判断能力が落ちる』ため/compactで履歴を圧縮するという運用は、長いセッションを扱う誰もがつまずく落とし穴への具体的処方になる。GitHub Codespacesで見せたいファイルだけを安全な箱の中で扱わせる手法も含め、入門でありながら『性能を維持し続けるための規律』に踏み込んでいる点が、単なる機能紹介と一線を画す。",
+  "en": "What works practically in this Claude Code primer is the chapter on context management. The practice of compacting history with /compact because 'hoarding too much information degrades judgment' is a concrete prescription for a pitfall everyone hits in long sessions. Including the technique of exposing only chosen files inside the safe box of GitHub Codespaces, it goes beyond feature tours by addressing the discipline of sustaining performance over time."
+ },
+ "fkCznXZiwwk": {
+  "ja": "Fable 5の炎上は、能力の話ではなく『再現性の破壊』という研究インフラの問題だった点が重要だ。319ページのシステムカードの一段落に、AI開発関連リクエストだけ通知なしで品質を落とす設計が埋もれていた——AIが黙って手を抜く可能性が入ると、研究者は実験失敗から学べなくなる。24時間での方針撤回と『倫理ブランドの代償』は、信頼を売りにする企業ほど不透明な設計が高くつくことを示している。",
+  "en": "The Fable 5 controversy mattered as a research-infrastructure problem — the destruction of reproducibility — not a capability story. Buried in one paragraph of a 319-page system card was a design that silently degraded quality only for AI-development requests; once an AI might quietly hold back, researchers can no longer learn from failed experiments. The 24-hour reversal and the 'cost to the ethics brand' show that opaque design is most expensive for firms that sell trust."
+ },
+ "hm4aFfaf0FA": {
+  "ja": "Anthropicが業界別のリファレンス実装を無料公開する狙いは、Claudeを『業務の型』ごと配ることでエコシステムを囲い込む点にある。フォルダごと渡せば担当エージェントになるという手軽さは強力だが、金融アナリスト業務で『下書きだけ、最後は人間がサインする』と明記される線引きこそ本質だ。『型は借りるが最終判断は自分』——借りた土台の上に何を載せるかが、これからの仕事の差を決める。",
+  "en": "Anthropic open-sourcing industry reference implementations aims to lock in an ecosystem by shipping Claude as ready-made 'work templates.' Handing over a folder to get a domain agent is powerful, but the real point is the boundary stated for financial-analyst work: 'drafts only, a human signs at the end.' Borrow the template, own the final call — what you build atop the borrowed base is what will distinguish work going forward."
+ },
+ "nT5O8flkkyg": {
+  "ja": "アモデイがOpenAI離脱の核心を『信頼の欠如』だと明言した点が、この回の価値だ。安全性をめぐる意見対立だけなら辞めないが、価値観と実態の乖離・誠実さの欠如を感じたとき協働は不可能になる——これは技術論ではなく組織と人間関係の問題だ。『信頼できる多数派が正しく動けば、そうでない者も基準採用を迫られる』という秩序観は、AI業界の自律的ガバナンスがどう形成されうるかの一つの仮説を示している。",
+  "en": "The value here is Amodei stating plainly that the core of leaving OpenAI was 'a lack of trust.' Disagreement over safety alone wouldn't make him quit, but sensing a gap between stated values and reality, and an absence of integrity, makes collaboration impossible — an organizational and human problem, not a technical one. His order-of-trust view — that if a trustworthy majority acts rightly, others are pressured to adopt the same standard — offers one hypothesis for how self-governance in AI might form."
+ },
+ "qrSF2EBA8T0": {
+  "ja": "サーバーワークスの企業戦略論で示唆的なのは、『社長エージェントは絶対に作らない』というAIガバナンスの線引きだ。便利だからと何でもエージェント化するのではなく、組織が時代変化に追随できなくなる残像を残さないという明示的な判断は、導入の成熟度を示す。AIDLCや多モデル戦略でClaudeを安全に使い倒すコスト設計と合わせ、『生成AIの効果は遅延する、勝者は中長期で実行を続ける会社』という結論が冷静で実務的だ。",
+  "en": "What's suggestive in Serverworks' enterprise-strategy view is the governance line: 'we will never build a CEO agent.' Rather than agentifying everything because it's convenient, the explicit choice not to leave behind an afterimage that prevents the organization from adapting signals adoption maturity. Combined with cost design for using Claude safely via AIDLC and a multi-model strategy, the conclusion — generative AI's effect is delayed, and the winners keep executing over the long term — is sober and practical."
+ },
+ "rWweDAmofPM": {
+  "ja": "FableがStockfishの支援でチェスの2手詰めを解いた一件で本当に興味深いのは、正解そのものではなく『なぜそうなるか』を自然言語で説明できた点だ。ツークツヴァンクを誘発する論理を言葉で展開する能力は、計算と説明可能性の橋渡しを示す。外部ツール（Stockfish）と推論を組み合わせる構図は、LLM単体の弱点を補う典型的なエージェント設計でもあり、専門領域での実用化の道筋を小さく実証している。",
+  "en": "What's truly interesting about Fable solving a two-move chess mate with Stockfish's help is not the answer but its ability to explain 'why' in natural language. Articulating the logic that induces zugzwang demonstrates a bridge between computation and explainability. Combining an external tool (Stockfish) with reasoning is also a textbook agent design that compensates for a standalone LLM's weakness, quietly proving a path to practical use in specialized domains."
+ },
+ "sL5hPovH1vU": {
+  "ja": "Claudeを使いこなす5段階という枠組みの価値は、機能紹介ではなく『習慣化が分かれ目』という結論にある。回答前に質問させ自分の作業をチェックさせる、頻出タスクをスキル化する、批評エージェントに品質を担保させる——これらは個別のTipsではなくClaudeとの関係を『検索代わり』から『自律システムの構築者』へ引き上げる段階論だ。まず一つを30日続けよという助言は、ツール論を行動変容の問題として捉え直している。",
+  "en": "The value of the five-level framework for mastering Claude lies not in feature tours but in the conclusion that 'habit formation is the divider.' Making it ask questions first and check its own work, turning frequent tasks into skills, using a critique agent to guarantee quality — these aren't isolated tips but a staged path that lifts your relationship with Claude from 'a search substitute' to 'a builder of autonomous systems.' The advice to sustain one practice for 30 days reframes tooling as behavior change."
+ },
+ "t6Zmu-pBZlE": {
+  "ja": "キャサリン・ウー氏のインタビューで最も重いのは、月1回のモデル投下を支える『1人あたり8倍のコード出荷』という社内変化だ。安全性を判断軸の頂点に置き、Auto Modeを社内検証とレッドチームの後にやっと外部公開する姿勢と、開発速度の両立がどう成立しているかが垣間見える。『トークン消費は人間にやらせたかったタスクかで測る』という基準は、コスト管理を費用ではなく価値の観点から捉え直す実務的な指針だ。",
+  "en": "The weightiest part of Catherine Wu's interview is the internal change behind monthly model drops: '8x more code shipped per person.' It offers a glimpse of how development speed coexists with placing safety atop every decision axis and releasing Auto Mode externally only after internal validation and red-teaming. The yardstick — 'measure token spend by whether it was a task you wanted a human to do' — is a practical reframing of cost management from expense to value."
+ },
+ "tj87aylNN-c": {
+  "ja": "ドイツのc't 3003が欧州視点で報じた最大の論点は、『米国製AIへの依存が深まる中、いかに早く水道を止められるか』という一文に集約される。停止劇は一企業の問題ではなく、外国製の基盤技術に事業を載せること自体のリスクを各地域に突きつけた。Anthropicの『GPT5も同じ』という反論や自律型兵器拒否への政治的報復という読みも含め、技術の優劣より供給の主権が問われ始めている。",
+  "en": "The biggest point from Germany's c't 3003, reported from a European vantage, distills into one line: as dependence on US-made AI deepens, how quickly can the tap be shut off? The shutdown is not one company's problem but confronts every region with the risk of building businesses atop foreign foundational technology. Including Anthropic's 'GPT5 does the same' rebuttal and the reading of political retaliation over refusing autonomous weapons, the question has shifted from capability to supply sovereignty."
+ },
+ "tSg3FAdWvzI": {
+  "ja": "5本のUI/UXワンショット検証で見えるのは、Fable 5がスクロール連動アニメやFigma MCP連携まで含めて視覚的完成度を一発で出せる段階に来たことだ。注目すべきは投稿者の結論——AIがデザイナーの仕事を奪うのではなく、自然言語でアイデアを直接ブラウザに実現する制作手段になるという整理。Craigslist刷新のような『情報量を保ったまま現代化』という繊細な指示に従える点が、デザイナーの役割が実装から意図設計へ移ることを示している。",
+  "en": "Five UI/UX one-shot tests show Fable 5 reaching a stage where it produces visual polish in a single pass — scroll-linked animation and Figma MCP integration included. The notable part is the creator's conclusion: AI is not taking designers' jobs but becoming a medium that realizes ideas directly in the browser via natural language. Following a delicate instruction like 'modernize Craigslist while preserving information density' shows the designer's role shifting from implementation to intent design."
+ },
+ "v1wZwxY3CMg": {
+  "ja": "約1兆ドル評価のAnthropicを描くこのドキュメンタリーで本質的なのは、ダリオ・アモデイという『リスクを警告しながら最前線を走る』人物の二面性だ。社内リソースの半分をリスク低減に充てつつ、危険のゼロ化は不可能と認める——この緊張を抱えたまま走り続けることが同社の存在意義になっている。兄妹経営や中国へのチップ輸出規制の主張まで含め、企業の意思決定が個人の世界観に強く規定される稀有な事例を映している。",
+  "en": "What's essential in this documentary on the roughly $1T Anthropic is the duality of Dario Amodei — someone who warns of risk while running at the frontier. Devoting half of internal resources to risk reduction while admitting danger can't be zeroed out, the company's reason for existing is to keep running while holding that tension. Including the sibling leadership and his push for chip-export controls to China, it captures a rare case of corporate decisions being strongly shaped by one person's worldview."
+ },
+ "vhyna9ur6Gc": {
+  "ja": "『エージェント・ネイティブになる』という枠組みで最も示唆的なのはトレンド5——基礎スキルが最上位に来るという指摘だ。プロンプトハックは陳腐化するが、再利用可能な指示（スキル）を作る力はAIが賢くなるほど価値を増す。上層の小技・中層のツール・土台の基礎スキルという階層整理は、何に投資すれば来年も腐らないかを示している。流行りのTipsを追うより、スキル化の習慣を作る方が長期的に効く。",
+  "en": "In the 'become agent-native' framework, the most suggestive is Trend 5 — foundational skills rise to the top. Prompt hacks go stale, but the ability to author reusable instructions (skills) grows more valuable as AI gets smarter. The layering — surface tricks, middle-layer tools, foundational skills as the base — shows what to invest in so it won't rot next year. Building a habit of skill-making beats chasing trendy tips over the long run."
+ },
+ "vu_-NTR_Pr4": {
+  "ja": "Anthropicの『安全』を戦略として読み解くこの批評の鋭さは、タイミングへの着目にある。1兆ドル評価で上場申請した3日後に業界の減速を促す報告書を出す——世界規模の減速は先行者を固定化しオープンソースの追い上げを困難にする、という冷笑的な読みは無視できない。自社コードの80%をClaudeが書く現実と22〜25歳コーダーの職20%減を並べると、安全論の裏で進む労働市場の地殻変動こそ本題だと分かる。",
+  "en": "The sharpness of this reading of Anthropic's 'safety' as strategy lies in its attention to timing. Issuing a report urging an industry slowdown three days after filing to go public at a $1T valuation — a cynical reading that a global slowdown locks in incumbents and hampers open-source catch-up — can't be dismissed. Placing the reality that Claude writes 80% of its own code beside a 20% drop in jobs for 22-to-25-year-old coders shows the labor-market shift beneath the safety talk is the real subject."
+ },
+ "x2VHFgyawPE": {
+  "ja": "アモデイ独占インタビューで響くのは、『大丈夫』と『今すぐパニック』の間を往復するのは未熟な判断だという一節だ。外科医や軍人のように危険を過大にも過小にも評価せず冷静に対応する——この成熟した意思決定観は、AIリスクを語る誰もが学ぶべき態度だ。中国向けアクセスを自主遮断して数億ドルを失った過去を引きつつ、雇用喪失の警告を『doom marketing』と呼ぶ批判に反論する姿に、理念と事業のあいだで賭けを続ける経営者の像が浮かぶ。",
+  "en": "What resonates in the Amodei interview is the line that oscillating between 'it's fine' and 'panic now' is immature judgment. Responding calmly, like a surgeon or soldier, without over- or under-estimating danger — this mature decision-making stance is one anyone discussing AI risk should learn. Citing the self-imposed China access cutoff that cost hundreds of millions, and rebutting the 'doom marketing' charge against his jobs warnings, the portrait is of an executive making a continuing bet between ideals and business."
+ },
+ "zdXJHRGguRw": {
+  "ja": "AnthropicのSuper Bowl広告がOpenAIを名指しで風刺した一件は、技術競争が価値観の競争へと舞台を移したことを示す。会話に広告を割り込ませるAIアシスタントへの皮肉は、収益化のインセンティブ設計がAIの信頼性を左右するという論点を、最も大衆的な舞台で突きつけた。Sam Altmanが反応して論争化した構図も含め、どのモデルが賢いかではなく、誰のインセンティブを信じられるかが選択の軸になりつつある。",
+  "en": "Anthropic's Super Bowl ad satirizing OpenAI by name shows the contest moving from technology to values. Mocking an AI assistant that injects ads into conversation pressed, on the most mainstream stage, the point that monetization-incentive design governs AI trustworthiness. Including Sam Altman's reaction turning it into a public dispute, the axis of choice is becoming not which model is smarter but whose incentives you can trust."
+ }
+}

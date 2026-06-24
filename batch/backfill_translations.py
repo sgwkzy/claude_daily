@@ -47,6 +47,7 @@ def _summary_from_frontmatter(fm: ArticleFrontmatter) -> SummaryResult:
         bulletPoints=fm.bulletPoints,
         sections=fm.sections,
         keyPhrases=fm.keyPhrases or [fm.channel],
+        editorial=fm.editorial,
     )
 
 

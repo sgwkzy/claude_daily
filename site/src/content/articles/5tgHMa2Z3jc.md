@@ -46,21 +46,19 @@ sections:
 
 
     Claude Codeは会話するだけでなく、コンピュータ上のファイルを直接作成・編集する。そのため作業場所となるフォルダへのアクセスを与える必要があり、ここが通常のチャットと一線を画す。'
-  image: null
 - heading: プラグインで機能を拡張する
   time: 544
   body: 'Claude Codeにはプラグインの仕組みがある。プラグインはスキルとツールをまとめたパッケージで、Anthropicが提供する強力なものが定期的に追加されている。
 
 
     動画が薦めるのは『Superpowers』で、ブレインストーミングやサブエージェント、デバッグなど多様なスキルを、タスクに応じてClaudeが自動的に呼び出してくれる。'
-  image: null
 - heading: 自分だけのスキルを作る
   time: 576
   body: 'スキルは、繰り返したいタスクをClaudeが同じ手順で実行するための再利用可能なプロセスだ。標準で用意された優れたスキルもあるが、自分専用のスキルも作れる。
 
 
     著者の作り方は、複数のプロンプトや試行を伴う作業を自分で一度通してから『これをスキルにまとめて』と頼む方法だ。例として、公開前に重要なセキュリティレビューを行うスキルを実演している。'
-  image: null
+editorial: 非エンジニア向けのClaude Code入門が成立すること自体が、ツールの位置づけの変化を示している。プラグインとスキルで反復作業を自動化し、自分の手順をその場で再利用可能な資産に変えられるなら、価値はコードを書ける能力ではなく『何を任せるかを設計する能力』に移る。公開前のセキュリティレビューをスキルで回す例は、自動化と最低限の規律をセットで配る賢いやり方だ。
 en:
   articleTitle: 'Claude Code for Non-Coders: Automating Repetitive Work With Plugins
     and Skills'
@@ -106,7 +104,6 @@ en:
       Claude Code does more than converse. It can directly create and edit files on
       the user''s computer. That means it needs access to the working folder, which
       is what sets it apart from a normal chat experience.'
-    image: null
   - heading: Extending capabilities with plugins
     time: 544
     body: 'Claude Code includes a plugin system. Plugins package together skills and
@@ -116,7 +113,6 @@ en:
       The video specifically recommends "Superpowers," which lets Claude automatically
       call a range of skills, including brainstorming, sub-agents, and debugging,
       depending on the task at hand.'
-    image: null
   - heading: Creating custom skills for your own workflow
     time: 576
     body: 'Skills are reusable processes that let Claude perform repeatable tasks
@@ -128,7 +124,12 @@ en:
       that normally takes multiple prompts and iterations, and then ask Claude to
       package that process as a skill. The example shown in the video is a security
       review skill for checks that matter before publishing.'
-    image: null
+  editorial: That a Claude Code primer for non-engineers even works signals a shift
+    in what the tool is. If plugins and skills automate repetitive work and turn your
+    own procedures into reusable assets on the spot, value moves from the ability
+    to write code to the ability to design what gets delegated. Running a pre-publish
+    security review as a skill is a smart way to ship automation and minimal discipline
+    together.
   headerImage: /images/5tgHMa2Z3jc/header.png
   heroImage: /images/5tgHMa2Z3jc/header.png
 ---
@@ -168,3 +169,7 @@ Claude Codeにはプラグインの仕組みがある。プラグインはスキ
 スキルは、繰り返したいタスクをClaudeが同じ手順で実行するための再利用可能なプロセスだ。標準で用意された優れたスキルもあるが、自分専用のスキルも作れる。
 
 著者の作り方は、複数のプロンプトや試行を伴う作業を自分で一度通してから『これをスキルにまとめて』と頼む方法だ。例として、公開前に重要なセキュリティレビューを行うスキルを実演している。
+
+## 編集部の視点
+
+非エンジニア向けのClaude Code入門が成立すること自体が、ツールの位置づけの変化を示している。プラグインとスキルで反復作業を自動化し、自分の手順をその場で再利用可能な資産に変えられるなら、価値はコードを書ける能力ではなく『何を任せるかを設計する能力』に移る。公開前のセキュリティレビューをスキルで回す例は、自動化と最低限の規律をセットで配る賢いやり方だ。

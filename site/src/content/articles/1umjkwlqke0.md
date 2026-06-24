@@ -43,21 +43,19 @@ sections:
 
 
     特に、既存サイトのクローンに近い品質まで寄せられることを投稿者は高く評価している。見た目の再現だけでなく、雰囲気や体験まで含めて近づけられるなら、制作提案や試作の速度は大きく変わるという見立てだ。'
-  image: null
 - heading: スクロールシネマティックスキルによる制作フロー
   time: 404
   body: '中盤では、用意したスキルファイルをClaudeに読ませたうえで、3Dスクロール型サイトを作る具体的なプロンプトをその場で組み立てている。高解像度の映像素材やヒーローセクション、複数の3Dクリップを使い、ローカルで動くブランドサイトまで持っていく流れが示される。
 
 
     重要なのは、画像生成、動画生成、フロントエンド実装を個別に往復しなくていいことだ。Claude Code内でMCP経由の外部能力を束ねることで、「発想から形になるまで」の手戻りが大きく減る構成になっている。'
-  image: null
 - heading: 反復改善とコスト感の現実的なバランス
   time: 825
   body: '後半では、気に入らない箇所があれば追加指示で差し替えられ、手作業でGeminiやKlingなどを行き来して素材をつなぐ必要がない点が改めて強調される。投稿者は、自分で細部を詰めるより、まず大きな見た目を一気に出してから修正する方が圧倒的に速いと見ている。
 
 
     完全自動化には1回あたり1〜2ドル程度のコストがかかるものの、サイト一式と素材生成をまとめて回せることを考えると十分に成立する価格だという整理だった。高単価案件向けの試作や提案には特に相性が良い、というのが動画の結論である。'
-  image: null
+editorial: 「1〜2ドルで高単価サイトが出てくる」という話の本質は、MCPが複数の生成ツールを束ねてワークフローを一本化した点にある。これまで人間が手作業でつないでいた画像・動画・コードの境界が消えると、制作の律速はツール操作ではなくプロンプト設計と素材選定に移る。受託制作の価格構造が崩れる一方、差別化はテーマと意図の質に集約されていく。安さそのものより、制作の摩擦が消えることの意味が大きい。
 en:
   articleTitle: Claude Fable 5 and Higgsfield MCP Turn Premium Web Prototypes Into
     a $2 Workflow
@@ -107,7 +105,6 @@ en:
       existing site''s quality. If the workflow can recreate not only the look but
       also the atmosphere and overall experience, then the speed of pitching and prototyping
       web work changes substantially.'
-    image: null
   - heading: The workflow behind the scroll-cinematic skill
     time: 404
     body: 'In the middle portion, the creator has Claude read a prepared skill file
@@ -120,7 +117,6 @@ en:
       no longer need to be handled as separate back-and-forth steps. By orchestrating
       external capabilities through MCP inside Claude Code, the workflow sharply reduces
       rework between the initial concept and a working visual output.'
-    image: null
   - heading: A practical balance between iteration speed and cost
     time: 825
     body: 'The latter part of the video reiterates that if something does not look
@@ -134,7 +130,12 @@ en:
       a very reasonable price given that it covers both a full site and the supporting
       assets. The conclusion is that the workflow is particularly well suited to prototyping
       and pitching high-ticket client work.'
-    image: null
+  editorial: The real story behind 'a premium site for one or two dollars' is that
+    MCP bundles multiple generation tools into a single workflow. Once the manual
+    seams between image, video, and code disappear, the bottleneck shifts from tool
+    operation to prompt design and asset selection. The pricing structure of contract
+    work erodes, while differentiation concentrates in the quality of theme and intent.
+    The vanishing friction matters more than the low cost itself.
   headerImage: /images/1UmjkWlqKe0/header.png
   heroImage: /images/1UmjkWlqKe0/header.png
 ---
@@ -173,3 +174,7 @@ en:
 後半では、気に入らない箇所があれば追加指示で差し替えられ、手作業でGeminiやKlingなどを行き来して素材をつなぐ必要がない点が改めて強調される。投稿者は、自分で細部を詰めるより、まず大きな見た目を一気に出してから修正する方が圧倒的に速いと見ている。
 
 完全自動化には1回あたり1〜2ドル程度のコストがかかるものの、サイト一式と素材生成をまとめて回せることを考えると十分に成立する価格だという整理だった。高単価案件向けの試作や提案には特に相性が良い、というのが動画の結論である。
+
+## 編集部の視点
+
+「1〜2ドルで高単価サイトが出てくる」という話の本質は、MCPが複数の生成ツールを束ねてワークフローを一本化した点にある。これまで人間が手作業でつないでいた画像・動画・コードの境界が消えると、制作の律速はツール操作ではなくプロンプト設計と素材選定に移る。受託制作の価格構造が崩れる一方、差別化はテーマと意図の質に集約されていく。安さそのものより、制作の摩擦が消えることの意味が大きい。

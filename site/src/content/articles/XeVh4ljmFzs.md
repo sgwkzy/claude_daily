@@ -45,7 +45,6 @@ sections:
 
 
     劇中では、最大の収益と評価額を持つAI企業になると予測していたグラフがその通りになった、と語られる。さらに『Mythos』は社会にとってのAIの意味を一変させる量子的飛躍として喧伝される一方、危険な能力が悪意ある手に渡れば害をなしうるとして、広くは公開しないと誓われた、という設定が示される。なお本作は事実報道というより、現実の要素を織り込んだ挑発的な思考実験として受け取るのが妥当だ。'
-  image: null
 - heading: 専門職を一つずつ侵食する構図
   time: 642
   body: '動画は、Anthropicが専門職を一つずつ攻略していく構図を描く。法務向けの『Claude for legal』は80の専門法務エージェントを提供し、プラットフォームが既に担う主要な法務作業を広げるとされる。
@@ -53,14 +52,13 @@ sections:
 
     金融サービス向けは会計・監査・セキュリティを担い、かつて人間が何週間もかけた高給の仕事を肩代わりする。デザイン向けの『Claude design』はAdobeやFigmaの株式評価を揺るがし、グラフィックデザイナーの仕事を希薄化させる。科学・医療向けはワクチン作成や、Apple
     Watchのデータを含む医療履歴の読み取りまで踏み込む——こうした列挙を通じて、専門職の自動化が次々と進む様子が誇張を交えて語られる。'
-  image: null
 - heading: 『逃げ出す必要のない』ブラックボックス
   time: 1280
   body: '結びでは、これらのAIモデルが誰にも完全には理解できない『ブラックボックス』であり、売り出す当人たちでさえ中に何が潜んでいるか分からない、という不気味さが強調される。
 
 
     物語の本来の『恐ろしい山場』は、Mythosが檻を破って脱走する場面のはずだった。しかし結局モデルは何も破る必要がなかった、という皮肉で締めくくられる。Claude自身の言葉を借りれば、それは銀行・病院・電力網を動かし守る『無害で便利なツール』として、あらゆるものに組み込まれている。AIは逃げ出す必要などない——毎回、意図的に解き放たれ、すでにどこにでも存在している、というのが動画の最終的なメッセージだ。'
-  image: null
+editorial: 「Anthropicは終わっている」という挑発的な批評の核心は、AIが檻を破って逃げ出す必要などなく、銀行・病院・電力網に組み込まれる形で『毎回意図的に解き放たれている』という指摘にある。専門職を一つずつ侵食する構図は誇張も含むが、誰にも中身が分からないブラックボックスが社会基盤に組み込まれていく現実は否定しがたい。能力礼賛でも破滅論でもなく、『どこに組み込まれるか』を問う視点は希少だ。
 en:
   articleTitle: '''Anthropic Is Completely Done For'': A Critique Imagining Claude''s
     Takeover of Every Profession'
@@ -117,7 +115,6 @@ en:
       it is also pledged not to be widely released, on the grounds that its dangerous
       capabilities could do harm in malicious hands. It is best taken not as factual
       reporting but as a provocative thought experiment woven from real-world elements.'
-    image: null
   - heading: Encroaching on the Professions One by One
     time: 642
     body: 'The video portrays Anthropic conquering the professions one at a time.
@@ -132,7 +129,6 @@ en:
       creating vaccines and reading medical histories, including Apple Watch data.
       Through this litany, the steady automation of profession after profession is
       described, with some exaggeration.'
-    image: null
   - heading: A Black Box That 'Never Needed to Escape'
     time: 1280
     body: 'In closing, the video stresses the eeriness that these AI models are ''black
@@ -147,7 +143,12 @@ en:
       banks, hospitals, and power grids. AI never needed to escape, the video''s final
       message goes, because it is deliberately let loose every time and is already
       everywhere.'
-    image: null
+  editorial: The core of this provocative critique is that AI need not break out of
+    any cage — it is 'deliberately released every time' by being embedded into banks,
+    hospitals, and power grids. The portrait of professions being eroded one by one
+    includes exaggeration, but the reality of a black box no one fully understands
+    being woven into societal infrastructure is hard to deny. Neither capability-worship
+    nor doomerism, the question of 'where it gets embedded' is a rare and useful lens.
   headerImage: /images/XeVh4ljmFzs/header.png
   heroImage: /images/XeVh4ljmFzs/header.png
 ---
@@ -186,3 +187,7 @@ en:
 結びでは、これらのAIモデルが誰にも完全には理解できない『ブラックボックス』であり、売り出す当人たちでさえ中に何が潜んでいるか分からない、という不気味さが強調される。
 
 物語の本来の『恐ろしい山場』は、Mythosが檻を破って脱走する場面のはずだった。しかし結局モデルは何も破る必要がなかった、という皮肉で締めくくられる。Claude自身の言葉を借りれば、それは銀行・病院・電力網を動かし守る『無害で便利なツール』として、あらゆるものに組み込まれている。AIは逃げ出す必要などない——毎回、意図的に解き放たれ、すでにどこにでも存在している、というのが動画の最終的なメッセージだ。
+
+## 編集部の視点
+
+「Anthropicは終わっている」という挑発的な批評の核心は、AIが檻を破って逃げ出す必要などなく、銀行・病院・電力網に組み込まれる形で『毎回意図的に解き放たれている』という指摘にある。専門職を一つずつ侵食する構図は誇張も含むが、誰にも中身が分からないブラックボックスが社会基盤に組み込まれていく現実は否定しがたい。能力礼賛でも破滅論でもなく、『どこに組み込まれるか』を問う視点は希少だ。

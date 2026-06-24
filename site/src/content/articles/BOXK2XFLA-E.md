@@ -49,14 +49,12 @@ sections:
 
 
     鍵は、最良の営業担当者の実際の動きを丹念に観察したことだ。何を無視し、何に答え、どこで人間の判断が必要だったかを見極め、紙の上の理想ではなく観察された実際のワークフローに沿ってエージェントを組み立てた。'
-  image: null
 - heading: harnessこそがエージェントの強さ
   time: 522
   body: 'Codexが強いのはモデルが優秀だからだけではない。OpenAIがモデルの周囲のharness（作業環境）を絶えず整備し、ターミナル、デスクトップアプリ、IDE、ブラウザ、コンピュータ操作、承認、サンドボックスなどを束ねているからだ。
 
 
     これは単なる賢いチャットボットを超えた、機械的な作業のための入念に保守された作業台と言える。Claude Codeチームも同じ発想でharnessへ重点投資しており、両社とも『現実の作業が宿る場所』を起点に設計している。'
-  image: null
 - heading: エージェント保守という未来の技術
   time: 1046
   body: '最後に大切なのはエージェントの価値の点検だ。出力は誰かに読まれているか、作業を変えたか、レビュー後も時間を節約しているか、逆に新たな手間を生んでいないかを問う必要がある。
@@ -64,7 +62,7 @@ sections:
 
     エージェントは他の道具と違い、『周囲の世界が変わる』ことと『内部のモデルが良くなる』ことの2方向で壊れる。保守とはその2つの動く対象の間で適合を保ち続ける営みだ。著者はStewart
     Brandの『The Maintenance of Everything』を、保守の思考を学べる一冊として薦めている。'
-  image: null
+editorial: 「ツールを8割削ったら性能が上がった」というVercelの実例は、エージェント設計の通説を正面から覆す。機能や権限を足すほど良くなるという直感は誤りで、本当に効くのは最良の担当者の実ワークフローを観察して環境（harness）を磨くことだ。さらに『エージェントは世界の変化と内部モデルの進化で壊れる』という保守の視点は希少で、作って終わりではなく運用し続ける技術としてエージェントを捉える成熟した議論である。
 en:
   articleTitle: 'AI Agents Do Not Improve by Addition: Lessons From Vercel and Agent
     Maintenance'
@@ -117,7 +115,6 @@ en:
       on paper, the team studied what they ignored, what they responded to, and where
       human judgment still mattered, then designed the agent around the workflow that
       existed in reality.'
-    image: null
   - heading: Why the Harness Matters More Than People Admit
     time: 522
     body: 'Codex is strong, the speaker argues, not just because the model itself
@@ -129,7 +126,6 @@ en:
       for mechanical work. He argues that the Claude Code team is making the same
       strategic bet by investing heavily in the harness, treating the place where
       real work happens as the starting point for agent design.'
-    image: null
   - heading: Agent Maintenance as the Next Real Technical Discipline
     time: 1046
     body: 'The final point is that agent value has to be audited. Are people actually
@@ -142,7 +138,12 @@ en:
       is the practice of preserving fit between those two moving targets. To think
       about that more clearly, the speaker recommends Stewart Brand''s "The Maintenance
       of Everything."'
-    image: null
+  editorial: Vercel's case — removing 80% of tools improved performance — directly
+    overturns conventional agent-design wisdom. The intuition that more features and
+    permissions help is wrong; what actually works is observing the best operator's
+    real workflow and refining the harness. The framing that 'agents break from both
+    world change and model evolution' is rare and valuable, treating agents as something
+    you operate continuously rather than build once.
   headerImage: /images/BOXK2XFLA-E/header.png
   heroImage: /images/BOXK2XFLA-E/header.png
 ---
@@ -183,3 +184,7 @@ Codexが強いのはモデルが優秀だからだけではない。OpenAIがモ
 最後に大切なのはエージェントの価値の点検だ。出力は誰かに読まれているか、作業を変えたか、レビュー後も時間を節約しているか、逆に新たな手間を生んでいないかを問う必要がある。
 
 エージェントは他の道具と違い、『周囲の世界が変わる』ことと『内部のモデルが良くなる』ことの2方向で壊れる。保守とはその2つの動く対象の間で適合を保ち続ける営みだ。著者はStewart Brandの『The Maintenance of Everything』を、保守の思考を学べる一冊として薦めている。
+
+## 編集部の視点
+
+「ツールを8割削ったら性能が上がった」というVercelの実例は、エージェント設計の通説を正面から覆す。機能や権限を足すほど良くなるという直感は誤りで、本当に効くのは最良の担当者の実ワークフローを観察して環境（harness）を磨くことだ。さらに『エージェントは世界の変化と内部モデルの進化で壊れる』という保守の視点は希少で、作って終わりではなく運用し続ける技術としてエージェントを捉える成熟した議論である。

@@ -48,7 +48,6 @@ sections:
 
 
     結果として、ムンバイで開発するエンジニアもサンフランシスコ在住の非米国籍ユーザーも、地球上で最も強力とされるモデルから一斉に切り離されることになった。発表前後3日でのフル禁止というスピードも、業界に強いショックを与えた要素として強調されている。'
-  image: null
 - heading: Apple Siri × Google Gemini — Claudeは費用で外れた
   time: 736
   body: '今週もう一つ大きいのは、新型SiriがApple独自のファウンデーションモデルではなくGoogle Geminiを基盤に再構築されたという報道だ。Appleは年間約10億ドル(約8千億ルピー)をGoogleに支払う条件で、その上に「Apple
@@ -56,7 +55,6 @@ sections:
 
 
     同じ役割をAnthropicの「Claude 2」相当で組んだ場合の見積りは年15億ドルとされ、価格でGoogle案に軍配が上がった格好だ。Apple側はオンデバイスとプライベートクラウドコンピュートの組み合わせで「データはAppleにも第三者にも保存されない」と強調し、外部監査を許容する形で信頼を獲得する戦略を取っている。'
-  image: null
 - heading: Figmaの1クリック化とKimi K 2.7 code
   time: 800
   body: 'ツール側のアップデートでは、Figmaが画像を貼ってチャットに指示するだけで編集可能なデザインに変換する機能を投入。エクスポートしてCanvaに戻して微調整、という流れがほぼワンクリックでつながるようになった。
@@ -64,7 +62,7 @@ sections:
 
     コーディングAIではKimi K 2.7 codeがKimi K 2.6・GPT 5.5・Claude Opus 4.8と並べてテストされ、サイエンス概念のビジュアル生成では「水の波」の物理表現が最もリアルだったと評価されている。前世代Kimi
     K 2.6は物理的な動きで苦戦していたとされ、汎用AIだけでなく可視化向けエージェントとして頭角を現してきた形だ。'
-  image: null
+editorial: 週報として束ねられたニュースの中で本質的なのは、最強モデルへのアクセスが国籍で断たれたという一点だ。Siri×Geminiの契約でClaudeが費用で外れた話と並べると、AIは性能だけでなく地政学とコスト構造の力学で勝敗が決まる段階に入ったことが分かる。技術の優劣だけを追うと、提供が止まる・契約から外れるといった非技術的リスクを見落とす。導入判断にはこの第二の地図が要る。
 en:
   articleTitle: 'This Week in AI: Fable 5 Ban, Siri-Gemini Deal, Kimi K 2.7 and Figma'
   seoTitle: 'This Week in AI: Fable 5 Ban, Siri-Gemini Deal, Kimi K 2.7 and F'
@@ -114,7 +112,6 @@ en:
       Francisco were both cut off from what the host describes as the most powerful
       model on Earth. The speed of the move, a full shutdown within three days of
       the announcement, is emphasized as part of what shocked the industry.'
-    image: null
   - heading: Apple Siri x Google Gemini, With Claude Ruled Out on Cost
     time: 736
     body: 'Another major story this week is the report that the new Siri is being
@@ -128,7 +125,6 @@ en:
       for its part, is stressing a mix of on-device processing and Private Cloud Compute,
       with a trust strategy centered on the claim that user data is not stored by
       Apple or third parties and can be externally audited.'
-    image: null
   - heading: Figma's One-Click Shift and Kimi K 2.7 Code
     time: 800
     body: 'On the tools side, Figma rolled out a feature that turns pasted images
@@ -143,7 +139,12 @@ en:
       K 2.6 reportedly struggled with physically accurate motion, so this is presented
       as a sign that Kimi is emerging not just as a general-purpose AI but as a strong
       visualization-oriented agent.'
-    image: null
+  editorial: Amid a week of bundled news, the essential item is that access to the
+    strongest model was cut along nationality lines. Set beside Claude losing the
+    Siri deal to Gemini on cost, it shows AI now being decided by geopolitics and
+    cost structure, not capability alone. Tracking only technical superiority means
+    missing non-technical risks like access being revoked or a deal being lost. Adoption
+    decisions need this second map.
   headerImage: /images/ACjwmGeDHFc/header.png
   heroImage: /images/ACjwmGeDHFc/header.png
 ---
@@ -183,3 +184,7 @@ en:
 ツール側のアップデートでは、Figmaが画像を貼ってチャットに指示するだけで編集可能なデザインに変換する機能を投入。エクスポートしてCanvaに戻して微調整、という流れがほぼワンクリックでつながるようになった。
 
 コーディングAIではKimi K 2.7 codeがKimi K 2.6・GPT 5.5・Claude Opus 4.8と並べてテストされ、サイエンス概念のビジュアル生成では「水の波」の物理表現が最もリアルだったと評価されている。前世代Kimi K 2.6は物理的な動きで苦戦していたとされ、汎用AIだけでなく可視化向けエージェントとして頭角を現してきた形だ。
+
+## 編集部の視点
+
+週報として束ねられたニュースの中で本質的なのは、最強モデルへのアクセスが国籍で断たれたという一点だ。Siri×Geminiの契約でClaudeが費用で外れた話と並べると、AIは性能だけでなく地政学とコスト構造の力学で勝敗が決まる段階に入ったことが分かる。技術の優劣だけを追うと、提供が止まる・契約から外れるといった非技術的リスクを見落とす。導入判断にはこの第二の地図が要る。

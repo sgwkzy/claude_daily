@@ -48,21 +48,20 @@ sections:
 
 
     同じサーバ上で動くモデルを「特定の利用者だけ遮断する」運用は技術的に成立しない。コンプライアンスのためAnthropicは両モデルを完全にオフにする選択を取り、結果として数億人規模の全顧客が一斉にアクセスを失った。'
-  image: null
 - heading: 争点となった「ジェイルブレイク」の中身とGPT 5.5との比較
   time: 26
   body: '米政府が問題視したのは、Fable 5の安全装置を突破するジェイルブレイク手法が発見されたという主張だ。だが、Anthropicがその手法を確認したところ、それはモデルに「特定のコードベースを読み、ソフトウェアの欠陥を修正する」よう依頼するという、すでに公開されている他社モデルでも日常的に可能な操作にすぎなかった。
 
 
     比較対象として明示されたのがGPT 5.5だ。同じ操作がOpenAIのモデルでも当然のように使われている。Anthropic側は「もしこの程度のジェイルブレイクで、数億ユーザーが使うモデルを停止させる基準を満たすなら、業界の全AIリリースが事実上凍結される」と反論している。'
-  image: null
 - heading: 「AIをいつ・誰が・何を根拠に停止できるのか」という新しい問い
   time: 60
   body: 'Anthropicは命令に従いながら公に反論するという、業界的に異例の対応を取った。Mayya氏はここに、これまで答える必要のなかった種類の問いがあると指摘する。「AIモデルがオンラインに留まれないほど危険だと決めるのは誰なのか、そして実際の証拠として何が認められるのか」という統治の問いだ。
 
 
     Anthropic側は「これは誤解だと考えており、復旧に向けて働きかけている」とも述べている。動画は「続報を追う」と締めくくられているが、米国の安全保障行政がAI企業に対してこの種の即時停止権限を実際に行使した最初の主要事例として記録される可能性が高い。'
-  image: null
+editorial: 命令には従いつつ公に反論するというAnthropicの異例の構図が、この件の見どころだ。問題視されたジェイルブレイクが『公開コードを読ませて欠陥を直させるだけ』でGPT
+  5.5でも日常的に可能なら、Fableだけを止める論拠は揺らぐ。本質は技術ではなく『AIが危険すぎると誰が・何を根拠に決めるのか』という未整備の問いで、これは今後あらゆるモデル提供の停止判断に再利用される前例になる。
 en:
   articleTitle: Anthropic Obeys a US Shutdown Order While Publicly Challenging the
     Basis for It
@@ -112,7 +111,6 @@ en:
       practical. To remain compliant, Anthropic chose to switch both models off entirely,
       which in turn cut off access for its entire user base, reportedly affecting
       hundreds of millions of customers.'
-    image: null
   - heading: What the "Jailbreak" Was and Why Anthropic Compared It to GPT 5.5
     time: 26
     body: 'The government''s stated concern was the discovery of a jailbreak method
@@ -127,7 +125,6 @@ en:
       if this level of jailbreak is enough to justify shutting down a model used by
       hundreds of millions of people, then in practice nearly every major AI release
       would be vulnerable to the same treatment.'
-    image: null
   - heading: 'A New Governance Question: Who Can Pull the Plug, and on What Evidence?'
     time: 60
     body: 'Anthropic took the unusual step of obeying the order while also disputing
@@ -140,7 +137,12 @@ en:
       and is working to restore access. The video closes by promising follow-up coverage,
       but the incident may already stand as the first major case in which US national-security
       authorities exercised immediate shutdown power over a leading AI model provider.'
-    image: null
+  editorial: The notable structure here is Anthropic complying while publicly pushing
+    back. If the cited jailbreak is merely 'read public code and fix its flaws' and
+    is routine even on GPT 5.5, the rationale for halting only Fable wavers. The real
+    issue is not technical but an unsettled question — who decides an AI is too dangerous,
+    and on what evidence — and it sets a precedent that will be reused for every future
+    shutdown decision.
   headerImage: /images/IyUXXlZVHQ0/header.png
   heroImage: /images/IyUXXlZVHQ0/header.png
 ---
@@ -180,3 +182,7 @@ en:
 Anthropicは命令に従いながら公に反論するという、業界的に異例の対応を取った。Mayya氏はここに、これまで答える必要のなかった種類の問いがあると指摘する。「AIモデルがオンラインに留まれないほど危険だと決めるのは誰なのか、そして実際の証拠として何が認められるのか」という統治の問いだ。
 
 Anthropic側は「これは誤解だと考えており、復旧に向けて働きかけている」とも述べている。動画は「続報を追う」と締めくくられているが、米国の安全保障行政がAI企業に対してこの種の即時停止権限を実際に行使した最初の主要事例として記録される可能性が高い。
+
+## 編集部の視点
+
+命令には従いつつ公に反論するというAnthropicの異例の構図が、この件の見どころだ。問題視されたジェイルブレイクが『公開コードを読ませて欠陥を直させるだけ』でGPT 5.5でも日常的に可能なら、Fableだけを止める論拠は揺らぐ。本質は技術ではなく『AIが危険すぎると誰が・何を根拠に決めるのか』という未整備の問いで、これは今後あらゆるモデル提供の停止判断に再利用される前例になる。

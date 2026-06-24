@@ -52,7 +52,6 @@ sections:
 
     MCP接続によりClaude Codeがプロジェクトのファイル構造とBlueprintアセットにアクセスでき、テストはまさに『AIにエンジニアを任せる』スタイルで進む。著者のSmart
     PolyはUnreal Engineチュートリアル分野で実績のある制作者で、評価は実装結果に対するシビアな目線で行われた。'
-  image: null
 - heading: ヘルス処理とラグドール — 数式は完璧、配線は1箇所惜しい
   time: 578
   body: 'ヘルス管理ロジックでは、計算自体は完璧だった。健康値から減算してゼロでClampするか、加算で上限で抑えるかという基本ロジックは正しく構築されていた。問題はPrint
@@ -60,7 +59,6 @@ sections:
 
 
     ラグドール処理はより複雑だが、Set Timer by Functionで遅延を作り、Recover from Ragdoll関数で物理シミュレーション停止・位置とローテーションのリセット・コリジョン再有効化・ragdoll変数をfalseに戻すという一連を、自動でうまく組んできた。Blueprintの細かなアーキテクチャ感覚がClaude側にちゃんと宿っているのが分かる例だ。'
-  image: null
 - heading: 5チャレンジ評価とClaude Code MCPの実用度
   time: 1278
   body: '5チャレンジの最終評価は次の通り。Hit Actor 8〜9/10、Soccer Ball 4/10、Hat 8〜9/10、Door 6〜7/10、ダメージボックス
@@ -69,7 +67,7 @@ sections:
 
     著者は重要な実用観点も指摘する。プロンプト精度が成果を左右する以上、より具体的に指示するほど結果は良くなる。そしてBlueprintの基礎知識があれば、Claudeの細かな配線ミスを手で修正できるため、AIへの再プロンプトでクレジットを消費する代わりに自分で直すという選択肢も取れる。Claude
     Code × Unreal Engine MCPの組み合わせは、ゲーム開発支援として『実用域に入った』と結論づけられる。'
-  image: null
+editorial: 5つのBlueprintチャレンジで出た『数式は正しいが配線が1箇所惜しい』という結果は、現状のAI支援開発の実像を正確に映す。論理は組めても細部の接続でミスが残るため、基礎知識のある人間が手で直せることが価値の前提になる。完全自動ではなく『8割を任せて2割を仕上げる』分業こそが現実的な実用域で、スコアの平均より『どこで人間が介入すべきか』の見極めが効率を決める。
 en:
   articleTitle: Claude Code × Unreal Engine 5.8 MCP — A Real Test on 5 Blueprint Challenges
   seoTitle: Claude Code × Unreal Engine 5.8 MCP — A Real Test on 5 Blueprint
@@ -126,7 +124,6 @@ en:
       assets, so the test really is ''hand the engineering to the AI.'' Smart Poly
       is a credible grader with strong UE tutorial credentials, so the assessment
       isn''t soft — it''s a real-result review.'
-    image: null
   - heading: Health system and ragdoll — perfect math, almost-perfect wiring
     time: 578
     body: 'On the health system test, the underlying math came out perfect — clamp
@@ -142,7 +139,6 @@ en:
       stops the physics simulation, resets the character''s location and rotation,
       re-enables collision, and flips the ragdoll boolean back to false. The Blueprint-architecture
       intuition was clearly there.'
-    image: null
   - heading: Five-challenge scores and where Claude Code via MCP actually sits
     time: 1278
     body: 'The final scores across the five tests: Hit Actor 8–9/10, Soccer Ball 4/10,
@@ -156,7 +152,12 @@ en:
       credits re-prompting. The combination of Claude Code and the Unreal MCP plugin
       has moved from ''interesting demo'' into the ''practical for real game work''
       zone.'
-    image: null
+  editorial: The result across five Blueprint challenges — 'the math is right but
+    one wire is off' — accurately mirrors AI-assisted development today. The logic
+    holds, but small connection errors remain, so value depends on a human with basic
+    knowledge fixing them by hand. The realistic sweet spot is not full automation
+    but a division of labor — delegate 80%, finish the 20% — where knowing when to
+    intervene matters more than the average score.
   headerImage: /images/OiFtnBj1P9o/header.png
   heroImage: /images/OiFtnBj1P9o/header.png
 ---
@@ -196,3 +197,7 @@ MCP接続によりClaude Codeがプロジェクトのファイル構造とBluepr
 5チャレンジの最終評価は次の通り。Hit Actor 8〜9/10、Soccer Ball 4/10、Hat 8〜9/10、Door 6〜7/10、ダメージボックス 6〜7/10。Soccer Ballがやや低めだが、全体として『かなりまともな仕事』という評価だ。
 
 著者は重要な実用観点も指摘する。プロンプト精度が成果を左右する以上、より具体的に指示するほど結果は良くなる。そしてBlueprintの基礎知識があれば、Claudeの細かな配線ミスを手で修正できるため、AIへの再プロンプトでクレジットを消費する代わりに自分で直すという選択肢も取れる。Claude Code × Unreal Engine MCPの組み合わせは、ゲーム開発支援として『実用域に入った』と結論づけられる。
+
+## 編集部の視点
+
+5つのBlueprintチャレンジで出た『数式は正しいが配線が1箇所惜しい』という結果は、現状のAI支援開発の実像を正確に映す。論理は組めても細部の接続でミスが残るため、基礎知識のある人間が手で直せることが価値の前提になる。完全自動ではなく『8割を任せて2割を仕上げる』分業こそが現実的な実用域で、スコアの平均より『どこで人間が介入すべきか』の見極めが効率を決める。

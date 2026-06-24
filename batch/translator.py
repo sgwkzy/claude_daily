@@ -40,7 +40,9 @@ class SummaryTranslator:
                 "{\"articleTitle\":\"...\","
                 "\"bulletPoints\":[{\"time\":0,\"text\":\"...\"}],"
                 "\"sections\":[{\"heading\":\"...\",\"time\":0,\"image\":null,\"body\":\"...\"}],"
-                "\"keyPhrases\":[\"...\"]}."
+                "\"keyPhrases\":[\"...\"],"
+                "\"editorial\":\"...\"}."
+                " Translate `editorial` as well; keep it as an editorial commentary, not a summary."
                 " Preserve every numeric `time` value and every `image` value exactly as given."
                 " Keep the same number and order of bulletPoints and sections."
                 " Preserve product and proper names (Claude, Claude Code, Anthropic, MCP, etc.)."
@@ -83,6 +85,7 @@ def _restore_invariants(source: SummaryResult, translated: SummaryResult) -> Sum
         bulletPoints=bullet_points,
         sections=sections,
         keyPhrases=key_phrases,
+        editorial=translated.editorial or source.editorial,
     )
 
 
@@ -105,4 +108,5 @@ def _dummy_translation(summary: SummaryResult) -> SummaryResult:
         bulletPoints=bullet_points,
         sections=sections,
         keyPhrases=[f"{phrase}" for phrase in summary.keyPhrases],
+        editorial=f"[EN] {summary.editorial}" if summary.editorial else None,
     )

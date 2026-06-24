@@ -51,7 +51,6 @@ sections:
 
 
     さらにAnthropicは別件で訴訟を抱える。Claudeの使用上限が広告された内容とまったく合わず、ユーザーが支払った分よりはるかに早く枯渇していることが判明したという。動画作者は『Claudeを有料で使っているなら今週のうちに状況を確認しておくべき』と注意喚起している。'
-  image: null
 - heading: Claude Designの実務強化 — Anthropicは攻めも忘れない
   time: 671
   body: '対照的にプロダクト側でAnthropicが見せたのはClaude Designの大幅強化だ。既存のWebサイトやデザインファイルをClaudeに渡すと、色・フォント・スタイルを自動で吸い上げる。新しい編集モデルとして、キャンバス上のあらゆる要素を直接クリックして移動・リサイズ・整列できるようになり、毎回プロンプトで指示しなくても画面で直接いじれる。
@@ -59,7 +58,6 @@ sections:
 
     さらにClaude DesignとClaude Codeが双方向で連携するため、デザインからコードへ、コードからデザインへの往復が成立する。エクスポート先もPDF・PowerPointに加えReplitに直接送れるようになり、『SkincareアプリLuna
     skincareを作って』のような自然言語プロンプトから実動アプリまで一気通貫のフローが組めるようになった。'
-  image: null
 - heading: ローカルAIの臨界点 — GLM 5.2をOllamaで動かす
   time: 1273
   body: 'GLM 5.2の真価はローカル運用にある。Ollama経由でモデル一式を自分のノートPCにダウンロードし、推論を完全にローカルで実行できる。プロンプトもデータも自分のマシンから一切出ない。データ主権・プライバシー観点で、これまで諦めていた業務が現実的になる可能性が広がる。
@@ -67,7 +65,8 @@ sections:
 
     ただし注意点も明確だ。モデルサイズは巨大で、動かすには相当強力なPCが要る。また『NvidiaがGLM 5.2を無料で提供している』という噂は半分しか正しくなく、現状提供されているのはGLM
     5.1までだ。それでも俯瞰すると、1年前なら最高峰モデルへの課金が必須だった水準のアプリが、無料のオープンモデルで作れるようになった。コストを理由に手を出せなかった人にとって、参入障壁が一段崩れた決定的な瞬間だ。'
-  image: null
+editorial: 「禁輸されたFable 5」と「無料のGLM 5.2」を並べる構図が、輸出規制の有効性そのものを問うている。誰でもダウンロードしてローカルで動かせるオープンモデルがフロンティアに迫る時代に、国籍でアクセスを断つ規制はどこまで意味を持つのか。同時にAnthropicがClaude
+  Designで攻めの実務強化を続ける点も見逃せない——守勢の報道の裏で、製品としての競争は止まっていない。
 en:
   articleTitle: GLM 5.2 Lands and the Claude Fable 5 Ban Stops Mattering — Plus the
     Anthropic Lawsuit
@@ -127,7 +126,6 @@ en:
       limits don''t match what was advertised — they burn through faster than what
       people are paying for. A lawsuit followed. The video author flags this as something
       Claude Pro and Max subscribers should check on their own accounts this week.'
-    image: null
   - heading: Anthropic plays offence too — Claude Design for real work
     time: 671
     body: 'On the product side, Anthropic isn''t only defending. Claude Design got
@@ -142,7 +140,6 @@ en:
       round trip actually closes. Exports cover PDF and PowerPoint, and a direct send
       into Replit means a natural-language prompt — ''design a sleek skincare shopping
       app called Luna'' — can become a real running app in one flow.'
-    image: null
   - heading: The local-AI inflection point — GLM 5.2 on Ollama
     time: 1273
     body: 'The point of GLM 5.2 is local execution. Ollama lets you download the full
@@ -157,7 +154,12 @@ en:
       a year ago this level of polish required paying for the most expensive frontier
       model on the planet. Today a free open model matches it. If cost was the wall
       stopping you from building, the wall has come down.'
-    image: null
+  editorial: Pairing 'embargoed Fable 5' with 'free GLM 5.2' questions the very effectiveness
+    of export controls. In an era when anyone can download an open model that nears
+    the frontier and run it locally, how much can nationality-based access restrictions
+    matter? At the same time, Anthropic pressing forward with practical upgrades to
+    Claude Design is worth noting — behind the defensive headlines, product competition
+    hasn't paused.
   headerImage: /images/O2HgyToWu9Q/header.png
   heroImage: /images/O2HgyToWu9Q/header.png
 ---
@@ -198,3 +200,7 @@ en:
 GLM 5.2の真価はローカル運用にある。Ollama経由でモデル一式を自分のノートPCにダウンロードし、推論を完全にローカルで実行できる。プロンプトもデータも自分のマシンから一切出ない。データ主権・プライバシー観点で、これまで諦めていた業務が現実的になる可能性が広がる。
 
 ただし注意点も明確だ。モデルサイズは巨大で、動かすには相当強力なPCが要る。また『NvidiaがGLM 5.2を無料で提供している』という噂は半分しか正しくなく、現状提供されているのはGLM 5.1までだ。それでも俯瞰すると、1年前なら最高峰モデルへの課金が必須だった水準のアプリが、無料のオープンモデルで作れるようになった。コストを理由に手を出せなかった人にとって、参入障壁が一段崩れた決定的な瞬間だ。
+
+## 編集部の視点
+
+「禁輸されたFable 5」と「無料のGLM 5.2」を並べる構図が、輸出規制の有効性そのものを問うている。誰でもダウンロードしてローカルで動かせるオープンモデルがフロンティアに迫る時代に、国籍でアクセスを断つ規制はどこまで意味を持つのか。同時にAnthropicがClaude Designで攻めの実務強化を続ける点も見逃せない——守勢の報道の裏で、製品としての競争は止まっていない。

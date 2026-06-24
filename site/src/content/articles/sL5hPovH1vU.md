@@ -49,21 +49,19 @@ sections:
 
 
     抜け出すコツは2つ。1つは回答の前に『この作業を正しく行うために必要な質問をして』と頼み、足りない文脈を引き出すこと。もう1つは『自分の作業をチェックして』と指示し、出力の誤りを自ら見つけさせることだ。'
-  image: null
 - heading: オペレーターのデプロイ手法
   time: 429
   body: '上級者はClaudeを『使う』のではなく『デプロイ』して問題を解かせる。第一はシステムプロンプトで、出力の型をあらかじめ定義しておく。著者は将来のチームや企業の価値は、こうしたシステムプロンプトの蓄積にあると考えている。
 
 
     第二はスキルで、繰り返すワークフローを保存して再利用する。週3回以上行う作業はスキル化が目安だ。第三はco-workによるタスクのスケジュール実行で、定例の処理を任せて人間は確認に回る。'
-  image: null
 - heading: 人間は『ループの上』に立つ
   time: 834
   body: '著者はメインのエージェントに、コピーやリサーチを批評エージェントへ渡してレビューさせる仕組みを使う。改善メモを作らせて再実行することで、常に最良の出力を得ているという。
 
 
     こうして人間は作業そのものから外れ、『ループの中』ではなく『ループの上』に立つ。重要なのは機能を集めることではなく習慣化することで、まずは1つの機能を30日連続で使い切ることを勧めている。'
-  image: null
+editorial: Claudeを使いこなす5段階という枠組みの価値は、機能紹介ではなく『習慣化が分かれ目』という結論にある。回答前に質問させ自分の作業をチェックさせる、頻出タスクをスキル化する、批評エージェントに品質を担保させる——これらは個別のTipsではなくClaudeとの関係を『検索代わり』から『自律システムの構築者』へ引き上げる段階論だ。まず一つを30日続けよという助言は、ツール論を行動変容の問題として捉え直している。
 en:
   articleTitle: 'From Search Replacement to System Builder: A Practical Guide to Mastering
     Claude'
@@ -114,7 +112,6 @@ en:
       needed to do this task correctly" so it can pull out the missing context. Second,
       tell it to "check your own work" so it can find errors in its output on its
       own.'
-    image: null
   - heading: How Operators Deploy Claude
     time: 429
     body: 'Advanced users do not just "use" Claude. They deploy it to solve problems.
@@ -127,7 +124,6 @@ en:
       comes up three times or more, that is the threshold for turning it into a skill.
       The third step is scheduled execution through co-work, where routine processing
       is delegated and humans step in only to verify the results.'
-    image: null
   - heading: Humans Belong Above the Loop
     time: 834
     body: 'The creator uses a setup where a main agent hands copy or research to a
@@ -138,7 +134,13 @@ en:
       That moves humans out of the task itself. Instead of being "in the loop," they
       stand "above the loop." What matters is not accumulating features, but building
       habits around them, starting with one feature used consistently for 30 days.'
-    image: null
+  editorial: The value of the five-level framework for mastering Claude lies not in
+    feature tours but in the conclusion that 'habit formation is the divider.' Making
+    it ask questions first and check its own work, turning frequent tasks into skills,
+    using a critique agent to guarantee quality — these aren't isolated tips but a
+    staged path that lifts your relationship with Claude from 'a search substitute'
+    to 'a builder of autonomous systems.' The advice to sustain one practice for 30
+    days reframes tooling as behavior change.
   headerImage: /images/sL5hPovH1vU/header.png
   heroImage: /images/sL5hPovH1vU/header.png
 ---
@@ -179,3 +181,7 @@ en:
 著者はメインのエージェントに、コピーやリサーチを批評エージェントへ渡してレビューさせる仕組みを使う。改善メモを作らせて再実行することで、常に最良の出力を得ているという。
 
 こうして人間は作業そのものから外れ、『ループの中』ではなく『ループの上』に立つ。重要なのは機能を集めることではなく習慣化することで、まずは1つの機能を30日連続で使い切ることを勧めている。
+
+## 編集部の視点
+
+Claudeを使いこなす5段階という枠組みの価値は、機能紹介ではなく『習慣化が分かれ目』という結論にある。回答前に質問させ自分の作業をチェックさせる、頻出タスクをスキル化する、批評エージェントに品質を担保させる——これらは個別のTipsではなくClaudeとの関係を『検索代わり』から『自律システムの構築者』へ引き上げる段階論だ。まず一つを30日続けよという助言は、ツール論を行動変容の問題として捉え直している。

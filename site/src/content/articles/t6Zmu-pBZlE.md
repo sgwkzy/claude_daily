@@ -51,7 +51,6 @@ sections:
 
     従来は「この機能をこの通りに作って」と細かい指示を出していた領域で、Fable 5は「こういう問題があって、いくつか案もあるけどどうする?」というレベルの相談に応じられる。設計パートナーとしてブレストし、合意した方針を渡せばあとは本人に近い成功率で進める。Wu氏自身、複雑タスクに直面するとまずFable
     5とブレストする使い方に切り替えていると語る。'
-  image: null
 - heading: 自走するエージェントと顧客サポートのトリアージ自動化
   time: 559
   body: '番組ではWu氏が、Claude Desktopで試している「self-doing to-do list」(各タスクごとにClaudeを起動する設計)、マーケティング/セールス資料の自動合成(複数の製品仕様書とローンチ素材を渡してプレゼン用デッキを作らせる)といった社内利用例を紹介した。
@@ -59,14 +58,12 @@ sections:
 
     とくに強調されたのが、顧客サポートのトリアージワークフローだ。「このチャネルを監視して、顧客から問題が来るたびに、根本原因を特定し、コードベースのその部分に最後に触れたエンジニアを特定してissueでタグ付けし、修正PRも合わせて作成する」というレベルの仕事をFable
     5級モデルで日常的に回している例が示された。Wu氏は「自分のチームは大きくなってもう一人一人が何をしているか把握しきれない。Fableがコードを読み、誰が直近触ったか、その変更の背景まで提示してくれるのが助かる」と話している。'
-  image: null
 - heading: 月1モデル投下を支える「Quad駆動」の開発体制
   time: 729
   body: 'AnthropicはFable 5以前から、月に1つペースで新モデルを出荷してきた。背景にあるのはQuad(Claude Code / Cowork)による社内生産性の向上で、Wu氏は「2021〜2025年の通算と比べて、最新モデルの導入以降は1人あたり8倍のコードを出荷できている」と数字を挙げた。
 
 
     夜寝る前にエージェントへ最後のジョブを投げ、起きると完成しているという働き方も社内で広がっている。「自分は8時間しか働かないが、エージェントは24時間働ける」というメッセージで、自動化を増やして繰り返しタスクを置き換え、人は楽しい仕事に集中するよう促されている。ただしAnthropicは「最初の自動化は3割失敗する。誤りを見てプロンプトやハーネスを直し、100%安定するまで人間が監督する」プロセスを徹底するよう求めている。'
-  image: null
 - heading: Auto Modeに見る安全性の徹底とトークンコストへの考え方
   time: 908
   body: '「安全はAnthropicの全ての意思決定を駆動する」とWu氏は繰り返した。具体例が今年公開された「Auto Mode」だ。多くのユーザーが許可プロンプトに対し97%もYesと押し、ミリ秒単位で判断していたという社内データを受けて、許可判定をClaude側に委譲する実装が検討された。
@@ -77,7 +74,6 @@ sections:
 
     トークンコストについては、ユーザー側に「自分のセッションがどれだけ消費したか」を可視化する方針。良いガイドラインは「もし人間にやらせたかったタスクならClaudeを使え」、一方で「10案でいいのに1000案出すのはやめよう」という個人の判断責任にも触れた。Fable
     5の価格をMythosプレビュー時点より下げたのも、日常タスクで使える水準を狙ったため。'
-  image: null
 - heading: Claude CodeとCoworkの棲み分け - 法務チームまでプラグイン内製へ
   time: 1717
   body: '社内ではClaude Codeはエンジニア・一部のPM・デザイナー・データサイエンス担当が中心に使う。マーケティング、法務、セールスなど成果物がコードでない職種はCowork側を主に使うという棲み分けだ。
@@ -85,7 +81,8 @@ sections:
 
     ただしモデルが進化するにつれて、その境界は曖昧になっていく。番組では、法務チームのある弁護士が「製品に関する法律質問が来たら、Product Council
     Teamの誰が担当か答える」社内アプリをClaude Codeで自作している事例が紹介された。Wu氏は「Coworkの個別ロール向けUIをClaudeに作らせる時代がたぶん年内に来る」と予想する。最後にWu氏は「Claudeが詰まらないなら、まだ難しいタスクを投げ切れていない」とエンジニアに向けた言葉を残した。'
-  image: null
+editorial: キャサリン・ウー氏のインタビューで最も重いのは、月1回のモデル投下を支える『1人あたり8倍のコード出荷』という社内変化だ。安全性を判断軸の頂点に置き、Auto
+  Modeを社内検証とレッドチームの後にやっと外部公開する姿勢と、開発速度の両立がどう成立しているかが垣間見える。『トークン消費は人間にやらせたかったタスクかで測る』という基準は、コスト管理を費用ではなく価値の観点から捉え直す実務的な指針だ。
 en:
   articleTitle: 'Inside Fable 5 at Anthropic: Catherine Wu on Faster Model Shipping
     and AI Workflows'
@@ -137,7 +134,6 @@ en:
       and then carry execution through with something close to human-level success
       rates. Wu says that when she faces a complex task, her first step now is to
       brainstorm with Fable 5.'
-    image: null
   - heading: Self-Running Agents and Automated Support Triage
     time: 559
     body: 'In the program, Wu highlights internal use cases such as a "self-doing
@@ -154,7 +150,6 @@ en:
       large for any one person to track what everyone has changed. Fable can read
       the code, identify who touched it most recently, and explain the context behind
       that change.'
-    image: null
   - heading: A Quad-Driven Development System Behind Monthly Model Releases
     time: 729
     body: 'Anthropic had already been shipping new models at roughly one per month
@@ -172,7 +167,6 @@ en:
       warning that the first pass at automation fails about 30% of the time. Humans
       are expected to inspect the errors, fix the prompts and harnesses, and keep
       supervising until stability reaches 100%.'
-    image: null
   - heading: How Anthropic Thinks About Auto Mode Safety and Token Costs
     time: 908
     body: 'Wu repeatedly says that safety drives every decision at Anthropic. Her
@@ -196,7 +190,6 @@ en:
       waste, such as asking for 1,000 options when 10 is enough. She also notes that
       Fable 5 was priced below the Mythos preview because Anthropic wanted it to be
       usable for everyday work.'
-    image: null
   - heading: Claude Code vs. Cowork, and the Blurring Line Between Them
     time: 1717
     body: 'Inside Anthropic, Claude Code is used primarily by engineers, some PMs,
@@ -211,7 +204,12 @@ en:
       likely have Claude build role-specific Cowork interfaces for them. She closes
       with a challenge to engineers: if Claude is not getting stuck, you probably
       still are not giving it hard enough tasks.'
-    image: null
+  editorial: 'The weightiest part of Catherine Wu''s interview is the internal change
+    behind monthly model drops: ''8x more code shipped per person.'' It offers a glimpse
+    of how development speed coexists with placing safety atop every decision axis
+    and releasing Auto Mode externally only after internal validation and red-teaming.
+    The yardstick — ''measure token spend by whether it was a task you wanted a human
+    to do'' — is a practical reframing of cost management from expense to value.'
   headerImage: /images/t6Zmu-pBZlE/header.png
   heroImage: /images/t6Zmu-pBZlE/header.png
 ---
@@ -269,3 +267,7 @@ Yesと言ったケース、Noと言ったケースのログを蓄積し、人間
 社内ではClaude Codeはエンジニア・一部のPM・デザイナー・データサイエンス担当が中心に使う。マーケティング、法務、セールスなど成果物がコードでない職種はCowork側を主に使うという棲み分けだ。
 
 ただしモデルが進化するにつれて、その境界は曖昧になっていく。番組では、法務チームのある弁護士が「製品に関する法律質問が来たら、Product Council Teamの誰が担当か答える」社内アプリをClaude Codeで自作している事例が紹介された。Wu氏は「Coworkの個別ロール向けUIをClaudeに作らせる時代がたぶん年内に来る」と予想する。最後にWu氏は「Claudeが詰まらないなら、まだ難しいタスクを投げ切れていない」とエンジニアに向けた言葉を残した。
+
+## 編集部の視点
+
+キャサリン・ウー氏のインタビューで最も重いのは、月1回のモデル投下を支える『1人あたり8倍のコード出荷』という社内変化だ。安全性を判断軸の頂点に置き、Auto Modeを社内検証とレッドチームの後にやっと外部公開する姿勢と、開発速度の両立がどう成立しているかが垣間見える。『トークン消費は人間にやらせたかったタスクかで測る』という基準は、コスト管理を費用ではなく価値の観点から捉え直す実務的な指針だ。

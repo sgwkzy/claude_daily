@@ -44,21 +44,20 @@ sections:
 
 
     投稿者はこの動きをIPO前の期待形成とも読みつつ、同時に実力が伴っていなければここまでの熱狂は起きないとも見ている。GoogleがYahooを追い抜いた時期になぞらえながら、モデル序列が入れ替わる瞬間かもしれないという温度感で話が進む。'
-  image: null
 - heading: Opus 4.8との違いと安全設計
   time: 117
   body: 'Fable 5はOpus 4.8の延長ではなく、Mythos 5系統の能力を一般利用向けに制御したモデルとして説明される。価格はOpusより高く、利用可能期間も限定されているため、強い性能を餌にした加入促進の性格もある。
 
 
     一方で危険領域では分類器が常時監視し、サイバーセキュリティや生物・化学などに触れる要求はOpus 4.8側へ差し替える。動画ではこの仕組みを「口輪」と表現しつつ、能力を残したまま一般公開するための現実的な安全策として理解している。'
-  image: null
 - heading: UI実演で見えた実務レベルの進歩
   time: 173
   body: 'ソフトウェア開発者の初期反応は非常に強く、コード改善や最適化を一気に進める事例が相次いでいると紹介される。投稿者自身の検証でも、短時間で作らせたUIに自然なドラッグアニメーションや破綻しにくいSVGが含まれており、従来モデルより一段上の完成度だと判断している。
 
 
     最終的には、Fable 5を単なるベンチマーク勝負ではなく、実際にプロダクトの画面や体験を形にできるモデルとして評価している。過熱感への留保は残しつつも、現場の開発者が反応する理由は十分あるという締め方だった。'
-  image: null
+editorial: 減速を訴えた直後に最強モデルを出すという矛盾は、Anthropicの構造的ジレンマそのものだ。だが実務者にとっての要点は政治ではなく安全設計にある。危険領域で応答をOpus
+  4.8へ差し替える分類器方式は、能力と安全を両立させる現実解だが、裏を返せば『同じプロンプトでも内部でモデルが切り替わりうる』ことを意味する。出力の再現性を前提に組むワークフローでは、この差し替え挙動を把握しておく必要がある。
 en:
   articleTitle: Anthropic Warned Against AI Acceleration, Then Released Claude Fable
     5
@@ -109,7 +108,6 @@ en:
       lacked real substance. Drawing a comparison to moments when platform hierarchies
       flipped in the past, he suggests this could be the point where the model ranking
       order starts to change.'
-    image: null
   - heading: How it differs from Opus 4.8 and how it is constrained
     time: 117
     body: 'Fable 5 is described not as a simple extension of Opus 4.8 but as a public-facing
@@ -123,7 +121,6 @@ en:
       The video jokingly calls this a "muzzle," but ultimately treats it as a pragmatic
       safety mechanism for releasing a powerful model without fully exposing its underlying
       capability.'
-    image: null
   - heading: A UI demo that suggests real workflow gains
     time: 173
     body: 'Early reactions from software developers have been unusually strong, with
@@ -136,7 +133,12 @@ en:
       but because it can turn real screens and user experiences into working output.
       The video leaves room for skepticism about the hype, but it argues that developers
       have solid reasons to be paying attention.'
-    image: null
+  editorial: Shipping the most capable model right after calling for a slowdown captures
+    Anthropic's structural dilemma. But for practitioners the real point is the safety
+    design, not the politics. Swapping responses to Opus 4.8 in dangerous domains
+    is a pragmatic way to balance capability and safety — yet it also means the underlying
+    model can change mid-prompt. Workflows that assume reproducible output need to
+    account for this silent substitution.
   headerImage: /images/1PBRhm5ZnjU/header.png
   heroImage: /images/1PBRhm5ZnjU/header.png
 ---
@@ -175,3 +177,7 @@ Fable 5はOpus 4.8の延長ではなく、Mythos 5系統の能力を一般利用
 ソフトウェア開発者の初期反応は非常に強く、コード改善や最適化を一気に進める事例が相次いでいると紹介される。投稿者自身の検証でも、短時間で作らせたUIに自然なドラッグアニメーションや破綻しにくいSVGが含まれており、従来モデルより一段上の完成度だと判断している。
 
 最終的には、Fable 5を単なるベンチマーク勝負ではなく、実際にプロダクトの画面や体験を形にできるモデルとして評価している。過熱感への留保は残しつつも、現場の開発者が反応する理由は十分あるという締め方だった。
+
+## 編集部の視点
+
+減速を訴えた直後に最強モデルを出すという矛盾は、Anthropicの構造的ジレンマそのものだ。だが実務者にとっての要点は政治ではなく安全設計にある。危険領域で応答をOpus 4.8へ差し替える分類器方式は、能力と安全を両立させる現実解だが、裏を返せば『同じプロンプトでも内部でモデルが切り替わりうる』ことを意味する。出力の再現性を前提に組むワークフローでは、この差し替え挙動を把握しておく必要がある。

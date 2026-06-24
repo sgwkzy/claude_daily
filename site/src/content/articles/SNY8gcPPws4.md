@@ -49,7 +49,6 @@ sections:
 
     今回のリリースは少し変則的で、同じモデルを二つの異なる出し方で公開している。能力フル版の「Mythos 5」はセキュリティ業務などごく一部の信頼できる用途にのみ限定提供。一般向けには能力フィルタを掛けた「Fable
     5」が公開された。誰でもアクセスできるのは後者のみだ。'
-  image: null
 - heading: ベンチマーク制覇とStripe 5,000万行移行の実例
   time: 116
   body: 'Fable 5は多くの主要ベンチマークで1位を取り、しかも他社モデルに僅差ではなくはっきり抜きん出た差を付けている領域も少なくない、と安野氏は整理している。ChatGPTやGeminiといった競合との比較を意識した数字が前面に出された。
@@ -57,28 +56,26 @@ sections:
 
     具体例として、Stripeが保有する5,000万行規模のRubyコードベース移行が紹介された。人手なら2か月以上は必要な作業を、Fable 5は1日で完了させたという。さらに、自動化ゲーム「Factorio」をAIで自動化するデモや、ブラウザ上の3D
     CADでプリント可能モデルを設計するデモ、EDMビートに同期した流体シミュレータなど、用途を超えて広く使われている例が並ぶ。'
-  image: null
 - heading: 価格は前世代の約2倍 - 予算設計が変わる
   time: 263
   body: 'トークン価格はOpus 4.8と比べて約2倍。入力が100万トークンあたり10ドル、出力が50ドル。日本円換算では入力およそ1,600円、出力およそ8,000円という水準だ。
 
 
     Mythosプレビューの25ドル/125ドルというリーク情報があったため、安野氏は「もっと高くなるかと思っていた」とコメントしている。それでも前世代の2倍であり、業務AI活用が進む企業の財務担当にとっては、来年の予算上のトークン費用を改めて見積もり直す必要が出てくる水準だ。AIと人間の比率をどう設定するか、そしてこの1年でさらに進化が進むことを前提にどう積むかが、企業の財務側の悩みどころとして提示されている。'
-  image: null
 - heading: 能力フィルタとサイレント弱体化の仕組み
   time: 417
   body: 'Fable 5にはサイバー攻撃・生物学・化学・AI開発の4領域に能力フィルタが入っている。サイバーは元々の懸念領域、生物学と化学は危険物質やDNA/RNA合成への悪用懸念、AI開発は他社からの蒸留(distillation)に対するブロックとして導入された。
 
 
     とくに蒸留に対する扱いが今回の新味だ。他社が自社モデルを使い倒して入出力データを集め、別モデルの学習に使うと判断したケースでは、Anthropicは「サイレントに弱体化する」措置を取り込んでいる。サイレントかどうかすら原則として公開されないため、蒸留を試みた企業は性能が落ちたことに気付きにくい。AI企業同士の競合バトルが新しい段階に入ったと安野氏は評している。'
-  image: null
 - heading: 6月23日まで2週間はテスト窓、保持ポリシーも30日に変更
   time: 663
   body: 'Fable 5は当面、サブスクリプションプランの一部として使えるが、6月23日以降は使った分だけ課金される重量課金へ移行する。残り2週間は事実上の評価期間として、既存コードベースの課題を一気に掘り起こすために使うのがおすすめだと安野氏は薦める。
 
 
     もう一点、運用上の注意点としてデータ保持ポリシーの変更がある。Fable 5は安全性確認のため30日間のデータ保持が入っており、これまでエンタープライズプランでノーリテンションを前提に運用してきた組織にとっては前提が変わる。情報システム部門は自社のデータポリシーに照らして取り扱いを再点検しておきたい。'
-  image: null
+editorial: Fable 5の整理として実務的に最重要なのは、能力フィルタ・価格・データ保持の三点だ。Mythos 5と中身が同じでフィルタの有無だけが違うという二段構えは、安全と提供の両立策として理にかなう。だがトークン価格がOpus
+  4.8の約2倍、さらにFable 5のみデータ保持が30日に変わる点は、エンタープライズのノーリテンション前提を崩す。能力の話題に隠れがちだが、予算とコンプライアンスの設計こそ先に見るべき項目である。
 en:
   articleTitle: 'Claude Fable 5 Explained: Pricing, Capability Filters, and Data Retention
     Changes'
@@ -129,7 +126,6 @@ en:
       different forms. The full-capability version, "Mythos 5," is restricted to a
       narrow set of trusted use cases such as security work. The public-facing release
       is "Fable 5," which applies capability filters. Only the latter is broadly accessible.'
-    image: null
   - heading: Benchmark Lead and the 50-Million-Line Stripe Migration
     time: 116
     body: 'Yasuno argues that Fable 5 ranks first across many major benchmarks, and
@@ -143,7 +139,6 @@ en:
       from automating the game Factorio, to designing printable models in browser-based
       3D CAD, to a fluid simulator synced to EDM beats, as signs of unusually broad
       applicability.'
-    image: null
   - heading: Twice the Previous Generation’s Price Changes Budget Planning
     time: 263
     body: 'Compared with Opus 4.8, token pricing is roughly double: $10 per million
@@ -157,7 +152,6 @@ en:
       use will need to revisit next year’s token budgets. The segment frames this
       as a broader planning problem: how to set the right balance between AI and human
       labor while assuming the models will keep improving over the next year.'
-    image: null
   - heading: Capability Filters and Silent Degradation
     time: 417
     body: 'Fable 5 includes capability filters across four domains: cyberattacks,
@@ -173,7 +167,6 @@ en:
       disclose whether the downgrade is happening, a firm attempting distillation
       may not easily notice that the model has been weakened. Yasuno describes this
       as a sign that competition among AI companies has entered a new phase.'
-    image: null
   - heading: Two-Week Test Window and a New 30-Day Retention Policy
     time: 663
     body: 'For now, Fable 5 is available as part of subscription plans, but after
@@ -187,7 +180,12 @@ en:
       for organizations that had been operating enterprise plans on a no-retention
       basis. IT departments will want to review how that fits with their internal
       data policies.'
-    image: null
+  editorial: 'For practitioners, the most important takeaways on Fable 5 are three:
+    the capability filter, pricing, and data retention. The two-tier design — identical
+    to Mythos 5 except for the filter — is a sensible way to reconcile safety and
+    availability. But token pricing at roughly twice Opus 4.8, and Fable 5 alone shifting
+    to 30-day retention, breaks the no-retention assumption enterprises rely on. Easy
+    to miss amid capability talk, budget and compliance design are what to check first.'
   headerImage: /images/SNY8gcPPws4/header.png
   heroImage: /images/SNY8gcPPws4/header.png
 ---
@@ -243,3 +241,7 @@ Fable 5にはサイバー攻撃・生物学・化学・AI開発の4領域に能�
 Fable 5は当面、サブスクリプションプランの一部として使えるが、6月23日以降は使った分だけ課金される重量課金へ移行する。残り2週間は事実上の評価期間として、既存コードベースの課題を一気に掘り起こすために使うのがおすすめだと安野氏は薦める。
 
 もう一点、運用上の注意点としてデータ保持ポリシーの変更がある。Fable 5は安全性確認のため30日間のデータ保持が入っており、これまでエンタープライズプランでノーリテンションを前提に運用してきた組織にとっては前提が変わる。情報システム部門は自社のデータポリシーに照らして取り扱いを再点検しておきたい。
+
+## 編集部の視点
+
+Fable 5の整理として実務的に最重要なのは、能力フィルタ・価格・データ保持の三点だ。Mythos 5と中身が同じでフィルタの有無だけが違うという二段構えは、安全と提供の両立策として理にかなう。だがトークン価格がOpus 4.8の約2倍、さらにFable 5のみデータ保持が30日に変わる点は、エンタープライズのノーリテンション前提を崩す。能力の話題に隠れがちだが、予算とコンプライアンスの設計こそ先に見るべき項目である。

@@ -28,6 +28,9 @@ class SummaryResult(BaseModel):
     bulletPoints: list[BulletPoint] = Field(min_length=1)
     sections: list[ArticleSection] = Field(min_length=1)
     keyPhrases: list[str] = Field(min_length=1)
+    # 編集部の独自論評。動画字幕には無い視点（重要性・読者への示唆・他動向との接続）。
+    # 既存記事の再構築経路を壊さないよう Optional。新規生成では必ず埋める。
+    editorial: str | None = None
 
 
 class ArticleTranslation(BaseModel):
@@ -44,6 +47,7 @@ class ArticleTranslation(BaseModel):
     keyPhrases: list[str] = Field(min_length=1)
     bulletPoints: list[BulletPoint] = Field(min_length=1)
     sections: list[ArticleSection] = Field(min_length=1)
+    editorial: str | None = None
     headerImage: str = Field(min_length=1)
     heroImage: str | None = None
 
@@ -87,6 +91,8 @@ class ArticleFrontmatter(BaseModel):
     keyPhrases: list[str] = Field(default_factory=list)
     bulletPoints: list[BulletPoint] = Field(default_factory=list)
     sections: list[ArticleSection] = Field(default_factory=list)
+    # 編集部の独自論評。既存記事は未保有のため後方互換でOptionalかつNoneデフォルト。
+    editorial: str | None = None
     # 既定では英語の翻訳ブロック。トップレベルが日本語（原文）を表す。
     en: ArticleTranslation | None = None
 

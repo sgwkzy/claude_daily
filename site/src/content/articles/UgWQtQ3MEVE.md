@@ -54,7 +54,6 @@ sections:
 
     描かれる未来像はシンプルで強烈だ。毎朝起きるとAIトレーディングボットがマーケットを既にスキャンし、戦略適合のギャッパー銘柄リストをスマホに通知。寄付き後は自動で買い・売り注文を流し、取引日中ずっと30分ごとにサイクルを回す。動画では、ブローカーAPIのセットアップとClaude
     Codeの安全接続、AIによる戦略構築、ユニバーススキャン→意思決定ループ→執行→出口までのフルパイプライン、Telegramアラート、R倍率追跡ダッシュボードまでを通しで作る。'
-  image: null
 - heading: 戦略コード化の実際 — rules.jsonでバックテストを実装に
   time: 656
   body: '採用戦略は前回のTrend Join Longで、TradingViewでバックテスト済み。勝率64%・プロフィットファクター2.48・最大ドローダウン7%・トータルP&L
@@ -63,7 +62,6 @@ sections:
 
     実装の中核はrules.json。エントリー条件・エグジット条件をすべてJSONで宣言し、ボットが毎サイクルそれを読み取って実行する構造になっている。このルールファイル自体もClaudeに依頼して作らせるのがミソだ。『rules.jsonを作って、戦略名はTrend
     Join Long、ロング専用で…』とClaudeに頼むだけで、複雑なルールセットを過不足なく構造化してくれる。'
-  image: null
 - heading: バックテストvs実トレード — 数字は美しく、現実は厳しい
   time: 1307
   body: '実取引結果は『正直に言えばイマイチ』だった。バックテストの華やかな数字と実トレードの結果が大きく乖離した。投稿者は2つの理由を挙げる。1つはバックテストが限定的だったこと——TradingViewで無制限の銘柄数を限定時間枠で走らせた数字だ。もう1つは、自分が手動でやっている執行判断のすべてを、指標とテクニカルパラメータでコード化しきれていないこと。後者は引き続き調整中で、今後の動画で続報を出すと予告する。
@@ -71,7 +69,7 @@ sections:
 
     率直な結論として、現時点では人間トレーダーである投稿者のTrend Join Long運用の方が、ボット運用より明らかに良い結果を出している。ただしTradingView+Interactive
     Brokers APIシステムは『堅実な出発点』であり、戦略・パフォーマンス・執行をAIとClaudeで最適化していく取り組みは続ける、と宣言する。AIトレーディングの誠実な現在地として極めて参考になる内容だ。'
-  image: null
+editorial: Claude×IBKR APIで自動売買ボットを組む一部始終で最も誠実なのは、『実取引はバックテストに及ばなかった』という結論だ。勝率64%の美しい数字が現実で崩れた理由——限定的な検証と、手動執行の判断を全てコード化しきれないこと——は、金融に限らずあらゆる自動化に通じる教訓である。AIは配管とパイプラインを組めるが、暗黙知の言語化という最後の壁は依然として人間側に残る。
 en:
   articleTitle: Claude × Interactive Brokers API — A Full Pipeline for an AI Trading
     Bot
@@ -137,7 +135,6 @@ en:
       Code connection, AI-assisted strategy design, the full pipeline from universe
       scan to decision loop to execution to exit, Telegram alerts, and an R-multiple
       dashboard.'
-    image: null
   - heading: Codifying a strategy — rules.json turns a backtest into execution
     time: 656
     body: 'The strategy is Trend Join Long from the previous video — backtested at
@@ -151,7 +148,6 @@ en:
       by asking Claude — ''build me a rules.json for the trading bot, strategy name
       Trend Join Long, long-only...'' — and letting it produce the structured ruleset
       without omissions.'
-    image: null
   - heading: Backtest vs live — the honest gap
     time: 1307
     body: 'The live results were ''just meh,'' to use the author''s word. The gap
@@ -167,7 +163,12 @@ en:
       starting point'' and the optimisation work continues. As an honest snapshot
       of where AI trading actually stands today, this is unusually useful — no breathless
       hype, just the gap between the backtest dream and the live tape.'
-    image: null
+  editorial: The most honest part of building an auto-trading bot with Claude and
+    the IBKR API is the conclusion that 'live trading fell short of the backtest.'
+    Why the elegant 64% win rate collapsed in reality — limited validation and the
+    inability to fully encode discretionary execution — is a lesson that extends beyond
+    finance to all automation. AI can assemble the plumbing and pipeline, but the
+    final wall of verbalizing tacit knowledge still rests with humans.
   headerImage: /images/UgWQtQ3MEVE/header.png
   heroImage: /images/UgWQtQ3MEVE/header.png
 ---
@@ -208,3 +209,7 @@ en:
 実取引結果は『正直に言えばイマイチ』だった。バックテストの華やかな数字と実トレードの結果が大きく乖離した。投稿者は2つの理由を挙げる。1つはバックテストが限定的だったこと——TradingViewで無制限の銘柄数を限定時間枠で走らせた数字だ。もう1つは、自分が手動でやっている執行判断のすべてを、指標とテクニカルパラメータでコード化しきれていないこと。後者は引き続き調整中で、今後の動画で続報を出すと予告する。
 
 率直な結論として、現時点では人間トレーダーである投稿者のTrend Join Long運用の方が、ボット運用より明らかに良い結果を出している。ただしTradingView+Interactive Brokers APIシステムは『堅実な出発点』であり、戦略・パフォーマンス・執行をAIとClaudeで最適化していく取り組みは続ける、と宣言する。AIトレーディングの誠実な現在地として極めて参考になる内容だ。
+
+## 編集部の視点
+
+Claude×IBKR APIで自動売買ボットを組む一部始終で最も誠実なのは、『実取引はバックテストに及ばなかった』という結論だ。勝率64%の美しい数字が現実で崩れた理由——限定的な検証と、手動執行の判断を全てコード化しきれないこと——は、金融に限らずあらゆる自動化に通じる教訓である。AIは配管とパイプラインを組めるが、暗黙知の言語化という最後の壁は依然として人間側に残る。

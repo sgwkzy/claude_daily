@@ -48,7 +48,6 @@ sections:
 
 
     最大の特徴は、完全無料であることと、クラウドではなく利用者のデバイス上でローカルに動作することだ。Claude Codeと同等の体験を、課金や外部サーバー依存なしに得られるという触れ込みになっている。'
-  image: null
 - heading: デモと性能の主張
   time: 14
   body: 'テストとして「3Dキャラクターが各セクションを歩くプレミアムなランディングページを作れ」という指示を与えたところ、North Mini codeはまず全体のアーキテクチャを設計し、その後コードを書き、数分のうちにセクション間をスライドして動く3Dロボットのアニメーションを生成したとされる。
@@ -56,7 +55,6 @@ sections:
 
     性能面では、多くのコーディングモデルが大規模ゆえに低速なのに対し、本モデルは速度と効率のバランスに優れると主張。Claudeの3倍の速度で動き、Gemini
     3.1 ProやNVIDIAのNemotronといった上位モデルも上回るとしている。'
-  image: null
 - heading: 仕組みとセットアップ
   time: 46
   body: '速度の鍵として挙げられているのが、いわゆるMoE(Mixture of Experts)的な構成だ。総パラメータ300億のうち一度に活性化するのは30億のみで、これにより小型モデル並みの速度と大型モデル並みの深さを同時に得られると説明される。
@@ -64,7 +62,7 @@ sections:
 
     セットアップ手順も簡潔で、ターミナルで一つのコマンドを実行して「Open code」を導入し、無料APIに接続したうえでモデル一覧からNorth Mini
     codeを選択すれば完了とされる。動画は無料の設定ガイド配布やコミュニティ参加の案内で締めくくられている。'
-  image: null
+editorial: 「Claudeより3倍速い無料モデル」という主張は割り引いて読むべきだが、Mixture of Experts（総300億のうち30億だけ活性化）でローカル実行の速度と深さを両立する設計思想自体は本物の潮流だ。重要なのはベンチマークの順位より、無料・ローカル・コマンド一つで導入という参入障壁の低さ。性能の絶対値で上位モデルに届かなくても、機密データを外に出さずに回せる選択肢が一つ増える意味は大きい。
 en:
   articleTitle: 'North Mini code: A Free Local Model Framed as a Faster Claude Code
     Alternative'
@@ -115,7 +113,6 @@ en:
       on the user''s own device rather than in the cloud. The pitch is that users
       can get a Claude Code-like experience without subscription costs or dependence
       on external servers.'
-    image: null
   - heading: The demo and the performance claims
     time: 14
     body: 'As a test, the presenter gives it the instruction to "build a premium landing
@@ -128,7 +125,6 @@ en:
       are so large, whereas this model is tuned for a better balance of speed and
       efficiency. The presenter claims it runs three times faster than Claude and
       surpasses high-end models such as Gemini 3.1 Pro and NVIDIA''s Nemotron.'
-    image: null
   - heading: How it works and how to set it up
     time: 46
     body: 'The video attributes the speed to a Mixture of Experts-style design. Out
@@ -140,7 +136,12 @@ en:
       command to install Open code, connect it to a free API, and select North Mini
       code from the available model list. The video closes by offering a free setup
       guide and inviting viewers to join the community.'
-    image: null
+  editorial: 'The ''3x faster than Claude, and free'' claim deserves skepticism, but
+    the underlying design — a mixture-of-experts model activating 3B of 30B parameters
+    to balance local speed and depth — reflects a genuine trend. What matters is not
+    the benchmark ranking but the low barrier: free, local, one command to install.
+    Even if it can''t match top models in absolute quality, gaining one more option
+    that keeps sensitive data on your machine is meaningful.'
   headerImage: /images/6i9BDqWVWeU/header.png
   heroImage: /images/6i9BDqWVWeU/header.png
 ---
@@ -180,3 +181,7 @@ en:
 速度の鍵として挙げられているのが、いわゆるMoE(Mixture of Experts)的な構成だ。総パラメータ300億のうち一度に活性化するのは30億のみで、これにより小型モデル並みの速度と大型モデル並みの深さを同時に得られると説明される。
 
 セットアップ手順も簡潔で、ターミナルで一つのコマンドを実行して「Open code」を導入し、無料APIに接続したうえでモデル一覧からNorth Mini codeを選択すれば完了とされる。動画は無料の設定ガイド配布やコミュニティ参加の案内で締めくくられている。
+
+## 編集部の視点
+
+「Claudeより3倍速い無料モデル」という主張は割り引いて読むべきだが、Mixture of Experts（総300億のうち30億だけ活性化）でローカル実行の速度と深さを両立する設計思想自体は本物の潮流だ。重要なのはベンチマークの順位より、無料・ローカル・コマンド一つで導入という参入障壁の低さ。性能の絶対値で上位モデルに届かなくても、機密データを外に出さずに回せる選択肢が一つ増える意味は大きい。

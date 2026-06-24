@@ -46,35 +46,31 @@ sections:
 
 
     しかし今日、Anthropicはソフトウェア株市場に数十億ドル規模の衝撃を与え、国防総省との取引を巡る競争にも参入し、現代のサイバーセキュリティを脅かしうる強力なモデルを生み出すまでに成長した。初期テスターからは「これは超兵器だ、公開しないでほしい」という言葉も寄せられたという。'
-  image: null
 - heading: 兄妹による経営と組織哲学
   time: 69
   body: 'AnthropicはCEOのダリオと社長のダニエラというアモデイ兄妹によって共同経営されている。ダリオが大局的なビジョンと研究方向性を担い、ダニエラが全リーダーシップチームを束ねて日々の業務を執行するという明確な役割分担が機能している。
 
 
     幼少期から仲の良い兄妹だった二人は「いつか一緒に大きなことをやりたかった」と語る。ダリオは誰にも直接報告せず、ダニエラが実務を仕切るという体制について「信じられないほど自由だ」と表現した。兄妹間で意見が対立した際は「どちらも勝たない」と二人は口をそろえる。'
-  image: null
 - heading: AI地政学と競合批判
   time: 1408
   body: 'Anthropicは強力な各国政府がAI覇権を争う技術的軍拡競争の中心に置かれている。ダリオはリスク管理を軽視する競合他社を「ヨーロ（無謀な賭け）をしている」と公然と批判し、中国へのAIチップ輸出を核兵器の北朝鮮輸出になぞらえて非難した。
 
 
     中国がAI能力で先行することはアメリカと民主主義にとって深刻な脅威になると主張するダリオは、自社のパートナー企業であるチップメーカーとの関係悪化を覚悟しながらも、輸出規制の必要性を訴え続けている。「自分が信じることを言い続ける」という姿勢を崩さない。'
-  image: null
 - heading: リスクとの向き合い方
   time: 2735
   body: 'Anthropicの技術が壊滅的な結果をもたらす可能性についてダリオは正直に認める。彼の見解では、そのリスクはAnthropicという一社の存在ではなく、技術そのものの性質・多数の国家・多数の企業という構造的要因から生じるものだという。
 
 
     ダリオは航空会社のアナロジーを用いて自社の立場を説明する。競合他社より10倍安全な航空会社を作ることはできても、墜落確率をゼロにすることは誰にもできない。Anthropicは社内リソースの半分をリスク低減に費やしており、目標は「その確率をできる限り低くすること」だと語った。'
-  image: null
 - heading: 経営者としての素顔
   time: 2821
   body: '世界最先端のAI企業を率いるという極限のプレッシャーの中、ダリオが精神的な平静を保つ方法はシンプルだ。週末にビデオゲームをプレイしたり、妹ダニエラと過ごしたり、妻とイタリアへ旅行したりすることが気分転換になるという。
 
 
     イタリアには馬を所有しており、「カリプソ」という名の馬のそばに座ってただ眺めるだけで心が落ち着くと話す。「彼女はこのAIの話なんて何も知らない。ただ幸せな馬なんだ」という言葉に、巨大テクノロジー企業のCEOの人間的な一面が垣間見える。'
-  image: null
+editorial: 約1兆ドル評価のAnthropicを描くこのドキュメンタリーで本質的なのは、ダリオ・アモデイという『リスクを警告しながら最前線を走る』人物の二面性だ。社内リソースの半分をリスク低減に充てつつ、危険のゼロ化は不可能と認める——この緊張を抱えたまま走り続けることが同社の存在意義になっている。兄妹経営や中国へのチップ輸出規制の主張まで含め、企業の意思決定が個人の世界観に強く規定される稀有な事例を映している。
 en:
   articleTitle: Inside Anthropic, the $965 Billion AI Juggernaut | The Circuit
   seoTitle: Inside Anthropic, the $965 Billion AI Juggernaut | The Circuit
@@ -125,7 +121,6 @@ en:
       tens of billions of dollars in software market value, compete for defense-related
       business, and build models strong enough to unsettle modern cybersecurity. Early
       testers reportedly even said, "This is a superweapon, please don’t release it."'
-    image: null
   - heading: A Company Run by Siblings
     time: 69
     body: 'Anthropic is jointly led by siblings Dario and Daniela Amodei, with Dario
@@ -138,7 +133,6 @@ en:
       significant together. Dario describes the structure as "incredibly freeing"
       because he does not have to report directly to anyone, while Daniela handles
       execution. When they disagree, they say, neither side really "wins."'
-    image: null
   - heading: AI Geopolitics and Dario’s Critique of Rivals
     time: 1408
     body: 'Anthropic now sits at the center of a technological arms race in which
@@ -152,7 +146,6 @@ en:
       to the United States and to democracy. Even while recognizing that this stance
       could strain Anthropic’s relationships with partner chipmakers, he continues
       to press for export controls and insists on saying what he believes.'
-    image: null
   - heading: How He Thinks About Risk
     time: 2735
     body: 'Dario is candid about the possibility that Anthropic’s technology could
@@ -166,7 +159,6 @@ en:
       reduce the crash rate to zero. Anthropic spends half its internal resources
       on risk reduction, and its aim, he says, is to push the probability of disaster
       as low as possible.'
-    image: null
   - heading: The Human Side of a Frontier AI CEO
     time: 2821
     body: 'Leading one of the world’s most advanced AI companies brings extreme pressure,
@@ -179,7 +171,13 @@ en:
       "Calypso" helps him calm down. The remark that "she knows nothing about this
       AI stuff, she’s just a happy horse" offers a brief glimpse of the person behind
       the CEO of a massive technology company.'
-    image: null
+  editorial: What's essential in this documentary on the roughly $1T Anthropic is
+    the duality of Dario Amodei — someone who warns of risk while running at the frontier.
+    Devoting half of internal resources to risk reduction while admitting danger can't
+    be zeroed out, the company's reason for existing is to keep running while holding
+    that tension. Including the sibling leadership and his push for chip-export controls
+    to China, it captures a rare case of corporate decisions being strongly shaped
+    by one person's worldview.
   headerImage: /images/v1wZwxY3CMg/header.png
   heroImage: /images/v1wZwxY3CMg/header.png
 ---
@@ -235,3 +233,7 @@ Anthropicの技術が壊滅的な結果をもたらす可能性についてダ�
 世界最先端のAI企業を率いるという極限のプレッシャーの中、ダリオが精神的な平静を保つ方法はシンプルだ。週末にビデオゲームをプレイしたり、妹ダニエラと過ごしたり、妻とイタリアへ旅行したりすることが気分転換になるという。
 
 イタリアには馬を所有しており、「カリプソ」という名の馬のそばに座ってただ眺めるだけで心が落ち着くと話す。「彼女はこのAIの話なんて何も知らない。ただ幸せな馬なんだ」という言葉に、巨大テクノロジー企業のCEOの人間的な一面が垣間見える。
+
+## 編集部の視点
+
+約1兆ドル評価のAnthropicを描くこのドキュメンタリーで本質的なのは、ダリオ・アモデイという『リスクを警告しながら最前線を走る』人物の二面性だ。社内リソースの半分をリスク低減に充てつつ、危険のゼロ化は不可能と認める——この緊張を抱えたまま走り続けることが同社の存在意義になっている。兄妹経営や中国へのチップ輸出規制の主張まで含め、企業の意思決定が個人の世界観に強く規定される稀有な事例を映している。

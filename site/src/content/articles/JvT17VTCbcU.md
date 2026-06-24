@@ -47,21 +47,19 @@ sections:
 
 
     約1時間で『Block Craft』が完成し、ブロック破壊・無限資源・クラフト風UIまでひと通り動作。消費トークンは約150万で、コストはかかるものの「本物のMinecraftを起動したのかと一瞬騙された」と評する仕上がりに到達している。'
-  image: null
 - heading: Photoshop / Spotify風アプリは数分〜10分でワンショット
   time: 814
   body: 'より定型的なUIに関しては、生成時間は一気に短くなる。Photoshop風の画像編集は約6分、Spotify風アプリは約11分でワンショット生成された。Spotify側はダークUIにサイドバー、アルバムグリッド、検索バー、再生・一時停止・スキップ・シャッフル・進捗バー・ボリューム、そしてオーディオビジュアライザーまで盛り込んだ仕様だった。
 
 
     面白いのは、Fable 5がデモ用に楽曲タイトルや「Neon Skyline」「Glass Bloom」などの曲名まで自前で作ってきた点だ。曲数は限定的でも、検索・ライク・ライブラリ表示も実装されており、UIだけでなくアプリとして体験できる完成度に達していた。'
-  image: null
 - heading: GTA 6 — ワンショットでは無理、でも『ラグドール物理』は本物級
   time: 1693
   body: '最後のテストは最も無謀な「GTA 6をゼロから」。さすがにマップ・モデル・ミッション一式をワンショットで生成するのは不可能で、結果は完全なGTAにはならない。それでも警官追跡・ロケットランチャー・爆発でラグドール挙動する人間や跳ね上がる車両など、物理周りの完成度は『真面目に時間を割き、本物のアセットと反復を入れれば相当近いものが作れる』と思わせる水準だ。
 
 
     レビューの結論は、Fable 5は「一発で完成品を作る魔法」ではなく、『1プロンプトでアプリやゲームの土台を高解像度で立ち上げる装置』として強力、というもの。Anthropic公開停止後にこれを再び触れる日がいつ来るかは、別の論点として残った形だ。'
-  image: null
+editorial: Minecraft・Spotify・GTAを順に1プロンプトで作る検証で見えるのは、生成の『得意と苦手の地形』だ。UIが明確なSpotify風は11分でほぼ完成する一方、GTA級はワンショットでは届かない——つまり仕様が言語化しやすいものほど一発生成に向く。『書いた機能は載るが、書かないと出ない』という素直な挙動の指摘は、プロンプト設計が依然として成果を決めることを実証している。
 en:
   articleTitle: Is Fable 5 Really a "Monster"? Testing One-Prompt Minecraft, Spotify,
     and GTA Clones
@@ -114,7 +112,6 @@ en:
       resources, and a Minecraft-style crafting UI all working. The run consumed about
       1.5 million tokens, so the cost was substantial, but the reviewer says the result
       was convincing enough to momentarily feel like launching the real Minecraft.'
-    image: null
   - heading: Photoshop and Spotify-Style Apps in Minutes, Not Hours
     time: 814
     body: 'For more standardized interfaces, generation time drops dramatically. A
@@ -129,7 +126,6 @@ en:
       Even with a limited number of songs, it implemented search, likes, and a library
       view, reaching a level where it felt like an actual app rather than just a mocked-up
       interface.'
-    image: null
   - heading: 'GTA 6: Not One-Shot Ready, but the Physics Already Feel Real'
     time: 1693
     body: 'The final test is the most unrealistic one: "build GTA 6 from scratch."
@@ -144,7 +140,12 @@ en:
       finished products. It is better understood as a system that can stand up a high-resolution
       foundation for apps and games from a single prompt. When the public will get
       to touch it again after Anthropic pulled it remains a separate open question.'
-    image: null
+  editorial: Building Minecraft, Spotify, and GTA each from one prompt reveals the
+    'terrain' of what generation handles well. A Spotify-style app with clear UI lands
+    in 11 minutes, while GTA-scale doesn't arrive in one shot — meaning the more verbalizable
+    the spec, the better it suits single-shot generation. The plain observation that
+    'what you write appears, what you don't won't' confirms that prompt design still
+    determines the result.
   headerImage: /images/JvT17VTCbcU/header.png
   heroImage: /images/JvT17VTCbcU/header.png
 ---
@@ -184,3 +185,7 @@ Prompt PotatoはClaude Fable 5(公開停止直前)に対し、Claude Codeの「u
 最後のテストは最も無謀な「GTA 6をゼロから」。さすがにマップ・モデル・ミッション一式をワンショットで生成するのは不可能で、結果は完全なGTAにはならない。それでも警官追跡・ロケットランチャー・爆発でラグドール挙動する人間や跳ね上がる車両など、物理周りの完成度は『真面目に時間を割き、本物のアセットと反復を入れれば相当近いものが作れる』と思わせる水準だ。
 
 レビューの結論は、Fable 5は「一発で完成品を作る魔法」ではなく、『1プロンプトでアプリやゲームの土台を高解像度で立ち上げる装置』として強力、というもの。Anthropic公開停止後にこれを再び触れる日がいつ来るかは、別の論点として残った形だ。
+
+## 編集部の視点
+
+Minecraft・Spotify・GTAを順に1プロンプトで作る検証で見えるのは、生成の『得意と苦手の地形』だ。UIが明確なSpotify風は11分でほぼ完成する一方、GTA級はワンショットでは届かない——つまり仕様が言語化しやすいものほど一発生成に向く。『書いた機能は載るが、書かないと出ない』という素直な挙動の指摘は、プロンプト設計が依然として成果を決めることを実証している。

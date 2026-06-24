@@ -48,7 +48,6 @@ sections:
 
 
     Anthropicが配っているのは「リファレンス実装」と呼ばれる成果物。担当AIの設定、作業の手順、外部データへの繋ぎ口などが、フォルダごと一式まとまっている。Claudeに渡すだけで、そのフォルダ内の役割を持つ担当エージェントとして動き始めるため、利用者は中身を熟読しなくても恩恵を受けられる。'
-  image: null
 - heading: Claude for Financial Services - 金融現場の担当を再現
   time: 148
   body: '1本目は金融向けのClaude for Financial Servicesだ。投資銀行業務、株式調査、ファンド運用といった現場の仕事が丸ごと入っている。GitHubで約3万のスターが付いており、世界中のプロが注目していることが分かる。
@@ -58,7 +57,6 @@ sections:
 
 
     ただし注釈として「これらはアナリストの下書きを作るだけで、投資のお勧めはしない。最後は必ず人間がサインする」と明記されている。話者は「これが後でめちゃくちゃ効いてくる」として、後半の論点へつなぐ伏線として強調した。'
-  image: null
 - heading: Knowledge Work Plugins と Claude for Life Sciences
   time: 234
   body: '2本目はKnowledge Work Pluginsで、営業・カスタマーサポート・法務・マーケティング・データ分析といったオフィスワーク全般をカバーする。GitHubで約2万のスターを集めている人気リポジトリで、営業先の事前準備、契約書チェック、秘密保持契約の仕訳、マーケキャンペーン企画といった典型タスクが一通り揃っている。コマンドを1発打つと、その仕事用のお手本がそのまま立ち上がる。
@@ -68,7 +66,6 @@ sections:
 
 
     公式以外にも有志や他社が作ったプラグインは無数にあるが、玉石混交のため、まずは公式の3本に絞って試すのが入り口として安心だと話者は補足する。'
-  image: null
 - heading: 型は借りるが最終判断は自分 - 差は土台に何を載せるか
   time: 381
   body: '結論は明確だ。仕事の段取りをゼロから自分で考える時代は終わったので、世界トップの会社が出した叩き台をまずたたき台にする。自分で1から組むより圧倒的に速いし、最初から質も高い。
@@ -78,7 +75,7 @@ sections:
 
 
     ここから話者の本題が立ち上がる。「みんな同じ土台を使えるなら、差がつくのは土台の上に何を載せるかだけ」。自分の現場の知識、経験、固有の判断基準を土台に積むことが、これからの仕事の価値になる。さらに、自分が改良した方を世の中に再公開すれば、全体がじわじわ底上げされていく。話者自身も「こっそり公開している」と明かし、まずは自分の仕事に近いリポジトリを覗いてみるよう促す形で締めくくった。'
-  image: null
+editorial: Anthropicが業界別のリファレンス実装を無料公開する狙いは、Claudeを『業務の型』ごと配ることでエコシステムを囲い込む点にある。フォルダごと渡せば担当エージェントになるという手軽さは強力だが、金融アナリスト業務で『下書きだけ、最後は人間がサインする』と明記される線引きこそ本質だ。『型は借りるが最終判断は自分』——借りた土台の上に何を載せるかが、これからの仕事の差を決める。
 en:
   articleTitle: Three Free Claude Workflow Blueprints from Anthropic and When to "Borrow
     the Pattern"
@@ -129,7 +126,6 @@ en:
       external data into a ready-made package. Hand that folder to Claude and it starts
       operating as the agent for that role, meaning users can benefit even without
       studying every detail inside.'
-    image: null
   - heading: 'Claude for Financial Services: Recreating Core Roles in Finance'
     time: 148
     body: 'The first example is Claude for Financial Services. It packages entire
@@ -149,7 +145,6 @@ en:
       drafts, do not make investment recommendations, and always require a human to
       sign off. The speaker stresses that this caveat becomes extremely important
       later and uses it as a setup for the broader point in the second half.'
-    image: null
   - heading: Knowledge Work Plugins and Claude for Life Sciences
     time: 234
     body: 'The second release is Knowledge Work Plugins, which covers general office
@@ -171,7 +166,6 @@ en:
       There are countless unofficial plugins built by individuals and other companies
       as well, but quality varies widely. The speaker adds that starting with Anthropic''s
       three official releases is the safest way in.'
-    image: null
   - heading: 'Borrow the Pattern, Keep the Judgment: The Real Edge Is What You Add'
     time: 381
     body: 'The conclusion is straightforward. The era of designing every workflow
@@ -193,7 +187,12 @@ en:
       gradually. The speaker even says they are quietly publishing their own improvements
       and closes by urging viewers to inspect a repository close to their own line
       of work.'
-    image: null
+  editorial: 'Anthropic open-sourcing industry reference implementations aims to lock
+    in an ecosystem by shipping Claude as ready-made ''work templates.'' Handing over
+    a folder to get a domain agent is powerful, but the real point is the boundary
+    stated for financial-analyst work: ''drafts only, a human signs at the end.''
+    Borrow the template, own the final call — what you build atop the borrowed base
+    is what will distinguish work going forward.'
   headerImage: /images/hm4aFfaf0FA/header.png
   heroImage: /images/hm4aFfaf0FA/header.png
 ---
@@ -247,3 +246,7 @@ Anthropicが配っているのは「リファレンス実装」と呼ばれる�
 ただしコピペで完璧かといえばノーで、そのまま使うとずれたまま突っ走ってしまう。Financial Servicesに明記された「人間がサインする」注意書きはまさにこれを示している。あくまで叩き台であって答えではない、というのが借り方の前提だ。
 
 ここから話者の本題が立ち上がる。「みんな同じ土台を使えるなら、差がつくのは土台の上に何を載せるかだけ」。自分の現場の知識、経験、固有の判断基準を土台に積むことが、これからの仕事の価値になる。さらに、自分が改良した方を世の中に再公開すれば、全体がじわじわ底上げされていく。話者自身も「こっそり公開している」と明かし、まずは自分の仕事に近いリポジトリを覗いてみるよう促す形で締めくくった。
+
+## 編集部の視点
+
+Anthropicが業界別のリファレンス実装を無料公開する狙いは、Claudeを『業務の型』ごと配ることでエコシステムを囲い込む点にある。フォルダごと渡せば担当エージェントになるという手軽さは強力だが、金融アナリスト業務で『下書きだけ、最後は人間がサインする』と明記される線引きこそ本質だ。『型は借りるが最終判断は自分』——借りた土台の上に何を載せるかが、これからの仕事の差を決める。

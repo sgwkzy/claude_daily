@@ -46,21 +46,19 @@ sections:
 
 
     今回検証されたのはAnthropicの新モデル「Fable」だ。配信者は白番で2手詰めの局面をFableに渡し、Stockfishとの連携でどこまでまっとうな解答に到達できるかを試した。結果としてFableは正解にたどり着いたという。'
-  image: null
 - heading: 正解より興味深かったFableの言語的説明
   time: 21
   body: '番組のハイライトは、Fableが解答そのものではなく、「なぜその手筋が成立するのか」を自然言語で説明できた点だ。配信者はFableの説明を引用する形で局面の論理を再構成している。
 
 
     Fableの説明はおおむね次の通りだ - 鍵は黒の駒が事実上動けない状況を作ること。ナイトはクイーンの斜めにより固定され動けない。キング・ルーク・ビショップも他の駒に縛られて凍結状態にある。'
-  image: null
 - heading: ツークツヴァンクを誘発する論理 - ルークa6で完成
   time: 39
   body: 'ルークと残りのポーンも封じることで、黒は「動かなければならない、しかし動けば負け」というツークツヴァンク状態に追い込まれる。動けるのはaポーンだけになり、aポーンが何をしようとも、白のルークがa6に入ることで詰みが完成する、というのがFableの示した論理だった。
 
 
     ニュース性としては、皮肉なことに本動画は米政府によるFable停止命令の直後に公開されており、「停止される前に評価してみた」という記録的価値も持つ。LLMがチェスの戦術的論理を言語化できる段階まで進化したことを、トルコ語圏のチェスファン目線で押さえた一本だ。'
-  image: null
+editorial: FableがStockfishの支援でチェスの2手詰めを解いた一件で本当に興味深いのは、正解そのものではなく『なぜそうなるか』を自然言語で説明できた点だ。ツークツヴァンクを誘発する論理を言葉で展開する能力は、計算と説明可能性の橋渡しを示す。外部ツール（Stockfish）と推論を組み合わせる構図は、LLM単体の弱点を補う典型的なエージェント設計でもあり、専門領域での実用化の道筋を小さく実証している。
 en:
   articleTitle: Turkish Chess Channel Tests Claude Fable on a Mate-in-Two and Gets
     the Right Answer
@@ -107,7 +105,6 @@ en:
       a mate-in-two puzzle from the white side and tests how far it can get toward
       a proper solution when paired with Stockfish. According to the video, Fable
       arrives at the correct answer.'
-    image: null
   - heading: 'More Interesting Than the Answer: Fable''s Verbal Explanation'
     time: 21
     body: 'The highlight of the segment is not merely that Fable found the move, but
@@ -119,7 +116,6 @@ en:
       which Black''s pieces are functionally unable to move. The knight is pinned
       in place by the queen''s diagonal, while the king, rook, and bishop are all
       frozen by the surrounding structure.'
-    image: null
   - heading: Zugzwang Logic Ends With Ra6 Mate
     time: 39
     body: 'By locking down the rook and the remaining pawn as well, Black is driven
@@ -133,7 +129,12 @@ en:
       record of how the model performed just before it was taken offline. It also
       captures, from the perspective of Turkish-speaking chess fans, how far LLMs
       have advanced in expressing tactical chess reasoning in language.'
-    image: null
+  editorial: What's truly interesting about Fable solving a two-move chess mate with
+    Stockfish's help is not the answer but its ability to explain 'why' in natural
+    language. Articulating the logic that induces zugzwang demonstrates a bridge between
+    computation and explainability. Combining an external tool (Stockfish) with reasoning
+    is also a textbook agent design that compensates for a standalone LLM's weakness,
+    quietly proving a path to practical use in specialized domains.
   headerImage: /images/rWweDAmofPM/header.png
   heroImage: /images/rWweDAmofPM/header.png
 ---
@@ -172,3 +173,7 @@ Fableの説明はおおむね次の通りだ - 鍵は黒の駒が事実上動け
 ルークと残りのポーンも封じることで、黒は「動かなければならない、しかし動けば負け」というツークツヴァンク状態に追い込まれる。動けるのはaポーンだけになり、aポーンが何をしようとも、白のルークがa6に入ることで詰みが完成する、というのがFableの示した論理だった。
 
 ニュース性としては、皮肉なことに本動画は米政府によるFable停止命令の直後に公開されており、「停止される前に評価してみた」という記録的価値も持つ。LLMがチェスの戦術的論理を言語化できる段階まで進化したことを、トルコ語圏のチェスファン目線で押さえた一本だ。
+
+## 編集部の視点
+
+FableがStockfishの支援でチェスの2手詰めを解いた一件で本当に興味深いのは、正解そのものではなく『なぜそうなるか』を自然言語で説明できた点だ。ツークツヴァンクを誘発する論理を言葉で展開する能力は、計算と説明可能性の橋渡しを示す。外部ツール（Stockfish）と推論を組み合わせる構図は、LLM単体の弱点を補う典型的なエージェント設計でもあり、専門領域での実用化の道筋を小さく実証している。

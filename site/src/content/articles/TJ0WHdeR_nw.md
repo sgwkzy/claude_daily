@@ -45,7 +45,6 @@ sections:
 
 
     そこで本動画は、プレミアムなモデルやツールを無料で使える6つのプラットフォームを紹介する。最良のクラウド（Claude）モデルを使う、プロ品質の動画を作る、リアルなアバターを生成する、創作プロセスを自動化する——制限が広いものもあれば無制限のものもあるが、いずれも無料でプレミアムを使えるという。'
-  image: null
 - heading: Claude最新モデルをAWS『Kiro』で無料利用
   time: 66
   body: '最初に紹介されるのは、Anthropicの最新Opus・Sonnet（そしてMythos再公開時にはそれも）を無料かつ合法に使う代替手段だ。投稿者は新モデルMythosを試そうとClaudeに再課金したが、その夜に課金したのに翌日にはモデルが削除され、支払い済みでも使えなかったという。同じ目に遭わないための代替策として提示するのがAWSの『Kiro』である。
@@ -53,7 +52,6 @@ sections:
 
     KiroはAIでアプリを開発できるプラットフォームで、Codex・Antigravity・Claude Code に相当するが、提供元はAmazon Web
     Services。クラウドベースでインストール不要だ。無料版では Sonnet 4.5・Haiku・DeepSeek・Minimax などが使えるが、これらはやや旧め。最新のプレミアムモデルは無料のPro版で解放できる。'
-  image: null
 - heading: 初月無料のProと、動画AIの無料枠
   time: 168
   body: 'Proプランは月1000クレジットで約10ドル。注目は『upgrade plan』から進むと初月が完全無料になる点で、銀行情報を入力して確認し、ホームに戻るだけで最新のClaudeモデルなどが使えるようになる。
@@ -61,7 +59,7 @@ sections:
 
     後半では動画AIにも触れる。Symphony（TikTokアカウントでログイン）ではBytedanceのモデルで画像・動画・アバターを生成でき、1クレジット＝動画1秒、週に最低1000クレジット＝毎週1000秒（16分超）を無料で作れる。さらにTikTok
     Adsアカウントを作ると週2000クレジットに増えるという『裏技』も紹介される。これらは本来、広告を出す企業向けに設計された仕組みであることが背景にある。'
-  image: null
+editorial: 「プレミアムモデルを無料で使う」という切り口は魅力的だが、本質は提供チャネルの多様化にある。同じClaudeでも、直接課金・AWS Kiro経由・トライアル枠でコストとアクセス性が変わる——投稿者が『課金したのに翌日モデルが消えた』体験を語る通り、単一チャネル依存はリスクだ。どの経路で最新モデルに触れるかを複線化しておくことは、節約以上に提供停止への備えとして意味がある。
 en:
   articleTitle: 'How to Use Premium AI for Free: Try Claude’s Latest Models via AWS
     Kiro'
@@ -114,7 +112,6 @@ en:
       and automating creative workflows. Some come with broad limits and some with
       effectively unlimited access, but the common pitch is free access to premium
       capability.'
-    image: null
   - heading: Using AWS Kiro to Access Claude’s Latest Models for Free
     time: 66
     body: 'The first recommendation is a legal free alternative for using Anthropic’s
@@ -130,7 +127,6 @@ en:
       tier includes Sonnet 4.5, Haiku, DeepSeek, and Minimax, though those are slightly
       older models. The latest premium models can be unlocked through the free Pro
       tier.'
-    image: null
   - heading: A Free First Month of Pro and Bonus Video AI Credits
     time: 168
     body: 'The Pro plan includes 1,000 credits per month for roughly $10. The notable
@@ -146,7 +142,12 @@ en:
       video generation every week. The creator also shares a "hack" where creating
       a TikTok Ads account doubles the weekly allowance to 2,000 credits, noting that
       the system was originally designed for businesses running ads.'
-    image: null
+  editorial: The 'use premium models for free' angle is appealing, but the substance
+    is diversifying delivery channels. The same Claude varies in cost and accessibility
+    via direct billing, AWS Kiro, or a trial tier — and as the creator's 'paid yet
+    the model vanished the next day' story shows, single-channel dependence is a risk.
+    Keeping multiple routes to the latest model is meaningful less as savings than
+    as insurance against availability being cut.
   headerImage: /images/TJ0WHdeR_nw/header.png
   heroImage: /images/TJ0WHdeR_nw/header.png
 ---
@@ -185,3 +186,7 @@ KiroはAIでアプリを開発できるプラットフォームで、Codex・Ant
 Proプランは月1000クレジットで約10ドル。注目は『upgrade plan』から進むと初月が完全無料になる点で、銀行情報を入力して確認し、ホームに戻るだけで最新のClaudeモデルなどが使えるようになる。
 
 後半では動画AIにも触れる。Symphony（TikTokアカウントでログイン）ではBytedanceのモデルで画像・動画・アバターを生成でき、1クレジット＝動画1秒、週に最低1000クレジット＝毎週1000秒（16分超）を無料で作れる。さらにTikTok Adsアカウントを作ると週2000クレジットに増えるという『裏技』も紹介される。これらは本来、広告を出す企業向けに設計された仕組みであることが背景にある。
+
+## 編集部の視点
+
+「プレミアムモデルを無料で使う」という切り口は魅力的だが、本質は提供チャネルの多様化にある。同じClaudeでも、直接課金・AWS Kiro経由・トライアル枠でコストとアクセス性が変わる——投稿者が『課金したのに翌日モデルが消えた』体験を語る通り、単一チャネル依存はリスクだ。どの経路で最新モデルに触れるかを複線化しておくことは、節約以上に提供停止への備えとして意味がある。

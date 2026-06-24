@@ -9,7 +9,7 @@ interface Props {
 
 const { locale } = Astro.props;
 const isEn = locale === "en";
-const lastUpdated = "2026-06-18";
+const lastUpdated = "2026-06-24";
 const contactHref = withBase(localePath("/contact/", locale));
 const description = isEn
   ? "Claude Daily editorial policy. How we choose videos, how we summarize, how we handle accuracy, and our correction policy."
@@ -76,6 +76,16 @@ const description = isEn
           ? "However, machine summaries can misread, misattribute context, or lose nuance. To confirm exact wording or intent, please check the original video."
           : "ただし、機械要約には誤読、文脈の取り違え、ニュアンスの欠落が起こり得ます。厳密な表現や発言の意図を確認したい場合は、必ず元動画をご確認ください。"}
       </p>
+      <p>
+        {isEn
+          ? "Beyond the summary, each article carries an original commentary block titled \"Editor's Take\" — our own perspective that is not present in the video transcript: why the topic matters, what it implies for developers and Claude users, and how it connects to other ongoing developments. This editorial layer is what we add on top of the primary source, and it is the distinctive value of this site."
+          : "当サイトの記事は要約にとどまらず、各記事に「編集部の視点」という独自の論評ブロックを付しています。これは動画の字幕には存在しない、運営者自身の視点です — なぜそのテーマが重要か、開発者や Claude ユーザーにとって何を示唆するか、他の動向とどう接続するか。一次情報の上に当サイトが加えるこの編集レイヤーこそが、当サイト独自の価値です。"}
+      </p>
+      <p>
+        {isEn
+          ? "Articles are not published untouched. With AI assistance, the operator selects the videos, edits the wording, adds the editorial commentary, and reviews each article before publishing — avoiding exaggerated phrasing, keeping a link to the primary source, and correcting clear errors when found."
+          : "記事はそのまま自動公開されるわけではありません。AI 支援のもと、運営者が動画を選定し、文言を整え、編集部の視点を加え、公開前に各記事を確認しています — 誇張的な表現を避け、一次情報へのリンクを保ち、明らかな誤りを見つけた場合は修正します。"}
+      </p>
     </section>
 
     <section class="space-y-3">
@@ -113,14 +123,16 @@ const description = isEn
           <>
             <li>Avoid exaggerated headlines and assertive rephrasing</li>
             <li>Clearly link to the primary source</li>
-            <li>Make it clear to readers that content is auto-generated</li>
+            <li>Add our own editorial commentary ("Editor's Take") rather than reproducing the video alone</li>
+            <li>Be transparent that articles are produced with AI assistance and reviewed by the operator</li>
             <li>Keep article-body policy separate from whether ads or analytics are used</li>
           </>
         ) : (
           <>
             <li>誇張的な見出しや断定的な言い換えを避ける</li>
             <li>一次情報へのリンクを明示する</li>
-            <li>自動生成であることを読者に分かる形で示す</li>
+            <li>動画の再現にとどめず、独自の論評「編集部の視点」を加える</li>
+            <li>記事は AI 支援で作成し運営者が確認していることを、透明性をもって示す</li>
             <li>広告や分析導入の有無にかかわらず、記事本文の方針は分離して扱う</li>
           </>
         )}

@@ -45,21 +45,19 @@ sections:
 
 
     それでも出てきた結果には、スクロールに追従するギャラリーや控えめなアニメーション、視覚的なアクセントが揃っており、投稿者はコードよりも体験設計の成熟度に驚いている。'
-  image: null
 - heading: 既存デザインの改善とFigma MCP活用
   time: 206
   body: '中盤のテストでは、既存のヒーローセクションをよりよい形に改善させ、さらにFigma MCPを使った案出しまで確認している。単なる再生成ではなく、既存案に対して追加文脈を踏まえた比較改善ができる点が評価されている。
 
 
     投稿者は「そのまま採用」ではなくA/Bテスト前提で見るべきだとしつつも、改善案として十分実務に載る水準だと判断している。単発の見栄えだけでなく、反復改善の足場として使えることが大きい。'
-  image: null
 - heading: 古いUI刷新から見えるデザイナーの役割変化
   time: 263
   body: 'Craigslistのような古典的UIをモダン化する課題では、情報密度を落としすぎず、タイプ中心の構造を保ったまま整えるという制約付きで試している。結果として、派手さより指示順守とニュアンス調整の上手さが見えるテストになっていた。
 
 
     最後に投稿者は、AI時代のデザイナーは不要になるのではなく、自然言語で意図を伝え、良い方向へ反復させる役割が強くなるとまとめる。Fable 5は「Figmaの外で動く制作パートナー」になり得るという見立てだ。'
-  image: null
+editorial: 5本のUI/UXワンショット検証で見えるのは、Fable 5がスクロール連動アニメやFigma MCP連携まで含めて視覚的完成度を一発で出せる段階に来たことだ。注目すべきは投稿者の結論——AIがデザイナーの仕事を奪うのではなく、自然言語でアイデアを直接ブラウザに実現する制作手段になるという整理。Craigslist刷新のような『情報量を保ったまま現代化』という繊細な指示に従える点が、デザイナーの役割が実装から意図設計へ移ることを示している。
 en:
   articleTitle: Claude Fable 5 One-Shot UI/UX Tests Show a Major Leap in Design Execution
   seoTitle: Claude Fable 5 One-Shot UI/UX Tests Show a Major Leap in Design
@@ -105,7 +103,6 @@ en:
       Even so, the result includes a scroll-following gallery, restrained animation,
       and strong visual accents. What surprises the creator most is not the code itself
       but the maturity of the experience design.'
-    image: null
   - heading: Improving Existing Design Work with Figma MCP
     time: 206
     body: 'In the middle test, Claude is asked to improve an existing hero section
@@ -118,7 +115,6 @@ en:
       it strong enough to serve as an A/B test candidate. The bigger takeaway is that
       the model is useful not just for flashy one-offs, but as a base for iterative
       refinement.'
-    image: null
   - heading: What a Craigslist Redesign Says About the Designer’s Role
     time: 263
     body: 'In the test built around modernizing a classic interface like Craigslist,
@@ -133,7 +129,13 @@ en:
       language and steering repeated iterations toward the right outcome. In that
       sense, Fable 5 looks like it could become a creative partner that works outside
       Figma.'
-    image: null
+  editorial: 'Five UI/UX one-shot tests show Fable 5 reaching a stage where it produces
+    visual polish in a single pass — scroll-linked animation and Figma MCP integration
+    included. The notable part is the creator''s conclusion: AI is not taking designers''
+    jobs but becoming a medium that realizes ideas directly in the browser via natural
+    language. Following a delicate instruction like ''modernize Craigslist while preserving
+    information density'' shows the designer''s role shifting from implementation
+    to intent design.'
   headerImage: /images/tSg3FAdWvzI/header.png
   heroImage: /images/tSg3FAdWvzI/header.png
 ---
@@ -172,3 +174,7 @@ en:
 Craigslistのような古典的UIをモダン化する課題では、情報密度を落としすぎず、タイプ中心の構造を保ったまま整えるという制約付きで試している。結果として、派手さより指示順守とニュアンス調整の上手さが見えるテストになっていた。
 
 最後に投稿者は、AI時代のデザイナーは不要になるのではなく、自然言語で意図を伝え、良い方向へ反復させる役割が強くなるとまとめる。Fable 5は「Figmaの外で動く制作パートナー」になり得るという見立てだ。
+
+## 編集部の視点
+
+5本のUI/UXワンショット検証で見えるのは、Fable 5がスクロール連動アニメやFigma MCP連携まで含めて視覚的完成度を一発で出せる段階に来たことだ。注目すべきは投稿者の結論——AIがデザイナーの仕事を奪うのではなく、自然言語でアイデアを直接ブラウザに実現する制作手段になるという整理。Craigslist刷新のような『情報量を保ったまま現代化』という繊細な指示に従える点が、デザイナーの役割が実装から意図設計へ移ることを示している。

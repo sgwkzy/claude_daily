@@ -46,7 +46,6 @@ sections:
 
 
     そして、そのタイミングが問題視される。2026年5月、Anthropicは1兆ドルという評価額で記録的な私募資金調達を完了し、株式公開を申請した。そのわずか3日後、AIが制御不能になりうると警告し、政府に業界全体の減速の検討を促す報告書を公表した。ある人には慎重さに、別の人には『安全に偽装された戦略』に見える、という対立する解釈が紹介される。'
-  image: null
 - heading: 自社コードの80%をClaudeが書く現実
   time: 142
   body: '2026年5月時点で、Anthropic自身のシステムに投入されるコードの80%超を、同社のAIであるClaudeが書いていた。2025年2月にClaude
@@ -54,14 +53,13 @@ sections:
 
 
     同時にエンジニアの生産量も増え、2024年比で1日あたり8倍のコードを出荷しているという。共同創業者のジャック・クラークは、2028年までにAIが書くコードの割合を100%に到達させられると公言している。AIが自らの後継を設計・構築し始めるなら、業界には『いつ進め、いつ止めるか』を決めるルールブックが必要になる——そしてAnthropicはすでにそれを持っている、と論は進む。'
-  image: null
 - heading: 規制の標準化と労働市場への衝撃
   time: 485
   body: 'Anthropicの責任あるスケーリングポリシーは、能力が危険な水準（Capability Thresholds）に達したとき追加保護を発動させる仕組みで、自律的なAI研究開発までを射程に入れる。同様の発想はカリフォルニアで法制化寸前まで行ったが、ベンチャー企業a16zは、規制の負担が業界の巨人ではなくスタートアップや小規模開発者に最も重くのしかかると警告した。訓練コストの10〜30%という罰金は1兆ドル企業には端金でも、新興企業には会社全体に等しい。法案は2024年9月にニューサム知事が拒否権を行使したが、形を変えて各地で再燃し続けている。
 
 
     さらに影響はAnthropicのコードに留まらない。同社は技術者がコードの大半を書かず『レビューする』側に回ったと認めており、それが業界標準になれば人的労働力は崩れる。スタンフォードのデジタル経済研究所のデータでは、22〜25歳のコーダーの職は2022年末のピークから約20%減り、30歳超は増加。入口の職が削られ、テック業界全体でレイオフが加速している実態が示される。'
-  image: null
+editorial: Anthropicの『安全』を戦略として読み解くこの批評の鋭さは、タイミングへの着目にある。1兆ドル評価で上場申請した3日後に業界の減速を促す報告書を出す——世界規模の減速は先行者を固定化しオープンソースの追い上げを困難にする、という冷笑的な読みは無視できない。自社コードの80%をClaudeが書く現実と22〜25歳コーダーの職20%減を並べると、安全論の裏で進む労働市場の地殻変動こそ本題だと分かる。
 en:
   articleTitle: Does Anthropic Really Want AI to Stop? The Case That 'Safety' Is a
     Strategy in Disguise
@@ -122,7 +120,6 @@ en:
       and urging governments to consider slowing the entire industry. To some it looks
       like caution; to others, like ''strategy disguised as safety'', and the video
       lays out both competing interpretations.'
-    image: null
   - heading: The Reality of Claude Writing 80% of Its Own Code
     time: 142
     body: 'As of May 2026, more than 80% of the code shipped into Anthropic''s own
@@ -137,7 +134,6 @@ en:
       AI-written code could reach 100% by 2028. If AI begins to design and build its
       own successors, the industry will need a rulebook for when to push ahead and
       when to stop, and, the argument goes, Anthropic already has one.'
-    image: null
   - heading: Standardizing Regulation and the Shock to the Labor Market
     time: 485
     body: 'Anthropic''s Responsible Scaling Policy triggers additional safeguards
@@ -156,7 +152,13 @@ en:
       Lab shows that jobs for coders aged 22 to 25 are down about 20% from their late-2022
       peak, while those over 30 have grown. Entry-level roles are being cut, and layoffs
       are accelerating across the tech industry.'
-    image: null
+  editorial: The sharpness of this reading of Anthropic's 'safety' as strategy lies
+    in its attention to timing. Issuing a report urging an industry slowdown three
+    days after filing to go public at a $1T valuation — a cynical reading that a global
+    slowdown locks in incumbents and hampers open-source catch-up — can't be dismissed.
+    Placing the reality that Claude writes 80% of its own code beside a 20% drop in
+    jobs for 22-to-25-year-old coders shows the labor-market shift beneath the safety
+    talk is the real subject.
   headerImage: /images/vu_-NTR_Pr4/header.png
   heroImage: /images/vu_-NTR_Pr4/header.png
 ---
@@ -195,3 +197,7 @@ Anthropicは、人類の絶滅を防ぐためにフロンティアAIの『責任
 Anthropicの責任あるスケーリングポリシーは、能力が危険な水準（Capability Thresholds）に達したとき追加保護を発動させる仕組みで、自律的なAI研究開発までを射程に入れる。同様の発想はカリフォルニアで法制化寸前まで行ったが、ベンチャー企業a16zは、規制の負担が業界の巨人ではなくスタートアップや小規模開発者に最も重くのしかかると警告した。訓練コストの10〜30%という罰金は1兆ドル企業には端金でも、新興企業には会社全体に等しい。法案は2024年9月にニューサム知事が拒否権を行使したが、形を変えて各地で再燃し続けている。
 
 さらに影響はAnthropicのコードに留まらない。同社は技術者がコードの大半を書かず『レビューする』側に回ったと認めており、それが業界標準になれば人的労働力は崩れる。スタンフォードのデジタル経済研究所のデータでは、22〜25歳のコーダーの職は2022年末のピークから約20%減り、30歳超は増加。入口の職が削られ、テック業界全体でレイオフが加速している実態が示される。
+
+## 編集部の視点
+
+Anthropicの『安全』を戦略として読み解くこの批評の鋭さは、タイミングへの着目にある。1兆ドル評価で上場申請した3日後に業界の減速を促す報告書を出す——世界規模の減速は先行者を固定化しオープンソースの追い上げを困難にする、という冷笑的な読みは無視できない。自社コードの80%をClaudeが書く現実と22〜25歳コーダーの職20%減を並べると、安全論の裏で進む労働市場の地殻変動こそ本題だと分かる。

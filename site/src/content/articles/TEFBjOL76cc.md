@@ -50,14 +50,12 @@ sections:
 
     ところが米政府は国家安全保障の権限に基づきexport control directiveを発令。米国内外を問わず、すべての非米国籍ユーザー(Anthropic社員を含む)からFable
     5とMythos 5へのアクセスを遮断した。Anthropicは『全顧客向けに両モデルを直ちに停止する。他のClaudeモデルは影響を受けない』と告知し、『これは誤解だと考えており、アクセス復旧に向け動く』とコメントしている。'
-  image: null
 - heading: FDAで$200M要する薬と、ノースクルーティニーのAI
   time: 448
   body: 'コメンテーターは『どんな審査もなく強力なAIを世に出せる現状』そのものを問題視する。「希少疾患の薬1つ通すのにFDAで$200M必要なのに、開発者自身が核兵器級と表現する技術はノースクルーティニーで公開できる。問題が見つかった後で初めて政府が動く構造こそ歪んでいる」と批判した。
 
 
     そのうえで彼らは『規制はもっと事前に存在すべきで、後追いで止めるのではいけない。これだけ革命的な技術であるなら、なおさら誰もが等しくアクセス可能なまま無検査で出していいはずがない』と訴え、今回のshutdownは『おかしさの治療』ではなく『おかしさの露呈』だと位置づけた。'
-  image: null
 - heading: 『中国に負ける論』への反論と『managerial model』
   time: 906
   body: '規制反対派の常套句『中国に競争で負ける』に対して、番組は『そもそも中国は国家管理でAI開発を進めている。彼らはそれを米国よりよほどうまくやっている』と反論する。むしろ米国のオープンで奔放な開発モデルこそが歪みを生んでおり、データセンター運用から個別モデルの展開判断まで、一定の管理を入れる『managerial
@@ -66,7 +64,8 @@ sections:
 
     コメントは『これはDario AmodeiやSam Altmanだけに決めさせていい問題ではなく、民主的なinputを残すべきだ』と締めくくられ、Fable
     5停止の是非そのものより、AIガバナンスの欠落を週末で言語化し直す回として番組は終わっている。'
-  image: null
+editorial: Fable 5停止を『FDA級の審査が無いことの異常さ』から読み解く視点が鋭い。希少疾患薬の承認に2億ドルかかる一方、開発者自身が核兵器級と呼ぶAIは審査ゼロで公開できる——この非対称が議論の核心だ。『中国に負ける論』への反論として、むしろ国家管理型の方が技術競争で上手くやっているという指摘も挑発的で、自由放任ではなく一定の管理を入れる『managerial
+  model』という結論は、規制論の新しい軸を提示している。
 en:
   articleTitle: Was Fable 5 Really Too Dangerous? A Case for FDA-Style AI Oversight
   seoTitle: Was Fable 5 Really Too Dangerous? A Case for FDA-Style AI Oversi
@@ -123,7 +122,6 @@ en:
       United States. Anthropic announced that it would immediately suspend both models
       for all customers while leaving other Claude models untouched, and said it believed
       the move reflected a misunderstanding and would work to restore access.'
-    image: null
   - heading: A $200M Drug Review, but No Scrutiny for Frontier AI
     time: 448
     body: 'The commentators argue that the deeper problem is the very idea that extremely
@@ -139,7 +137,6 @@ en:
       there is even less justification for releasing it uninspected while leaving
       access open to everyone. They cast this shutdown not as a cure for what is broken,
       but as proof that the system was broken all along.'
-    image: null
   - heading: Why the Hosts Reject the "We’ll Lose to China" Argument
     time: 906
     body: 'The segment pushes back on the standard anti-regulation line that tighter
@@ -155,7 +152,12 @@ en:
       or Sam Altman alone. Democratic input has to remain part of the process. The
       episode ultimately treats the Fable 5 shutdown less as a yes-or-no judgment
       on that one model and more as a way to name the missing pieces in AI governance.'
-    image: null
+  editorial: Reading the Fable 5 shutdown through 'the absence of FDA-grade review'
+    is incisive. Approving a rare-disease drug costs $200M, yet an AI its own makers
+    call nuclear-grade ships with zero review — that asymmetry is the crux. The rebuttal
+    to the 'we'll lose to China' argument — that state-managed systems actually compete
+    better — is provocative, and the conclusion favoring a 'managerial model' over
+    laissez-faire offers a new axis for the regulation debate.
   headerImage: /images/TEFBjOL76cc/header.png
   heroImage: /images/TEFBjOL76cc/header.png
 ---
@@ -195,3 +197,7 @@ en:
 規制反対派の常套句『中国に競争で負ける』に対して、番組は『そもそも中国は国家管理でAI開発を進めている。彼らはそれを米国よりよほどうまくやっている』と反論する。むしろ米国のオープンで奔放な開発モデルこそが歪みを生んでおり、データセンター運用から個別モデルの展開判断まで、一定の管理を入れる『managerial model』こそが今後の唯一の現実解だと整理した。
 
 コメントは『これはDario AmodeiやSam Altmanだけに決めさせていい問題ではなく、民主的なinputを残すべきだ』と締めくくられ、Fable 5停止の是非そのものより、AIガバナンスの欠落を週末で言語化し直す回として番組は終わっている。
+
+## 編集部の視点
+
+Fable 5停止を『FDA級の審査が無いことの異常さ』から読み解く視点が鋭い。希少疾患薬の承認に2億ドルかかる一方、開発者自身が核兵器級と呼ぶAIは審査ゼロで公開できる——この非対称が議論の核心だ。『中国に負ける論』への反論として、むしろ国家管理型の方が技術競争で上手くやっているという指摘も挑発的で、自由放任ではなく一定の管理を入れる『managerial model』という結論は、規制論の新しい軸を提示している。

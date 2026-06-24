@@ -47,7 +47,6 @@ sections:
 
 
     この出来事から彼は、自分たちが事業もワークフローも創作プロセスも、他人のサーバー上で動き他人の規約に縛られたモデルの上に築いてきたことの脆さを痛感する。たった一通の政府書簡で消えてしまう基盤だった、というわけだ。'
-  image: null
 - heading: ローカルモデルという答えと主要な選択肢
   time: 45
   body: 'そこで今週末はあえてフロンティアモデルを一切使わないと決め、ローカルモデルとは何か、なぜ一週間前より急に重要になったのか、どれを使い、どんなハードウェアが要るのかを解説する回にしたと述べる。知能が自分の机の上で無料で動くからこそ成立する収益アイデアにも触れるとした。
@@ -55,14 +54,13 @@ sections:
 
     実用的な選択肢として挙げられるのは、まず学ぶならこれという第一候補のQwen、難しい思考やコーディングに強い(ただし推論に10〜30秒かかる)DeepSeek、16GB
     RAMやスマホにも載るほど軽量で文章がきれいなGoogleのGemma、そして巨大なコミュニティと豊富なファインチューンを持ち「どんな状況にもLlamaがある」とされるMetaのLlamaだ。'
-  image: null
 - heading: 量子化と「止められない」ものを作る勧め
   time: 790
   body: '技術的な要点として「量子化(quantization)」が紹介される。モデルのメモリ消費を抑え、手元のマシンで現実的に動かすための鍵となる概念だ。ローカルモデルは最強ではないが、日常的なタスクの6〜8割では十分実用的で、用途の幅も広いと評価する。
 
 
     投稿者は、ただ視聴して頷くのではなく、OllamaやLM Studioを導入してQwen 3を動かし、実際のタスクを完全にローカルでやり切ってみることを勧める。クラウドモデルと使い分ければ、次に何かが禁止されたり値上げされたりしても事業を回し続けられるとし、「誰にも止められないものを今日作ろう」と締めくくっている。'
-  image: null
+editorial: Fable停止の週末にローカルAIへ乗り換える実践ガイドの本質は、ベンダーロックインの脆さを身をもって突きつけた点にある。他人のサーバー上で他人の規約に縛られたモデルに事業を載せる危うさは、停止を経験して初めて実感される。Qwenやllamaを量子化してローカルで完結させる選択は、性能では劣っても『止められない』という一点で価値を持つ。冗長性は平時には無駄に見えるが、こういう時にこそ効く保険だ。
 en:
   articleTitle: 'What to Build After the Fable Ban: A Practical Guide to Local AI
     Models'
@@ -113,7 +111,6 @@ en:
       creative processes on top of models that live on someone else''s servers and
       operate under someone else''s rules. In his telling, the entire foundation disappeared
       because of a single government letter.'
-    image: null
   - heading: Why Local Models Are the Answer and Which Ones Matter
     time: 45
     body: 'That is why, he says, this weekend''s episode intentionally avoids frontier
@@ -128,7 +125,6 @@ en:
       Google''s Gemma as a lightweight model with strong prose that can fit on a 16
       GB machine or even a phone, and Meta''s Llama as the ecosystem choice backed
       by a huge community and countless fine-tunes.'
-    image: null
   - heading: Quantization and the Case for Building Something Nobody Can Shut Off
     time: 790
     body: 'The main technical concept he emphasizes is quantization, which reduces
@@ -143,7 +139,13 @@ en:
       If users pair local models with cloud models where appropriate, they can keep
       operating even when the next ban or price hike hits. His closing line is a direct
       challenge: build something today that nobody can stop.'
-    image: null
+  editorial: The essence of this weekend guide to switching to local AI is that it
+    viscerally drives home the fragility of vendor lock-in. The danger of building
+    a business atop a model bound by someone else's terms on someone else's server
+    is only truly felt after experiencing a shutdown. Quantizing Qwen or Llama to
+    run fully local is worth it on a single point — it can't be turned off — even
+    at lower performance. Redundancy looks wasteful in calm times but is exactly the
+    insurance that pays off here.
   headerImage: /images/bdhUBBACglw/header.png
   heroImage: /images/bdhUBBACglw/header.png
 ---
@@ -183,3 +185,7 @@ en:
 技術的な要点として「量子化(quantization)」が紹介される。モデルのメモリ消費を抑え、手元のマシンで現実的に動かすための鍵となる概念だ。ローカルモデルは最強ではないが、日常的なタスクの6〜8割では十分実用的で、用途の幅も広いと評価する。
 
 投稿者は、ただ視聴して頷くのではなく、OllamaやLM Studioを導入してQwen 3を動かし、実際のタスクを完全にローカルでやり切ってみることを勧める。クラウドモデルと使い分ければ、次に何かが禁止されたり値上げされたりしても事業を回し続けられるとし、「誰にも止められないものを今日作ろう」と締めくくっている。
+
+## 編集部の視点
+
+Fable停止の週末にローカルAIへ乗り換える実践ガイドの本質は、ベンダーロックインの脆さを身をもって突きつけた点にある。他人のサーバー上で他人の規約に縛られたモデルに事業を載せる危うさは、停止を経験して初めて実感される。Qwenやllamaを量子化してローカルで完結させる選択は、性能では劣っても『止められない』という一点で価値を持つ。冗長性は平時には無駄に見えるが、こういう時にこそ効く保険だ。

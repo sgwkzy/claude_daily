@@ -22,6 +22,7 @@ const translationSchema = z.object({
   keyPhrases: z.array(z.string()),
   bulletPoints: z.array(bulletPointSchema),
   sections: z.array(sectionSchema),
+  editorial: z.string().min(1).optional(),
   headerImage: z.string().min(1),
   heroImage: z.string().min(1).nullable().optional()
 });
@@ -53,6 +54,7 @@ const articles = defineCollection({
     keyPhrases: z.array(z.string()),
     bulletPoints: z.array(bulletPointSchema),
     sections: z.array(sectionSchema),
+    editorial: z.string().min(1).optional(),
     en: z.optional(translationSchema.nullable())
   })
 });

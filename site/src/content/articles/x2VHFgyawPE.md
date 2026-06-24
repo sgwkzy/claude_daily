@@ -50,7 +50,6 @@ sections:
 
 
     その上で、危機と楽観の間で激しく揺れるのは未熟な意思決定だと戒める。外科医や軍人のように、危険を過大にも過小にも見積もらず合理的に応じることが成熟だと位置づけた。'
-  image: null
 - heading: AI時代に残る仕事と「終末論マーケティング」批判への反論
   time: 2032
   body: '雇用への影響について、アモデイは物理世界での製造や人間中心の職は残ると見る。AIがより良い顧客対応をできても、重要な局面では人は人と話したいと考えるからだ。
@@ -60,7 +59,6 @@ sections:
 
 
     AIを誰かの価値観や意図に沿わせる役割は人間に残るが、それがどれほど厚いものになるかは読みにくいとした。'
-  image: null
 - heading: 価値観を守るための代償と企業の姿勢
   time: 4099
   body: '終盤、アモデイは自社が価値観のために払ってきた代償を列挙する。最強モデルの公開を見送ったことや、中国向けのアクセス遮断で数億ドルを失ったことだ。
@@ -70,7 +68,8 @@ sections:
 
 
     彼は、会社の歴史全体を見て最も整合的な仮説は何かを各人に問いかけ、自分たちは誠実に正しい方向を目指していると締めくくった。'
-  image: null
+editorial: アモデイ独占インタビューで響くのは、『大丈夫』と『今すぐパニック』の間を往復するのは未熟な判断だという一節だ。外科医や軍人のように危険を過大にも過小にも評価せず冷静に対応する——この成熟した意思決定観は、AIリスクを語る誰もが学ぶべき態度だ。中国向けアクセスを自主遮断して数億ドルを失った過去を引きつつ、雇用喪失の警告を『doom
+  marketing』と呼ぶ批判に反論する姿に、理念と事業のあいだで賭けを続ける経営者の像が浮かぶ。
 en:
   articleTitle: 'Inside the Mind of Anthropic CEO Dario Amodei: The Weight of Exponential
     Growth and a Bet on ''Doing the Right Thing'''
@@ -133,7 +132,6 @@ en:
       On top of that, he warns that swinging violently between crisis and optimism
       is immature decision-making. Like a surgeon or a soldier, maturity means responding
       rationally, neither overestimating nor underestimating the danger.'
-    image: null
   - heading: The Jobs That Remain in the AI Era and a Rebuttal to 'Doom Marketing'
     time: 2032
     body: 'On the impact on employment, Amodei believes physical-world manufacturing
@@ -148,7 +146,6 @@ en:
 
       The role of aligning AI with someone''s values and intent will remain with humans,
       he says, though how substantial that role will be is hard to read.'
-    image: null
   - heading: The Price of Defending Its Values and the Company's Posture
     time: 4099
     body: 'Toward the end, Amodei lists the prices his company has paid for its values:
@@ -164,7 +161,13 @@ en:
       He asks each viewer to consider, looking at the company''s entire history, what
       the most consistent hypothesis is, and concludes that they are sincerely aiming
       in the right direction.'
-    image: null
+  editorial: What resonates in the Amodei interview is the line that oscillating between
+    'it's fine' and 'panic now' is immature judgment. Responding calmly, like a surgeon
+    or soldier, without over- or under-estimating danger — this mature decision-making
+    stance is one anyone discussing AI risk should learn. Citing the self-imposed
+    China access cutoff that cost hundreds of millions, and rebutting the 'doom marketing'
+    charge against his jobs warnings, the portrait is of an executive making a continuing
+    bet between ideals and business.
   headerImage: /images/x2VHFgyawPE/header.png
   heroImage: /images/x2VHFgyawPE/header.png
 ---
@@ -210,3 +213,7 @@ AIを誰かの価値観や意図に沿わせる役割は人間に残るが、そ
 いずれも誰かに命じられた行動ではなく、自発的な判断だったと強調する。組織は常に不完全で機能不全を抱えるが、それを直しながら正しいことを実行しようとしてきたという。
 
 彼は、会社の歴史全体を見て最も整合的な仮説は何かを各人に問いかけ、自分たちは誠実に正しい方向を目指していると締めくくった。
+
+## 編集部の視点
+
+アモデイ独占インタビューで響くのは、『大丈夫』と『今すぐパニック』の間を往復するのは未熟な判断だという一節だ。外科医や軍人のように危険を過大にも過小にも評価せず冷静に対応する——この成熟した意思決定観は、AIリスクを語る誰もが学ぶべき態度だ。中国向けアクセスを自主遮断して数億ドルを失った過去を引きつつ、雇用喪失の警告を『doom marketing』と呼ぶ批判に反論する姿に、理念と事業のあいだで賭けを続ける経営者の像が浮かぶ。
