@@ -1,5 +1,4 @@
-import { getCollection } from "astro:content";
-import { buildArticlePath, loadDailyGroups, loadTopicGroups } from "../lib/articles";
+import { buildArticlePath, loadArticles, loadDailyGroups, loadTopicGroups } from "../lib/articles";
 import { localePath, locales } from "../i18n/ui";
 
 const site = import.meta.env.SITE ?? "https://www.claude-daily.com";
@@ -21,7 +20,9 @@ interface SitemapEntry {
 }
 
 export async function GET() {
-  const articles = await getCollection("articles");
+  // loadArticles は fetchedAt の新しい順にソート済み。articles[0] が最新記事になり、
+  // 静的ページの lastmod を「サイトの最終更新日」として正しく反映できる。
+  const articles = await loadArticles();
   const groups = await loadDailyGroups();
   const latestFetchedAt = articles[0]?.data.fetchedAt.toISOString();
 
