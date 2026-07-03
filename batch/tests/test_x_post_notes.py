@@ -29,7 +29,7 @@ def test_render_post_notes_contains_each_article() -> None:
     assert "## Claude Fable 5の安全設計を読み解く" in text
     assert "## Claude Code 完全入門" in text
     # ASCII の videoId ベース URL（日本語スラッグではない）
-    assert "https://www.claude-daily.com/articles/y9wz2pv404e/" in text
+    assert "https://claude-daily.com/articles/y9wz2pv404e/" in text
     assert text.count("```text") == 2
 
 

@@ -39,13 +39,13 @@ const structuredData = {
   "@context": "https://schema.org",
   "@type": "CollectionPage",
   name: locale === "en" ? `${dateLabel} brief | Claude Daily` : `${dateLabel} のブリーフ | Claude Daily`,
-  url: `https://www.claude-daily.com${localePath(`/days/${day.date}/`, locale)}`,
+  url: `https://claude-daily.com${localePath(`/days/${day.date}/`, locale)}`,
   inLanguage: locale,
   description,
   isPartOf: {
     "@type": "WebSite",
     name: "Claude Daily",
-    url: "https://www.claude-daily.com/",
+    url: "https://claude-daily.com/",
   },
 };
 ---

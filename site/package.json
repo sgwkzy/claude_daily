@@ -2,7 +2,7 @@
   "name": "claude-daily-site",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://www.claude-daily.com/",
+  "homepage": "https://claude-daily.com/",
   "type": "module",
   "scripts": {
     "dev": "astro dev",

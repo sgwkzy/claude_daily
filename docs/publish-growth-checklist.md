@@ -2,7 +2,7 @@
 
 ## Current Technical Baseline
 
-- 独自ドメインは `https://www.claude-daily.com`
+- 独自ドメインは `https://claude-daily.com`
 - Astro 側の `site` は独自ドメインに設定済み
 - `CNAME` は `site/public/CNAME` で管理
 - canonical / OGP / Twitter Card / JSON-LD をレイアウトで出力
@@ -13,7 +13,7 @@
 ## Immediate Launch Tasks
 
 1. GitHub Pages の DNS と HTTPS を安定化する
-2. Google Search Console に `https://www.claude-daily.com/` を登録する
+2. Google Search Console に `https://claude-daily.com/` を登録する
 3. `sitemap.xml` を Search Console に送信する
 4. GA4 プロパティを作り、`PUBLIC_GA_MEASUREMENT_ID` を GitHub Repository Variables へ設定する
 5. Bing Webmaster Tools にも同じサイトマップを送信する

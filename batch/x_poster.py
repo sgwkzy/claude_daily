@@ -8,7 +8,7 @@ from dataclasses import dataclass
 
 logger = logging.getLogger(__name__)
 
-SITE_URL = "https://www.claude-daily.com"
+SITE_URL = "https://claude-daily.com"
 BASE_TAGS = ["Claude", "Anthropic"]
 TWEET_MAX = 280
 URL_LENGTH = 23  # t.co 自動短縮の固定長

@@ -1,4 +1,4 @@
-const site = import.meta.env.SITE ?? "https://www.claude-daily.com";
+const site = import.meta.env.SITE ?? "https://claude-daily.com";
 
 export function GET() {
   const body = [

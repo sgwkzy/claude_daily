@@ -57,7 +57,7 @@ jobs:
     env:
       INDEXNOW_ENDPOINT: https://www.bing.com/indexnow
       INDEXNOW_KEY: b32626ab-6fcd-48b6-a66e-edb27a8f8b56
-      SITE_URL: https://www.claude-daily.com
+      SITE_URL: https://claude-daily.com
     steps:
       - name: リポジトリを取得
         uses: actions/checkout@v4

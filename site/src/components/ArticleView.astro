@@ -53,7 +53,7 @@ const structuredData = {
   "@type": "Article",
   headline: seoTitle,
   description: articleDescription,
-  image: [`https://www.claude-daily.com${heroImageSrc}`],
+  image: [`https://claude-daily.com${heroImageSrc}`],
   datePublished: data.fetchedAt.toISOString(),
   dateModified: data.fetchedAt.toISOString(),
   inLanguage: locale,
@@ -66,10 +66,10 @@ const structuredData = {
     name: "Claude Daily",
     logo: {
       "@type": "ImageObject",
-      url: "https://www.claude-daily.com/logo.png",
+      url: "https://claude-daily.com/logo.png",
     },
   },
-  mainEntityOfPage: `https://www.claude-daily.com${localePath(canonicalPath, locale)}`,
+  mainEntityOfPage: `https://claude-daily.com${localePath(canonicalPath, locale)}`,
   isBasedOn: `https://youtu.be/${data.videoId}`,
 };
 ---

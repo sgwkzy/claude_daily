@@ -37,7 +37,7 @@ const {
 } = Astro.props;
 
 const tr = t(locale);
-const siteUrl = Astro.site ?? new URL("https://www.claude-daily.com");
+const siteUrl = Astro.site ?? new URL("https://claude-daily.com");
 // `path` はロケール非依存のベースパス。未指定なら現在 URL から /jp を剥がして求める。
 const basePath = path ?? toBasePath(Astro.url.pathname);
 const localizedHref = (loc: Locale) => withBase(localePath(basePath, loc));

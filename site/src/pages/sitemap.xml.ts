@@ -1,7 +1,7 @@
 import { buildArticlePath, loadArticles, loadDailyGroups, loadTopicGroups } from "../lib/articles";
 import { localePath, locales } from "../i18n/ui";
 
-const site = import.meta.env.SITE ?? "https://www.claude-daily.com";
+const site = import.meta.env.SITE ?? "https://claude-daily.com";
 
 const toUrl = (path: string) => new URL(path, site).toString();
 

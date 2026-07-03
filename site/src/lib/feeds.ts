@@ -6,7 +6,7 @@ import {
 } from "./articles";
 import { localePath, type Locale } from "../i18n/ui";
 
-const SITE_URL = "https://www.claude-daily.com";
+const SITE_URL = "https://claude-daily.com";
 
 const escapeXml = (value: string): string =>
   value
