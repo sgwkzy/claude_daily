@@ -32,7 +32,7 @@ npm --version
 ## セットアップ
 
 ```powershell
-cd F:\Work\claude-daily
+cd F:\ClaudeWorks\DevelopClaudeDaily
 Copy-Item .env.example .env
 python -m venv .venv
 . .\.venv\Scripts\Activate.ps1
@@ -65,7 +65,7 @@ GitHub Pages の本番ビルドで使う場合は、`Repository Settings > Secre
 ドライラン:
 
 ```powershell
-cd F:\Work\claude-daily
+cd F:\ClaudeWorks\DevelopClaudeDaily
 . .\.venv\Scripts\Activate.ps1
 python .\batch\main.py --dry-run
 ```
@@ -93,7 +93,7 @@ python -m pytest
 Astro 開発サーバー:
 
 ```powershell
-cd F:\Work\claude-daily\site
+cd F:\ClaudeWorks\DevelopClaudeDaily\site
 npm run dev
 ```
 
@@ -105,7 +105,7 @@ npm run dev
 - 実行ログは `batch/tmp/batch.log` に追記され、字幕取得経路と失敗理由の確認に使えます。
 - 記事フロントマターの構造と Astro Content Collections の zod スキーマは同じ項目を表現しています。
 - 画像生成は OpenAI `gpt-image-1` の image edit API を利用します。
-- サムネイル仕様と運用方針は [docs/thumbnail-directions.md](/F:/Work/claude-daily/docs/thumbnail-directions.md) を参照してください。
+- サムネイル仕様と運用方針は [docs/thumbnail-directions.md](/F:/ClaudeWorks/DevelopClaudeDaily/docs/thumbnail-directions.md) を参照してください。
 
 ## 多言語対応（英語デフォルト / 日本語 `/jp/`）
 
