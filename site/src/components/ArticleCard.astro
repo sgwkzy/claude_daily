@@ -41,46 +41,45 @@ const previewText = summary ?? bulletPoints[0]?.text;
 const chipStyle = "border-coral/30 bg-coral/10 text-coralDark";
 ---
 
-<article class="overflow-hidden rounded-[2rem] border border-line/70 bg-paper shadow-card transition hover:-translate-y-0.5 hover:shadow-slide">
-  <a href={articleHref} class="group block">
-    <div class="grid gap-0 xl:max-h-[27rem] xl:grid-cols-[1.38fr_0.62fr]">
-      <div class="bg-[#ded1c2] xl:h-[27rem]">
-        <div class="flex aspect-video h-full items-center justify-center xl:aspect-auto">
-          <img src={headerImageSrc} alt={title} class="h-full w-full object-cover object-center transition duration-500 ease-out group-hover:scale-[1.012]" />
-        </div>
+<article class="group relative overflow-hidden rounded-[2rem] border border-line/70 bg-paper shadow-card transition hover:-translate-y-0.5 hover:shadow-slide">
+  <div class="grid gap-0 xl:grid-cols-[1.38fr_0.62fr] xl:items-stretch">
+    <div class="bg-[#ded1c2]">
+      <div class="flex aspect-video items-center justify-center">
+        <img src={headerImageSrc} alt={title} class="h-full w-full object-cover object-center transition duration-500 ease-out group-hover:scale-[1.012]" />
       </div>
-      <div class="space-y-5 overflow-hidden p-6 md:p-8 xl:flex xl:h-[27rem] xl:flex-col xl:justify-between xl:p-9">
-        <div class="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">
-          <span class="truncate">{channel}</span>
-          <span class="h-px w-6 bg-line"></span>
-          <time>{publishedAt.toLocaleDateString(locale === "en" ? "en-US" : "ja-JP")}</time>
-        </div>
-        <div class="space-y-4">
-          <h2 class="headline line-clamp-3 text-[1.5rem] font-black leading-[1.18] text-ink md:text-[1.72rem]">{title}</h2>
-          {previewText && (
-            <div class="rounded-2xl border border-coral/20 bg-coral/5 px-4 py-4">
-              {/* line-clamp は専用要素に。同じ要素に縦パディングがあると 5 行目が
-                  下パディングへ滲み出るため、パディングはラッパーへ分離する。 */}
-              <p class="text-sm leading-7 text-ink/82 line-clamp-4">
-                {previewText}
-              </p>
-            </div>
-          )}
-        </div>
-        <div class="space-y-2 overflow-hidden pt-1">
-          <p class="text-[0.7rem] uppercase tracking-[0.24em] text-clay">{tr("card.topics")}</p>
-          <div class="flex flex-wrap gap-2">
-          {keyPhrases.slice(0, 3).map((phrase) => (
-            <a
-              href={withBase(localePath(buildTopicHrefFromLabel(phrase), locale))}
-              class={`rounded-full border px-2.5 py-0.5 text-[0.7rem] transition hover:-translate-y-0.5 hover:shadow-sm ${chipStyle}`}
-            >
-              #{phrase}
-            </a>
-          ))}
+    </div>
+    <div class="space-y-5 overflow-hidden p-6 md:p-8 xl:flex xl:flex-col xl:justify-between xl:p-9">
+      <div class="flex items-center gap-3 text-[0.7rem] uppercase tracking-[0.22em] text-clay">
+        <span class="truncate">{channel}</span>
+        <span class="h-px w-6 bg-line"></span>
+        <time>{publishedAt.toLocaleDateString(locale === "en" ? "en-US" : "ja-JP")}</time>
+      </div>
+      <div class="space-y-4">
+        <h2 class="headline line-clamp-3 text-[1.5rem] font-black leading-[1.18] text-ink md:text-[1.72rem]">{title}</h2>
+        {previewText && (
+          <div class="rounded-2xl border border-coral/20 bg-coral/5 px-4 py-4">
+            {/* line-clamp は専用要素に。同じ要素に縦パディングがあると 5 行目が
+                下パディングへ滲み出るため、パディングはラッパーへ分離する。 */}
+            <p class="text-sm leading-7 text-ink/82 line-clamp-4">
+              {previewText}
+            </p>
           </div>
+        )}
+      </div>
+      <div class="space-y-2 overflow-hidden pt-1">
+        <p class="text-[0.7rem] uppercase tracking-[0.24em] text-clay">{tr("card.topics")}</p>
+        <div class="flex flex-wrap gap-2">
+        {keyPhrases.slice(0, 3).map((phrase) => (
+          <a
+            href={withBase(localePath(buildTopicHrefFromLabel(phrase), locale))}
+            class={`relative z-10 rounded-full border px-2.5 py-0.5 text-[0.7rem] transition hover:-translate-y-0.5 hover:shadow-sm ${chipStyle}`}
+          >
+            #{phrase}
+          </a>
+        ))}
         </div>
       </div>
     </div>
-  </a>
+  </div>
+  <a href={articleHref} class="absolute inset-0" aria-label={title}></a>
 </article>
