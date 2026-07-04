@@ -8,7 +8,7 @@ summary: 3年前はAIをワークフローに取り入れ始めたばかりで�
 channel: Claude
 channelId: UCV03SRZXJEz-hchIAogeJOg
 publishedAt: '2026-07-02T16:59:37Z'
-fetchedAt: '2026-07-04T18:06:42.180866Z'
+fetchedAt: '2026-07-04T05:00:00.000000Z'
 originalThumbnail: https://i.ytimg.com/vi/MhfnicQVkgY/maxresdefault.jpg
 headerImage: /images/MhfnicQVkgY/header.ja.png
 heroImage: /images/MhfnicQVkgY/header.ja.png

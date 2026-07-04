@@ -8,7 +8,7 @@ summary: 現在最も導入数が多いエージェントの一つ『Open Claw�
 channel: Parker Prompts
 channelId: UCaNk22cLid93kifuVbVapcQ
 publishedAt: '2026-07-02T12:30:25Z'
-fetchedAt: '2026-07-04T18:06:42.180866Z'
+fetchedAt: '2026-07-04T05:00:00.000000Z'
 originalThumbnail: https://i.ytimg.com/vi/QcnrWiZokh4/maxresdefault.jpg
 headerImage: /images/QcnrWiZokh4/header.ja.png
 heroImage: /images/QcnrWiZokh4/header.ja.png

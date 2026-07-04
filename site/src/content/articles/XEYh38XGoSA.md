@@ -8,7 +8,7 @@ summary: 以前『Obsidianからノーションへ移行した理由』という
 channel: Christian Lempa
 channelId: UCZNhwA1B5YqiY1nLzmM0ZRg
 publishedAt: '2026-07-02T14:00:34Z'
-fetchedAt: '2026-07-04T18:06:42.180866Z'
+fetchedAt: '2026-07-04T05:00:00.000000Z'
 originalThumbnail: https://i.ytimg.com/vi/XEYh38XGoSA/maxresdefault.jpg
 headerImage: /images/XEYh38XGoSA/header.ja.png
 heroImage: /images/XEYh38XGoSA/header.ja.png

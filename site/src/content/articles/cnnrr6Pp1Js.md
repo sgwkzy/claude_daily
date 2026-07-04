@@ -8,7 +8,7 @@ summary: 中国製AIモデルの性能が米国モデルに急速に接近する
 channel: Fernando Ulrich
 channelId: UCLJkh3QjHsLtK0LZFd28oGg
 publishedAt: '2026-07-02T21:37:54Z'
-fetchedAt: '2026-07-04T18:06:42.180866Z'
+fetchedAt: '2026-07-04T05:00:00.000000Z'
 originalThumbnail: https://i.ytimg.com/vi/cnnrr6Pp1Js/maxresdefault.jpg
 headerImage: /images/cnnrr6Pp1Js/header.ja.png
 heroImage: /images/cnnrr6Pp1Js/header.ja.png

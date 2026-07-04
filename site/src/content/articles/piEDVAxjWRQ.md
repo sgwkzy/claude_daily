@@ -8,7 +8,7 @@ summary: Claude Fable 5が復活し、Opus 4.8との違いはわずかだと思�
 channel: AI 아스트라 AI Astra
 channelId: UCvh79XDQNnQRns5XSxWnmvw
 publishedAt: '2026-07-02T06:54:26Z'
-fetchedAt: '2026-07-04T18:06:42.180866Z'
+fetchedAt: '2026-07-04T05:00:00.000000Z'
 originalThumbnail: https://i.ytimg.com/vi/piEDVAxjWRQ/maxresdefault.jpg
 headerImage: /images/piEDVAxjWRQ/header.ja.png
 heroImage: /images/piEDVAxjWRQ/header.ja.png
