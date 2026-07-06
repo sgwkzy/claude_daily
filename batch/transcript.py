@@ -23,12 +23,22 @@ def preferred_languages(title: str) -> list[str]:
 
 
 class TranscriptFetcher:
-    def fetch(self, video_id: str, languages: list[str] | None = None, dry_run: bool = False) -> list[TranscriptSegment]:
+    def fetch(self, video_id: str, languages: list[str] | None = None, dry_run: bool = False, tor=None) -> list[TranscriptSegment]:
         if dry_run:
             return _dummy_segments()
         languages = languages or ["ja", "en"]
+        if tor is None:
+            from .tor_control import ManagedTor
+
+            with ManagedTor() as owned_tor:
+                return self._fetch_with_tor(video_id, languages, owned_tor)
+        return self._fetch_with_tor(video_id, languages, tor)
+
+    def _fetch_with_tor(self, video_id: str, languages: list[str], tor) -> list[TranscriptSegment]:
         try:
             from youtube_transcript_api import NoTranscriptFound, TranscriptsDisabled, YouTubeTranscriptApi
+            from youtube_transcript_api._errors import IpBlocked, RequestBlocked
+            from youtube_transcript_api.proxies import GenericProxyConfig
 
             api = YouTubeTranscriptApi()
             try:
@@ -50,6 +60,22 @@ class TranscriptFetcher:
                         ",".join(languages),
                     )
                     return []
+            except (IpBlocked, RequestBlocked) as error:
+                logger.warning(
+                    "Transcript fetch blocked via youtube_transcript_api, retrying through Tor: video_id=%s languages=%s error=%s",
+                    video_id,
+                    ",".join(languages),
+                    error,
+                )
+                fetched = self._fetch_via_tor_api(
+                    YouTubeTranscriptApi,
+                    GenericProxyConfig,
+                    video_id,
+                    languages,
+                    tor,
+                )
+                if fetched is None:
+                    return _fetch_with_ytdlp(video_id, languages, tor=tor)
         except TranscriptsDisabled:
             logger.info(
                 "Transcript unavailable via youtube_transcript_api: video_id=%s languages=%s reason=disabled",
@@ -64,7 +90,7 @@ class TranscriptFetcher:
                 ",".join(languages),
                 error,
             )
-            return _fetch_with_ytdlp(video_id, languages)
+            return _fetch_with_ytdlp(video_id, languages, tor=tor)
         return [
             TranscriptSegment(
                 start=int(snippet.start),
@@ -74,6 +100,38 @@ class TranscriptFetcher:
             for snippet in fetched
             if snippet.text.strip()
         ]
+
+    def _fetch_via_tor_api(self, api_cls, proxy_config_cls, video_id: str, languages: list[str], tor):
+        if not tor.ensure():
+            logger.warning("Tor を起動できず、Tor経由の字幕再取得を断念しました。")
+            return None
+
+        proxy_config = proxy_config_cls(
+            http_url="socks5://127.0.0.1:9050",
+            https_url="socks5://127.0.0.1:9050",
+        )
+        api = api_cls(proxy_config=proxy_config)
+        try:
+            fetched = api.fetch(video_id, languages=languages)
+            logger.info(
+                "Transcript fetched via Tor-backed youtube_transcript_api: video_id=%s languages=%s segments=%s",
+                video_id,
+                ",".join(languages),
+                len(fetched),
+            )
+            return fetched
+        except Exception as error:
+            try:
+                from youtube_transcript_api import NoTranscriptFound
+
+                if isinstance(error, NoTranscriptFound):
+                    fetched = _fetch_any_available(api, video_id, languages)
+                    if fetched is not None:
+                        return fetched
+            except Exception:
+                pass
+            logger.warning("Tor-backed transcript fetch failed: video_id=%s error=%s", video_id, error)
+            return None
 
 
 def _fetch_any_available(api, video_id: str, preferred: list[str]):
@@ -129,7 +187,7 @@ def _dummy_segments() -> list[TranscriptSegment]:
     ]
 
 
-def _fetch_with_ytdlp(video_id: str, languages: list[str]) -> list[TranscriptSegment]:
+def _fetch_with_ytdlp(video_id: str, languages: list[str], tor=None) -> list[TranscriptSegment]:
     if not _has_command("yt-dlp"):
         logger.warning("yt-dlp is not available for transcript fallback: video_id=%s", video_id)
         return []
@@ -151,6 +209,8 @@ def _fetch_with_ytdlp(video_id: str, languages: list[str]) -> list[TranscriptSeg
         ]
         if _has_command("node"):
             command.extend(["--js-runtimes", "node"])
+        if tor is not None and tor.ensure():
+            command.extend(["--proxy", "socks5://127.0.0.1:9050"])
         cookies_from_browser = os.getenv("YTDLP_COOKIES_FROM_BROWSER", "").strip()
         cookies_path = os.getenv("YTDLP_COOKIES_PATH", "").strip()
         if cookies_from_browser:

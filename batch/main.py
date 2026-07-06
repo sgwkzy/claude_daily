@@ -17,6 +17,7 @@ from batch.models import PipelineStats
 from batch.pipeline import PipelineDeps, process_candidate
 from batch.ranker import dedupe_and_rank
 from batch.summarizer import TranscriptSummarizer
+from batch.tor_control import ManagedTor
 from batch.transcript import TranscriptFetcher
 from batch.translator import SummaryTranslator
 from batch.trend_proposer import TrendProposer
@@ -78,25 +79,27 @@ def main() -> int:
     print(f"提案キーワード: {', '.join(trend_keywords) if trend_keywords else 'なし'}")
 
     keywords = settings.youtube.keywords + trend_keywords
-    candidates = fetcher.fetch(keywords=keywords, dry_run=args.dry_run)
-    ranked = dedupe_and_rank(candidates, limit=limit, youtube_config=settings.youtube)
+    with ManagedTor() as shared_tor:
+        candidates = fetcher.fetch(keywords=keywords, dry_run=args.dry_run, tor=shared_tor)
+        ranked = dedupe_and_rank(candidates, limit=limit, youtube_config=settings.youtube)
 
-    deps = PipelineDeps(
-        root=root,
-        settings=settings,
-        transcript_fetcher=transcript_fetcher,
-        summarizer=summarizer,
-        translator=translator,
-        media=media,
-        header_generator=header_generator,
-        thumbnail_directions=thumbnail_directions,
-        dry_run=args.dry_run,
-    )
+        deps = PipelineDeps(
+            root=root,
+            settings=settings,
+            transcript_fetcher=transcript_fetcher,
+            summarizer=summarizer,
+            translator=translator,
+            media=media,
+            header_generator=header_generator,
+            thumbnail_directions=thumbnail_directions,
+            dry_run=args.dry_run,
+            tor=shared_tor,
+        )
 
-    for candidate in ranked:
-        payload = process_candidate(candidate, deps, stats)
-        if payload is not None:
-            pending_x_posts.append(payload)
+        for candidate in ranked:
+            payload = process_candidate(candidate, deps, stats)
+            if payload is not None:
+                pending_x_posts.append(payload)
 
     print(
         "実行結果:"

@@ -25,7 +25,7 @@ class YouTubeFetcher:
         self.api_key = api_key
         self.settings = settings
 
-    def fetch(self, keywords: Iterable[str], dry_run: bool = False) -> list[VideoCandidate]:
+    def fetch(self, keywords: Iterable[str], dry_run: bool = False, tor=None) -> list[VideoCandidate]:
         if dry_run:
             return self._dummy_candidates(list(keywords))
         if not self.api_key:
@@ -36,38 +36,44 @@ class YouTubeFetcher:
         collected: list[VideoCandidate] = []
         published_after = (datetime.now(UTC) - timedelta(hours=self.settings.youtube.max_age_hours)).isoformat()
 
-        from .tor_control import ManagedTor
+        if tor is None:
+            from .tor_control import ManagedTor
 
-        with ManagedTor() as tor:
-            for region in self.settings.youtube.effective_regions():
-                for keyword in keywords:
-                    search_params = {
-                        "part": "snippet",
-                        "type": "video",
-                        "q": keyword,
-                        "order": "viewCount",
-                        "maxResults": self.settings.youtube.per_keyword_top_n,
-                        "publishedAfter": published_after,
-                        "regionCode": region,
-                    }
-                    search_response = self._call(
-                        lambda: service.search().list(**search_params).execute(),
-                        _SEARCH_URL,
-                        search_params,
-                        tor,
-                    )
-                    video_ids = [item["id"]["videoId"] for item in search_response.get("items", []) if item.get("id", {}).get("videoId")]
-                    if not video_ids:
-                        continue
-                    videos_params = {"part": "snippet,statistics,contentDetails", "id": ",".join(video_ids)}
-                    videos_response = self._call(
-                        lambda: service.videos().list(**videos_params).execute(),
-                        _VIDEOS_URL,
-                        videos_params,
-                        tor,
-                    )
-                    for item in videos_response.get("items", []):
-                        collected.append(self._to_candidate(item, keyword))
+            with ManagedTor() as owned_tor:
+                return self._fetch_with_tor(keywords, service, published_after, owned_tor)
+        return self._fetch_with_tor(keywords, service, published_after, tor)
+
+    def _fetch_with_tor(self, keywords: Iterable[str], service, published_after: str, tor) -> list[VideoCandidate]:
+        collected: list[VideoCandidate] = []
+        for region in self.settings.youtube.effective_regions():
+            for keyword in keywords:
+                search_params = {
+                    "part": "snippet",
+                    "type": "video",
+                    "q": keyword,
+                    "order": "viewCount",
+                    "maxResults": self.settings.youtube.per_keyword_top_n,
+                    "publishedAfter": published_after,
+                    "regionCode": region,
+                }
+                search_response = self._call(
+                    lambda: service.search().list(**search_params).execute(),
+                    _SEARCH_URL,
+                    search_params,
+                    tor,
+                )
+                video_ids = [item["id"]["videoId"] for item in search_response.get("items", []) if item.get("id", {}).get("videoId")]
+                if not video_ids:
+                    continue
+                videos_params = {"part": "snippet,statistics,contentDetails", "id": ",".join(video_ids)}
+                videos_response = self._call(
+                    lambda: service.videos().list(**videos_params).execute(),
+                    _VIDEOS_URL,
+                    videos_params,
+                    tor,
+                )
+                for item in videos_response.get("items", []):
+                    collected.append(self._to_candidate(item, keyword))
         return collected
 
     def _call(self, primary, fallback_url: str, params: dict, tor) -> dict:

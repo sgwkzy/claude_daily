@@ -36,6 +36,7 @@ class PipelineDeps:
     header_generator: HeaderImageGenerator
     thumbnail_directions: list[str]
     dry_run: bool = False
+    tor: object | None = None
 
 
 def _header_context(candidate: VideoCandidate, summary: SummaryResult) -> HeaderContext:
@@ -117,6 +118,7 @@ def process_candidate(
                 candidate.video_id,
                 languages=preferred_languages(candidate.title),
                 dry_run=deps.dry_run,
+                tor=deps.tor,
             )
         )
     except Exception as error:
